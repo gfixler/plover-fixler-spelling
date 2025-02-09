@@ -8,14 +8,14 @@ diacritics = {
 
 connected = [
     {
-        "name": "Latin A with ogonek",
+        "name": "A with ogonek",
         "majuscule": ("A", "Ą"),
         "minuscule": ("a", "ą"),
         "diacritics": ["ogonek"], #TODO 
         "link": "https://en.wikipedia.org/wiki/%C4%84",
     },
     {
-        "name": "Cyrillic A with ogonek"
+        "name": "A with ogonek (Cyrillic)",
         "majuscule": ("A", "А̨"),
         "minuscule": ("a", "а̨"),
         "diacritics": ["ogonek"],
