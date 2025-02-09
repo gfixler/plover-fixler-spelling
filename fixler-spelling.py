@@ -4,7 +4,7 @@ diacritics = {
     "ogonek": "-PBG", # "little tail"
     "ring": "-FRPB",
     "stroke": "-RB",
-    "stroke_diagonal": "-BL",
+    "slash": "-BL",
 }
 
 connected = [
@@ -172,7 +172,7 @@ connected = [
         "name": "L with stroke",
         "majuscule": ("L", "Ł"),
         "minuscule": ("l", "ł"),
-        "diacritics": ["stroke_diagonal"], # TODO
+        "diacritics": ["slash"], # TODO
         "link": "https://en.wikipedia.org/wiki/%C5%81",
     },
     {
@@ -181,6 +181,41 @@ connected = [
         "minuscule": ("l", "ƚ"),
         "diacritics": ["stroke"], # TODO
         "link": "https://en.wikipedia.org/wiki/L_with_bar",
+    },
+    {
+        "name": "M with cedilla",
+        "majuscule": ("M", "M̧"),
+        "minuscule": ("m", "m̧"),
+        "diacritics": ["cedilla"],
+        "link": "https://en.wikipedia.org/wiki/Cedilla",
+    },
+    {
+        "name": "palatal nasal", # TODO
+        "majuscule": ("N", "Ɲ"),
+        "minuscule": ("n", "ɲ"),
+        "diacritics": [], # TODO
+        "link": "https://en.wikipedia.org/wiki/%C6%9D",
+    },
+    {
+        "name": "O with ogonek",
+        "majuscule": ("Q", "Ǫ"),
+        "minuscule": ("q", "ǫ"),
+        "diacritics": ["ogonek"],
+        "link": "https://en.wikipedia.org/wiki/%C7%AA",
+    },
+    {
+        "name": "O with cedilla",
+        "majuscule": ("O", "O̧"),
+        "minuscule": ("o", "o̧"),
+        "diacritics": ["cedilla"],
+        "link": "https://en.wikipedia.org/wiki/Cedilla",
+    },
+    {
+        "name": "O with stroke",
+        "majuscule": ("O", "Ø"),
+        "minuscule": ("o", "ø"),
+        "diacritics": ["slash"],
+        "link": "https://en.wikipedia.org/wiki/%C3%98",
     },
 }
 
