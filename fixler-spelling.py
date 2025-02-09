@@ -4,6 +4,7 @@ diacritics = {
     "ogonek": "-PBG", # "little tail"
     "ring": "-FRPB",
     "stroke": "-RB",
+    "stroke_diagonal": "-BL",
 }
 
 connected = [
@@ -69,6 +70,117 @@ connected = [
         "minuscule": ("d", "ɖ"),
         "diacritics": [], # TODO
         "link": "https://en.wikipedia.org/wiki/African_D",
+    },
+    {
+        "name": "E with ogonek",
+        "majuscule": ("E", "Ę"),
+        "minuscule": ("e", "ę"),
+        "diacritics": ["ogonek"],
+        "link": "https://en.wikipedia.org/wiki/%C4%98",
+    },
+    {
+        "name": "E with cedilla",
+        "majuscule": ("E", "Ȩ"),
+        "minuscule": ("e", "ȩ"),
+        "diacritics": ["cedilla"],
+        "link": "https://en.wikipedia.org/wiki/Cedilla",
+    },
+    {
+        "name": "Schwa with cedilla",
+        "majuscule": ("E", "Ə̧"),
+        "minuscule": ("e", "ə̧"),
+        "diacritics": [], # TODO
+        "link": "https://en.wikipedia.org/wiki/Cedilla",
+    },
+    {
+        "name": "Ɛ̧", # TODO
+        "majuscule": ("E", "Ɛ̧"),
+        "minuscule": ("e", "ɛ̧"),
+        "diacritics": [], # TODO
+        "link": "https://en.wikipedia.org/wiki/Cedilla",
+    },
+    {
+        "name": "F with hook",
+        "majuscule": ("F", "Ƒ"),
+        "minuscule": ("f", "ƒ"),
+        "diacritics": ["hook"],
+        "link": "https://en.wikipedia.org/wiki/%C6%91",
+    },
+    {
+        "name": "G with stroke",
+        "majuscule": ("G", "Ǥ"),
+        "minuscule": ("g", "ǥ"),
+        "diacritics": ["stroke"],
+        "link": "https://en.wikipedia.org/wiki/G_with_stroke",
+    },
+    {
+        "name": "G with hook",
+        "majuscule": ("G", "Ɠ"),
+        "minuscule": ("g", "ɠ"),
+        "diacritics": ["hook"],
+        "link": "https://en.wikipedia.org/wiki/G_with_hook",
+    },
+    {
+        "name": "H with stroke",
+        "majuscule": ("H", "Ħ"),
+        "minuscule": ("h", "ħ"),
+        "diacritics": ["stroke"],
+        "link": "https://en.wikipedia.org/wiki/H_with_stroke",
+    },
+    {
+        "name": "Voiced glottal fricative",
+        "majuscule": ("H", "Ɦ"),
+        "minuscule": ("h", "ɦ"),
+        "diacritics": [], # TODO
+        "link": "https://en.wikipedia.org/wiki/Voiced_glottal_fricative",
+    },
+    {
+        "name": "I with ogonek",
+        "majuscule": ("I", "Į"),
+        "minuscule": ("i", "į"),
+        "diacritics": ["ogonek"],
+        "link": "https://en.wikipedia.org/wiki/%C4%AE",
+    },
+    {
+        "name": "I with cedilla",
+        "majuscule": ("I", "I̧"),
+        "minuscule": ("i", "į"),
+        "diacritics": ["cedilla"],
+        "link": "https://en.wikipedia.org/wiki/Cedilla",
+    },
+    {
+        "name": "I with bar",
+        "majuscule": ("I", "Ɨ"),
+        "minuscule": ("i", "ɨ"),
+        "diacritics": ["stroke"],
+        "link": "https://en.wikipedia.org/wiki/I_with_bar", # TODO
+    {
+        "name": "Barred I with cedilla",
+        "majuscule": ("I", "Ɨ̧"),
+        "minuscule": ("i", "ɨ"),
+        "diacritics": ["stroke", "cedilla"],
+        "link": "https://en.wikipedia.org/wiki/Cedilla",
+    },
+    {
+        "name": "K with hook",
+        "majuscule": ("K", "Ƙ"),
+        "minuscule": ("k", "ƙ"),
+        "diacritics": ["hook"],
+        "link": "https://en.wikipedia.org/wiki/%C6%98",
+    },
+    {
+        "name": "L with stroke",
+        "majuscule": ("L", "Ł"),
+        "minuscule": ("l", "ł"),
+        "diacritics": ["stroke_diagonal"], # TODO
+        "link": "https://en.wikipedia.org/wiki/%C5%81",
+    },
+    {
+        "name": "L with bar",
+        "majuscule": ("L", "Ƚ"),
+        "minuscule": ("l", "ƚ"),
+        "diacritics": ["stroke"], # TODO
+        "link": "https://en.wikipedia.org/wiki/L_with_bar",
     },
 }
 
