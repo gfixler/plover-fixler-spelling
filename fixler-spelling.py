@@ -35,5 +35,40 @@ connected = [
         "diacritics": ["hook"],
         "link": "https://en.wikipedia.org/wiki/%C6%81",
     },
+    {
+        "name": "C with hook",
+        "majuscule": ("C", "Ƈ"),
+        "minuscule": ("c", "ƈ"),
+        "diacritics": ["hook"],
+        "link": "https://en.wikipedia.org/wiki/%C6%87",
+    },
+    {
+        "name": "C with cedilla",
+        "majuscule": ("C", "Ç"),
+        "minuscule": ("c", "ç"),
+        "diacritics": ["cedilla"],
+        "link": "https://en.wikipedia.org/wiki/%C3%87",
+    },
+    {
+        "name": "D with stroke",
+        "majuscule": ("D", "Đ"),
+        "minuscule": ("d", "đ"),
+        "diacritics": ["stroke"],
+        "link": "https://en.wikipedia.org/wiki/D_with_stroke",
+    },
+    {
+        "name": "D with hook",
+        "majuscule": ("D", "Ɗ"),
+        "minuscule": ("d", "ɗ"),
+        "diacritics": ["hook"],
+        "link": "https://en.wikipedia.org/wiki/%C6%8A",
+    },
+    {
+        "name": "African D",
+        "majuscule": ("D", "Ɖ"),
+        "minuscule": ("d", "ɖ"),
+        "diacritics": [], # TODO
+        "link": "https://en.wikipedia.org/wiki/African_D",
+    },
 }
 
