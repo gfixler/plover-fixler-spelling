@@ -19,7 +19,7 @@ connected = [
         "link": "https://en.wikipedia.org/wiki/%C4%84",
     },
     {
-        "name": "A with ogonek (Cyrillic)",
+        "name": "A with ogonek (Cyrillic)", # TODO
         "majuscule": ("A", "А̨"),
         "minuscule": ("a", "а̨"),
         "diacritics": ["ogonek"],
