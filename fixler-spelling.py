@@ -5,6 +5,9 @@ diacritics = {
     "ring": "-FRPB",
     "stroke": "-RB",
     "slash": "-BL",
+    "turned": "-FG",
+    "inverted": "-RBG",
+    "reversed": "-LG",
 }
 
 connected = [
@@ -216,6 +219,20 @@ connected = [
         "minuscule": ("o", "ø"),
         "diacritics": ["slash"],
         "link": "https://en.wikipedia.org/wiki/%C3%98",
+    },
+    {
+        "name": "Reversed C", # TODO
+        "majuscule": ("C", "Ↄ"),
+        "minuscule": ("c", "ↄ"),
+        "diacritics": ["reversed"],
+        "link": "https://en.wikipedia.org/wiki/Claudian_letters", # TODO
+    },
+    {
+        "name": "Turned F",
+        "majuscule": ("F", "Ⅎ"),
+        "minuscule": ("f"_ "ⅎ"),
+        "diacritics": ["turned"],
+        "link": "https://en.wikipedia.org/wiki/Claudian_letters", # TODO
     },
 }
 
