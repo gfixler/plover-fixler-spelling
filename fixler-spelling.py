@@ -50,12 +50,14 @@ tbd = [
         "minuscule": ("e", "ǝ"),
         "modifiers": ["reversed"],
         "link": "https://en.wikipedia.org/wiki/%C6%8E",
+    },
     {
         "name": "Eth",
         "majuscule": ("D", "Ð"),
         "minuscule": ("d", "ð"),
         "modifiers": ["slash"],
         "link": "https://en.wikipedia.org/wiki/Eth",
+    },
     {
         "name": "Voiced glottal fricative",
         "majuscule": ("H", "Ɦ"),
@@ -76,10 +78,11 @@ tbd = [
         "minuscule": ("c", "ɔ̧"),
         "modifiers": ["reversed", "cedilla"],
         "link": "https://en.wikipedia.org/wiki/%C6%86%CC%A7",
+    },
     {
         "name": "Turned F",
         "majuscule": ("F", "Ⅎ"),
-        "minuscule": ("f"_ "ⅎ"),
+        "minuscule": ("f", "ⅎ"),
         "modifiers": ["turned"],
         "link": "https://en.wikipedia.org/wiki/Claudian_letters", # TODO
     },
@@ -204,6 +207,7 @@ connectedDiacritics = [
         "minuscule": ("i", "ɨ"),
         "modifiers": ["stroke"],
         "link": "https://en.wikipedia.org/wiki/I_with_bar", # TODO
+    },
     {
         "name": "Barred I with cedilla",
         "majuscule": ("I", "Ɨ̧"),
@@ -358,9 +362,9 @@ connectedDiacritics = [
         "modifiers": ["hook"],
         "link": "https://en.wikipedia.org/wiki/%C6%B3",
     },
-}
+]
 
-detachedDiacritics = {
+detachedDiacritics = [
     {
         "name": "A with acute",
         "majuscule": ("A", "Á"),
@@ -536,5 +540,5 @@ detachedDiacritics = {
         "modifiers": ["circumflex"],
         "link": "https://en.wikipedia.org/wiki/Circumflex",
     },
-}
+]
 
