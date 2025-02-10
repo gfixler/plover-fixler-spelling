@@ -12,7 +12,35 @@ modifiers = {
     "reversed": "-LG",
 }
 
-modifieds = [
+tbd = [
+    {
+        "name": "A with ogonek (Cyrillic)", # TODO
+        "majuscule": ("A", "А̨"),
+        "minuscule": ("a", "а̨"),
+        "modifiers": ["ogonek"],
+        "link": "https://en.wikipedia.org/wiki/A_with_ogonek_(Cyrillic)",
+    },
+    {
+        "name": "Schwa with cedilla",
+        "majuscule": ("E", "Ə̧"),
+        "minuscule": ("e", "ə̧"),
+        "modifiers": ["inverted", "cedilla"], # TODO
+        "link": "https://en.wikipedia.org/wiki/Cedilla",
+    },
+    {
+        "name": "Ɛ̧", # TODO
+        "majuscule": ("E", "Ɛ̧"),
+        "minuscule": ("e", "ɛ̧"),
+        "modifiers": [], # TODO
+        "link": "https://en.wikipedia.org/wiki/Cedilla",
+    },
+    {
+        "name": "Voiced glottal fricative",
+        "majuscule": ("H", "Ɦ"),
+        "minuscule": ("h", "ɦ"),
+        "modifiers": [], # TODO
+        "link": "https://en.wikipedia.org/wiki/Voiced_glottal_fricative",
+    },
     {
         "name": "Reversed C", # TODO
         "majuscule": ("C", "Ↄ"),
@@ -20,6 +48,12 @@ modifieds = [
         "modifiers": ["reversed"],
         "link": "https://en.wikipedia.org/wiki/Claudian_letters", # TODO
     },
+    {
+        "name": "Reversed C with cedilla",
+        "majuscule": ("C", "Ɔ̧"),
+        "minuscule": ("c", "ɔ̧"),
+        "modifiers": ["reversed", "cedilla"],
+        "link": "https://en.wikipedia.org/wiki/%C6%86%CC%A7",
     {
         "name": "Turned F",
         "majuscule": ("F", "Ⅎ"),
@@ -36,13 +70,6 @@ connectedDiacritics = [
         "minuscule": ("a", "ą"),
         "modifiers": ["ogonek"], #TODO
         "link": "https://en.wikipedia.org/wiki/%C4%84",
-    },
-    {
-        "name": "A with ogonek (Cyrillic)", # TODO
-        "majuscule": ("A", "А̨"),
-        "minuscule": ("a", "а̨"),
-        "modifiers": ["ogonek"],
-        "link": "https://en.wikipedia.org/wiki/A_with_ogonek_(Cyrillic)",
     },
     {
         "name": "A with cedilla",
@@ -108,20 +135,6 @@ connectedDiacritics = [
         "link": "https://en.wikipedia.org/wiki/Cedilla",
     },
     {
-        "name": "Schwa with cedilla",
-        "majuscule": ("E", "Ə̧"),
-        "minuscule": ("e", "ə̧"),
-        "modifiers": [], # TODO
-        "link": "https://en.wikipedia.org/wiki/Cedilla",
-    },
-    {
-        "name": "Ɛ̧", # TODO
-        "majuscule": ("E", "Ɛ̧"),
-        "minuscule": ("e", "ɛ̧"),
-        "modifiers": [], # TODO
-        "link": "https://en.wikipedia.org/wiki/Cedilla",
-    },
-    {
         "name": "F with hook",
         "majuscule": ("F", "Ƒ"),
         "minuscule": ("f", "ƒ"),
@@ -148,13 +161,6 @@ connectedDiacritics = [
         "minuscule": ("h", "ħ"),
         "modifiers": ["stroke"],
         "link": "https://en.wikipedia.org/wiki/H_with_stroke",
-    },
-    {
-        "name": "Voiced glottal fricative",
-        "majuscule": ("H", "Ɦ"),
-        "minuscule": ("h", "ɦ"),
-        "modifiers": [], # TODO
-        "link": "https://en.wikipedia.org/wiki/Voiced_glottal_fricative",
     },
     {
         "name": "I with ogonek",
