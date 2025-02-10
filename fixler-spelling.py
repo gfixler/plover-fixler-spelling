@@ -45,6 +45,18 @@ tbd = [
         "link": "https://en.wikipedia.org/wiki/Cedilla",
     },
     {
+        "name": "Reversed E",
+        "majuscule": ("E", "Ǝ"),
+        "minuscule": ("e", "ǝ"),
+        "modifiers": ["reversed"],
+        "link": "https://en.wikipedia.org/wiki/%C6%8E",
+    {
+        "name": "Eth",
+        "majuscule": ("D", "Ð"),
+        "minuscule": ("d", "ð"),
+        "modifiers": ["slash"],
+        "link": "https://en.wikipedia.org/wiki/Eth",
+    {
         "name": "Voiced glottal fricative",
         "majuscule": ("H", "Ɦ"),
         "minuscule": ("h", "ɦ"),
