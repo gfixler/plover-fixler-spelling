@@ -59,7 +59,7 @@ tbd = [
         "modifiers": ["ogonek"],
         "link": "https://en.wikipedia.org/wiki/A_with_ogonek_(Cyrillic)",
     },
-    {,
+    {
         "name": "Y with double acute (Cyrillic)",
         "majuscule": ("Y", "Ӳ"),
         "minuscule": ("y", "ӳ"),
@@ -492,7 +492,7 @@ detachedDiacritics = [
         "modifiers": ["ring", "acute"],
         "link": "https://en.wikipedia.org/wiki/%C3%85#On_computers",
     },
-    {,
+    {
         "name": "A with double acute",
         "majuscule": ("A", "A̋"),
         "minuscule": ("a", "a̋"),
@@ -811,7 +811,7 @@ detachedDiacritics = [
         "name": "K with cedilla",
         "majuscule": ("K", "Ķ"),
         "minuscule": ("k", "ķ"),
-        "modifiers" ["cedilla"],
+        "modifiers": ["cedilla"],
         "link": "https://en.wikipedia.org/wiki/%C4%B6",
     },
     {
