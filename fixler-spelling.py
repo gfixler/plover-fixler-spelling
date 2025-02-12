@@ -131,6 +131,41 @@ tbd = [
         "modifiers": ["caron"],
         "link": "https://en.wikipedia.org/wiki/%C7%AE",
     },
+    {
+        "name": "AE ligature with acute",
+        "majuscule": ("Æ", "Ǽ"),
+        "minuscule": ("æ", "ǽ"),
+        "modifiers": ["acute"],
+        "link": "https://en.wikipedia.org/wiki/%C3%86",
+    },
+    {
+        "name": "AE ligature with macron",
+        "majuscule": ("Æ", "Ǣ"),
+        "minuscule": ("æ", "ǣ"),
+        "modifiers": ["macron"],
+        "link": "https://en.wikipedia.org/wiki/%C3%86",
+    },
+    {
+        "name": "AE ligature with grave",
+        "majuscule": ("Æ", "Æ̀"),
+        "minuscule": ("æ", "æ̀"),
+        "modifiers": ["grave"],
+        "link": "https://en.wikipedia.org/wiki/%C3%86",
+    },
+    {
+        "name": "AE ligature with circumflex",
+        "majuscule": ("Æ", "Æ̂"),
+        "minuscule": ("æ", "æ̂"),
+        "modifiers": ["circumflex"],
+        "link": "https://en.wikipedia.org/wiki/%C3%86",
+    },
+    {
+        "name": "AE ligature with tilde",
+        "majuscule": ("Æ", "Æ̃"),
+        "minuscule": ("æ", "æ̃"),
+        "modifiers": ["tilde"],
+        "link": "https://en.wikipedia.org/wiki/%C3%86",
+    },
 ]
 
 connectedDiacritics = [
@@ -500,41 +535,6 @@ detachedDiacritics = [
         "minuscule": ("a", "a̋"),
         "modifiers": ["acute", "acute"],
         "link": "https://en.wikipedia.org/wiki/Double_acute_accent#Letters_with_double_acute",
-    },
-    {
-        "name": "AE ligature with acute",
-        "majuscule": ("Æ", "Ǽ"),
-        "minuscule": ("æ", "ǽ"),
-        "modifiers": ["acute"],
-        "link": "https://en.wikipedia.org/wiki/%C3%86",
-    },
-    {
-        "name": "AE ligature with macron",
-        "majuscule": ("Æ", "Ǣ"),
-        "minuscule": ("æ", "ǣ"),
-        "modifiers": ["macron"],
-        "link": "https://en.wikipedia.org/wiki/%C3%86",
-    },
-    {
-        "name": "AE ligature with grave",
-        "majuscule": ("Æ", "Æ̀"),
-        "minuscule": ("æ", "æ̀"),
-        "modifiers": ["grave"],
-        "link": "https://en.wikipedia.org/wiki/%C3%86",
-    },
-    {
-        "name": "AE ligature with circumflex",
-        "majuscule": ("Æ", "Æ̂"),
-        "minuscule": ("æ", "æ̂"),
-        "modifiers": ["circumflex"],
-        "link": "https://en.wikipedia.org/wiki/%C3%86",
-    },
-    {
-        "name": "AE ligature with tilde",
-        "majuscule": ("Æ", "Æ̃"),
-        "minuscule": ("æ", "æ̃"),
-        "modifiers": ["tilde"],
-        "link": "https://en.wikipedia.org/wiki/%C3%86",
     },
     {
         "name": "B with dot below",
