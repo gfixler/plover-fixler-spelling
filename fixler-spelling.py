@@ -1351,3 +1351,18 @@ detachedDiacritics = [
     },
 ]
 
+def createEntry (entry):
+    minLetter, minAccented = entry["minuscule"]
+    mods = map(lambda x: modifiers[x], entry["modifiers"])
+    minuscule = [letters[minLetter]] + list(mods)
+    return ("/".join(minuscule), minAccented)
+
+if __name__ == "__main__":
+    output = []
+    with open("test.json", "w") as f:
+        f.write("{\n")
+        for entry in detachedDiacritics:
+            k, v = createEntry(entry)
+            output.append('"' + k + '": "' + v + '"')
+        f.write(",\n".join(output))
+        f.write("\n}\n")
