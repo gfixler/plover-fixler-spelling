@@ -25,6 +25,7 @@ letters = {
     "x": "KP*",
     "y": "KWR*",
     "z": "STKPW*",
+    "æ": "A*/E",
 }
 
 modifiers = {
@@ -130,41 +131,6 @@ tbd = [
         "minuscule": ("", "ǯ"),
         "modifiers": ["caron"],
         "link": "https://en.wikipedia.org/wiki/%C7%AE",
-    },
-    {
-        "name": "AE ligature with acute",
-        "majuscule": ("Æ", "Ǽ"),
-        "minuscule": ("æ", "ǽ"),
-        "modifiers": ["acute"],
-        "link": "https://en.wikipedia.org/wiki/%C3%86",
-    },
-    {
-        "name": "AE ligature with macron",
-        "majuscule": ("Æ", "Ǣ"),
-        "minuscule": ("æ", "ǣ"),
-        "modifiers": ["macron"],
-        "link": "https://en.wikipedia.org/wiki/%C3%86",
-    },
-    {
-        "name": "AE ligature with grave",
-        "majuscule": ("Æ", "Æ̀"),
-        "minuscule": ("æ", "æ̀"),
-        "modifiers": ["grave"],
-        "link": "https://en.wikipedia.org/wiki/%C3%86",
-    },
-    {
-        "name": "AE ligature with circumflex",
-        "majuscule": ("Æ", "Æ̂"),
-        "minuscule": ("æ", "æ̂"),
-        "modifiers": ["circumflex"],
-        "link": "https://en.wikipedia.org/wiki/%C3%86",
-    },
-    {
-        "name": "AE ligature with tilde",
-        "majuscule": ("Æ", "Æ̃"),
-        "minuscule": ("æ", "æ̃"),
-        "modifiers": ["tilde"],
-        "link": "https://en.wikipedia.org/wiki/%C3%86",
     },
 ]
 
@@ -1340,6 +1306,48 @@ detachedDiacritics = [
         "minuscule": ("z", "ẓ"),
         "modifiers": ["dotBelow"],
         "link": "https://en.wikipedia.org/wiki/%E1%BA%92",
+    },
+    {
+        "name": "AE ligature with acute",
+        "majuscule": ("Æ", "Ǽ"),
+        "minuscule": ("æ", "ǽ"),
+        "modifiers": ["acute"],
+        "link": "https://en.wikipedia.org/wiki/%C3%86",
+    },
+    {
+        "name": "AE ligature with macron",
+        "majuscule": ("Æ", "Ǣ"),
+        "minuscule": ("æ", "ǣ"),
+        "modifiers": ["macron"],
+        "link": "https://en.wikipedia.org/wiki/%C3%86",
+    },
+    {
+        "name": "AE ligature with grave",
+        "majuscule": ("Æ", "Æ̀"),
+        "minuscule": ("æ", "æ̀"),
+        "modifiers": ["grave"],
+        "link": "https://en.wikipedia.org/wiki/%C3%86",
+    },
+    {
+        "name": "AE ligature with circumflex",
+        "majuscule": ("Æ", "Æ̂"),
+        "minuscule": ("æ", "æ̂"),
+        "modifiers": ["circumflex"],
+        "link": "https://en.wikipedia.org/wiki/%C3%86",
+    },
+    {
+        "name": "AE ligature with tilde",
+        "majuscule": ("Æ", "Æ̃"),
+        "minuscule": ("æ", "æ̃"),
+        "modifiers": ["tilde"],
+        "link": "https://en.wikipedia.org/wiki/%C3%86",
+    },
+    {
+        "name": "AE ligature turned",
+        "majuscule": None,
+        "minuscule": ("æ", "ᴂ"),
+        "modifiers": ["turned"],
+        "link": "https://en.wiktionary.org/wiki/%E1%B4%82#Translingual",
     },
 ]
 
