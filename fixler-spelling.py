@@ -32,6 +32,7 @@ modifiers = {
     "breve": "-FRBLG",
     "caron": "-FBL",
     "cedilla": "-RPB",
+    "circumflex": "-RPG",
     "comma": "-B",
     "diaeresis": "-FL",
     "dotAbove": "-F",
@@ -39,6 +40,7 @@ modifiers = {
     "grave": "-FB",
     "hook": "-FRP",
     "horn": "-BLG",
+    "interpunct": "-FR",
     "macron": "-FP",
     "ogonek": "-PBG", # "little tail"
     "ring": "-FRPB",
