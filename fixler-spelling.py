@@ -513,7 +513,7 @@ detachedDiacritics = [
     },
     {
         "name": "A with caron",
-        "majuscule": ("A", "Â"),
+        "majuscule": ("A", "Ǎ"),
         "minuscule": ("a", "ǎ"),
         "modifiers": ["caron"],
         "link": "https://en.wikipedia.org/wiki/Caron",
