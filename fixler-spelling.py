@@ -81,6 +81,9 @@ moddableChars = {
     "æ": "A*/E",
 }
 
+minWraps = ("{>}{&", "}")
+majWraps = ("{-|}{&", "}")
+
 modifiers = {
     "acute": "-RP",
     "breve": "-FRBLG",
@@ -1404,17 +1407,29 @@ detachedDiacritics = [
     },
 ]
 
-def createEntry (entry):
-    minLetter, minAccented = entry["minuscule"]
-    mods = map(lambda x: modifiers[x], entry["modifiers"])
-    minuscule = [moddableChars[minLetter]] + list(mods)
-    return ("/".join(minuscule), minAccented)
+def buildModdedChar (srcDestChars, modStrokes, wraps):
+    if srcDestChars is None:
+        return None
+    srcChar, destChar = srcDestChars
+    wrapL, wrapR = wraps
+    strokes = [moddableChars[srcChar]] + list(modStrokes)
+    return ("/".join(strokes), wrapL + destChar + wrapR)
+
+def createOutlines (entry):
+    modStrokes = list(map(lambda x: modifiers[x], entry["modifiers"]))
+    minuscule = buildModdedChar(entry["minuscule"], modStrokes, minWraps)
+    majuscule = buildModdedChar(entry["majuscule"], modStrokes, majWraps)
+    return (minuscule, majuscule)
 
 if __name__ == "__main__":
-    print("{\n")
-    for i, entry in enumerate(detachedDiacritics):
-        k, v = createEntry(entry)
-        end = '' if i == len(detachedDiacritics) - 1 else ','
-        print('"' + k + '": "' + v + '"' + end)
-    print("}\n")
+    outlines = {}
+    for entry in detachedDiacritics:
+        minuscule, majuscule = createOutlines(entry)
+        if minuscule != None:
+            k, v = minuscule
+            outlines[k] = v
+        if majuscule != None:
+            k, v = majuscule
+            outlines[k] = v
+    print(outlines)
 
