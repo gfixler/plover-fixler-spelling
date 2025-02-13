@@ -1,3 +1,5 @@
+import json
+
 moddableChars = {
     "A": "A*P",
     "a": "A*",
@@ -1431,5 +1433,5 @@ if __name__ == "__main__":
         if majuscule != None:
             k, v = majuscule
             outlines[k] = v
-    print(outlines)
+    print(json.dumps(outlines, ensure_ascii=False, indent=0))
 
