@@ -1358,11 +1358,10 @@ def createEntry (entry):
     return ("/".join(minuscule), minAccented)
 
 if __name__ == "__main__":
-    output = []
-    with open("test.json", "w") as f:
-        f.write("{\n")
-        for entry in detachedDiacritics:
-            k, v = createEntry(entry)
-            output.append('"' + k + '": "' + v + '"')
-        f.write(",\n".join(output))
-        f.write("\n}\n")
+    print("{\n")
+    for i, entry in enumerate(detachedDiacritics):
+        k, v = createEntry(entry)
+        end = '' if i == len(detachedDiacritics) - 1 else ','
+        print('"' + k + '": "' + v + '"' + end)
+    print("}\n")
+
