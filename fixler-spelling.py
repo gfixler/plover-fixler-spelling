@@ -3,84 +3,61 @@ import json
 moddableChars = {
     "A": "A*P",
     "a": "A*",
-
     "B": "PW*P",
     "b": "PW*",
-
     "C": "KR*P",
     "c": "KR*",
-
     "D": "TK*P",
     "d": "TK*",
-
     "E": "*EP",
     "e": "*E",
-
     "F": "TP*P",
     "f": "TP*",
-
     "G": "TKPW*P",
     "g": "TKPW*",
-
     "H": "H*P",
     "h": "H*",
-
     "I": "*EUP",
     "i": "*EU",
-
     "J": "SKWR*P",
     "j": "SKWR*",
-
     "K": "K*P",
     "k": "K*",
-
     "L": "HR*P",
     "l": "HR*",
-
     "M": "PH*P",
     "m": "PH*",
-
     "N": "TPH*P",
     "n": "TPH*",
-
     "O": "O*P",
     "o": "O*",
-
     "P": "P*P",
     "p": "P*",
-
     "Q": "KW*P",
     "q": "KW*",
-
     "R": "R*P",
     "r": "R*",
-
     "S": "S*P",
     "s": "S*",
-
     "T": "T*P",
     "t": "T*",
-
     "U": "*UP",
     "u": "*U",
-
     "V": "SR*P",
     "v": "SR*",
-
     "W": "W*P",
     "w": "W*",
-
     "X": "KP*P",
     "x": "KP*",
-
     "Y": "KWR*P",
     "y": "KWR*",
-
     "Z": "STKPW*P",
     "z": "STKPW*",
 
     "Æ": "A*P/E",
     "æ": "A*/E",
+    "Ə": "SKHA*P",
+    "ə": "SKHA*",
 }
 
 minWraps = ("{>}{&", "}")
