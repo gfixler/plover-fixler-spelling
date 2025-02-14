@@ -67,7 +67,7 @@ modifiers = {
     "acute": "-RP",
     "breve": "-FRBLG",
     "caron": "-FBL",
-    "cedilla": "-RPB",
+    "cedilla": "-G",
     "circumflex": "-RPG",
     "comma": "-B",
     "diaeresis": "-FL",
@@ -84,7 +84,7 @@ modifiers = {
     "slash": "-BL",
     "tilde": "-FPBG",
 
-    "turned": "-FG",
+    "turned": "-RL",
     "inverted": "-RBG",
     "reversed": "-LG",
 }
