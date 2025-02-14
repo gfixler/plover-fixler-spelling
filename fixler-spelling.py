@@ -132,6 +132,20 @@ tbd = [
         "modifiers": ["caron"],
         "link": "https://en.wikipedia.org/wiki/%C7%AE",
     },
+    {
+        "name": "African D",
+        "majuscule": ("D", "Ɖ"),
+        "minuscule": ("d", "ɖ"),
+        "modifiers": [], # TODO
+        "link": "https://en.wikipedia.org/wiki/African_D",
+    },
+    {
+        "name": "palatal nasal", # TODO
+        "majuscule": ("N", "Ɲ"),
+        "minuscule": ("n", "ɲ"),
+        "modifiers": [], # TODO
+        "link": "https://en.wikipedia.org/wiki/%C6%9D",
+    },
 ]
 
 connectedDiacritics = [
@@ -183,13 +197,6 @@ connectedDiacritics = [
         "minuscule": ("d", "ɗ"),
         "modifiers": ["hook"],
         "link": "https://en.wikipedia.org/wiki/%C6%8A",
-    },
-    {
-        "name": "African D",
-        "majuscule": ("D", "Ɖ"),
-        "minuscule": ("d", "ɖ"),
-        "modifiers": [], # TODO
-        "link": "https://en.wikipedia.org/wiki/African_D",
     },
     {
         "name": "E with ogonek",
@@ -288,13 +295,6 @@ connectedDiacritics = [
         "minuscule": ("m", "m̧"),
         "modifiers": ["cedilla"],
         "link": "https://en.wikipedia.org/wiki/Cedilla",
-    },
-    {
-        "name": "palatal nasal", # TODO
-        "majuscule": ("N", "Ɲ"),
-        "minuscule": ("n", "ɲ"),
-        "modifiers": [], # TODO
-        "link": "https://en.wikipedia.org/wiki/%C6%9D",
     },
     {
         "name": "O with ogonek",
