@@ -98,20 +98,6 @@ tbd = [
         "link": "https://en.wikipedia.org/wiki/A_with_ogonek_(Cyrillic)",
     },
     {
-        "name": "Y with double acute (Cyrillic)",
-        "majuscule": ("Y", "Ӳ"),
-        "minuscule": ("y", "ӳ"),
-        "modifiers": ["acute", "acute"],
-        "link": "https://en.wikipedia.org/wiki/Double_acute_accent#Letters_with_double_acute",
-    },
-    {
-        "name": "Schwa with cedilla",
-        "majuscule": ("E", "Ə̧"),
-        "minuscule": ("e", "ə̧"),
-        "modifiers": ["inverted", "cedilla"], # TODO
-        "link": "https://en.wikipedia.org/wiki/Cedilla",
-    },
-    {
         "name": "Ɛ̧", # TODO
         "majuscule": ("E", "Ɛ̧"),
         "minuscule": ("e", "ɛ̧"),
@@ -138,27 +124,6 @@ tbd = [
         "minuscule": ("h", "ɦ"),
         "modifiers": [], # TODO
         "link": "https://en.wikipedia.org/wiki/Voiced_glottal_fricative",
-    },
-    {
-        "name": "Reversed C", # TODO
-        "majuscule": ("C", "Ↄ"),
-        "minuscule": ("c", "ↄ"),
-        "modifiers": ["reversed"],
-        "link": "https://en.wikipedia.org/wiki/Claudian_letters", # TODO
-    },
-    {
-        "name": "Reversed C with cedilla",
-        "majuscule": ("C", "Ɔ̧"),
-        "minuscule": ("c", "ɔ̧"),
-        "modifiers": ["reversed", "cedilla"],
-        "link": "https://en.wikipedia.org/wiki/%C6%86%CC%A7",
-    },
-    {
-        "name": "Turned F",
-        "majuscule": ("F", "Ⅎ"),
-        "minuscule": ("f", "ⅎ"),
-        "modifiers": ["turned"],
-        "link": "https://en.wikipedia.org/wiki/Claudian_letters", # TODO
     },
     {
         "name": "Ezh with caron",
@@ -442,6 +407,34 @@ connectedDiacritics = [
         "minuscule": ("y", "ƴ"),
         "modifiers": ["hook"],
         "link": "https://en.wikipedia.org/wiki/%C6%B3",
+    },
+    {
+        "name": "Schwa with cedilla",
+        "majuscule": ("Ə", "Ə̧"),
+        "minuscule": ("ə", "ə̧"),
+        "modifiers": ["inverted", "cedilla"],
+        "link": "https://en.wikipedia.org/wiki/Cedilla",
+    },
+    {
+        "name": "Reversed C", # TODO
+        "majuscule": ("C", "Ↄ"),
+        "minuscule": ("c", "ↄ"),
+        "modifiers": ["reversed"],
+        "link": "https://en.wikipedia.org/wiki/Claudian_letters", # TODO
+    },
+    {
+        "name": "Reversed C with cedilla",
+        "majuscule": ("C", "Ɔ̧"),
+        "minuscule": ("c", "ɔ̧"),
+        "modifiers": ["reversed", "cedilla"],
+        "link": "https://en.wikipedia.org/wiki/%C6%86%CC%A7",
+    },
+    {
+        "name": "Turned F",
+        "majuscule": ("F", "Ⅎ"),
+        "minuscule": ("f", "ⅎ"),
+        "modifiers": ["turned"],
+        "link": "https://en.wikipedia.org/wiki/Claudian_letters", # TODO
     },
 ]
 
@@ -1313,6 +1306,13 @@ detachedDiacritics = [
         "minuscule": ("y", "ỹ"),
         "modifiers": ["tilde"],
         "link": "https://en.wikipedia.org/wiki/Tilde",
+    },
+    {
+        "name": "Y with double acute",
+        "majuscule": ("Y", "Ӳ"),
+        "minuscule": ("y", "ӳ"),
+        "modifiers": ["acute", "acute"],
+        "link": "https://en.wikipedia.org/wiki/Double_acute_accent#Letters_with_double_acute",
     },
     {
         "name": "Z with acute",
