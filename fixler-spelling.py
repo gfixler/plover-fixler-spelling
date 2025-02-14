@@ -1671,13 +1671,19 @@ def createOutlines (entry):
 
 if __name__ == "__main__":
     outlines = {}
-    for entry in detachedDiacritics:
-        minuscule, majuscule = createOutlines(entry)
-        if minuscule != None:
-            k, v = minuscule
-            outlines[k] = v
-        if majuscule != None:
-            k, v = majuscule
-            outlines[k] = v
+    entrySets = [
+        connectedDiacritics,
+        detachedDiacritics,
+        vietnameseExtras,
+    ]
+    for entries in entrySets:
+        for entry in  entries:
+            minuscule, majuscule = createOutlines(entry)
+            if minuscule != None:
+                k, v = minuscule
+                outlines[k] = v
+            if majuscule != None:
+                k, v = majuscule
+                outlines[k] = v
     print(json.dumps(outlines, ensure_ascii=False, indent=0))
 
