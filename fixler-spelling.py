@@ -74,7 +74,7 @@ modifiers = {
     "dotAbove": "-F",
     "dotBelow": "-R",
     "grave": "-FB",
-    "hook": "-FRP",
+    "hookAbove": "-FRP",
     "horn": "-BLG",
     "interpunct": "-FR",
     "macron": "-FP",
@@ -164,17 +164,17 @@ connectedDiacritics = [
         "link": "https://en.wikipedia.org/wiki/Cedilla",
     },
     {
-        "name": "B with a hook",
+        "name": "B with a hook above",
         "majuscule": ("B", "Ɓ"),
         "minuscule": ("b", "ɓ"),
-        "modifiers": ["hook"],
+        "modifiers": ["hookAbove"],
         "link": "https://en.wikipedia.org/wiki/%C6%81",
     },
     {
-        "name": "C with hook",
+        "name": "C with hook above",
         "majuscule": ("C", "Ƈ"),
         "minuscule": ("c", "ƈ"),
-        "modifiers": ["hook"],
+        "modifiers": ["hookAbove"],
         "link": "https://en.wikipedia.org/wiki/%C6%87",
     },
     {
@@ -192,10 +192,10 @@ connectedDiacritics = [
         "link": "https://en.wikipedia.org/wiki/D_with_stroke",
     },
     {
-        "name": "D with hook",
+        "name": "D with hook above",
         "majuscule": ("D", "Ɗ"),
         "minuscule": ("d", "ɗ"),
-        "modifiers": ["hook"],
+        "modifiers": ["hookAbove"],
         "link": "https://en.wikipedia.org/wiki/%C6%8A",
     },
     {
@@ -213,10 +213,10 @@ connectedDiacritics = [
         "link": "https://en.wikipedia.org/wiki/Cedilla",
     },
     {
-        "name": "F with hook",
+        "name": "F with hook above",
         "majuscule": ("F", "Ƒ"),
         "minuscule": ("f", "ƒ"),
-        "modifiers": ["hook"],
+        "modifiers": ["hookAbove"],
         "link": "https://en.wikipedia.org/wiki/%C6%91",
     },
     {
@@ -227,10 +227,10 @@ connectedDiacritics = [
         "link": "https://en.wikipedia.org/wiki/G_with_stroke",
     },
     {
-        "name": "G with hook",
+        "name": "G with hook above",
         "majuscule": ("G", "Ɠ"),
         "minuscule": ("g", "ɠ"),
-        "modifiers": ["hook"],
+        "modifiers": ["hookAbove"],
         "link": "https://en.wikipedia.org/wiki/G_with_hook",
     },
     {
@@ -269,10 +269,10 @@ connectedDiacritics = [
         "link": "https://en.wikipedia.org/wiki/Cedilla",
     },
     {
-        "name": "K with hook",
+        "name": "K with hook above",
         "majuscule": ("K", "Ƙ"),
         "minuscule": ("k", "ƙ"),
-        "modifiers": ["hook"],
+        "modifiers": ["hookAbove"],
         "link": "https://en.wikipedia.org/wiki/%C6%98",
     },
     {
@@ -325,10 +325,10 @@ connectedDiacritics = [
         "link": "https://en.wikipedia.org/wiki/%C6%A0",
     },
     {
-        "name": "P with hook",
+        "name": "P with hook above",
         "majuscule": ("P", "Ƥ"),
         "minuscule": ("p", "ƥ"),
-        "modifiers": ["hook"],
+        "modifiers": ["hookAbove"],
         "link": "https://en.wikipedia.org/wiki/%C6%A4",
     },
     {
@@ -346,10 +346,10 @@ connectedDiacritics = [
         "link": "https://en.wikipedia.org/wiki/%C5%9E",
     },
     {
-        "name": "T with hook",
+        "name": "T with hook above",
         "majuscule": ("T", "Ƭ"),
         "minuscule": ("t", "ƭ"),
-        "modifiers": ["hook"],
+        "modifiers": ["hookAbove"],
         "link": "https://en.wikipedia.org/wiki/%C6%AC",
     },
     {
@@ -402,10 +402,10 @@ connectedDiacritics = [
         "link": "https://en.wikipedia.org/wiki/Ogonek",
     },
     {
-        "name": "Y with hook",
+        "name": "Y with hook above",
         "majuscule": ("Y", "Ƴ"),
         "minuscule": ("y", "ƴ"),
-        "modifiers": ["hook"],
+        "modifiers": ["hookAbove"],
         "link": "https://en.wikipedia.org/wiki/%C6%B3",
     },
     {
@@ -1388,10 +1388,10 @@ detachedDiacritics = [
 
 vietnameseExtras = [
     {
-        "name": "Y with hook",
+        "name": "Y with hook above",
         "majuscule": ("Y", "Ỷ"),
         "minuscule": ("y", "ỷ"),
-        "modifiers": ["hook"],
+        "modifiers": ["hookAbove"],
         "link": "",
     },
     {
@@ -1402,10 +1402,10 @@ vietnameseExtras = [
         "link": "",
     },
     {
-        "name": "A with breve and hook",
+        "name": "A with breve and hook above",
         "majuscule": ("A", "Ẳ"),
         "minuscule": ("a", "ẳ"),
-        "modifiers": ["breve", "hook"],
+        "modifiers": ["breve", "hookAbove"],
         "link": "",
     },
     {
@@ -1430,10 +1430,10 @@ vietnameseExtras = [
         "link": "",
     },
     {
-        "name": "A with hook",
+        "name": "A with hook above",
         "majuscule": ("A", "Ả"),
         "minuscule": ("a", "ả"),
-        "modifiers": ["hook"],
+        "modifiers": ["hookAbove"],
         "link": "",
     },
     {
@@ -1458,10 +1458,10 @@ vietnameseExtras = [
         "link": "",
     },
     {
-        "name": "A with circumflex and hook",
+        "name": "A with circumflex and hook above",
         "majuscule": ("A", "Ẩ"),
         "minuscule": ("a", "ẩ"),
-        "modifiers": ["circumflex", "hook"],
+        "modifiers": ["circumflex", "hookAbove"],
         "link": "",
     },
     {
@@ -1486,10 +1486,10 @@ vietnameseExtras = [
         "link": "",
     },
     {
-        "name": "O with hook",
+        "name": "O with hook above",
         "majuscule": ("O", "Ỏ"),
         "minuscule": ("o", "ỏ"),
-        "modifiers": ["hook"],
+        "modifiers": ["hookAbove"],
         "link": "",
     },
     {
@@ -1507,10 +1507,10 @@ vietnameseExtras = [
         "link": "",
     },
     {
-        "name": "O with horn and hook",
+        "name": "O with horn and hook above",
         "majuscule": ("O", "Ở"),
         "minuscule": ("o", "ở"),
-        "modifiers": ["horn", "hook"],
+        "modifiers": ["horn", "hookAbove"],
         "link": "",
     },
     {
@@ -1535,10 +1535,10 @@ vietnameseExtras = [
         "link": "",
     },
     {
-        "name": "O with circumflex and hook",
+        "name": "O with circumflex and hook above",
         "majuscule": ("O", "Ổ"),
         "minuscule": ("o", "ổ"),
-        "modifiers": ["circumflex", "hook"],
+        "modifiers": ["circumflex", "hookAbove"],
         "link": "",
     },
     {
@@ -1563,10 +1563,10 @@ vietnameseExtras = [
         "link": "",
     },
     {
-        "name": "E with hook",
+        "name": "E with hook above",
         "majuscule": ("E", "Ẻ"),
         "minuscule": ("e", "ẻ"),
-        "modifiers": ["hook"],
+        "modifiers": ["hookAbove"],
         "link": "",
     },
     {
@@ -1577,10 +1577,10 @@ vietnameseExtras = [
         "link": "",
     },
     {
-        "name": "E with circumflex and hook",
+        "name": "E with circumflex and hook above",
         "majuscule": ("E", "Ể"),
         "minuscule": ("e", "ể"),
-        "modifiers": ["circumflex", "hook"],
+        "modifiers": ["circumflex", "hookAbove"],
         "link": "",
     },
     {
@@ -1605,17 +1605,17 @@ vietnameseExtras = [
         "link": "",
     },
     {
-        "name": "I with hook",
+        "name": "I with hook above",
         "majuscule": ("I", "Ỉ"),
         "minuscule": ("i", "ỉ"),
-        "modifiers": ["hook"],
+        "modifiers": ["hookAbove"],
         "link": "",
     },
     {
-        "name": "U with hook",
+        "name": "U with hook above",
         "majuscule": ("U", "Ủ"),
         "minuscule": ("u", "ủ"),
-        "modifiers": ["hook"],
+        "modifiers": ["hookAbove"],
         "link": "",
     },
     {
@@ -1626,10 +1626,10 @@ vietnameseExtras = [
         "link": "",
     },
     {
-        "name": "U with horn and hook",
+        "name": "U with horn and hook above",
         "majuscule": ("U", "Ử"),
         "minuscule": ("u", "ử"),
-        "modifiers": ["horn", "hook"],
+        "modifiers": ["horn", "hookAbove"],
         "link": "",
     },
     {
