@@ -412,7 +412,7 @@ connectedDiacritics = [
         "name": "Schwa with cedilla",
         "majuscule": ("Ə", "Ə̧"),
         "minuscule": ("ə", "ə̧"),
-        "modifiers": ["inverted", "cedilla"],
+        "modifiers": ["cedilla"],
         "link": "https://en.wikipedia.org/wiki/Cedilla",
     },
     {
