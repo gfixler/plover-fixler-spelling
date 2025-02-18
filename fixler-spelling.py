@@ -590,7 +590,7 @@ detachedDiacritics = [
     {
         "name": "D with circumflex",
         "majuscule": ("D", "Ḓ"),
-        "minuscule": ("d", "ḑ"),
+        "minuscule": ("d", "ḓ"),
         "modifiers": ["circumflex"],
         "link": "https://en.wikipedia.org/wiki/Circumflex",
     },
@@ -658,13 +658,6 @@ detachedDiacritics = [
         "link": "https://en.wikipedia.org/wiki/%E1%BA%BC",
     },
     {
-        "name": "E with ring above",
-        "majuscule": ("E", "E̊"),
-        "minuscule": ("e", "e̊"),
-        "modifiers": ["ringAbove"],
-        "link": "https://en.wikipedia.org/wiki/Ring_(diacritic)",
-    },
-    {
         "name": "E with dot below",
         "majuscule": ("E", "Ẹ"),
         "minuscule": ("e", "ẹ"),
@@ -730,7 +723,7 @@ detachedDiacritics = [
     {
         "name": "H with dot below",
         "majuscule": ("H", "Ḥ"),
-        "minuscule": ("h", "ĥ"),
+        "minuscule": ("h", "ḥ"),
         "modifiers": ["dotBelow"],
         "link": "https://en.wikipedia.org/wiki/Dot_(diacritic)",
     },
@@ -1108,7 +1101,7 @@ detachedDiacritics = [
     {
         "name": "S with dot above",
         "majuscule": ("S", "Ṡ"),
-        "minuscule": ("s", "ṡ"), # TODO ẛ
+        "minuscule": ("s", "ṡ"), # TODO add "ẛ"
         "modifiers": ["dotAbove"],
         "link": "https://en.wikipedia.org/wiki/%E1%B9%A0",
     },
@@ -1248,7 +1241,7 @@ detachedDiacritics = [
     {
         "name": "W with grave",
         "majuscule": ("W", "Ẁ"),
-        "minuscule": ("w", "ẃ"),
+        "minuscule": ("w", "ẁ"),
         "modifiers": ["grave"],
         "link": "https://en.wikipedia.org/wiki/Grave_accent",
     },
