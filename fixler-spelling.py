@@ -56,8 +56,8 @@ moddableChars = {
 
     "Æ": "A*P/E",
     "æ": "A*/E",
-    "Ə": "SKHA*P",
-    "ə": "SKHA*",
+    "Ə": "SKWHA*P",
+    "ə": "SKWHA*",
 }
 
 minWraps = ("{>}{&", "}")
