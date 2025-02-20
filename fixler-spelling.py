@@ -158,7 +158,7 @@ tbd = [
     },
 ]
 
-connectedDiacritics = [
+entries = [
     {
         "name": "A with ogonek",
         "majuscule": ("A", "Ą"),
@@ -446,9 +446,6 @@ connectedDiacritics = [
         "modifiers": ["turned"],
         "link": "https://en.wikipedia.org/wiki/Claudian_letters", # TODO
     },
-]
-
-detachedDiacritics = [
     {
         "name": "A with acute",
         "majuscule": ("A", "Á"),
@@ -1387,9 +1384,6 @@ detachedDiacritics = [
         "modifiers": ["turned"],
         "link": "https://en.wiktionary.org/wiki/%E1%B4%82#Translingual",
     },
-]
-
-vietnameseExtras = [
     {
         "name": "Y with hook above",
         "majuscule": ("Y", "Ỷ"),
@@ -1656,9 +1650,6 @@ vietnameseExtras = [
         "modifiers": ["horn", "acute"],
         "link": "",
     },
-]
-
-newEntries = [
     {
         "name": "D with caron",
         "majuscule": ("D", "Ď"),
@@ -2258,20 +2249,13 @@ def createOutlines (entry):
 
 if __name__ == "__main__":
     outlines = {}
-    entrySets = [
-        connectedDiacritics,
-        detachedDiacritics,
-        vietnameseExtras,
-        newEntries,
-    ]
-    for entries in entrySets:
-        for entry in  entries:
-            minuscule, majuscule = createOutlines(entry)
-            if minuscule != None:
-                k, v = minuscule
-                outlines[k] = v
-            if majuscule != None:
-                k, v = majuscule
-                outlines[k] = v
+    for entry in entries:
+        minuscule, majuscule = createOutlines(entry)
+        if minuscule != None:
+            k, v = minuscule
+            outlines[k] = v
+        if majuscule != None:
+            k, v = majuscule
+            outlines[k] = v
     print(json.dumps(outlines, ensure_ascii=False, indent=0))
 
