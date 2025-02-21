@@ -73,7 +73,7 @@ modifiers = {
     "cedilla": "-G",
     "circumflex": "-RPG",
     "circumflexBelow": "-RPG/-RPG",
-    "comma": "-B",
+    "commaBelow": "-B",
     "diaeresis": "-FL",
     "diaeresisBelow": "-RG",
     "dotAbove": "-F",
@@ -1115,7 +1115,7 @@ entries = [
         "name": "S with comma below",
         "majuscule": ("S", "Ș"),
         "minuscule": ("s", "ș"),
-        "modifiers": ["comma"],
+        "modifiers": ["commaBelow"],
         "link": "https://en.wikipedia.org/wiki/%C8%98",
     },
     {
@@ -1136,7 +1136,7 @@ entries = [
         "name": "T with comma",
         "majuscule": ("T", "Ț"),
         "minuscule": ("t", "ț"),
-        "modifiers": ["comma"],
+        "modifiers": ["commaBelow"],
         "link": "https://en.wikipedia.org/wiki/%C8%9A",
     },
     {
