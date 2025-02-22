@@ -1,6 +1,6 @@
 from PIL import Image, ImageDraw, ImageFont
 
-from fixspell import entries
+from fixspell import modifiers
 
 
 defaultKeyOpts = {
@@ -37,9 +37,9 @@ def genKey (label, pressed=False, topRow=False, **kwargs):
     image = Image.new("RGB", (width, height), bgCol)
     draw = ImageDraw.Draw(image)
 
-    stroke = kwargs["outlineWidth"]
     border = kwargs["outerOutlineDown" if pressed else "outerOutlineUp"]
     rad = kwargs["outerRadius"]
+    stroke = kwargs["outlineWidth"]
     col = kwargs["dnColorDark" if pressed else "upColorDark"]
     dims = (0, 0, width - (stroke / 2), height - (stroke / 2))
     opts = {"fill":col, "outline":border, "width":stroke, "radius":rad}
@@ -91,7 +91,12 @@ def genDiacriticStrokeImage (s="", **kwargs):
     image.paste(L, (x + kw * 2, y))
     image.paste(G, (x + kw * 2, y + kh))
 
-    image.save("test.png", "PNG")
+    return image
+
+def genDiacriticImages ():
+    for modName, modStroke in modifiers.items():
+        image = genDiacriticStrokeImage(modStroke, **defaultKeyOpts)
+        image.save("images/" + modName + ".png", "PNG")
 
 readmeTop = """
 # Fixler Spelling for Plover
