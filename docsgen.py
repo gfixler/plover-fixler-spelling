@@ -1,4 +1,4 @@
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 from fixspell import modifiers
 
@@ -30,23 +30,25 @@ defaultKeyOpts = {
 }
 
 def genKey (label, pressed=False, topRow=False, **kwargs):
-    width = kwargs["keyWidth"]
-    height = kwargs["keyHeight"]
+    upResFactor = 8
+
+    width = kwargs["keyWidth"] * upResFactor
+    height = kwargs["keyHeight"] * upResFactor
     bgCol = kwargs["backgroundCol"]
 
     image = Image.new("RGB", (width, height), bgCol)
     draw = ImageDraw.Draw(image)
 
     border = kwargs["outerOutlineDown" if pressed else "outerOutlineUp"]
-    rad = kwargs["outerRadius"]
-    stroke = kwargs["outlineWidth"]
+    stroke = kwargs["outlineWidth"] * upResFactor
+    rad = kwargs["outerRadius"] * upResFactor
     col = kwargs["dnColorDark" if pressed else "upColorDark"]
     dims = (0, 0, width - (stroke / 2), height - (stroke / 2))
     opts = {"fill":col, "outline":border, "width":stroke, "radius":rad}
     draw.rounded_rectangle(dims, **opts)
 
-    draft = kwargs["draft"]
-    draftOffset = kwargs["draftOffset"]
+    draft = kwargs["draft"] * upResFactor
+    draftOffset = kwargs["draftOffset"] * upResFactor
 
     offset = draftOffset * (1 if topRow else -1)
     x = draft
@@ -54,19 +56,21 @@ def genKey (label, pressed=False, topRow=False, **kwargs):
     w = width - draft
     h = height - draft + offset
     border = kwargs["innerOutlineDown" if pressed else "innerOutlineUp"]
-    stroke = kwargs["outlineWidth"]
-    rad = kwargs["innerRadius"]
+    stroke = kwargs["outlineWidth"] * upResFactor
+    rad = kwargs["innerRadius"] * upResFactor
     col = kwargs["dnColorLight" if pressed else "upColorLight"]
     dims = (x, y, w - (stroke / 2), h - (stroke / 2))
     opts = {"fill":col, "outline":border, "width":stroke, "radius":rad}
     draw.rounded_rectangle(dims, **opts)
 
-    font = ImageFont.truetype('Arial', 16)
+    font = ImageFont.truetype('Arial', 14 * upResFactor)
     _, _, tw, th = draw.textbbox((0, 0), label, font)
     dims = ((width-tw) / 2, (height-th) / 2 + offset)
     draw.text(dims, label, font=font, fill="black")
 
-    return image
+    downRes = image.resize((image.width // upResFactor, image.height // upResFactor), resample=Image.LANCZOS)
+
+    return downRes
 
 
 def genDiacriticStrokeImage (s="", **kwargs):
