@@ -4,8 +4,6 @@ from fixspell import entries
 
 
 defaultKeyOpts = {
-    "backgroundCol": "#EEEEEE",
-
     "keyWidth": 57,
     "keyHeight": 57,
 
@@ -17,15 +15,18 @@ defaultKeyOpts = {
 
     "outlineWidth": 1,
 
+    "backgroundCol": "white",
+    "keysFrameCol": "#EEEEEE",
+
     "outerOutlineUp": "black",
     "outerOutlineDown": "black",
     "innerOutlineUp": "#BBBBBB",
     "innerOutlineDown": "#009900",
 
     "upColorDark": "#CCCCCC",
-    "upColorLight": "#FFFFFF",
+    "upColorLight": "#FCFCFC",
     "dnColorDark": "#00AA00",
-    "dnColorLight": "#22CC22",
+    "dnColorLight": "#46CD34",
 }
 
 def genKey (label, pressed=False, topRow=False, **kwargs):
