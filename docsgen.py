@@ -15,8 +15,11 @@ defaultKeyOpts = {
 
     "outlineWidth": 1,
 
+    "frameMargin": 5,
+    "frameRadius": 8,
+
     "backgroundCol": "white",
-    "keysFrameCol": "#EEEEEE",
+    "strokeFrameCol": "#EEEEEE",
 
     "outerOutlineUp": "black",
     "outerOutlineDown": "black",
@@ -34,7 +37,7 @@ def genKey (label, pressed=False, topRow=False, **kwargs):
 
     width = kwargs["keyWidth"] * upResFactor
     height = kwargs["keyHeight"] * upResFactor
-    bgCol = kwargs["backgroundCol"]
+    bgCol = kwargs["strokeFrameCol"]
 
     image = Image.new("RGB", (width, height), bgCol)
     draw = ImageDraw.Draw(image)
@@ -83,11 +86,23 @@ def genDiacriticStrokeImage (s="", **kwargs):
 
     kw = F.width
     kh = F.height
-    w = kw * 3
-    h = kw * 2
-    x = 0
-    y = 0
-    image = Image.new("RGB", (w, h))
+
+    margin = 8
+    w = kw * 3 + margin * 2
+    h = kw * 2 + margin * 2
+    x = margin
+    y = margin
+
+    bgCol = kwargs["backgroundCol"]
+    image = Image.new("RGB", (w, h), bgCol)
+    draw = ImageDraw.Draw(image)
+
+    rad = kwargs["frameRadius"]
+    col = kwargs["strokeFrameCol"]
+    dims = (0, 0, image.width, image.height)
+    opts = {"fill":col, "radius":rad}
+    draw.rounded_rectangle(dims, **opts)
+
     image.paste(F, (x, y))
     image.paste(R, (x, y + kw))
     image.paste(P, (x + kw, y))
