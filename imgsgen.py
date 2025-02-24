@@ -19,17 +19,17 @@ defaultKeyOpts = {
     "frameRadius": 8,
 
     "backgroundCol": "white",
-    "strokeFrameCol": "#EEEEEE",
+    "frameCol": "#EEEEEE",
 
-    "outerOutlineUp": "black",
-    "outerOutlineDown": "black",
-    "innerOutlineUp": "#BBBBBB",
-    "innerOutlineDown": "#009900",
+    "keyOutlineCol": "black",
 
-    "upColorDark": "#CCCCCC",
-    "upColorLight": "#FCFCFC",
-    "dnColorDark": "#00AA00",
-    "dnColorLight": "#46CD34",
+    "keyLightCol": "#FCFCFC",
+    "keyDarkCol": "#CCCCCC",
+    "keyRidgeCol": "#BBBBBB",
+
+    "modLightCol": "#46CD34",
+    "modDarkCol": "#00AA00",
+    "modRidgeCol": "#009900",
 }
 
 def genKey (label, pressed=False, topRow=False, **kwargs):
@@ -37,15 +37,15 @@ def genKey (label, pressed=False, topRow=False, **kwargs):
 
     width = kwargs["keyWidth"] * upResFactor
     height = kwargs["keyHeight"] * upResFactor
-    bgCol = kwargs["strokeFrameCol"]
+    bgCol = kwargs["frameCol"]
 
     image = Image.new("RGB", (width, height), bgCol)
     draw = ImageDraw.Draw(image)
 
-    border = kwargs["outerOutlineDown" if pressed else "outerOutlineUp"]
+    border = kwargs["keyOutlineCol"]
     stroke = kwargs["outlineWidth"] * upResFactor
     rad = kwargs["outerRadius"] * upResFactor
-    col = kwargs["dnColorDark" if pressed else "upColorDark"]
+    col = kwargs["modDarkCol" if pressed else "keyDarkCol"]
     dims = (0, 0, width - (stroke / 2), height - (stroke / 2))
     opts = {"fill":col, "outline":border, "width":stroke, "radius":rad}
     draw.rounded_rectangle(dims, **opts)
@@ -58,10 +58,10 @@ def genKey (label, pressed=False, topRow=False, **kwargs):
     y = draft + offset
     w = width - draft
     h = height - draft + offset
-    border = kwargs["innerOutlineDown" if pressed else "innerOutlineUp"]
+    border = kwargs["modRidgeCol" if pressed else "keyRidgeCol"]
     stroke = kwargs["outlineWidth"] * upResFactor
     rad = kwargs["innerRadius"] * upResFactor
-    col = kwargs["dnColorLight" if pressed else "upColorLight"]
+    col = kwargs["modLightCol" if pressed else "keyLightCol"]
     dims = (x, y, w - (stroke / 2), h - (stroke / 2))
     opts = {"fill":col, "outline":border, "width":stroke, "radius":rad}
     draw.rounded_rectangle(dims, **opts)
@@ -98,7 +98,7 @@ def genDiacriticStrokeImage (s="", **kwargs):
     draw = ImageDraw.Draw(image)
 
     rad = kwargs["frameRadius"]
-    col = kwargs["strokeFrameCol"]
+    col = kwargs["frameCol"]
     dims = (0, 0, image.width, image.height)
     opts = {"fill":col, "radius":rad}
     draw.rounded_rectangle(dims, **opts)
