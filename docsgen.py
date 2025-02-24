@@ -24,11 +24,10 @@ The following 6 keys are used to add diacritics.
 ## Adding Diacritics
 Add diacritics to letters by stroking a chord from the diacritic keys after stroking a letter chord.
 
-In general, the chord used is meant to visually resemble, the diacritic being added.
-
 NOTE: The chords are pre-built, and don't work with Plover's stroke history. This means you must use the chord specified for each letter in this system, before following up with a diacritic stroke. Currently, if you want to use a different stroke for a letter (e.g. STK instead of STKPW for z), you must change it in the python file. This limitation may be addressed at some point.
 
 ## Available Diacritics
+The chords are meant to resemble their diacritics, generally speaking.
 """
 
 def getEntriesWithModifier (modifier):
@@ -42,9 +41,16 @@ def generateDiacriticsSection ():
         print("|" + modifierName.capitalize() + "| |")
         chars = []
         for e in getEntriesWithModifier(modifierName):
-            maju = e["majuscule"][1] if e["majuscule"] else ""
-            minu = e["minuscule"][1] if e["minuscule"] else ""
-            chars += maju + minu
+            if e["majuscule"]:
+                if e["link"]:
+                    chars.append("[" + e["majuscule"][1] + "](" + e["link"] + ")")
+                else:
+                    chars.append(e["majuscule"][1])
+            if e["minuscule"]:
+                if e["link"]:
+                    chars.append("[" + e["minuscule"][1] + "](" + e["link"] + ")")
+                else:
+                    chars.append(e["minuscule"][1])
         charsStr = " ".join(chars)
         img = "![" + modifierName + "](images/" + modifierName + ".png)"
         print("|" + img + "|Used in: " + charsStr + "|")
