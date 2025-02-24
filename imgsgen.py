@@ -30,6 +30,10 @@ defaultKeyOpts = {
     "modLightCol": "#46CD34",
     "modDarkCol": "#00AA00",
     "modRidgeCol": "#009900",
+
+    "tweakLightCol": "#BF69EE",
+    "tweakDarkCol": "#A24ED1",
+    "tweakRidgeCol": "#9146BC",
 }
 
 def genKey (label, keyType="key", topRow=False, **kwargs):
@@ -85,12 +89,17 @@ def genDiacriticStrokeImage (stroke="", **kwargs):
     L = genKey("L", pressed("L"), True, **kwargs)
     G = genKey("G", pressed("G"), **kwargs)
 
+    pressed = lambda k: "tweak" if k in stroke else "key"
+    E = genKey("E", pressed("E"), ** kwargs)
+    U = genKey("U", pressed("U"), ** kwargs)
+
     kw = F.width
     kh = F.height
 
+    tweaked = "E" in stroke or "U" in stroke
     margin = 8
     w = kw * 3 + margin * 2
-    h = kw * 2 + margin * 2
+    h = kw * (4 if tweaked else 2) + margin * 2
     x = margin
     y = margin
 
@@ -110,6 +119,10 @@ def genDiacriticStrokeImage (stroke="", **kwargs):
     image.paste(B, (x + kw, y + kh))
     image.paste(L, (x + kw * 2, y))
     image.paste(G, (x + kw * 2, y + kh))
+
+    if "E" in stroke or "U" in stroke:
+        image.paste(E, (x, y + kh * 3))
+        image.paste(U, (x + kw, y + kh * 3))
 
     return image
 
