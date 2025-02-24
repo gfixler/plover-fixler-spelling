@@ -118,4 +118,6 @@ def genDiacriticImages ():
         image = genDiacriticStrokeImage(modStroke, **defaultKeyOpts)
         image.save("images/" + modName + ".png", "PNG")
 
+if __name__ == "__main__":
+    genDiacriticImages()
 
