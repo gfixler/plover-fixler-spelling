@@ -1,4 +1,4 @@
-from fixspell import modifiers
+from fixspell import entries, modifiers
 
 
 readmeTop = """
@@ -31,12 +31,25 @@ NOTE: The chords are pre-built, and don't work with Plover's stroke history. Thi
 ## Available Diacritics
 """
 
-def generateReadme ():
-    print(readmeTop)
+def getEntriesWithModifier (modifier):
+    search = lambda x: modifier in x["modifiers"]
+    return filter(search, entries)
+
+def generateDiacriticsSection ():
     print("|Pattern|Notes|")
     print("|-|-|")
-    for diacriticName, combiningMark in combiningMarks.items():
-        print("|" + diacriticName.capitalize() + "| |")
-        img = "![" + diacriticName + "](images/" + diacriticName + ".png)"
-        print("|" + img + "|" + diacriticName + "|")
+    for modifierName in modifiers:
+        print("|" + modifierName.capitalize() + "| |")
+        chars = []
+        for e in getEntriesWithModifier(modifierName):
+            maju = e["majuscule"][1] if e["majuscule"] else ""
+            minu = e["minuscule"][1] if e["minuscule"] else ""
+            chars += maju + minu
+        charsStr = " ".join(chars)
+        img = "![" + modifierName + "](images/" + modifierName + ".png)"
+        print("|" + img + "|Used in: " + charsStr + "|")
+
+def generateReadme ():
+    print(readmeTop)
+    generateDiacriticsSection()
 
