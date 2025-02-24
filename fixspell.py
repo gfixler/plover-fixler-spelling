@@ -85,7 +85,6 @@ modifiers = {
     "interpunct": "-FR",
     "lineBelow": "-BG",
     "macron": "-FP",
-    "macronBelow": "-FP/-FP",
     "ogonek": "-PBG", # "little tail"
     "ringAbove": "-FRPB",
     "ringBelow": "-FRPB/-FRPB",
@@ -95,7 +94,7 @@ modifiers = {
     "tildeBelow": "-FPBG/-FPBG",
 
     "turned": "-RL",
-    "inverted": "-RBG",
+#    "inverted": "-RBG",
     "reversed": "-LG",
 }
 
@@ -419,25 +418,11 @@ entries = [
         "link": "https://en.wikipedia.org/wiki/%C6%B3",
     },
     {
-        "name": "Schwa with cedilla",
-        "majuscule": ("Ə", "Ə̧"),
-        "minuscule": ("ə", "ə̧"),
-        "modifiers": ["cedilla"],
-        "link": "https://en.wikipedia.org/wiki/Cedilla",
-    },
-    {
         "name": "Reversed C", # TODO
         "majuscule": ("C", "Ↄ"),
         "minuscule": ("c", "ↄ"),
         "modifiers": ["reversed"],
         "link": "https://en.wikipedia.org/wiki/Claudian_letters", # TODO
-    },
-    {
-        "name": "Reversed C with cedilla",
-        "majuscule": ("C", "Ɔ̧"),
-        "minuscule": ("c", "ɔ̧"),
-        "modifiers": ["reversed", "cedilla"],
-        "link": "https://en.wikipedia.org/wiki/%C6%86%CC%A7",
     },
     {
         "name": "Turned F",
@@ -1570,7 +1555,7 @@ entries = [
         "name": "E with circumflex and dot below",
         "majuscule": ("E", "Ệ"),
         "minuscule": ("e", "ệ"),
-        "modifiers": ["circumflex", "dotAbove"],
+        "modifiers": ["circumflex", "dotBelow"],
         "link": "",
     },
     {
