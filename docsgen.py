@@ -14,7 +14,12 @@ A fingerspelling system for the Plover steno software
 
 ## Diacritic Keys
 The following 6 keys are used to add diacritics.
-![test](http://garyfixler.com/fixlerSpelling/board.png)
+
+```
+🅂🅃🄿🄷 🄾 🅵🅿🅻🅃🄳
+🅂🄺🅆🅁 🄾 🆁🅱🅶🅂🅉
+　　　🄰🄾 🄴🅄
+```
 
 ## Adding Diacritics
 Add diacritics to letters by stroking a chord from the diacritic keys after stroking a letter chord.
