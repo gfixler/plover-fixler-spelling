@@ -1375,6 +1375,8 @@ entries = [
         "minuscule": ("y", "ỷ"),
         "modifiers": ["hookAbove"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1EF6",
+        "minLink": "https://www.compart.com/en/unicode/U+1EF7",
     },
     {
         "name": "Y with dot below",
@@ -1382,6 +1384,8 @@ entries = [
         "minuscule": ("y", "ỵ"),
         "modifiers": ["dotBelow"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1EF4",
+        "minLink": "https://www.compart.com/en/unicode/U+1EF5",
     },
     {
         "name": "A with breve and hook above",
@@ -1389,6 +1393,8 @@ entries = [
         "minuscule": ("a", "ẳ"),
         "modifiers": ["breve", "hookAbove"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1EB2",
+        "minLink": "https://www.compart.com/en/unicode/U+1EB3",
     },
     {
         "name": "A with breve and tilde",
@@ -1396,6 +1402,8 @@ entries = [
         "minuscule": ("a", "ẵ"),
         "modifiers": ["breve", "tilde"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1EB4",
+        "minLink": "https://www.compart.com/en/unicode/U+1EB5",
     },
     {
         "name": "A with breve and grave",
@@ -1403,6 +1411,8 @@ entries = [
         "minuscule": ("a", "ằ"),
         "modifiers": ["breve", "grave"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1EB0",
+        "minLink": "https://www.compart.com/en/unicode/U+1EB1",
     },
     {
         "name": "A with breve and acute",
@@ -1410,6 +1420,8 @@ entries = [
         "minuscule": ("A", "ắ"),
         "modifiers": ["breve", "acute"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1EAE",
+        "minLink": "https://www.compart.com/en/unicode/U+1EAF",
     },
     {
         "name": "A with hook above",
@@ -1417,6 +1429,8 @@ entries = [
         "minuscule": ("a", "ả"),
         "modifiers": ["hookAbove"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1EA2",
+        "minLink": "https://www.compart.com/en/unicode/U+1EA3",
     },
     {
         "name": "A with dot below",
@@ -1424,6 +1438,8 @@ entries = [
         "minuscule": ("a", "ạ"),
         "modifiers": ["dotBelow"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1EA0",
+        "minLink": "https://www.compart.com/en/unicode/U+1EA1",
     },
     {
         "name": "A with breve and dot below",
@@ -1431,6 +1447,8 @@ entries = [
         "minuscule": ("a", "ặ"),
         "modifiers": ["breve", "dotBelow"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1EB6",
+        "minLink": "https://www.compart.com/en/unicode/U+1EB7",
     },
     {
         "name": "A with circumflex and dot below",
@@ -1438,6 +1456,8 @@ entries = [
         "minuscule": ("a", "ậ"),
         "modifiers": ["circumflex", "dotBelow"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1EAC",
+        "minLink": "https://www.compart.com/en/unicode/U+1EAD",
     },
     {
         "name": "A with circumflex and hook above",
@@ -1445,6 +1465,8 @@ entries = [
         "minuscule": ("a", "ẩ"),
         "modifiers": ["circumflex", "hookAbove"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1EA8",
+        "minLink": "https://www.compart.com/en/unicode/U+1EA9",
     },
     {
         "name": "A with circumflex and tilde",
@@ -1452,6 +1474,8 @@ entries = [
         "minuscule": ("a", "ẫ"),
         "modifiers": ["circumflex", "tilde"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1EAA",
+        "minLink": "https://www.compart.com/en/unicode/U+1EAB",
     },
     {
         "name": "A with circumflex and grave",
@@ -1459,6 +1483,8 @@ entries = [
         "minuscule": ("a", "ầ"),
         "modifiers": ["circumflex", "grave"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1EA6",
+        "minLink": "https://www.compart.com/en/unicode/U+1EA7",
     },
     {
         "name": "A with circumflex and acute",
@@ -1466,6 +1492,8 @@ entries = [
         "minuscule": ("a", "ấ"),
         "modifiers": ["circumflex", "acute"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1EA4",
+        "minLink": "https://www.compart.com/en/unicode/U+1EA5",
     },
     {
         "name": "O with hook above",
@@ -1473,6 +1501,8 @@ entries = [
         "minuscule": ("o", "ỏ"),
         "modifiers": ["hookAbove"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1ECE",
+        "minLink": "https://www.compart.com/en/unicode/U+1ECF",
     },
     {
         "name": "O with horn and dot below",
@@ -1480,6 +1510,8 @@ entries = [
         "minuscule": ("o", "ợ"),
         "modifiers": ["horn", "dotBelow"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1EE2",
+        "minLink": "https://www.compart.com/en/unicode/U+1EE3",
     },
     {
         "name": "O with circumflex and dot below",
@@ -1487,6 +1519,8 @@ entries = [
         "minuscule": ("o", "ộ"),
         "modifiers": ["circumflex", "dotBelow"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1ED8",
+        "minLink": "https://www.compart.com/en/unicode/U+1ED9",
     },
     {
         "name": "O with horn and hook above",
@@ -1494,6 +1528,8 @@ entries = [
         "minuscule": ("o", "ở"),
         "modifiers": ["horn", "hookAbove"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1EDE",
+        "minLink": "https://www.compart.com/en/unicode/U+1EDF",
     },
     {
         "name": "O with horn and tilde",
@@ -1501,6 +1537,8 @@ entries = [
         "minuscule": ("o", "ỡ"),
         "modifiers": ["horn", "tilde"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1EE0",
+        "minLink": "https://www.compart.com/en/unicode/U+1EE1",
     },
     {
         "name": "O with horn and grave",
@@ -1508,6 +1546,8 @@ entries = [
         "minuscule": ("o", "ờ"),
         "modifiers": ["horn", "grave"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1EDC",
+        "minLink": "https://www.compart.com/en/unicode/U+1EDD",
     },
     {
         "name": "O with horn and acute",
@@ -1515,6 +1555,8 @@ entries = [
         "minuscule": ("o", "ớ"),
         "modifiers": ["horn", "acute"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1EDA",
+        "minLink": "https://www.compart.com/en/unicode/U+1EDB",
     },
     {
         "name": "O with circumflex and hook above",
@@ -1522,6 +1564,8 @@ entries = [
         "minuscule": ("o", "ổ"),
         "modifiers": ["circumflex", "hookAbove"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1ED4",
+        "minLink": "https://www.compart.com/en/unicode/U+1ED5",
     },
     {
         "name": "O with circumflex and tilde",
@@ -1529,6 +1573,8 @@ entries = [
         "minuscule": ("o", "ỗ"),
         "modifiers": ["circumflex", "tilde"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1ED6",
+        "minLink": "https://www.compart.com/en/unicode/U+1ED7",
     },
     {
         "name": "O with circumflex and grave",
@@ -1536,6 +1582,8 @@ entries = [
         "minuscule": ("o", "ồ"),
         "modifiers": ["circumflex", "grave"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1ED2",
+        "minLink": "https://www.compart.com/en/unicode/U+1ED3",
     },
     {
         "name": "O with circumflex and acute",
@@ -1543,6 +1591,8 @@ entries = [
         "minuscule": ("o", "ố"),
         "modifiers": ["circumflex", "acute"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1ED0",
+        "minLink": "https://www.compart.com/en/unicode/U+1ED1",
     },
     {
         "name": "E with hook above",
@@ -1550,6 +1600,8 @@ entries = [
         "minuscule": ("e", "ẻ"),
         "modifiers": ["hookAbove"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1EBA",
+        "minLink": "https://www.compart.com/en/unicode/U+1EBB",
     },
     {
         "name": "E with circumflex and dot below",
@@ -1557,6 +1609,8 @@ entries = [
         "minuscule": ("e", "ệ"),
         "modifiers": ["circumflex", "dotBelow"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1EC6",
+        "minLink": "https://www.compart.com/en/unicode/U+1EC7",
     },
     {
         "name": "E with circumflex and hook above",
@@ -1564,6 +1618,8 @@ entries = [
         "minuscule": ("e", "ể"),
         "modifiers": ["circumflex", "hookAbove"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1EC2",
+        "minLink": "https://www.compart.com/en/unicode/U+1EC3",
     },
     {
         "name": "E with circumflex and tilde",
@@ -1571,6 +1627,8 @@ entries = [
         "minuscule": ("e", "ễ"),
         "modifiers": ["circumflex", "tilde"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1EC4",
+        "minLink": "https://www.compart.com/en/unicode/U+1EC5",
     },
     {
         "name": "E with circumflex and grave",
@@ -1578,6 +1636,8 @@ entries = [
         "minuscule": ("e", "ề"),
         "modifiers": ["circumflex", "grave"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1EC0",
+        "minLink": "https://www.compart.com/en/unicode/U+1EC1",
     },
     {
         "name": "E with circumflex and acute",
@@ -1585,6 +1645,8 @@ entries = [
         "minuscule": ("e", "ế"),
         "modifiers": ["circumflex", "acute"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1EBE",
+        "minLink": "https://www.compart.com/en/unicode/U+1EBF",
     },
     {
         "name": "I with hook above",
@@ -1592,6 +1654,8 @@ entries = [
         "minuscule": ("i", "ỉ"),
         "modifiers": ["hookAbove"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1EC8",
+        "minLink": "https://www.compart.com/en/unicode/U+1EC9",
     },
     {
         "name": "U with hook above",
@@ -1599,6 +1663,8 @@ entries = [
         "minuscule": ("u", "ủ"),
         "modifiers": ["hookAbove"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1EE6",
+        "minLink": "https://www.compart.com/en/unicode/U+1EE7",
     },
     {
         "name": "U with horn and dot below",
@@ -1606,6 +1672,8 @@ entries = [
         "minuscule": ("u", "ự"),
         "modifiers": ["horn", "dotBelow"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1EF0",
+        "minLink": "https://www.compart.com/en/unicode/U+1EF1",
     },
     {
         "name": "U with horn and hook above",
@@ -1613,6 +1681,8 @@ entries = [
         "minuscule": ("u", "ử"),
         "modifiers": ["horn", "hookAbove"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1EEC",
+        "minLink": "https://www.compart.com/en/unicode/U+1EED",
     },
     {
         "name": "U with horn and tilde",
@@ -1620,6 +1690,8 @@ entries = [
         "minuscule": ("u", "ữ"),
         "modifiers": ["horn", "tilde"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1EEE",
+        "minLink": "https://www.compart.com/en/unicode/U+1EEF",
     },
     {
         "name": "U with horn and grave",
@@ -1627,6 +1699,8 @@ entries = [
         "minuscule": ("u", "ừ"),
         "modifiers": ["horn", "grave"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1EEA",
+        "minLink": "https://www.compart.com/en/unicode/U+1EEB",
     },
     {
         "name": "U with horn and acute",
@@ -1634,6 +1708,8 @@ entries = [
         "minuscule": ("u", "ứ"),
         "modifiers": ["horn", "acute"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1EE8",
+        "minLink": "https://www.compart.com/en/unicode/U+1EE9",
     },
     {
         "name": "D with caron",
@@ -1641,6 +1717,8 @@ entries = [
         "minuscule": ("d", "ď"),
         "modifiers": ["caron"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+010E",
+        "minLink": "https://www.compart.com/en/unicode/U+010F",
     },
     {
         "name": "U with diaeresis and acute",
@@ -1648,6 +1726,8 @@ entries = [
         "minuscule": ("u", "ǘ"),
         "modifiers": ["diaeresis", "acute"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+01D7",
+        "minLink": "https://www.compart.com/en/unicode/U+01D8",
     },
     {
         "name": "U with diaeresis and macron",
@@ -1655,6 +1735,8 @@ entries = [
         "minuscule": ("u", "ǖ"),
         "modifiers": ["diaeresis", "macron"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+01D5",
+        "minLink": "https://www.compart.com/en/unicode/U+01D6",
     },
     {
         "name": "U with diaeresis and caron",
@@ -1662,6 +1744,8 @@ entries = [
         "minuscule": ("u", "ǚ"),
         "modifiers": ["diaeresis", "macron"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+01D9",
+        "minLink": "https://www.compart.com/en/unicode/U+01DA",
     },
     {
         "name": "U with diaeresis and grave",
@@ -1669,6 +1753,8 @@ entries = [
         "minuscule": ("u", "ǜ"),
         "modifiers": ["diaeresis", "grave"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+01DB",
+        "minLink": "https://www.compart.com/en/unicode/U+01DC",
     },
     {
         "name": "A with dot above and macron",
@@ -1676,6 +1762,8 @@ entries = [
         "minuscule": ("a", "ǡ"),
         "modifiers": ["dotAbove", "macron"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+01E0",
+        "minLink": "https://www.compart.com/en/unicode/U+01E1",
     },
     {
         "name": "O with ogonek and macron",
@@ -1683,6 +1771,8 @@ entries = [
         "minuscule": ("o", "ǭ"),
         "modifiers": ["ogonek", "macron"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+01EC",
+        "minLink": "https://www.compart.com/en/unicode/U+01ED",
     },
     {
         "name": "N with grave",
@@ -1690,6 +1780,8 @@ entries = [
         "minuscule": ("n", "ǹ"),
         "modifiers": ["grave"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+01F8",
+        "minLink": "https://www.compart.com/en/unicode/U+01F9",
     },
     {
         "name": "A with double grave",
@@ -1697,6 +1789,8 @@ entries = [
         "minuscule": ("a", "ȁ"),
         "modifiers": ["graveDoubled"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+0200",
+        "minLink": "https://www.compart.com/en/unicode/U+0201",
     },
     {
         "name": "A with inverted breve",
@@ -1704,6 +1798,8 @@ entries = [
         "minuscule": ("a", "ȃ"),
         "modifiers": ["breveInverted"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+0202",
+        "minLink": "https://www.compart.com/en/unicode/U+0203",
     },
     {
         "name": "E with double grave",
@@ -1711,6 +1807,8 @@ entries = [
         "minuscule": ("e", "ȅ"),
         "modifiers": ["graveDoubled"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+0204",
+        "minLink": "https://www.compart.com/en/unicode/U+0205",
     },
     {
         "name": "E with inverted breve",
@@ -1718,6 +1816,8 @@ entries = [
         "minuscule": ("e", "ȇ"),
         "modifiers": ["breveInverted"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+0206",
+        "minLink": "https://www.compart.com/en/unicode/U+0207",
     },
     {
         "name": "I with double grave",
@@ -1725,6 +1825,8 @@ entries = [
         "minuscule": ("i", "ȉ"),
         "modifiers": ["graveDoubled"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+0208",
+        "minLink": "https://www.compart.com/en/unicode/U+0209",
     },
     {
         "name": "I with inverted breve",
@@ -1732,6 +1834,8 @@ entries = [
         "minuscule": ("i", "ȋ"),
         "modifiers": ["breveInverted"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+020A",
+        "minLink": "https://www.compart.com/en/unicode/U+020B",
     },
     {
         "name": "O with double grave",
@@ -1739,6 +1843,8 @@ entries = [
         "minuscule": ("o", "ȍ"),
         "modifiers": ["graveDoubled"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+020C",
+        "minLink": "https://www.compart.com/en/unicode/U+020D",
     },
     {
         "name": "O with inverted breve",
@@ -1746,6 +1852,8 @@ entries = [
         "minuscule": ("o", "ȏ"),
         "modifiers": ["breveInverted"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+020E",
+        "minLink": "https://www.compart.com/en/unicode/U+020F",
     },
     {
         "name": "R with double grave",
@@ -1753,6 +1861,8 @@ entries = [
         "minuscule": ("r", "ȑ"),
         "modifiers": ["graveDoubled"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+0210",
+        "minLink": "https://www.compart.com/en/unicode/U+0211",
     },
     {
         "name": "R with inverted breve",
@@ -1760,6 +1870,8 @@ entries = [
         "minuscule": ("r", "ȓ"),
         "modifiers": ["breveInverted"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+0212",
+        "minLink": "https://www.compart.com/en/unicode/U+0213",
     },
     {
         "name": "U with double grave",
@@ -1767,6 +1879,8 @@ entries = [
         "minuscule": ("u", "ȕ"),
         "modifiers": ["graveDoubled"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+0214",
+        "minLink": "https://www.compart.com/en/unicode/U+0215",
     },
     {
         "name": "U with inverted breve",
@@ -1774,6 +1888,8 @@ entries = [
         "minuscule": ("u", "ȗ"),
         "modifiers": ["breveInverted"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+0216",
+        "minLink": "https://www.compart.com/en/unicode/U+0217",
     },
     {
         "name": "H with caron",
@@ -1781,6 +1897,8 @@ entries = [
         "minuscule": ("h", "ȟ"),
         "modifiers": ["caron"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+021E",
+        "minLink": "https://www.compart.com/en/unicode/U+021F",
     },
     {
         "name": "A with ring below",
@@ -1788,6 +1906,8 @@ entries = [
         "minuscule": ("a", "ḁ"),
         "modifiers": ["ringBelow"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E00",
+        "minLink": "https://www.compart.com/en/unicode/U+1E01",
     },
     {
         "name": "B with dot above",
@@ -1795,6 +1915,8 @@ entries = [
         "minuscule": ("b", "ḃ"),
         "modifiers": ["dotAbove"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E02",
+        "minLink": "https://www.compart.com/en/unicode/U+1E03",
     },
     {
         "name": "B with line below",
@@ -1802,6 +1924,8 @@ entries = [
         "minuscule": ("b", "ḇ"),
         "modifiers": ["lineBelow"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E06",
+        "minLink": "https://www.compart.com/en/unicode/U+1E07",
     },
     {
         "name": "C with cedilla and acute",
@@ -1809,6 +1933,8 @@ entries = [
         "minuscule": ("c", "ḉ"),
         "modifiers": ["cedilla","acute"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E08",
+        "minLink": "https://www.compart.com/en/unicode/U+1E09",
     },
     {
         "name": "D with dot above",
@@ -1816,6 +1942,8 @@ entries = [
         "minuscule": ("d", "ḋ"),
         "modifiers": ["dotAbove"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E0A",
+        "minLink": "https://www.compart.com/en/unicode/U+1E0B",
     },
     {
         "name": "D with line below",
@@ -1823,6 +1951,8 @@ entries = [
         "minuscule": ("d", "ḏ"),
         "modifiers": ["lineBelow"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E0E",
+        "minLink": "https://www.compart.com/en/unicode/U+1E0F",
     },
     {
         "name": "E with macron and grave accent",
@@ -1830,6 +1960,8 @@ entries = [
         "minuscule": ("e", "ḕ"),
         "modifiers": ["macron", "grave"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E14",
+        "minLink": "https://www.compart.com/en/unicode/U+1E15",
     },
     {
         "name": "E with macron and acute",
@@ -1837,6 +1969,8 @@ entries = [
         "minuscule": ("e", "ḗ"),
         "modifiers": ["macron", "acute"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E16",
+        "minLink": "https://www.compart.com/en/unicode/U+1E17",
     },
     {
         "name": "E with circumflex below",
@@ -1844,6 +1978,8 @@ entries = [
         "minuscule": ("e", "ḙ"),
         "modifiers": ["circumflexBelow"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E18",
+        "minLink": "https://www.compart.com/en/unicode/U+1E19",
     },
     {
         "name": "E with tilde below",
@@ -1851,6 +1987,8 @@ entries = [
         "minuscule": ("e", "ḛ"),
         "modifiers": ["tildeBelow"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E1A",
+        "minLink": "https://www.compart.com/en/unicode/U+1E1B",
     },
     {
         "name": "E with cedilla and breve",
@@ -1858,6 +1996,8 @@ entries = [
         "minuscule": ("e", "ḝ"),
         "modifiers": ["cedilla", "breve"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E1C",
+        "minLink": "https://www.compart.com/en/unicode/U+1E1D",
     },
     {
         "name": "F with dot to above",
@@ -1865,6 +2005,8 @@ entries = [
         "minuscule": ("f", "ḟ"),
         "modifiers": ["dotAbove"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E1E",
+        "minLink": "https://www.compart.com/en/unicode/U+1E1F",
     },
     {
         "name": "G with macron",
@@ -1872,6 +2014,8 @@ entries = [
         "minuscule": ("g", "ḡ"),
         "modifiers": ["macron"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E20",
+        "minLink": "https://www.compart.com/en/unicode/U+1E21",
     },
     {
         "name": "H with dot above",
@@ -1879,6 +2023,8 @@ entries = [
         "minuscule": ("h", "ḣ"),
         "modifiers": ["dotAbove"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E22",
+        "minLink": "https://www.compart.com/en/unicode/U+1E23",
     },
     {
         "name": "H with diaeresis",
@@ -1886,6 +2032,8 @@ entries = [
         "minuscule": ("h", "ḧ"),
         "modifiers": ["diaeresis"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E26",
+        "minLink": "https://www.compart.com/en/unicode/U+1E27",
     },
     {
         "name": "H with cedilla",
@@ -1893,6 +2041,8 @@ entries = [
         "minuscule": ("h", "ḩ"),
         "modifiers": ["cedilla"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E28",
+        "minLink": "https://www.compart.com/en/unicode/U+1E29",
     },
     {
         "name": "H with breve below",
@@ -1900,6 +2050,8 @@ entries = [
         "minuscule": ("h", "ḫ"),
         "modifiers": ["breveBelow"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E2A",
+        "minLink": "https://www.compart.com/en/unicode/U+1E2B",
     },
     {
         "name": "I with tilde below",
@@ -1907,6 +2059,8 @@ entries = [
         "minuscule": ("I", "ḭ"),
         "modifiers": ["tildeBelow"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E2C",
+        "minLink": "https://www.compart.com/en/unicode/U+1E2D",
     },
     {
         "name": "I with diaeresis and acute",
@@ -1914,6 +2068,8 @@ entries = [
         "minuscule": ("i", "ḯ"),
         "modifiers": ["diaeresis", "acute"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E2E",
+        "minLink": "https://www.compart.com/en/unicode/U+1E2F",
     },
     {
         "name": "K with acute",
@@ -1921,6 +2077,8 @@ entries = [
         "minuscule": ("k", "ḱ"),
         "modifiers": ["acute"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E30",
+        "minLink": "https://www.compart.com/en/unicode/U+1E31",
     },
     {
         "name": "K with dot below",
@@ -1928,6 +2086,8 @@ entries = [
         "minuscule": ("k", "ḳ"),
         "modifiers": ["dotBelow"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E32",
+        "minLink": "https://www.compart.com/en/unicode/U+1E33",
     },
     {
         "name": "K with line below",
@@ -1935,6 +2095,8 @@ entries = [
         "minuscule": ("k", "ḵ"),
         "modifiers": ["lineBelow"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E34",
+        "minLink": "https://www.compart.com/en/unicode/U+1E35",
     },
     {
         "name": "L with dot below and macron",
@@ -1942,6 +2104,8 @@ entries = [
         "minuscule": ("l", "ḹ"),
         "modifiers": ["dotBelow", "macron"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E38",
+        "minLink": "https://www.compart.com/en/unicode/U+1E39",
     },
     {
         "name": "L with line below",
@@ -1949,6 +2113,8 @@ entries = [
         "minuscule": ("l", "ḻ"),
         "modifiers": ["lineBelow"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E3A",
+        "minLink": "https://www.compart.com/en/unicode/U+1E3B",
     },
     {
         "name": "M with acute",
@@ -1956,6 +2122,8 @@ entries = [
         "minuscule": ("m", "ḿ"),
         "modifiers": ["acute"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E3E",
+        "minLink": "https://www.compart.com/en/unicode/U+1E3F",
     },
     {
         "name": "M with dot above",
@@ -1963,6 +2131,8 @@ entries = [
         "minuscule": ("m", "ṁ"),
         "modifiers": ["dotAbove"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E40",
+        "minLink": "https://www.compart.com/en/unicode/U+1E41",
     },
     {
         "name": "M with dot below",
@@ -1970,6 +2140,8 @@ entries = [
         "minuscule": ("m", "ṃ"),
         "modifiers": ["dotBelow"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E42",
+        "minLink": "https://www.compart.com/en/unicode/U+1E43",
     },
     {
         "name": "N with dot below",
@@ -1977,6 +2149,8 @@ entries = [
         "minuscule": ("n", "ṇ"),
         "modifiers": ["dotBelow"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E46",
+        "minLink": "https://www.compart.com/en/unicode/U+1E47",
     },
     {
         "name": "N with line below",
@@ -1984,6 +2158,8 @@ entries = [
         "minuscule": ("n", "ṉ"),
         "modifiers": ["lineBelow"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E48",
+        "minLink": "https://www.compart.com/en/unicode/U+1E49",
     },
     {
         "name": "O with tilde and acute",
@@ -1991,6 +2167,8 @@ entries = [
         "minuscule": ("o", "ṍ"),
         "modifiers": ["tilde", "acute"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E4C",
+        "minLink": "https://www.compart.com/en/unicode/U+1E4D",
     },
     {
         "name": "O with tilde and diaeresis",
@@ -1998,6 +2176,8 @@ entries = [
         "minuscule": ("o", "ṏ"),
         "modifiers": ["tilde", "diaeresis"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E4E",
+        "minLink": "https://www.compart.com/en/unicode/U+1E4F",
     },
     {
         "name": "O with macron and grave",
@@ -2005,6 +2185,8 @@ entries = [
         "minuscule": ("o", "ṑ"),
         "modifiers": ["macron", "grave"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E50",
+        "minLink": "https://www.compart.com/en/unicode/U+1E51",
     },
     {
         "name": "O with macron and acute",
@@ -2012,6 +2194,8 @@ entries = [
         "minuscule": ("o", "ṓ"),
         "modifiers": ["macron", "acute"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E52",
+        "minLink": "https://www.compart.com/en/unicode/U+1E53",
     },
     {
         "name": "P with acute",
@@ -2019,6 +2203,8 @@ entries = [
         "minuscule": ("p", "ṕ"),
         "modifiers": ["acute"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E54",
+        "minLink": "https://www.compart.com/en/unicode/U+1E55",
     },
     {
         "name": "P with dot above",
@@ -2026,6 +2212,8 @@ entries = [
         "minuscule": ("p", "ṗ"),
         "modifiers": ["dotAbove"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E56",
+        "minLink": "https://www.compart.com/en/unicode/U+1E57",
     },
     {
         "name": "R with dot above",
@@ -2033,6 +2221,8 @@ entries = [
         "minuscule": ("r", "ṙ"),
         "modifiers": ["dotAbove"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E58",
+        "minLink": "https://www.compart.com/en/unicode/U+1E59",
     },
     {
         "name": "R with dot below and macron",
@@ -2040,6 +2230,8 @@ entries = [
         "minuscule": ("r", "ṝ"),
         "modifiers": ["dotBelow", "macron"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E5C",
+        "minLink": "https://www.compart.com/en/unicode/U+1E5D",
     },
     {
         "name": "R with line below",
@@ -2047,6 +2239,8 @@ entries = [
         "minuscule": ("r", "ṟ"),
         "modifiers": ["lineBelow"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E5E",
+        "minLink": "https://www.compart.com/en/unicode/U+1E5F",
     },
     {
         "name": "S with dot below",
@@ -2054,6 +2248,8 @@ entries = [
         "minuscule": ("s", "ṣ"),
         "modifiers": ["dotBelow"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E62",
+        "minLink": "https://www.compart.com/en/unicode/U+1E63",
     },
     {
         "name": "S with acute and dot above",
@@ -2061,6 +2257,8 @@ entries = [
         "minuscule": ("s", "ṥ"),
         "modifiers": ["acute", "dotAbove"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E64",
+        "minLink": "https://www.compart.com/en/unicode/U+1E65",
     },
     {
         "name": "S with caron and dot above",
@@ -2068,6 +2266,8 @@ entries = [
         "minuscule": ("s", "ṧ"),
         "modifiers": ["caron", "dotAbove"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E66",
+        "minLink": "https://www.compart.com/en/unicode/U+1E67",
     },
     {
         "name": "S with dot below and dot above",
@@ -2075,6 +2275,8 @@ entries = [
         "minuscule": ("s", "ṩ"),
         "modifiers": ["dotBelow", "dotAbove"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E68",
+        "minLink": "https://www.compart.com/en/unicode/U+1E69",
     },
     {
         "name": "T with dot above",
@@ -2082,6 +2284,8 @@ entries = [
         "minuscule": ("t", "ṫ"),
         "modifiers": ["dotAbove"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E6A",
+        "minLink": "https://www.compart.com/en/unicode/U+1E6B",
     },
     {
         "name": "T with line below",
@@ -2089,6 +2293,8 @@ entries = [
         "minuscule": ("t", "ṯ"),
         "modifiers": ["lineBelow"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E6E",
+        "minLink": "https://www.compart.com/en/unicode/U+1E6F",
     },
     {
         "name": "U with diaeresis below",
@@ -2096,6 +2302,8 @@ entries = [
         "minuscule": ("u", "ṳ"),
         "modifiers": ["diaeresisBelow"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E72",
+        "minLink": "https://www.compart.com/en/unicode/U+1E73",
     },
     {
         "name": "U with tilde below",
@@ -2103,6 +2311,8 @@ entries = [
         "minuscule": ("u", "ṵ"),
         "modifiers": ["tildeBelow"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E74",
+        "minLink": "https://www.compart.com/en/unicode/U+1E75",
     },
     {
         "name": "U with circumflex below",
@@ -2110,6 +2320,8 @@ entries = [
         "minuscule": ("u", "ṷ"),
         "modifiers": ["circumflexBelow"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E76",
+        "minLink": "https://www.compart.com/en/unicode/U+1E77",
     },
     {
         "name": "U with tilde and acute",
@@ -2117,6 +2329,8 @@ entries = [
         "minuscule": ("u", "ṹ"),
         "modifiers": ["tilde", "acute"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E78",
+        "minLink": "https://www.compart.com/en/unicode/U+1E79",
     },
     {
         "name": "U with macron and diaeresis",
@@ -2124,6 +2338,8 @@ entries = [
         "minuscule": ("u", "ṻ"),
         "modifiers": ["macron", "diaeresis"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E7A",
+        "minLink": "https://www.compart.com/en/unicode/U+1E7B",
     },
     {
         "name": "V with tilde",
@@ -2131,6 +2347,8 @@ entries = [
         "minuscule": ("v", "ṽ"),
         "modifiers": ["tilde"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E7C",
+        "minLink": "https://www.compart.com/en/unicode/U+1E7D",
     },
     {
         "name": "V with dot below",
@@ -2138,6 +2356,8 @@ entries = [
         "minuscule": ("v", "ṿ"),
         "modifiers": ["dotBelow"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E7E",
+        "minLink": "https://www.compart.com/en/unicode/U+1E7F",
     },
     {
         "name": "W with dot above",
@@ -2145,6 +2365,8 @@ entries = [
         "minuscule": ("w", "ẇ"),
         "modifiers": ["dotAbove"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E86",
+        "minLink": "https://www.compart.com/en/unicode/U+1E87",
     },
     {
         "name": "W with dot below",
@@ -2152,6 +2374,8 @@ entries = [
         "minuscule": ("w", "ẉ"),
         "modifiers": ["dotBelow"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E88",
+        "minLink": "https://www.compart.com/en/unicode/U+1E89",
     },
     {
         "name": "X with diaeresis",
@@ -2159,6 +2383,8 @@ entries = [
         "minuscule": ("x", "ẍ"),
         "modifiers": ["diaeresis"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E8C",
+        "minLink": "https://www.compart.com/en/unicode/U+1E8D",
     },
     {
         "name": "Y with dot above",
@@ -2166,6 +2392,8 @@ entries = [
         "minuscule": ("y", "ẏ"),
         "modifiers": ["dotAbove"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E8E",
+        "minLink": "https://www.compart.com/en/unicode/U+1E8F",
     },
     {
         "name": "Z with circumflex",
@@ -2173,6 +2401,8 @@ entries = [
         "minuscule": ("z", "ẑ"),
         "modifiers": ["circumflex"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E90",
+        "minLink": "https://www.compart.com/en/unicode/U+1E91",
     },
     {
         "name": "Z with line below",
@@ -2180,6 +2410,8 @@ entries = [
         "minuscule": ("z", "ẕ"),
         "modifiers": ["lineBelow"],
         "link": "",
+        "majLink": "https://www.compart.com/en/unicode/U+1E94",
+        "minLink": "https://www.compart.com/en/unicode/U+1E95",
     },
     {
         "name": "H with line below",
@@ -2187,6 +2419,7 @@ entries = [
         "minuscule": ("h", "ẖ"),
         "modifiers": ["lineBelow"],
         "link": "",
+        "minLink": "https://www.compart.com/en/unicode/U+1E96",
     },
     {
         "name": "T with diaeresis",
@@ -2194,6 +2427,7 @@ entries = [
         "minuscule": ("t", "ẗ"),
         "modifiers": ["diaeresis"],
         "link": "",
+        "minLink": "https://www.compart.com/en/unicode/U+1E97",
     },
     {
         "name": "W with ring above",
@@ -2201,6 +2435,7 @@ entries = [
         "minuscule": ("w", "ẘ"),
         "modifiers": ["ringAbove"],
         "link": "",
+        "minLink": "https://www.compart.com/en/unicode/U+1E98",
     },
     {
         "name": "Y with ring above",
@@ -2208,13 +2443,15 @@ entries = [
         "minuscule": ("y", "ẙ"),
         "modifiers": ["ringAbove"],
         "link": "",
+        "minLink": "https://www.compart.com/en/unicode/U+1E99",
     },
     {
         "name": "J with caron",
-        "majuscule": ("J", "J̌"),
+        "majuscule": None,
         "minuscule": ("j", "ǰ"),
         "modifiers": ["caron"],
         "link": "",
+        "minLink": "https://www.compart.com/en/unicode/U+01F0",
     },
 ]
 
