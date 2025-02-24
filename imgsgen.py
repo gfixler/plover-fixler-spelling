@@ -32,7 +32,7 @@ defaultKeyOpts = {
     "modRidgeCol": "#009900",
 }
 
-def genKey (label, pressed=False, topRow=False, **kwargs):
+def genKey (label, keyType="key", topRow=False, **kwargs):
     upResFactor = 8
 
     width = kwargs["keyWidth"] * upResFactor
@@ -45,7 +45,7 @@ def genKey (label, pressed=False, topRow=False, **kwargs):
     border = kwargs["keyOutlineCol"]
     stroke = kwargs["outlineWidth"] * upResFactor
     rad = kwargs["outerRadius"] * upResFactor
-    col = kwargs["modDarkCol" if pressed else "keyDarkCol"]
+    col = kwargs[keyType + "DarkCol"]
     dims = (0, 0, width - (stroke / 2), height - (stroke / 2))
     opts = {"fill":col, "outline":border, "width":stroke, "radius":rad}
     draw.rounded_rectangle(dims, **opts)
@@ -58,10 +58,10 @@ def genKey (label, pressed=False, topRow=False, **kwargs):
     y = draft + offset
     w = width - draft
     h = height - draft + offset
-    border = kwargs["modRidgeCol" if pressed else "keyRidgeCol"]
+    border = kwargs[keyType + "RidgeCol"]
     stroke = kwargs["outlineWidth"] * upResFactor
     rad = kwargs["innerRadius"] * upResFactor
-    col = kwargs["modLightCol" if pressed else "keyLightCol"]
+    col = kwargs[keyType + "LightCol"]
     dims = (x, y, w - (stroke / 2), h - (stroke / 2))
     opts = {"fill":col, "outline":border, "width":stroke, "radius":rad}
     draw.rounded_rectangle(dims, **opts)
@@ -76,13 +76,14 @@ def genKey (label, pressed=False, topRow=False, **kwargs):
     return downRes
 
 
-def genDiacriticStrokeImage (s="", **kwargs):
-    F = genKey("F", "F" in s, True, **kwargs)
-    R = genKey("R", "R" in s, **kwargs)
-    P = genKey("P", "P" in s, True, **kwargs)
-    B = genKey("B", "B" in s, **kwargs)
-    L = genKey("L", "L" in s, True, **kwargs)
-    G = genKey("G", "G" in s, **kwargs)
+def genDiacriticStrokeImage (stroke="", **kwargs):
+    pressed = lambda k: "mod" if k in stroke else "key"
+    F = genKey("F", pressed("F"), True, **kwargs)
+    R = genKey("R", pressed("R"), **kwargs)
+    P = genKey("P", pressed("P"), True, **kwargs)
+    B = genKey("B", pressed("B"), **kwargs)
+    L = genKey("L", pressed("L"), True, **kwargs)
+    G = genKey("G", pressed("G"), **kwargs)
 
     kw = F.width
     kh = F.height
