@@ -71,6 +71,15 @@ def generateDiacriticsSection ():
 
 def generateReadme ():
     print(readmeTitle)
+    charCount = 0
+    for entry in entries:
+        if "minuscule" in entry:
+            if entry["minuscule"]:
+                charCount += 1
+        if "majuscule" in entry:
+            if entry["majuscule"]:
+                charCount += 1
+    print("This library currently provides quick access to " + str(charCount) + " characters.")
     print(readmeGoals)
     print(readmeSections)
     print(readmeAddingModifiers)
