@@ -45,6 +45,8 @@ def getEntriesWithModifier (modifier):
     search = lambda x: modifier in x["modifiers"]
     return filter(search, entries)
 
+unicodeCodePtURL = "https://www.compart.com/en/unicode/"
+
 def generateDiacriticsSection ():
     print("|Pattern|Notes|")
     print("|-|-|")
@@ -52,16 +54,17 @@ def generateDiacriticsSection ():
         print("|" + modifierName.capitalize() + "| |")
         chars = []
         for e in getEntriesWithModifier(modifierName):
-            if e["majuscule"]:
-                if e["link"]:
-                    chars.append("[" + e["majuscule"][1] + "](" + e["link"] + ")")
-                else:
-                    chars.append(e["majuscule"][1])
-            if e["minuscule"]:
-                if e["link"]:
-                    chars.append("[" + e["minuscule"][1] + "](" + e["link"] + ")")
-                else:
-                    chars.append(e["minuscule"][1])
+            for scule in ["min", "maj"]:
+                if e[scule + "uscule"]:
+                    l = ""
+                    r = ""
+                    if (scule + "CodePt") in e:
+                        l = "["
+                        r = "](" + unicodeCodePtURL + e[scule + "CodePt"] + ")"
+                    elif e["link"]:
+                        l = "["
+                        r = "](" + e["link"] + ")"
+                    chars.append(l + e[scule + "uscule"][1] + r)
         charsStr = " ".join(chars)
         img = "![" + modifierName + "](images/" + modifierName + ".png)"
         print("|" + img + "|Used in: " + charsStr + "|")
