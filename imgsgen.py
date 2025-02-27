@@ -127,8 +127,8 @@ def genDiacriticStrokeImage (stroke="", **kwargs):
     return image
 
 def genDiacriticImages ():
-    for modName, modStroke in modifiers.items():
-        image = genDiacriticStrokeImage(modStroke, **defaultKeyOpts)
+    for modName, modData in modifiers.items():
+        image = genDiacriticStrokeImage(modData["outline"], **defaultKeyOpts)
         image.save("images/" + modName + ".png", "PNG")
 
 if __name__ == "__main__":

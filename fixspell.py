@@ -64,38 +64,162 @@ minWraps = ("{>}{&", "}")
 majWraps = ("{-|}{&", "}")
 
 modifiers = {
-    "acute": "-RP",
-    "acuteDoubled": "ERP",
-    "breve": "-FRBLG",
-    "breveBelow": "UFRBLG",
-    "breveInverted": "-FRPLG",
-    "caron": "-FBL",
-    "cedilla": "-G",
-    "circumflex": "-RPG",
-    "circumflexBelow": "URPG",
-    "commaBelow": "-B",
-    "diaeresis": "-FL",
-    "diaeresisBelow": "-RG",
-    "dotAbove": "-F",
-    "dotBelow": "-R",
-    "grave": "-FB",
-    "graveDoubled": "EFB",
-    "hookAbove": "-FRP",
-    "horn": "-BLG",
-    "interpunct": "-FR",
-    "lineBelow": "-BG",
-    "macron": "-FP",
-    "ogonek": "-PBG", # "little tail"
-    "ringAbove": "-FRPB",
-    "ringBelow": "UFRPB",
-    "stroke": "-RB",
-    "slash": "-BL",
-    "tilde": "-FPBG",
-    "tildeBelow": "UFPBG",
+    "acute": {
+        "outline": "-RP",
+        "name": "Acute",
+        "docs": "",
+    },
+    "acuteDoubled": {
+        "outline": "ERP",
+        "name": "Double Acute",
+        "docs": "",
+    },
+    "breve": {
+        "outline": "-FRBLG",
+        "name": "Breve",
+        "docs": "",
+    },
+    "breveBelow": {
+        "outline": "UFRBLG",
+        "name": "Breve Below",
+        "docs": "",
+    },
+    "breveInverted": {
+        "outline": "-FRPLG",
+        "name": "Breve Inverted",
+        "docs": "",
+    },
+    "caron": {
+        "outline": "-FBL",
+        "name": "Caron",
+        "docs": "",
+    },
+    "cedilla": {
+        "outline": "-G",
+        "name": "Cedilla",
+        "docs": "",
+    },
+    "circumflex": {
+        "outline": "-RPG",
+        "name": "Circumflex",
+        "docs": "",
+    },
+    "circumflexBelow": {
+        "outline": "URPG",
+        "name": "Circumflex Below",
+        "docs": "",
+    },
+    "commaBelow": {
+        "outline": "-B",
+        "name": "Comma Below",
+        "docs": "",
+    },
+    "diaeresis": {
+        "outline": "-FL",
+        "name": "Diaeresis",
+        "docs": "",
+    },
+    "diaeresisBelow": {
+        "outline": "-RG",
+        "name": "Diaeresis Below",
+        "docs": "",
+    },
+    "dotAbove": {
+        "outline": "-F",
+        "name": "Dot Above",
+        "docs": "",
+    },
+    "dotBelow": {
+        "outline": "-R",
+        "name": "Dot Below",
+        "docs": "",
+    },
+    "grave": {
+        "outline": "-FB",
+        "name": "Grave",
+        "docs": "",
+    },
+    "graveDoubled": {
+        "outline": "EFB",
+        "name": "Double Grave",
+        "docs": "",
+    },
+    "hookAbove": {
+        "outline": "-FRP",
+        "name": "Hook Above",
+        "docs": "",
+    },
+    "horn": {
+        "outline": "-BLG",
+        "name": "Horn",
+        "docs": "",
+    },
+    "interpunct": {
+        "outline": "-FR",
+        "name": "Interpunct",
+        "docs": "",
+    },
+    "lineBelow": {
+        "outline": "-BG",
+        "name": "Line Below",
+        "docs": "",
+    },
+    "macron": {
+        "outline": "-FP",
+        "name": "Macron",
+        "docs": "",
+    },
+    "ogonek": {
+        "outline": "-PBG", # "little tail"
+        "name": "Ogonek",
+        "docs": "",
+    },
+    "ringAbove": {
+        "outline": "-FRPB",
+        "name": "Ring Above",
+        "docs": "",
+    },
+    "ringBelow": {
+        "outline": "UFRPB",
+        "name": "Ring Below",
+        "docs": "",
+    },
+    "stroke": {
+        "outline": "-RB",
+        "name": "Stroke",
+        "docs": "",
+    },
+    "slash": {
+        "outline": "-BL",
+        "name": "Slash",
+        "docs": "",
+    },
+    "tilde": {
+        "outline": "-FPBG",
+        "name": "Tilde",
+        "docs": "",
+    },
+    "tildeBelow": {
+        "outline": "UFPBG",
+        "name": "Tilde Below",
+        "docs": "",
+    },
 
-    "turned": "-RL",
-#    "inverted": "-RBG",
-    "reversed": "-LG",
+    "turned": {
+        "outline": "-RL",
+        "name": "Turned/Rotated",
+        "docs": "",
+    },
+   # "inverted": {
+   #      "outline": "-RBG",
+   #      "name": "Inverted/Flipped",
+   #      "docs": "",
+   #  },
+    "reversed": {
+        "outline": "-LG",
+        "name": "Reversed",
+        "docs": "",
+    },
 }
 
 tbd = [
@@ -2464,7 +2588,7 @@ def buildModdedChar (srcDestChars, modStrokes, wraps):
     return ("/".join(strokes), wrapL + destChar + wrapR)
 
 def createOutlines (entry):
-    modStrokes = list(map(lambda x: modifiers[x], entry["modifiers"]))
+    modStrokes = list(map(lambda x: modifiers[x]["outline"], entry["modifiers"]))
     minuscule = buildModdedChar(entry["minuscule"], modStrokes, minWraps)
     majuscule = buildModdedChar(entry["majuscule"], modStrokes, majWraps)
     return (minuscule, majuscule)
