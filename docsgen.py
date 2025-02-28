@@ -50,10 +50,12 @@ unicodeCodePtURL = "https://www.compart.com/en/unicode/"
 def generateDiacriticsSection ():
     print("|Pattern|Notes|")
     print("|-|-|")
-    for modifierName in modifiers:
-        print("|" + modifierName.capitalize() + "| |")
+    for name, data in modifiers.items():
+        prettyName = data["name"]
+        info = data["docs"]
+        print("|" + prettyName + "| |")
         chars = []
-        for e in getEntriesWithModifier(modifierName):
+        for e in getEntriesWithModifier(name):
             for scule in ["min", "maj"]:
                 if e[scule + "uscule"]:
                     l = ""
@@ -66,8 +68,8 @@ def generateDiacriticsSection ():
                         r = "](" + e["link"] + ")"
                     chars.append(l + e[scule + "uscule"][1] + r)
         charsStr = " ".join(chars)
-        img = "![" + modifierName + "](images/" + modifierName + ".png)"
-        print("|" + img + "|Used in: " + charsStr + "|")
+        img = "![" + name + "](images/" + name + ".png)"
+        print("|" + img + "|" + info + "<BR><BR>Used in: " + charsStr + "|")
 
 def generateReadme ():
     print(readmeTitle)
