@@ -177,7 +177,7 @@ modifiers = {
     "ogonek": {
         "outline": "-PBG", # "little tail"
         "name": "Ogonek",
-        "docs": "The ogonek, meaning 'little tail' in Polish, hangs of the bottom of its character, curling down and to the right.",
+        "docs": "The ogonek, meaning 'little tail' in Polish, hangs off the bottom of its character, curling down and to the right.",
     },
     "ringAbove": {
         "outline": "-FRPB",
