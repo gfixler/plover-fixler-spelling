@@ -8,11 +8,11 @@ A fingerspelling system for the [Plover](https://www.openstenoproject.org/plover
 
 readmeGoals = """
 ## Design Goals
-* allow writing all Latin alphabet letters, upper and lowercase
-* provide system for most precomposed Latin letters with diacritics
-* provide system for many common combining characters
-* allow other symbols, ligatures, etc., on a case-by-case basis
-* absorb some other alphabets (Greek, NATO, Braille, Morse, etc.)
+* provide upper and lowercase letters, with some extras, like Æ/æ, and Ə/ə
+* systematize writing most precomposed Latin letters with diacritics
+* extend system to allow composing in combining characters
+* add in other symbols, ligatures, etc., on a case-by-case basis
+* include some similar alphabets (NATO, Braille, Morse, Greek, etc.)
 """
 
 readmeSections = """
@@ -29,14 +29,29 @@ readmeAddingModifiers = """
 ## Adding Diacritics/Modifiers
 Modify base letters by stroking a diacritic or modifier outline immediately after a base letter.
 
-For example, to get á, stroke A* for "a", then the acute modifier outline to  convert it.
+For example, to get á, stroke A* for "a", then the acute modifier outline to convert it.
 
-NOTE: The outlines are [currently] pre-built, and don't take into account character output. This means you must use the chord specified for each letter in this system, before following up with a diacritic stroke. Currently, if you want to use a different stroke for a letter (like STK instead of STKPW for z), you must change it in the python file.
+NOTE: Modifiers are currently precomposed with their letters. The system doesn't look back at previous output, meaning you must stroke the letter as defined, followed by any modifiers. This in turn means you must use this system's strokes for each letter, e.g. STKPW for "z", and not STK. Currently, the only way to fix this is to modify the python file, and regenerate the dictionary.
+""" # TODO allow adding character overrides in a user-defined file
+
+readmeTweaks = """
+## Modifier Tweaks
+Tweaks are added to a modifier stroke using the E and U keys:
+
+    🅂🅃🄿🄷 🄾 🄵🄿🄻🅃🄳
+    🅂🄺🅆🅁 🄾 🅁🄱🄶🅂🅉
+    　　　🄰🄾 🅴🆄
+
+|Tweak|Description|
+|-|-|
+|![E](image/E_tweak)|Think of E as meaning "extra". This is added to acute and grave strokes to double them.|
+|![U](image/U_tweak)|Think of U as meaning "under". This is added to various diacritic strokes to turn them into their "below" versions: breve below, circumflex below, line below, ring below, and tilde below.|
+|![EU](image/EU_tweak)|Think of EU (the "i" chord in steno) as meaning "invert".
 """
 
 readmeAvailableDiacritics = """
-## Available Diacritics
-The chords are meant to resemble their diacritics, generally speaking.
+## Available Diacritics/Modifiers
+In general, the diacritic chords are meant to visually resemble their symbols, to ease remembering them all.
 
 For other modifiers, like rotation or inversion, an attempt was made to be memorable. See notes with each modifier.
 """
@@ -85,6 +100,7 @@ def generateReadme ():
     print(readmeGoals)
     print(readmeSections)
     print(readmeAddingModifiers)
+    print(readmeTweaks)
     print(readmeAvailableDiacritics)
     generateDiacriticsSection()
 
