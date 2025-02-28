@@ -290,13 +290,6 @@ entries = [
         "link": "https://en.wikipedia.org/wiki/%C4%84",
     },
     {
-        "name": "A with cedilla",
-        "majuscule": ("A", "Ą"),
-        "minuscule": ("a", "Ą"),
-        "modifiers": ["cedilla"],
-        "link": "https://en.wikipedia.org/wiki/Cedilla",
-    },
-    {
         "name": "B with a hook above",
         "majuscule": ("B", "Ɓ"),
         "minuscule": ("b", "ɓ"),
@@ -383,7 +376,7 @@ entries = [
     {
         "name": "I with cedilla",
         "majuscule": ("I", "I̧"),
-        "minuscule": ("i", "į"),
+        "minuscule": ("i", "i̧"),
         "modifiers": ["cedilla"],
         "link": "https://en.wikipedia.org/wiki/Cedilla",
     },
@@ -393,13 +386,6 @@ entries = [
         "minuscule": ("i", "ɨ"),
         "modifiers": ["stroke"],
         "link": "https://en.wikipedia.org/wiki/I_with_bar", # TODO
-    },
-    {
-        "name": "Barred I with cedilla",
-        "majuscule": ("I", "Ɨ̧"),
-        "minuscule": ("i", "ɨ"),
-        "modifiers": ["stroke", "cedilla"],
-        "link": "https://en.wikipedia.org/wiki/Cedilla",
     },
     {
         "name": "K with hook above",
@@ -1463,27 +1449,6 @@ entries = [
         "majuscule": ("Æ", "Ǣ"),
         "minuscule": ("æ", "ǣ"),
         "modifiers": ["macron"],
-        "link": "https://en.wikipedia.org/wiki/%C3%86",
-    },
-    {
-        "name": "AE ligature with grave",
-        "majuscule": ("Æ", "Æ̀"),
-        "minuscule": ("æ", "æ̀"),
-        "modifiers": ["grave"],
-        "link": "https://en.wikipedia.org/wiki/%C3%86",
-    },
-    {
-        "name": "AE ligature with circumflex",
-        "majuscule": ("Æ", "Æ̂"),
-        "minuscule": ("æ", "æ̂"),
-        "modifiers": ["circumflex"],
-        "link": "https://en.wikipedia.org/wiki/%C3%86",
-    },
-    {
-        "name": "AE ligature with tilde",
-        "majuscule": ("Æ", "Æ̃"),
-        "minuscule": ("æ", "æ̃"),
-        "modifiers": ["tilde"],
         "link": "https://en.wikipedia.org/wiki/%C3%86",
     },
     {
