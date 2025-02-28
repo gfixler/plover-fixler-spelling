@@ -67,142 +67,147 @@ modifiers = {
     "acute": {
         "outline": "-RP",
         "name": "Acute",
-        "docs": "",
+        "docs": "Shaped like the acute symbol.",
     },
     "acuteDoubled": {
         "outline": "ERP",
         "name": "Double Acute",
-        "docs": "",
+        "docs": "The acute modifier shape, with the 'extra' tweak.", # TODO: link to extra tweak
     },
     "breve": {
         "outline": "-FRBLG",
         "name": "Breve",
-        "docs": "",
+        "docs": "Shaped like the breve symbol.",
     },
     "breveBelow": {
         "outline": "UFRBLG",
         "name": "Breve Below",
-        "docs": "",
+        "docs": "The breve modifier shape, with the 'under' tweak.", # TODO: link to under tweak
     },
     "breveInverted": {
         "outline": "-FRPLG",
         "name": "Breve Inverted",
-        "docs": "",
+        "docs": "Shaped like the inverted breve symbol.",
     },
     "caron": {
         "outline": "-FBL",
         "name": "Caron",
-        "docs": "",
+        "docs": "Shaped like the caron symbol.",
     },
     "cedilla": {
         "outline": "-G",
         "name": "Cedilla",
-        "docs": "",
+        "docs": "Only remaining low key (see dot below, and comma below).", # TODO: link to dot below and comma below
     },
     "circumflex": {
         "outline": "-RPG",
         "name": "Circumflex",
-        "docs": "",
+        "docs": "Shaped like the circumflex symbol.",
     },
     "circumflexBelow": {
         "outline": "URPG",
         "name": "Circumflex Below",
-        "docs": "",
+        "docs": "The circumflex modifier shape, with the 'under' tweak.", # TODO: link to under tweak
     },
     "commaBelow": {
         "outline": "-B",
         "name": "Comma Below",
-        "docs": "",
+        "docs": "Chosen to mirror the shape used for the comma in the Emily's Symbols plugin.",
     },
     "diaeresis": {
         "outline": "-FL",
-        "name": "Diaeresis",
-        "docs": "",
+        "name": "Diaeresis/Umlaut",
+        "docs": "Shaped like the diaeresis/umlaut symbols.<BR><BR>NOTE: [diaeresis](https://en.wikipedia.org/wiki/Diaeresis_(diacritic)) and [umlaut](https://en.wikipedia.org/wiki/Umlaut_(diacritic)) are distinct concepts, with separate uses, but are represented by the same Unicode code points. They are created via the same outline in this spelling system.",
     },
     "diaeresisBelow": {
         "outline": "-RG",
         "name": "Diaeresis Below",
-        "docs": "",
+        "docs": "The diaeresis/umlaut shape, but lower.",
     },
     "dotAbove": {
         "outline": "-F",
         "name": "Dot Above",
-        "docs": "",
+        "docs": "A single key, up high, like a dot above.",
     },
     "dotBelow": {
         "outline": "-R",
         "name": "Dot Below",
-        "docs": "",
+        "docs": "A single key, down low, like a dot below.",
     },
     "grave": {
         "outline": "-FB",
         "name": "Grave",
-        "docs": "",
+        "docs": "Shaped like the grave symbol.",
     },
     "graveDoubled": {
         "outline": "EFB",
         "name": "Double Grave",
-        "docs": "",
+        "docs": "The grave modifier shape, with the 'extra' tweak.", # TODO: link to extra tweak
     },
     "hookAbove": {
-        "outline": "-FRP",
+        "outline": "-FPB",
         "name": "Hook Above",
-        "docs": "",
+        "docs": "Shaped like the hook above symbol, sticking up, and curling to the left.",
+    },
+    "hook": {
+        "outline": "-FRP",
+        "name": "Hook",
+        "docs": "Distinct from hook above, which is a detached diacritic, this is for characters with an attached hook. The hook shape was chosen to match most of these characters, which either curl up, then to the right, or to the left, then down, which makes the same curve. Imagine the chord shape attaching to some at the –R, and others at the –P. Some of the visual nature of this is down to fonts and rendering, of course, and a few letters don't match up well to this chord shape, and will just have to be memorized as exceptions for now.",
     },
     "horn": {
         "outline": "-BLG",
         "name": "Horn",
-        "docs": "",
+        "docs": "Shaped like the horn symbol, sticking out to the right and curving upward. The shape is also on the right-hand side of the modifier keys cluster, as the horn sticks out the right side of it characters.",
     },
     "interpunct": {
         "outline": "-FR",
         "name": "Interpunct",
-        "docs": "",
+        "docs": "An odd one, which joins the dot above and dot below characters. Think of it as the midpoint of the above and below dots, made by stroking both together.",
     },
     "lineBelow": {
-        "outline": "-BG",
+        "outline": "UFP",
         "name": "Line Below",
-        "docs": "",
+        "docs": "When decomposed into base character + diacritic, the combining character for this set of Unicode composed characters is the macron below. Rather than use the the lower version of the chord, on the bottom row, this uses the 'under' tweak with the macron shape, to respect this relation.", # TODO: link to under tweak
     },
     "macron": {
         "outline": "-FP",
         "name": "Macron",
-        "docs": "",
+        "docs": "Shaped like the macron symbol.",
     },
     "ogonek": {
         "outline": "-PBG", # "little tail"
         "name": "Ogonek",
-        "docs": "",
+        "docs": "The ogonek, meaning 'little tail' in Polish, hangs of the bottom of its character, curling down and to the right.",
     },
     "ringAbove": {
         "outline": "-FRPB",
         "name": "Ring Above",
-        "docs": "",
+        "docs": "Think of this square of keys like a little circle, or ring.",
     },
     "ringBelow": {
         "outline": "UFRPB",
         "name": "Ring Below",
-        "docs": "",
+        "docs": "The ring above modifier shape, with the 'under' tweak.", # TODO: link to under tweak
     },
     "stroke": {
         "outline": "-RB",
         "name": "Stroke",
-        "docs": "",
+        "docs": "Like the macron, but lower, because it cuts through the character, rather than flying above it.",
     },
     "slash": {
         "outline": "-BL",
         "name": "Slash",
-        "docs": "",
+        "docs": "Like the acute, but shifted, to indicate that it's lower, and cuts through the character. A bit of a stretch, as it's shifted to the right, not down, but other options were used up. Maybe think of it like moving to the right while reading this text, which eventually wraps, and takes you down a line.",
     },
     "tilde": {
         "outline": "-FPBG",
         "name": "Tilde",
-        "docs": "",
+        "docs": "Shaped like the tilde symbol.",
     },
     "tildeBelow": {
         "outline": "UFPBG",
         "name": "Tilde Below",
-        "docs": "",
+        "docs": "The tilde modifier shape, with the 'under' tweak.", # TODO: link to under tweak
     },
 
     "turned": {
@@ -290,17 +295,17 @@ entries = [
         "link": "https://en.wikipedia.org/wiki/%C4%84",
     },
     {
-        "name": "B with a hook above",
+        "name": "B with hook",
         "majuscule": ("B", "Ɓ"),
         "minuscule": ("b", "ɓ"),
-        "modifiers": ["hookAbove"],
+        "modifiers": ["hook"],
         "link": "https://en.wikipedia.org/wiki/%C6%81",
     },
     {
-        "name": "C with hook above",
+        "name": "C with hook",
         "majuscule": ("C", "Ƈ"),
         "minuscule": ("c", "ƈ"),
-        "modifiers": ["hookAbove"],
+        "modifiers": ["hook"],
         "link": "https://en.wikipedia.org/wiki/%C6%87",
     },
     {
@@ -318,10 +323,10 @@ entries = [
         "link": "https://en.wikipedia.org/wiki/D_with_stroke",
     },
     {
-        "name": "D with hook above",
+        "name": "D with hook",
         "majuscule": ("D", "Ɗ"),
         "minuscule": ("d", "ɗ"),
-        "modifiers": ["hookAbove"],
+        "modifiers": ["hook"],
         "link": "https://en.wikipedia.org/wiki/%C6%8A",
     },
     {
@@ -339,10 +344,10 @@ entries = [
         "link": "https://en.wikipedia.org/wiki/Cedilla",
     },
     {
-        "name": "F with hook above",
+        "name": "F with hook",
         "majuscule": ("F", "Ƒ"),
         "minuscule": ("f", "ƒ"),
-        "modifiers": ["hookAbove"],
+        "modifiers": ["hook"],
         "link": "https://en.wikipedia.org/wiki/%C6%91",
     },
     {
@@ -353,10 +358,10 @@ entries = [
         "link": "https://en.wikipedia.org/wiki/G_with_stroke",
     },
     {
-        "name": "G with hook above",
+        "name": "G with hook",
         "majuscule": ("G", "Ɠ"),
         "minuscule": ("g", "ɠ"),
-        "modifiers": ["hookAbove"],
+        "modifiers": ["hook"],
         "link": "https://en.wikipedia.org/wiki/G_with_hook",
     },
     {
@@ -388,10 +393,10 @@ entries = [
         "link": "https://en.wikipedia.org/wiki/I_with_bar", # TODO
     },
     {
-        "name": "K with hook above",
+        "name": "K with hook",
         "majuscule": ("K", "Ƙ"),
         "minuscule": ("k", "ƙ"),
-        "modifiers": ["hookAbove"],
+        "modifiers": ["hook"],
         "link": "https://en.wikipedia.org/wiki/%C6%98",
     },
     {
@@ -444,10 +449,10 @@ entries = [
         "link": "https://en.wikipedia.org/wiki/%C6%A0",
     },
     {
-        "name": "P with hook above",
+        "name": "P with hook",
         "majuscule": ("P", "Ƥ"),
         "minuscule": ("p", "ƥ"),
-        "modifiers": ["hookAbove"],
+        "modifiers": ["hook"],
         "link": "https://en.wikipedia.org/wiki/%C6%A4",
     },
     {
@@ -465,10 +470,10 @@ entries = [
         "link": "https://en.wikipedia.org/wiki/%C5%9E",
     },
     {
-        "name": "T with hook above",
+        "name": "T with hook",
         "majuscule": ("T", "Ƭ"),
         "minuscule": ("t", "ƭ"),
-        "modifiers": ["hookAbove"],
+        "modifiers": ["hook"],
         "link": "https://en.wikipedia.org/wiki/%C6%AC",
     },
     {
@@ -521,10 +526,10 @@ entries = [
         "link": "https://en.wikipedia.org/wiki/Ogonek",
     },
     {
-        "name": "Y with hook above",
+        "name": "Y with hook",
         "majuscule": ("Y", "Ƴ"),
         "minuscule": ("y", "ƴ"),
-        "modifiers": ["hookAbove"],
+        "modifiers": ["hook"],
         "link": "https://en.wikipedia.org/wiki/%C6%B3",
     },
     {
