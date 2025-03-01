@@ -3,12 +3,16 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 from fixspell import modifiers
 
 
-defaultKeyOpts = {
-    "keyWidth": 57,
-    "keyHeight": 57,
+northKey = (0, 2)
+southKey = (0, -2)
+eastKey = (-2, 0)
+westKey = (2, 0)
 
-    "draft": 6,
-    "draftOffset": 2,
+defaultKeyOpts = {
+    "unit": 57,
+
+    "topFaceShrink": 6,
+    "topFaceOffset": northKey,
 
     "outerRadius": 5,
     "innerRadius": 3,
@@ -22,76 +26,87 @@ defaultKeyOpts = {
     "frameCol": "#EEEEEE",
 
     "keyOutlineCol": "black",
-
-    "keyLightCol": "#FCFCFC",
-    "keyDarkCol": "#CCCCCC",
-    "keyRidgeCol": "#BBBBBB",
-
-    "modLightCol": "#46CD34",
-    "modDarkCol": "#00AA00",
-    "modRidgeCol": "#009900",
-
-    "tweakLightCol": "#BF69EE",
-    "tweakDarkCol": "#A24ED1",
-    "tweakRidgeCol": "#9146BC",
 }
 
-def genKey (label, keyType="key", topRow=False, **kwargs):
-    upResFactor = 8
+defaultKeyCols = {
+    "light": "#FCFCFC",
+    "dark": "#CCCCCC",
+    "ridge": "#BBBBBB",
+}
 
-    width = kwargs["keyWidth"] * upResFactor
-    height = kwargs["keyHeight"] * upResFactor
-    bgCol = kwargs["frameCol"]
+modifierKeyCols = {
+    "light": "#46CD34",
+    "dark": "#00AA00",
+    "ridge": "#009900",
+}
 
-    image = Image.new("RGB", (width, height), bgCol)
+tweakKeyCols = {
+    "light": "#BF69EE",
+    "dark": "#A24ED1",
+    "ridge": "#9146BC",
+}
+
+def genKey (label, keyCols=defaultKeyCols, keyOpts=defaultKeyOpts):
+    smoothing = 8
+
+    unit = keyOpts["unit"] * smoothing
+    bgCol = keyOpts["frameCol"]
+
+    image = Image.new("RGB", (unit, unit), bgCol)
     draw = ImageDraw.Draw(image)
 
-    border = kwargs["keyOutlineCol"]
-    stroke = kwargs["outlineWidth"] * upResFactor
-    rad = kwargs["outerRadius"] * upResFactor
-    col = kwargs[keyType + "DarkCol"]
-    dims = (0, 0, width - (stroke / 2), height - (stroke / 2))
-    opts = {"fill":col, "outline":border, "width":stroke, "radius":rad}
+    borderCol = keyOpts["keyOutlineCol"]
+    stroke = keyOpts["outlineWidth"] * smoothing
+    rad = keyOpts["outerRadius"] * smoothing
+    col = keyCols["dark"]
+    dims = (0, 0, unit - (stroke / 2), unit - (stroke / 2))
+    opts = {"fill":col, "outline":borderCol, "width":stroke, "radius":rad}
     draw.rounded_rectangle(dims, **opts)
 
-    draft = kwargs["draft"] * upResFactor
-    draftOffset = kwargs["draftOffset"] * upResFactor
+    topFaceShrink = keyOpts["topFaceShrink"] * smoothing
+    xOffset, yOffset = keyOpts["topFaceOffset"]
 
-    offset = draftOffset * (1 if topRow else -1)
-    x = draft
-    y = draft + offset
-    w = width - draft
-    h = height - draft + offset
-    border = kwargs[keyType + "RidgeCol"]
-    stroke = kwargs["outlineWidth"] * upResFactor
-    rad = kwargs["innerRadius"] * upResFactor
-    col = kwargs[keyType + "LightCol"]
+    xOffset *= smoothing
+    yOffset *= smoothing
+    x = topFaceShrink + xOffset
+    y = topFaceShrink + yOffset
+    w = unit - topFaceShrink + xOffset
+    h = unit - topFaceShrink + yOffset
+    ridgeCol = keyCols["ridge"]
+    stroke = keyOpts["outlineWidth"] * smoothing
+    rad = keyOpts["innerRadius"] * smoothing
+    col = keyCols["light"]
     dims = (x, y, w - (stroke / 2), h - (stroke / 2))
-    opts = {"fill":col, "outline":border, "width":stroke, "radius":rad}
+    opts = {"fill":col, "outline":ridgeCol, "width":stroke, "radius":rad}
     draw.rounded_rectangle(dims, **opts)
 
-    font = ImageFont.truetype('Arial', 14 * upResFactor)
+    font = ImageFont.truetype('Arial', 14 * smoothing)
     _, _, tw, th = draw.textbbox((0, 0), label, font)
-    dims = ((width-tw) / 2, (height-th) / 2 + offset)
+    dims = ((unit-tw) / 2 + xOffset, (unit-th) / 2 + yOffset)
     draw.text(dims, label, font=font, fill="black")
 
-    downRes = image.resize((image.width // upResFactor, image.height // upResFactor), resample=Image.LANCZOS)
+    downRes = image.resize((image.width // smoothing, image.height // smoothing), resample=Image.LANCZOS)
 
     return downRes
 
 
-def genDiacriticStrokeImage (stroke="", **kwargs):
-    pressed = lambda k: "mod" if k in stroke else "key"
-    F = genKey("F", pressed("F"), True, **kwargs)
-    R = genKey("R", pressed("R"), **kwargs)
-    P = genKey("P", pressed("P"), True, **kwargs)
-    B = genKey("B", pressed("B"), **kwargs)
-    L = genKey("L", pressed("L"), True, **kwargs)
-    G = genKey("G", pressed("G"), **kwargs)
+def genDiacriticStrokeImage (stroke="", keyOpts=defaultKeyOpts):
+    pressed = lambda k: modifierKeyCols if k in stroke else defaultKeyCols
+    north = {"topFaceOffset": northKey}
+    south = {"topFaceOffset": southKey}
+    west = {"topFaceOffset": westKey}
+    east = {"topFaceOffset": eastKey}
 
-    pressed = lambda k: "tweak" if k in stroke else "key"
-    E = genKey("E", pressed("E"), ** kwargs)
-    U = genKey("U", pressed("U"), ** kwargs)
+    F = genKey("F", pressed("F"), keyOpts | north)
+    R = genKey("R", pressed("R"), keyOpts | south)
+    P = genKey("P", pressed("P"), keyOpts | north)
+    B = genKey("B", pressed("B"), keyOpts | south)
+    L = genKey("L", pressed("L"), keyOpts | north)
+    G = genKey("G", pressed("G"), keyOpts | south)
+
+    pressed = lambda k: tweakKeyCols if k in stroke else defaultKeyCols
+    E = genKey("E", pressed("E"), keyOpts | west)
+    U = genKey("U", pressed("U"), keyOpts | east)
 
     kw = F.width
     kh = F.height
@@ -103,12 +118,12 @@ def genDiacriticStrokeImage (stroke="", **kwargs):
     x = margin
     y = margin
 
-    bgCol = kwargs["backgroundCol"]
+    bgCol = keyOpts["backgroundCol"]
     image = Image.new("RGB", (w, h), bgCol)
     draw = ImageDraw.Draw(image)
 
-    rad = kwargs["frameRadius"]
-    col = kwargs["frameCol"]
+    rad = keyOpts["frameRadius"]
+    col = keyOpts["frameCol"]
     dims = (0, 0, image.width, image.height)
     opts = {"fill":col, "radius":rad}
     draw.rounded_rectangle(dims, **opts)
@@ -128,7 +143,7 @@ def genDiacriticStrokeImage (stroke="", **kwargs):
 
 def genDiacriticImages ():
     for modName, modData in modifiers.items():
-        image = genDiacriticStrokeImage(modData["outline"], **defaultKeyOpts)
+        image = genDiacriticStrokeImage(modData["outline"], defaultKeyOpts)
         image.save("images/" + modName + ".png", "PNG")
 
 if __name__ == "__main__":
