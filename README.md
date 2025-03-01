@@ -38,10 +38,10 @@ Tweaks are added to a modifier stroke using the E and U keys:
 
 |Tweak|Description|
 |-|-|
-|![EU Up](image/EU_up.png)|Neither E nor U pressed means no tweak to the modifier stroke.|
-|![E Down](image/E_down.png)|Think of E as meaning "extra". This is added to acute and grave strokes to double them.|
-|![U Down](image/U_down.png)|Think of U as meaning "under". This is added to various diacritic strokes to turn them into their "below" versions: breve below, circumflex below, line below, ring below, and tilde below.|
-|![EU Down](image/EU_down.png)|Think of EU (the "i" chord in steno) as meaning "invert".
+|![EU Up](images/EU_up.png)|Neither E nor U pressed means no tweak to the modifier stroke.|
+|![E Down](images/E_down.png)|Think of E as meaning "extra". This is added to acute and grave strokes to double them.|
+|![U Down](images/U_down.png)|Think of U as meaning "under". This is added to various diacritic strokes to turn them into their "below" versions: breve below, circumflex below, line below, ring below, and tilde below.|
+|![EU Down](images/EU_down.png)|Think of EU (the "i" chord in steno) as meaning "invert".
 
 
 ## Available Diacritics/Modifiers
