@@ -72,7 +72,7 @@ modifiers = {
     "acuteDoubled": {
         "outline": "ERP",
         "name": "Double Acute",
-        "docs": "The acute modifier shape, with the '[extra](#e-tweak)' tweak.",
+        "docs": "The acute modifier shape, with the '[extra](#modifier-tweaks)' tweak.",
     },
     "breve": {
         "outline": "-FRBLG",
@@ -82,7 +82,7 @@ modifiers = {
     "breveBelow": {
         "outline": "UFRBLG",
         "name": "Breve Below",
-        "docs": "The breve modifier shape, with the '[under](#u-tweak)' tweak.",
+        "docs": "The breve modifier shape, with the '[under](#modifier-tweaks)' tweak.",
     },
     "breveInverted": {
         "outline": "-FRPLG",
@@ -107,7 +107,7 @@ modifiers = {
     "circumflexBelow": {
         "outline": "URPG",
         "name": "Circumflex Below",
-        "docs": "The circumflex modifier shape, with the '[under](#u-tweak)' tweak.",
+        "docs": "The circumflex modifier shape, with the '[under](#modifier-tweaks)' tweak.",
     },
     "commaBelow": {
         "outline": "-B",
@@ -142,7 +142,7 @@ modifiers = {
     "graveDoubled": {
         "outline": "EFB",
         "name": "Double Grave",
-        "docs": "The grave modifier shape, with the '[extra](#e-tweak)' tweak.",
+        "docs": "The grave modifier shape, with the '[extra](#modifier-tweaks)' tweak.",
     },
     "hookAbove": {
         "outline": "-FPB",
@@ -167,7 +167,7 @@ modifiers = {
     "lineBelow": {
         "outline": "UFP",
         "name": "Line Below",
-        "docs": "When decomposed into base character + diacritic, the combining character for this set of Unicode composed characters is the macron below. Rather than use the the lower version of the chord, on the bottom row, this uses the '[under](#u-tweak)' tweak with the macron shape, to respect this relation.",
+        "docs": "When decomposed into base character + diacritic, the combining character for this set of Unicode composed characters is the macron below. Rather than use the the lower version of the chord, on the bottom row, this uses the '[under](#modifier-tweaks)' tweak with the macron shape, to respect this relation.",
     },
     "macron": {
         "outline": "-FP",
@@ -187,7 +187,7 @@ modifiers = {
     "ringBelow": {
         "outline": "UFRPB",
         "name": "Ring Below",
-        "docs": "The ring above modifier shape, with the '[under](#u-tweak)' tweak.",
+        "docs": "The ring above modifier shape, with the '[under](#modifier-tweaks)' tweak.",
     },
     "stroke": {
         "outline": "-RB",
@@ -207,7 +207,7 @@ modifiers = {
     "tildeBelow": {
         "outline": "UFPBG",
         "name": "Tilde Below",
-        "docs": "The tilde modifier shape, with the '[under](#u-tweak)' tweak.",
+        "docs": "The tilde modifier shape, with the '[under](#modifier-tweaks)' tweak.",
     },
 
     "turned": {
