@@ -180,9 +180,9 @@ def genTweakStrokeImage (stroke="", keyOpts=defaultKeyOpts):
 
 def genTweakImages ():
     genTweakStrokeImage("").save("images/EU_up.png", "PNG")
-    genTweakStrokeImage("E").save("images/E_up.png", "PNG")
-    genTweakStrokeImage("U").save("images/U_up.png", "PNG")
-    genTweakStrokeImage("EU").save("images/UE_up.png", "PNG")
+    genTweakStrokeImage("E").save("images/E_down.png", "PNG")
+    genTweakStrokeImage("U").save("images/U_down.png", "PNG")
+    genTweakStrokeImage("EU").save("images/UE_down.png", "PNG")
 
 if __name__ == "__main__":
     genDiacriticImages()
