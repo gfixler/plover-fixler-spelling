@@ -291,7 +291,7 @@ entries = [
         "name": "A with ogonek",
         "majuscule": ("A", "Ą"),
         "minuscule": ("a", "ą"),
-        "modifiers": ["ogonek"], #TODO
+        "modifiers": ["ogonek"], #TODO look more into ogonek
         "link": "https://en.wikipedia.org/wiki/%C4%84",
     },
     {
@@ -390,7 +390,7 @@ entries = [
         "majuscule": ("I", "Ɨ"),
         "minuscule": ("i", "ɨ"),
         "modifiers": ["stroke"],
-        "link": "https://en.wikipedia.org/wiki/I_with_bar", # TODO
+        "link": "https://en.wikipedia.org/wiki/I_with_bar", # TODO look more into bar
     },
     {
         "name": "K with hook",
@@ -403,14 +403,14 @@ entries = [
         "name": "L with stroke",
         "majuscule": ("L", "Ł"),
         "minuscule": ("l", "ł"),
-        "modifiers": ["slash"], # TODO
+        "modifiers": ["slash"], # TODO look more into stroke
         "link": "https://en.wikipedia.org/wiki/%C5%81",
     },
     {
         "name": "L with bar",
         "majuscule": ("L", "Ƚ"),
         "minuscule": ("l", "ƚ"),
-        "modifiers": ["stroke"], # TODO
+        "modifiers": ["stroke"],
         "link": "https://en.wikipedia.org/wiki/L_with_bar",
     },
     {
@@ -533,18 +533,18 @@ entries = [
         "link": "https://en.wikipedia.org/wiki/%C6%B3",
     },
     {
-        "name": "Reversed C", # TODO
+        "name": "Reversed C",
         "majuscule": ("C", "Ↄ"),
         "minuscule": ("c", "ↄ"),
         "modifiers": ["reversed"],
-        "link": "https://en.wikipedia.org/wiki/Claudian_letters", # TODO
+        "link": "https://en.wikipedia.org/wiki/Claudian_letters", # TODO research these
     },
     {
         "name": "Turned F",
         "majuscule": ("F", "Ⅎ"),
         "minuscule": ("f", "ⅎ"),
         "modifiers": ["turned"],
-        "link": "https://en.wikipedia.org/wiki/Claudian_letters", # TODO
+        "link": "https://en.wikipedia.org/wiki/Claudian_letters", # TODO research these
     },
     {
         "name": "A with acute",
