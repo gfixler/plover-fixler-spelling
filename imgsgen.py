@@ -114,7 +114,7 @@ def genDiacriticStrokeImage (stroke="", keyOpts=defaultKeyOpts):
     tweaked = "E" in stroke or "U" in stroke
     margin = 8
     w = kw * 3 + margin * 2
-    h = kw * (4 if tweaked else 2) + margin * 2
+    h = kh * (4 if tweaked else 2) + margin * 2
     x = margin
     y = margin
 
@@ -143,7 +143,7 @@ def genDiacriticStrokeImage (stroke="", keyOpts=defaultKeyOpts):
 
 def genDiacriticImages ():
     for modName, modData in modifiers.items():
-        image = genDiacriticStrokeImage(modData["outline"], defaultKeyOpts)
+        image = genDiacriticStrokeImage(modData["outline"])
         image.save("images/" + modName + ".png", "PNG")
 
 if __name__ == "__main__":
