@@ -146,6 +146,45 @@ def genDiacriticImages ():
         image = genDiacriticStrokeImage(modData["outline"])
         image.save("images/" + modName + ".png", "PNG")
 
+def genTweakStrokeImage (stroke="", keyOpts=defaultKeyOpts):
+    pressed = lambda k: tweakKeyCols if k in stroke else defaultKeyCols
+    west = {"topFaceOffset": westKey}
+    east = {"topFaceOffset": eastKey}
+
+    E = genKey("E", pressed("E"), keyOpts | west)
+    U = genKey("U", pressed("U"), keyOpts | east)
+
+    kw = E.width
+    kh = E.height
+
+    margin = 8
+    w = kw * 2 + margin * 2
+    h = kh * 1 + margin * 2
+    x = margin
+    y = margin
+
+    bgCol = keyOpts["backgroundCol"]
+    image = Image.new("RGB", (w, h), bgCol)
+    draw = ImageDraw.Draw(image)
+
+    rad = keyOpts["frameRadius"]
+    col = keyOpts["frameCol"]
+    dims = (0, 0, image.width, image.height)
+    opts = {"fill":col, "radius":rad}
+    draw.rounded_rectangle(dims, **opts)
+
+    image.paste(E, (x, y))
+    image.paste(U, (x + kw, y))
+
+    return image
+
+def genTweakImages ():
+    genTweakStrokeImage("").save("images/EU_up.png", "PNG")
+    genTweakStrokeImage("E").save("images/E_up.png", "PNG")
+    genTweakStrokeImage("U").save("images/U_up.png", "PNG")
+    genTweakStrokeImage("EU").save("images/UE_up.png", "PNG")
+
 if __name__ == "__main__":
     genDiacriticImages()
+    genTweakImages()
 
