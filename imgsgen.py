@@ -111,10 +111,9 @@ def genDiacriticStrokeImage (stroke="", keyOpts=defaultKeyOpts):
     kw = F.width
     kh = F.height
 
-    tweaked = "E" in stroke or "U" in stroke
     margin = 8
     w = kw * 3 + margin * 2
-    h = kh * (4 if tweaked else 2) + margin * 2
+    h = kh * 2 + margin * 2
     x = margin
     y = margin
 
@@ -134,10 +133,6 @@ def genDiacriticStrokeImage (stroke="", keyOpts=defaultKeyOpts):
     image.paste(B, (x + kw, y + kh))
     image.paste(L, (x + kw * 2, y))
     image.paste(G, (x + kw * 2, y + kh))
-
-    if "E" in stroke or "U" in stroke:
-        image.paste(E, (x, y + kh * 3))
-        image.paste(U, (x + kw, y + kh * 3))
 
     return image
 
