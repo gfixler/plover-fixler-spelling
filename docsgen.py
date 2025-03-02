@@ -118,7 +118,7 @@ def generateReadme ():
     print(readmeGoals)
     print(readmeNotesOnDesign)
     print(readmeSections)
-    print(readmeAddingModifiers)
+    print(readmeUsingModifiers)
     print(readmeTweaks)
     print(readmeAvailableDiacritics)
     generateDiacriticsSection()
