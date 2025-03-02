@@ -95,9 +95,9 @@ modifiers = {
         "docs": "Shaped like the caron symbol.",
     },
     "cedilla": {
-        "outline": "-G",
+        "outline": "-RPB",
         "name": "Cedilla",
-        "docs": "Only remaining low key (see [dot below](#dot-below), and [comma below](#comma-below)).",
+        "docs": "Shaped like the cedilla, which hangs below the character, and curves to the left.",
     },
     "circumflex": {
         "outline": "-RPG",
@@ -213,7 +213,7 @@ modifiers = {
     "turned": {
         "outline": "-RL",
         "name": "Turned/Rotated",
-        "docs": "",
+        "docs": "This is not a diacritic, but allows access to characters that are turned, or rotated.",
     },
    # "inverted": {
    #      "outline": "-RBG",
@@ -221,9 +221,9 @@ modifiers = {
    #      "docs": "",
    #  },
     "reversed": {
-        "outline": "-LG",
+        "outline": "EURL",
         "name": "Reversed",
-        "docs": "",
+        "docs": "The turned modifier shape, with the '[inverted](#modifier-tweaks)' tweak.<BR><BR>This is not a diacritic, but allows access to characters that are flipped, inverted, or reversed.",
     },
 }
 
