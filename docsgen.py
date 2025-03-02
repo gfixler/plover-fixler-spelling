@@ -25,8 +25,8 @@ The following 6 keys are used to add diacritics.
 ```
 """
 
-readmeAddingModifiers = """
-## Adding Diacritics/Modifiers
+readmeUsingModifiers = """
+## UsingDiacritics/Modifiers
 Modify base letters by stroking a diacritic or modifier outline immediately after a base letter.
 
 For example, to get á, stroke A* for "a", then the acute modifier outline to convert it.
