@@ -36,11 +36,7 @@ NOTE: Modifiers are currently precomposed with their letters. The system doesn't
 
 readmeTweaks = """
 ## Modifier Tweaks
-Tweaks are added to a modifier stroke using the E and U keys:
-
-    🅂🅃🄿🄷 🄾 🄵🄿🄻🅃🄳
-    🅂🄺🅆🅁 🄾 🅁🄱🄶🅂🅉
-    　　　🄰🄾 🅴🆄
+Tweaks are added to a modifier stroke using the E and U keys.
 
 |Tweak|Description|
 |-|-|
@@ -55,6 +51,8 @@ readmeAvailableDiacritics = """
 In general, the diacritic chords are meant to visually resemble their symbols, to ease remembering them all.
 
 For other modifiers, like rotation or inversion, an attempt was made to be memorable. See notes with each modifier.
+
+NOTE: Modifier and Tweak are part of the same stroke.
 """
 
 def getEntriesWithModifier (modifier):
@@ -64,7 +62,7 @@ def getEntriesWithModifier (modifier):
 unicodeCodePtURL = "https://www.compart.com/en/unicode/"
 
 def generateDiacriticsSection ():
-    print("|Pattern|Tweak|Notes|")
+    print("|Modifier|Tweak|Notes|")
     print("|-|-|-|")
     for name, data in modifiers.items():
         prettyName = data["name"]

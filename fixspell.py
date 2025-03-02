@@ -152,12 +152,12 @@ modifiers = {
     "hook": {
         "outline": "-FRP",
         "name": "Hook",
-        "docs": "Distinct from hook above, which is a detached diacritic, this is for characters with an attached hook. The hook shape was chosen to match most of these characters, which either curl up, then to the right, or to the left, then down, which makes the same curve. Imagine the chord shape attaching to some at the –R, and others at the –P. Some of the visual nature of this is down to fonts and rendering, of course, and a few letters don't match up well to this chord shape, and will just have to be memorized as exceptions for now.",
+        "docs": "Distinct from 'hook above', which is a detached diacritic, this is for characters with an attached hook. The hook shape was chosen to match most of these characters, which either curl up, then to the right, or to the left, then down, which makes the same curve. Imagine the chord shape attaching to some at the −R, and others at the −P. Some of the visual nature of this is down to fonts and rendering, of course, and a few letters don't match up well to this chord shape, and will just have to be memorized as exceptions for now.",
     },
     "horn": {
         "outline": "-BLG",
         "name": "Horn",
-        "docs": "Shaped like the horn symbol, sticking out to the right and curving upward. The shape is also on the right-hand side of the modifier keys cluster, as the horn sticks out the right side of it characters.",
+        "docs": "Shaped like the horn symbol, sticking out to the right and curving upward. The shape is also on the right-hand side of the modifier keys cluster, as the horn sticks out the right side of its characters.",
     },
     "interpunct": {
         "outline": "-FR",
