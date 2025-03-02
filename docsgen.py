@@ -15,6 +15,17 @@ readmeGoals = """
 * include some similar alphabets (NATO, Braille, Morse, Greek, etc.)
 """
 
+readmeNotesOnDesign = """
+## Notes on Design
+The core of this system is about spelling, and revolves around the Latin letters with diacritics, and alphabets that map well to and from Latin letters. That said, this library is not above including other, fun things that don't exactly fit, but also don't feel terrible out of place here.
+
+Modifiers do not currently look at stroke history. The modifier system simply creates multi-stroke outlines that pair a base letter with a modifier, e.g., "á" ("a with acute") is simply defined as the two-stroke outline, A*/-RP. You can't stroke KAT to write "cat", then stroke a modifier to add a diacritic to the "t" on the end of the word.
+
+All characters in the "Used by" lists following each modifier in the [Available Diacritics/Modifiers](#available-modifiersdiacritics) section below are "precomposed" characters in Unicode, meaning they have a single code point in The Unicode Standard. Many characters not in these lists, encountered in the wild, are actually composed of a base letter, and one or more [combining character](https://en.wikipedia.org/wiki/Combining_character)s. Even characters that do have a composed (single code point) version often show up as [composed versions](https://nation.marketo.com/t5/product-blogs/when-an-e%CC%81-is-not-an-%C3%A9-about-unicode-precomposed-vs-decomposed/ba-p/339051) of themselves.
+
+Characters with more than one modifier, like "ẫ" ("a with circumflex and tilde"), are made by stroking the letter chord, followed by the two modifier chords in sequence. The order of these is based primarily on the Unicode name, where "ẫ" (Unicode code point U+1EAB) is called "LATIN SMALL LETTER A WITH CIRCUMFLEX AND TILDE", and means you stroke the circumflex modifier before the tilde modifier.
+"""
+
 readmeSections = """
 ## Diacritic Keys
 The following 6 keys are used to add diacritics.
@@ -105,6 +116,7 @@ def generateReadme ():
                 charCount += 1
     print("This library currently provides quick access to " + str(charCount) + " characters.")
     print(readmeGoals)
+    print(readmeNotesOnDesign)
     print(readmeSections)
     print(readmeAddingModifiers)
     print(readmeTweaks)
