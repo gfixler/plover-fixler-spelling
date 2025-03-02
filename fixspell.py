@@ -112,7 +112,7 @@ modifiers = {
     "commaBelow": {
         "outline": "-B",
         "name": "Comma Below",
-        "docs": "Chosen to mirror the shape used for the comma in the Emily's Symbols plugin.",
+        "docs": "Chosen to mirror the shape used for the comma in the [Emily's Symbols](https://github.com/EPLHREU/emily-symbols) plugin.",
     },
     "diaeresis": {
         "outline": "-FL",
@@ -127,12 +127,12 @@ modifiers = {
     "dotAbove": {
         "outline": "-F",
         "name": "Dot Above",
-        "docs": "A single key, up high, like a dot above.",
+        "docs": "A single key, up high, like a dot above. See dot below.",
     },
     "dotBelow": {
         "outline": "-R",
         "name": "Dot Below",
-        "docs": "A single key, down low, like a dot below.",
+        "docs": "Chosen to mirror the shape used for the period in the [Emily's Symbols](https://github.com/EPLHREU/emily-symbols) plugin. A single key, down low, like a dot below. See dot above.",
     },
     "grave": {
         "outline": "-FB",
