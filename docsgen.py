@@ -23,15 +23,17 @@ Modifiers do not currently look at stroke history. The modifier system simply cr
 
 Because letters are "baked in" to the outlines with their modifiers, it means you must use the letter chords as defined in this library. This limitation should be removed in the future. This means if you use STK for "z", for example, and this system uses STKPW, you must use this system's version to write, e.g., the ẓ character.
 
-All characters in the core system, seen in the "Used by" lists following each modifier in the [Available Diacritics/Modifiers](#available-diacriticsmodifiers) section below are "precomposed" characters in Unicode, meaning they have a single code point in The Unicode Standard. Many characters not in these lists, encountered in the wild, are actually composed of a base letter, and one or more [combining characters](https://en.wikipedia.org/wiki/Combining_character). For example, z with acute exists in Unicode, but currently, z with grave does not, so it's not in the core system here. If you see a z with grave, it's composed of small letter z (U+007A) and the combining grave diacritic (U+0323). Even characters that do have a precomposed (single code point) version often show up as [composed versions](https://en.wikipedia.org/wiki/Unicode_equivalence) of themselves.
+All characters in the core system, seen in the "Used by" lists following each modifier in the [Available Diacritics and Other Modifiers](#available-diacritics-and-other-modifiers) section below are "precomposed" characters in Unicode, meaning they have a single code point in The Unicode Standard. Many characters not in these lists, encountered in the wild, are actually composed of a base letter, and one or more [combining characters](https://en.wikipedia.org/wiki/Combining_character). For example, z with acute exists in Unicode, but currently, z with grave does not, so it's not in the core system here. If you see a z with grave, it's composed of small letter z (U+007A) and the combining grave diacritic (U+0323). Even characters that do have a precomposed (single code point) version often show up as [composed versions](https://en.wikipedia.org/wiki/Unicode_equivalence) of themselves.
 
 Characters with more than one modifier, like "ẫ" ("a with circumflex and tilde"), are made by stroking the letter chord, followed by each modifier chord in sequence. The order of these is based primarily on the Unicode name, where "ẫ" (Unicode code point U+1EAB) is called "LATIN SMALL LETTER A WITH CIRCUMFLEX AND TILDE", and means you stroke the circumflex modifier before the tilde modifier.
 """
 # TODO allow adding character overrides in a user-defined file
 
 readmeSections = """
-## Diacritic Keys
-The following 6 keys are used to add diacritics.
+## Modifier Keys
+The following 6 keys are used to add diacritics and other modifiers.
+
+See the following section, [Using Modifiers](#using-modifiers), for usage instructions.
 ```
 🅂🅃🄿🄷 🄾 🅵🅿🅻🅃🄳
 🅂🄺🅆🅁 🄾 🆁🅱🅶🅂🅉
@@ -40,7 +42,7 @@ The following 6 keys are used to add diacritics.
 """
 
 readmeUsingModifiers = """
-## UsingDiacritics/Modifiers
+## Using Modifiers
 Modify base letters by stroking a diacritic or modifier outline immediately after a base letter.
 
 For example, to get á, stroke A* for "a", then the acute modifier outline to convert it.
@@ -59,7 +61,7 @@ Tweaks are added to a modifier stroke using the E and U keys.
 """
 
 readmeAvailableDiacritics = """
-## Available Diacritics/Modifiers
+## Available Diacritics and Other Modifiers
 In general, the diacritic chords are meant to visually resemble their symbols, to ease remembering them all.
 
 For other modifiers, like rotation or inversion, an attempt was made to be memorable. See notes with each modifier.
