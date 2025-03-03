@@ -1,3 +1,6 @@
+import unicodedata
+
+
 from fixspell import entries, modifiers
 
 
@@ -74,11 +77,26 @@ For other modifiers, like rotation or inversion, an attempt was made to be memor
 NOTE: Modifier and Tweak are part of the same stroke.
 """
 
+unicodeCodePtURL = "https://www.compart.com/en/unicode/"
+toCodePt = lambda char: "U+" + ("0000" + hex(ord(char))[2:])[-4:].upper()
+toURL = lambda char: unicodeCodePtURL + toCodePt(char)
+
+def ccc_sort_key (c):
+    normalized = unicodedata.normalize("NFD", c)
+    base_letter = normalized[0]
+    return (base_letter.lower(), normalized[1:], base_letter.islower())
+
+readmeAllCharacters = """
+## Character List
+Here are all the characters this library exports.
+
+Code points currently link to their associated page on [Compart](https://www.compart.com/en/about-compart)'s site.
+|Char|Code Pt|Name|
+|-|-|-|"""
+
 def getEntriesWithModifier (modifier):
     search = lambda x: modifier in x["modifiers"]
     return filter(search, entries)
-
-unicodeCodePtURL = "https://www.compart.com/en/unicode/"
 
 def generateDiacriticsSection ():
     print("|Modifier|Tweak|Notes|")
@@ -130,6 +148,16 @@ def generateReadme ():
     print(readmeTweaks)
     print(readmeAvailableDiacritics)
     generateDiacriticsSection()
+    print(readmeAllCharacters)
+    chars = []
+    for entry in entries:
+        if entry["minuscule"] != None:
+            chars.append(entry["minuscule"][1])
+        if entry["majuscule"] != None:
+            chars.append(entry["majuscule"][1])
+    cccs = sorted(chars, key=ccc_sort_key)
+    for ccc in cccs:
+        print("|" + ccc + "|[" + toCodePt(ccc) + "](" + toURL(ccc) + ")|" + unicodedata.name(ccc) + "|")
 
 if __name__ == "__main__":
     generateReadme()
