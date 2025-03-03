@@ -379,13 +379,6 @@ entries = [
         "link": "https://en.wikipedia.org/wiki/%C4%AE",
     },
     {
-        "name": "I with cedilla",
-        "majuscule": ("I", "I̧"),
-        "minuscule": ("i", "i̧"),
-        "modifiers": ["cedilla"],
-        "link": "https://en.wikipedia.org/wiki/Cedilla",
-    },
-    {
         "name": "I with bar",
         "majuscule": ("I", "Ɨ"),
         "minuscule": ("i", "ɨ"),
@@ -414,25 +407,11 @@ entries = [
         "link": "https://en.wikipedia.org/wiki/L_with_bar",
     },
     {
-        "name": "M with cedilla",
-        "majuscule": ("M", "M̧"),
-        "minuscule": ("m", "m̧"),
-        "modifiers": ["cedilla"],
-        "link": "https://en.wikipedia.org/wiki/Cedilla",
-    },
-    {
         "name": "O with ogonek",
         "majuscule": ("Q", "Ǫ"),
         "minuscule": ("q", "ǫ"),
         "modifiers": ["ogonek"],
         "link": "https://en.wikipedia.org/wiki/%C7%AA",
-    },
-    {
-        "name": "O with cedilla",
-        "majuscule": ("O", "O̧"),
-        "minuscule": ("o", "o̧"),
-        "modifiers": ["cedilla"],
-        "link": "https://en.wikipedia.org/wiki/Cedilla",
     },
     {
         "name": "O with stroke",
@@ -498,13 +477,6 @@ entries = [
         "link": "https://en.wikipedia.org/wiki/%C5%B2",
     },
     {
-        "name": "U with cedilla",
-        "majuscule": ("U", "U̧"),
-        "minuscule": ("u", "u̧"),
-        "modifiers": ["cedilla"],
-        "link": "https://en.wikipedia.org/wiki/Cedilla",
-    },
-    {
         "name": "U with horn",
         "majuscule": ("U", "Ư"),
         "minuscule": ("u", "ư"),
@@ -517,13 +489,6 @@ entries = [
         "minuscule": ("u", "ʉ"),
         "modifiers": ["stroke"],
         "link": "https://en.wikipedia.org/wiki/U_with_bar",
-    },
-    {
-        "name": "Y with ogonek",
-        "majuscule": ("Y", "Y̨"),
-        "minuscule": ("y", "y̨"),
-        "modifiers": ["ogonek"],
-        "link": "https://en.wikipedia.org/wiki/Ogonek",
     },
     {
         "name": "Y with hook",
@@ -622,20 +587,6 @@ entries = [
         "minuscule": ("a", "å"),
         "modifiers": ["ringAbove"],
         "link": "https://en.wikipedia.org/wiki/%C3%85",
-    },
-    {
-        "name": "A with ring above and acute",
-        "majuscule": ("A", "Ǻ"),
-        "minuscule": ("a", "ǻ"),
-        "modifiers": ["ringAbove", "acute"],
-        "link": "https://en.wikipedia.org/wiki/%C3%85#On_computers",
-    },
-    {
-        "name": "A with double acute",
-        "majuscule": ("A", "A̋"),
-        "minuscule": ("a", "a̋"),
-        "modifiers": ["acuteDoubled"],
-        "link": "https://en.wikipedia.org/wiki/Double_acute_accent#Letters_with_double_acute",
     },
     {
         "name": "B with dot below",
@@ -799,13 +750,6 @@ entries = [
         "link": "https://en.wikipedia.org/wiki/%C4%9E",
     },
     {
-        "name": "G with tilde",
-        "majuscule": ("G", "G̃"),
-        "minuscule": ("g", "g̃"),
-        "modifiers": ["tilde"],
-        "link": "https://en.wikipedia.org/wiki/G%CC%83",
-    },
-    {
         "name": "G with cedilla",
         "majuscule": ("G", "Ģ"),
         "minuscule": ("g", "ģ"),
@@ -960,32 +904,11 @@ entries = [
         "link": "https://en.wikipedia.org/wiki/Circumflex",
     },
     {
-        "name": "M with circumflex",
-        "majuscule": ("M", "M̂"),
-        "minuscule": ("m", "m̂"),
-        "modifiers": ["circumflex"],
-        "link": "https://en.wikipedia.org/wiki/Circumflex",
-    },
-    {
-        "name": "M with macron",
-        "majuscule": ("M", "M̄"),
-        "minuscule": ("m", "m̄"),
-        "modifiers": ["macron"],
-        "link": "https://en.wikipedia.org/wiki/Macron_(diacritic)",
-    },
-    {
         "name": "N with acute",
         "majuscule": ("N", "Ń"),
         "minuscule": ("n", "ń"),
         "modifiers": ["acute"],
         "link": "https://en.wikipedia.org/wiki/%C5%83",
-    },
-    {
-        "name": "N with circumflex",
-        "majuscule": ("N", "N̂"),
-        "minuscule": ("n", "n̂"),
-        "modifiers": ["circumflex"],
-        "link": "https://en.wikipedia.org/wiki/Circumflex",
     },
     {
         "name": "N with dot above",
@@ -995,25 +918,11 @@ entries = [
         "link": "https://en.wikipedia.org/wiki/%E1%B9%84",
     },
     {
-        "name": "N with diaeresis",
-        "majuscule": ("N", "N̈"),
-        "minuscule": ("n", "n̈"),
-        "modifiers": ["diaeresis"],
-        "link": "https://en.wikipedia.org/wiki/N%CC%88",
-    },
-    {
         "name": "N with caron",
         "majuscule": ("N", "Ň"),
         "minuscule": ("n", "ň"),
         "modifiers": ["caron"],
         "link": "https://en.wikipedia.org/wiki/%C5%87",
-    },
-    {
-        "name": "N with macron",
-        "majuscule": ("N", "N̄"),
-        "minuscule": ("n", "n̄"),
-        "modifiers": ["macron"],
-        "link": "https://en.wikipedia.org/wiki/Macron_(diacritic)",
     },
     {
         "name": "N with tilde",
@@ -1147,13 +1056,6 @@ entries = [
         "minuscule": ("o", "ơ"),
         "modifiers": ["horn"],
         "link": "https://en.wikipedia.org/wiki/%C6%A0",
-    },
-    {
-        "name": "P with macron ",
-        "majuscule": ("P", "P̄"),
-        "minuscule": ("p", "p̄"),
-        "modifiers": ["macron"],
-        "link": "https://en.wikipedia.org/wiki/Macron_(diacritic)#Letter_extension",
     },
     {
         "name": "R with acute",
