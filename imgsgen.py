@@ -42,7 +42,7 @@ tweakKeyCols = defaultKeyCols | {
     "ridge": "#9146BC",
 }
 
-def genKey (label, keyCols=defaultKeyCols, keyOpts=defaultKeyOpts):
+def genKey (label, keyOpts=defaultKeyOpts, keyCols=defaultKeyCols):
     smoothing = 8
 
     unit = keyOpts["unit"] * smoothing
@@ -87,23 +87,20 @@ def genKey (label, keyCols=defaultKeyCols, keyOpts=defaultKeyOpts):
     return downRes
 
 
-def genDiacriticStrokeImage (stroke="", keyCols=defaultKeyCols, keyOpts=defaultKeyOpts):
+def genDiacriticStrokeImage (stroke="", keyOpts=defaultKeyOpts, keyCols=defaultKeyCols):
     pressed = lambda k: modifierKeyCols if k in stroke else defaultKeyCols
+
     north = {"faceOffsetY": 2}
     south = {"faceOffsetY": -2}
     east = {"faceOffsetX": -2}
     west = {"faceOffsetX": 2}
 
-    F = genKey("F", pressed("F"), keyOpts | north)
-    R = genKey("R", pressed("R"), keyOpts | south)
-    P = genKey("P", pressed("P"), keyOpts | north)
-    B = genKey("B", pressed("B"), keyOpts | south)
-    L = genKey("L", pressed("L"), keyOpts | north)
-    G = genKey("G", pressed("G"), keyOpts | south)
-
-    pressed = lambda k: tweakKeyCols if k in stroke else defaultKeyCols
-    E = genKey("E", pressed("E"), keyOpts | west)
-    U = genKey("U", pressed("U"), keyOpts | east)
+    F = genKey("F", keyOpts | north, pressed("F"))
+    R = genKey("R", keyOpts | south, pressed("R"))
+    P = genKey("P", keyOpts | north, pressed("P"))
+    B = genKey("B", keyOpts | south, pressed("B"))
+    L = genKey("L", keyOpts | north, pressed("L"))
+    G = genKey("G", keyOpts | south, pressed("G"))
 
     kw = F.width
     kh = F.height
@@ -138,13 +135,14 @@ def genDiacriticImages ():
         image = genDiacriticStrokeImage(modData["outline"])
         image.save("images/" + modName + ".png", "PNG")
 
-def genTweakStrokeImage (stroke="", keyCols=defaultKeyCols, keyOpts=defaultKeyOpts):
+def genTweakStrokeImage (stroke="", keyOpts=defaultKeyOpts, keyCols=defaultKeyCols):
     pressed = lambda k: tweakKeyCols if k in stroke else defaultKeyCols
+
     east = {"faceOffsetX": -2}
     west = {"faceOffsetX": 2}
 
-    E = genKey("E", pressed("E"), keyOpts | west)
-    U = genKey("U", pressed("U"), keyOpts | east)
+    E = genKey("E", keyOpts | west, pressed("E"))
+    U = genKey("U", keyOpts | east, pressed("U"))
 
     kw = E.width
     kh = E.height
