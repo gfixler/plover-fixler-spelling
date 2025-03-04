@@ -18,26 +18,25 @@ defaultKeyOpts = {
 
     "frameMargin": 5,
     "frameRadius": 8,
-
-    "backgroundCol": "white",
-    "frameCol": "#EEEEEE",
-
-    "keyOutlineCol": "black",
 }
 
 defaultKeyCols = {
+    "backgroundCol": "white",
+    "frameCol": "#EEEEEE",
+    "keyOutlineCol": "black",
+
     "light": "#FCFCFC",
     "dark": "#CCCCCC",
     "ridge": "#BBBBBB",
 }
 
-modifierKeyCols = {
+modifierKeyCols = defaultKeyCols | {
     "light": "#46CD34",
     "dark": "#00AA00",
     "ridge": "#009900",
 }
 
-tweakKeyCols = {
+tweakKeyCols = defaultKeyCols | {
     "light": "#BF69EE",
     "dark": "#A24ED1",
     "ridge": "#9146BC",
@@ -47,15 +46,15 @@ def genKey (label, keyCols=defaultKeyCols, keyOpts=defaultKeyOpts):
     smoothing = 8
 
     unit = keyOpts["unit"] * smoothing
-    bgCol = keyOpts["frameCol"]
+    bgCol = keyCols["frameCol"]
 
     image = Image.new("RGB", (unit, unit), bgCol)
     draw = ImageDraw.Draw(image)
 
-    borderCol = keyOpts["keyOutlineCol"]
+    col = keyCols["dark"]
+    borderCol = keyCols["keyOutlineCol"]
     stroke = keyOpts["outlineWidth"] * smoothing
     rad = keyOpts["baseCornerRadius"] * smoothing
-    col = keyCols["dark"]
     dims = (0, 0, unit - (stroke / 2), unit - (stroke / 2))
     opts = {"fill":col, "outline":borderCol, "width":stroke, "radius":rad}
     draw.rounded_rectangle(dims, **opts)
@@ -70,10 +69,10 @@ def genKey (label, keyCols=defaultKeyCols, keyOpts=defaultKeyOpts):
     y = faceMargin + yOffset
     w = unit - faceMargin + xOffset
     h = unit - faceMargin + yOffset
+    col = keyCols["light"]
     ridgeCol = keyCols["ridge"]
     stroke = keyOpts["outlineWidth"] * smoothing
     rad = keyOpts["faceCornerRadius"] * smoothing
-    col = keyCols["light"]
     dims = (x, y, w - (stroke / 2), h - (stroke / 2))
     opts = {"fill":col, "outline":ridgeCol, "width":stroke, "radius":rad}
     draw.rounded_rectangle(dims, **opts)
@@ -88,7 +87,7 @@ def genKey (label, keyCols=defaultKeyCols, keyOpts=defaultKeyOpts):
     return downRes
 
 
-def genDiacriticStrokeImage (stroke="", keyOpts=defaultKeyOpts):
+def genDiacriticStrokeImage (stroke="", keyCols=defaultKeyCols, keyOpts=defaultKeyOpts):
     pressed = lambda k: modifierKeyCols if k in stroke else defaultKeyCols
     north = {"faceOffsetY": 2}
     south = {"faceOffsetY": -2}
@@ -115,12 +114,12 @@ def genDiacriticStrokeImage (stroke="", keyOpts=defaultKeyOpts):
     x = margin
     y = margin
 
-    bgCol = keyOpts["backgroundCol"]
+    bgCol = keyCols["backgroundCol"]
     image = Image.new("RGB", (w, h), bgCol)
     draw = ImageDraw.Draw(image)
 
+    col = keyCols["frameCol"]
     rad = keyOpts["frameRadius"]
-    col = keyOpts["frameCol"]
     dims = (0, 0, image.width, image.height)
     opts = {"fill":col, "radius":rad}
     draw.rounded_rectangle(dims, **opts)
@@ -139,7 +138,7 @@ def genDiacriticImages ():
         image = genDiacriticStrokeImage(modData["outline"])
         image.save("images/" + modName + ".png", "PNG")
 
-def genTweakStrokeImage (stroke="", keyOpts=defaultKeyOpts):
+def genTweakStrokeImage (stroke="", keyCols=defaultKeyCols, keyOpts=defaultKeyOpts):
     pressed = lambda k: tweakKeyCols if k in stroke else defaultKeyCols
     east = {"faceOffsetX": -2}
     west = {"faceOffsetX": 2}
@@ -156,12 +155,12 @@ def genTweakStrokeImage (stroke="", keyOpts=defaultKeyOpts):
     x = margin
     y = margin
 
-    bgCol = keyOpts["backgroundCol"]
+    bgCol = keyCols["backgroundCol"]
     image = Image.new("RGB", (w, h), bgCol)
     draw = ImageDraw.Draw(image)
 
     rad = keyOpts["frameRadius"]
-    col = keyOpts["frameCol"]
+    col = keyCols["frameCol"]
     dims = (0, 0, image.width, image.height)
     opts = {"fill":col, "radius":rad}
     draw.rounded_rectangle(dims, **opts)
