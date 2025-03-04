@@ -3,19 +3,16 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 from fixspell import modifiers
 
 
-northKey = (0, 2)
-southKey = (0, -2)
-eastKey = (-2, 0)
-westKey = (2, 0)
-
 defaultKeyOpts = {
     "unit": 57,
 
-    "topFaceShrink": 6,
-    "topFaceOffset": northKey,
+    "faceMargin": 6,
 
-    "outerRadius": 5,
-    "innerRadius": 3,
+    "faceOffsetX": 0,
+    "faceOffsetY": 0,
+
+    "baseCornerRadius": 5,
+    "faceCornerRadius": 3,
 
     "outlineWidth": 1,
 
@@ -57,24 +54,25 @@ def genKey (label, keyCols=defaultKeyCols, keyOpts=defaultKeyOpts):
 
     borderCol = keyOpts["keyOutlineCol"]
     stroke = keyOpts["outlineWidth"] * smoothing
-    rad = keyOpts["outerRadius"] * smoothing
+    rad = keyOpts["baseCornerRadius"] * smoothing
     col = keyCols["dark"]
     dims = (0, 0, unit - (stroke / 2), unit - (stroke / 2))
     opts = {"fill":col, "outline":borderCol, "width":stroke, "radius":rad}
     draw.rounded_rectangle(dims, **opts)
 
-    topFaceShrink = keyOpts["topFaceShrink"] * smoothing
-    xOffset, yOffset = keyOpts["topFaceOffset"]
+    faceMargin = keyOpts["faceMargin"] * smoothing
+    xOffset = keyOpts["faceOffsetX"]
+    yOffset = keyOpts["faceOffsetY"]
 
     xOffset *= smoothing
     yOffset *= smoothing
-    x = topFaceShrink + xOffset
-    y = topFaceShrink + yOffset
-    w = unit - topFaceShrink + xOffset
-    h = unit - topFaceShrink + yOffset
+    x = faceMargin + xOffset
+    y = faceMargin + yOffset
+    w = unit - faceMargin + xOffset
+    h = unit - faceMargin + yOffset
     ridgeCol = keyCols["ridge"]
     stroke = keyOpts["outlineWidth"] * smoothing
-    rad = keyOpts["innerRadius"] * smoothing
+    rad = keyOpts["faceCornerRadius"] * smoothing
     col = keyCols["light"]
     dims = (x, y, w - (stroke / 2), h - (stroke / 2))
     opts = {"fill":col, "outline":ridgeCol, "width":stroke, "radius":rad}
@@ -92,10 +90,10 @@ def genKey (label, keyCols=defaultKeyCols, keyOpts=defaultKeyOpts):
 
 def genDiacriticStrokeImage (stroke="", keyOpts=defaultKeyOpts):
     pressed = lambda k: modifierKeyCols if k in stroke else defaultKeyCols
-    north = {"topFaceOffset": northKey}
-    south = {"topFaceOffset": southKey}
-    west = {"topFaceOffset": westKey}
-    east = {"topFaceOffset": eastKey}
+    north = {"faceOffsetY": 2}
+    south = {"faceOffsetY": -2}
+    east = {"faceOffsetX": -2}
+    west = {"faceOffsetX": 2}
 
     F = genKey("F", pressed("F"), keyOpts | north)
     R = genKey("R", pressed("R"), keyOpts | south)
@@ -143,8 +141,8 @@ def genDiacriticImages ():
 
 def genTweakStrokeImage (stroke="", keyOpts=defaultKeyOpts):
     pressed = lambda k: tweakKeyCols if k in stroke else defaultKeyCols
-    west = {"topFaceOffset": westKey}
-    east = {"topFaceOffset": eastKey}
+    east = {"faceOffsetX": -2}
+    west = {"faceOffsetX": 2}
 
     E = genKey("E", pressed("E"), keyOpts | west)
     U = genKey("U", pressed("U"), keyOpts | east)
