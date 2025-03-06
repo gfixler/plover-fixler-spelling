@@ -1371,8 +1371,6 @@ entries = [
         "minuscule": ("y", "ỷ"),
         "modifiers": ["hookAbove"],
         "link": "",
-        "majCodePt": "U+1EF6",
-        "minCodePt": "U+1EF7",
     },
     {
         "name": "Y with dot below",
@@ -1380,8 +1378,6 @@ entries = [
         "minuscule": ("y", "ỵ"),
         "modifiers": ["dotBelow"],
         "link": "",
-        "majCodePt": "U+1EF4",
-        "minCodePt": "U+1EF5",
     },
     {
         "name": "A with breve and hook above",
@@ -1389,8 +1385,6 @@ entries = [
         "minuscule": ("a", "ẳ"),
         "modifiers": ["breve", "hookAbove"],
         "link": "",
-        "majCodePt": "U+1EB2",
-        "minCodePt": "U+1EB3",
     },
     {
         "name": "A with breve and tilde",
@@ -1398,8 +1392,6 @@ entries = [
         "minuscule": ("a", "ẵ"),
         "modifiers": ["breve", "tilde"],
         "link": "",
-        "majCodePt": "U+1EB4",
-        "minCodePt": "U+1EB5",
     },
     {
         "name": "A with breve and grave",
@@ -1407,8 +1399,6 @@ entries = [
         "minuscule": ("a", "ằ"),
         "modifiers": ["breve", "grave"],
         "link": "",
-        "majCodePt": "U+1EB0",
-        "minCodePt": "U+1EB1",
     },
     {
         "name": "A with breve and acute",
@@ -1416,8 +1406,6 @@ entries = [
         "minuscule": ("A", "ắ"),
         "modifiers": ["breve", "acute"],
         "link": "",
-        "majCodePt": "U+1EAE",
-        "minCodePt": "U+1EAF",
     },
     {
         "name": "A with hook above",
@@ -1425,8 +1413,6 @@ entries = [
         "minuscule": ("a", "ả"),
         "modifiers": ["hookAbove"],
         "link": "",
-        "majCodePt": "U+1EA2",
-        "minCodePt": "U+1EA3",
     },
     {
         "name": "A with dot below",
@@ -1434,8 +1420,6 @@ entries = [
         "minuscule": ("a", "ạ"),
         "modifiers": ["dotBelow"],
         "link": "",
-        "majCodePt": "U+1EA0",
-        "minCodePt": "U+1EA1",
     },
     {
         "name": "A with breve and dot below",
@@ -1443,8 +1427,6 @@ entries = [
         "minuscule": ("a", "ặ"),
         "modifiers": ["breve", "dotBelow"],
         "link": "",
-        "majCodePt": "U+1EB6",
-        "minCodePt": "U+1EB7",
     },
     {
         "name": "A with circumflex and dot below",
@@ -1452,8 +1434,6 @@ entries = [
         "minuscule": ("a", "ậ"),
         "modifiers": ["circumflex", "dotBelow"],
         "link": "",
-        "majCodePt": "U+1EAC",
-        "minCodePt": "U+1EAD",
     },
     {
         "name": "A with circumflex and hook above",
@@ -1461,8 +1441,6 @@ entries = [
         "minuscule": ("a", "ẩ"),
         "modifiers": ["circumflex", "hookAbove"],
         "link": "",
-        "majCodePt": "U+1EA8",
-        "minCodePt": "U+1EA9",
     },
     {
         "name": "A with circumflex and tilde",
@@ -1470,8 +1448,6 @@ entries = [
         "minuscule": ("a", "ẫ"),
         "modifiers": ["circumflex", "tilde"],
         "link": "",
-        "majCodePt": "U+1EAA",
-        "minCodePt": "U+1EAB",
     },
     {
         "name": "A with circumflex and grave",
@@ -1479,8 +1455,6 @@ entries = [
         "minuscule": ("a", "ầ"),
         "modifiers": ["circumflex", "grave"],
         "link": "",
-        "majCodePt": "U+1EA6",
-        "minCodePt": "U+1EA7",
     },
     {
         "name": "A with circumflex and acute",
@@ -1488,8 +1462,6 @@ entries = [
         "minuscule": ("a", "ấ"),
         "modifiers": ["circumflex", "acute"],
         "link": "",
-        "majCodePt": "U+1EA4",
-        "minCodePt": "U+1EA5",
     },
     {
         "name": "O with hook above",
@@ -1497,8 +1469,6 @@ entries = [
         "minuscule": ("o", "ỏ"),
         "modifiers": ["hookAbove"],
         "link": "",
-        "majCodePt": "U+1ECE",
-        "minCodePt": "U+1ECF",
     },
     {
         "name": "O with horn and dot below",
@@ -1506,8 +1476,6 @@ entries = [
         "minuscule": ("o", "ợ"),
         "modifiers": ["horn", "dotBelow"],
         "link": "",
-        "majCodePt": "U+1EE2",
-        "minCodePt": "U+1EE3",
     },
     {
         "name": "O with circumflex and dot below",
@@ -1515,8 +1483,6 @@ entries = [
         "minuscule": ("o", "ộ"),
         "modifiers": ["circumflex", "dotBelow"],
         "link": "",
-        "majCodePt": "U+1ED8",
-        "minCodePt": "U+1ED9",
     },
     {
         "name": "O with horn and hook above",
@@ -1524,8 +1490,6 @@ entries = [
         "minuscule": ("o", "ở"),
         "modifiers": ["horn", "hookAbove"],
         "link": "",
-        "majCodePt": "U+1EDE",
-        "minCodePt": "U+1EDF",
     },
     {
         "name": "O with horn and tilde",
@@ -1533,8 +1497,6 @@ entries = [
         "minuscule": ("o", "ỡ"),
         "modifiers": ["horn", "tilde"],
         "link": "",
-        "majCodePt": "U+1EE0",
-        "minCodePt": "U+1EE1",
     },
     {
         "name": "O with horn and grave",
@@ -1542,8 +1504,6 @@ entries = [
         "minuscule": ("o", "ờ"),
         "modifiers": ["horn", "grave"],
         "link": "",
-        "majCodePt": "U+1EDC",
-        "minCodePt": "U+1EDD",
     },
     {
         "name": "O with horn and acute",
@@ -1551,8 +1511,6 @@ entries = [
         "minuscule": ("o", "ớ"),
         "modifiers": ["horn", "acute"],
         "link": "",
-        "majCodePt": "U+1EDA",
-        "minCodePt": "U+1EDB",
     },
     {
         "name": "O with circumflex and hook above",
@@ -1560,8 +1518,6 @@ entries = [
         "minuscule": ("o", "ổ"),
         "modifiers": ["circumflex", "hookAbove"],
         "link": "",
-        "majCodePt": "U+1ED4",
-        "minCodePt": "U+1ED5",
     },
     {
         "name": "O with circumflex and tilde",
@@ -1569,8 +1525,6 @@ entries = [
         "minuscule": ("o", "ỗ"),
         "modifiers": ["circumflex", "tilde"],
         "link": "",
-        "majCodePt": "U+1ED6",
-        "minCodePt": "U+1ED7",
     },
     {
         "name": "O with circumflex and grave",
@@ -1578,8 +1532,6 @@ entries = [
         "minuscule": ("o", "ồ"),
         "modifiers": ["circumflex", "grave"],
         "link": "",
-        "majCodePt": "U+1ED2",
-        "minCodePt": "U+1ED3",
     },
     {
         "name": "O with circumflex and acute",
@@ -1587,8 +1539,6 @@ entries = [
         "minuscule": ("o", "ố"),
         "modifiers": ["circumflex", "acute"],
         "link": "",
-        "majCodePt": "U+1ED0",
-        "minCodePt": "U+1ED1",
     },
     {
         "name": "E with hook above",
@@ -1596,8 +1546,6 @@ entries = [
         "minuscule": ("e", "ẻ"),
         "modifiers": ["hookAbove"],
         "link": "",
-        "majCodePt": "U+1EBA",
-        "minCodePt": "U+1EBB",
     },
     {
         "name": "E with circumflex and dot below",
@@ -1605,8 +1553,6 @@ entries = [
         "minuscule": ("e", "ệ"),
         "modifiers": ["circumflex", "dotBelow"],
         "link": "",
-        "majCodePt": "U+1EC6",
-        "minCodePt": "U+1EC7",
     },
     {
         "name": "E with circumflex and hook above",
@@ -1614,8 +1560,6 @@ entries = [
         "minuscule": ("e", "ể"),
         "modifiers": ["circumflex", "hookAbove"],
         "link": "",
-        "majCodePt": "U+1EC2",
-        "minCodePt": "U+1EC3",
     },
     {
         "name": "E with circumflex and tilde",
@@ -1623,8 +1567,6 @@ entries = [
         "minuscule": ("e", "ễ"),
         "modifiers": ["circumflex", "tilde"],
         "link": "",
-        "majCodePt": "U+1EC4",
-        "minCodePt": "U+1EC5",
     },
     {
         "name": "E with circumflex and grave",
@@ -1632,8 +1574,6 @@ entries = [
         "minuscule": ("e", "ề"),
         "modifiers": ["circumflex", "grave"],
         "link": "",
-        "majCodePt": "U+1EC0",
-        "minCodePt": "U+1EC1",
     },
     {
         "name": "E with circumflex and acute",
@@ -1641,8 +1581,6 @@ entries = [
         "minuscule": ("e", "ế"),
         "modifiers": ["circumflex", "acute"],
         "link": "",
-        "majCodePt": "U+1EBE",
-        "minCodePt": "U+1EBF",
     },
     {
         "name": "I with hook above",
@@ -1650,8 +1588,6 @@ entries = [
         "minuscule": ("i", "ỉ"),
         "modifiers": ["hookAbove"],
         "link": "",
-        "majCodePt": "U+1EC8",
-        "minCodePt": "U+1EC9",
     },
     {
         "name": "U with hook above",
@@ -1659,8 +1595,6 @@ entries = [
         "minuscule": ("u", "ủ"),
         "modifiers": ["hookAbove"],
         "link": "",
-        "majCodePt": "U+1EE6",
-        "minCodePt": "U+1EE7",
     },
     {
         "name": "U with horn and dot below",
@@ -1668,8 +1602,6 @@ entries = [
         "minuscule": ("u", "ự"),
         "modifiers": ["horn", "dotBelow"],
         "link": "",
-        "majCodePt": "U+1EF0",
-        "minCodePt": "U+1EF1",
     },
     {
         "name": "U with horn and hook above",
@@ -1677,8 +1609,6 @@ entries = [
         "minuscule": ("u", "ử"),
         "modifiers": ["horn", "hookAbove"],
         "link": "",
-        "majCodePt": "U+1EEC",
-        "minCodePt": "U+1EED",
     },
     {
         "name": "U with horn and tilde",
@@ -1686,8 +1616,6 @@ entries = [
         "minuscule": ("u", "ữ"),
         "modifiers": ["horn", "tilde"],
         "link": "",
-        "majCodePt": "U+1EEE",
-        "minCodePt": "U+1EEF",
     },
     {
         "name": "U with horn and grave",
@@ -1695,8 +1623,6 @@ entries = [
         "minuscule": ("u", "ừ"),
         "modifiers": ["horn", "grave"],
         "link": "",
-        "majCodePt": "U+1EEA",
-        "minCodePt": "U+1EEB",
     },
     {
         "name": "U with horn and acute",
@@ -1704,8 +1630,6 @@ entries = [
         "minuscule": ("u", "ứ"),
         "modifiers": ["horn", "acute"],
         "link": "",
-        "majCodePt": "U+1EE8",
-        "minCodePt": "U+1EE9",
     },
     {
         "name": "D with caron",
@@ -1713,8 +1637,6 @@ entries = [
         "minuscule": ("d", "ď"),
         "modifiers": ["caron"],
         "link": "",
-        "majCodePt": "U+010E",
-        "minCodePt": "U+010F",
     },
     {
         "name": "U with diaeresis and acute",
@@ -1722,8 +1644,6 @@ entries = [
         "minuscule": ("u", "ǘ"),
         "modifiers": ["diaeresis", "acute"],
         "link": "",
-        "majCodePt": "U+01D7",
-        "minCodePt": "U+01D8",
     },
     {
         "name": "U with diaeresis and macron",
@@ -1731,8 +1651,6 @@ entries = [
         "minuscule": ("u", "ǖ"),
         "modifiers": ["diaeresis", "macron"],
         "link": "",
-        "majCodePt": "U+01D5",
-        "minCodePt": "U+01D6",
     },
     {
         "name": "U with diaeresis and caron",
@@ -1740,8 +1658,6 @@ entries = [
         "minuscule": ("u", "ǚ"),
         "modifiers": ["diaeresis", "macron"],
         "link": "",
-        "majCodePt": "U+01D9",
-        "minCodePt": "U+01DA",
     },
     {
         "name": "U with diaeresis and grave",
@@ -1749,8 +1665,6 @@ entries = [
         "minuscule": ("u", "ǜ"),
         "modifiers": ["diaeresis", "grave"],
         "link": "",
-        "majCodePt": "U+01DB",
-        "minCodePt": "U+01DC",
     },
     {
         "name": "A with dot above and macron",
@@ -1758,8 +1672,6 @@ entries = [
         "minuscule": ("a", "ǡ"),
         "modifiers": ["dotAbove", "macron"],
         "link": "",
-        "majCodePt": "U+01E0",
-        "minCodePt": "U+01E1",
     },
     {
         "name": "O with ogonek and macron",
@@ -1767,8 +1679,6 @@ entries = [
         "minuscule": ("o", "ǭ"),
         "modifiers": ["ogonek", "macron"],
         "link": "",
-        "majCodePt": "U+01EC",
-        "minCodePt": "U+01ED",
     },
     {
         "name": "N with grave",
@@ -1776,8 +1686,6 @@ entries = [
         "minuscule": ("n", "ǹ"),
         "modifiers": ["grave"],
         "link": "",
-        "majCodePt": "U+01F8",
-        "minCodePt": "U+01F9",
     },
     {
         "name": "A with double grave",
@@ -1785,8 +1693,6 @@ entries = [
         "minuscule": ("a", "ȁ"),
         "modifiers": ["graveDoubled"],
         "link": "",
-        "majCodePt": "U+0200",
-        "minCodePt": "U+0201",
     },
     {
         "name": "A with inverted breve",
@@ -1794,8 +1700,6 @@ entries = [
         "minuscule": ("a", "ȃ"),
         "modifiers": ["breveInverted"],
         "link": "",
-        "majCodePt": "U+0202",
-        "minCodePt": "U+0203",
     },
     {
         "name": "E with double grave",
@@ -1803,8 +1707,6 @@ entries = [
         "minuscule": ("e", "ȅ"),
         "modifiers": ["graveDoubled"],
         "link": "",
-        "majCodePt": "U+0204",
-        "minCodePt": "U+0205",
     },
     {
         "name": "E with inverted breve",
@@ -1812,8 +1714,6 @@ entries = [
         "minuscule": ("e", "ȇ"),
         "modifiers": ["breveInverted"],
         "link": "",
-        "majCodePt": "U+0206",
-        "minCodePt": "U+0207",
     },
     {
         "name": "I with double grave",
@@ -1821,8 +1721,6 @@ entries = [
         "minuscule": ("i", "ȉ"),
         "modifiers": ["graveDoubled"],
         "link": "",
-        "majCodePt": "U+0208",
-        "minCodePt": "U+0209",
     },
     {
         "name": "I with inverted breve",
@@ -1830,8 +1728,6 @@ entries = [
         "minuscule": ("i", "ȋ"),
         "modifiers": ["breveInverted"],
         "link": "",
-        "majCodePt": "U+020A",
-        "minCodePt": "U+020B",
     },
     {
         "name": "O with double grave",
@@ -1839,8 +1735,6 @@ entries = [
         "minuscule": ("o", "ȍ"),
         "modifiers": ["graveDoubled"],
         "link": "",
-        "majCodePt": "U+020C",
-        "minCodePt": "U+020D",
     },
     {
         "name": "O with inverted breve",
@@ -1848,8 +1742,6 @@ entries = [
         "minuscule": ("o", "ȏ"),
         "modifiers": ["breveInverted"],
         "link": "",
-        "majCodePt": "U+020E",
-        "minCodePt": "U+020F",
     },
     {
         "name": "R with double grave",
@@ -1857,8 +1749,6 @@ entries = [
         "minuscule": ("r", "ȑ"),
         "modifiers": ["graveDoubled"],
         "link": "",
-        "majCodePt": "U+0210",
-        "minCodePt": "U+0211",
     },
     {
         "name": "R with inverted breve",
@@ -1866,8 +1756,6 @@ entries = [
         "minuscule": ("r", "ȓ"),
         "modifiers": ["breveInverted"],
         "link": "",
-        "majCodePt": "U+0212",
-        "minCodePt": "U+0213",
     },
     {
         "name": "U with double grave",
@@ -1875,8 +1763,6 @@ entries = [
         "minuscule": ("u", "ȕ"),
         "modifiers": ["graveDoubled"],
         "link": "",
-        "majCodePt": "U+0214",
-        "minCodePt": "U+0215",
     },
     {
         "name": "U with inverted breve",
@@ -1884,8 +1770,6 @@ entries = [
         "minuscule": ("u", "ȗ"),
         "modifiers": ["breveInverted"],
         "link": "",
-        "majCodePt": "U+0216",
-        "minCodePt": "U+0217",
     },
     {
         "name": "H with caron",
@@ -1893,8 +1777,6 @@ entries = [
         "minuscule": ("h", "ȟ"),
         "modifiers": ["caron"],
         "link": "",
-        "majCodePt": "U+021E",
-        "minCodePt": "U+021F",
     },
     {
         "name": "A with ring below",
@@ -1902,8 +1784,6 @@ entries = [
         "minuscule": ("a", "ḁ"),
         "modifiers": ["ringBelow"],
         "link": "",
-        "majCodePt": "U+1E00",
-        "minCodePt": "U+1E01",
     },
     {
         "name": "B with dot above",
@@ -1911,8 +1791,6 @@ entries = [
         "minuscule": ("b", "ḃ"),
         "modifiers": ["dotAbove"],
         "link": "",
-        "majCodePt": "U+1E02",
-        "minCodePt": "U+1E03",
     },
     {
         "name": "B with line below",
@@ -1920,8 +1798,6 @@ entries = [
         "minuscule": ("b", "ḇ"),
         "modifiers": ["lineBelow"],
         "link": "",
-        "majCodePt": "U+1E06",
-        "minCodePt": "U+1E07",
     },
     {
         "name": "C with cedilla and acute",
@@ -1929,8 +1805,6 @@ entries = [
         "minuscule": ("c", "ḉ"),
         "modifiers": ["cedilla","acute"],
         "link": "",
-        "majCodePt": "U+1E08",
-        "minCodePt": "U+1E09",
     },
     {
         "name": "D with dot above",
@@ -1938,8 +1812,6 @@ entries = [
         "minuscule": ("d", "ḋ"),
         "modifiers": ["dotAbove"],
         "link": "",
-        "majCodePt": "U+1E0A",
-        "minCodePt": "U+1E0B",
     },
     {
         "name": "D with line below",
@@ -1947,8 +1819,6 @@ entries = [
         "minuscule": ("d", "ḏ"),
         "modifiers": ["lineBelow"],
         "link": "",
-        "majCodePt": "U+1E0E",
-        "minCodePt": "U+1E0F",
     },
     {
         "name": "E with macron and grave accent",
@@ -1956,8 +1826,6 @@ entries = [
         "minuscule": ("e", "ḕ"),
         "modifiers": ["macron", "grave"],
         "link": "",
-        "majCodePt": "U+1E14",
-        "minCodePt": "U+1E15",
     },
     {
         "name": "E with macron and acute",
@@ -1965,8 +1833,6 @@ entries = [
         "minuscule": ("e", "ḗ"),
         "modifiers": ["macron", "acute"],
         "link": "",
-        "majCodePt": "U+1E16",
-        "minCodePt": "U+1E17",
     },
     {
         "name": "E with circumflex below",
@@ -1974,8 +1840,6 @@ entries = [
         "minuscule": ("e", "ḙ"),
         "modifiers": ["circumflexBelow"],
         "link": "",
-        "majCodePt": "U+1E18",
-        "minCodePt": "U+1E19",
     },
     {
         "name": "E with tilde below",
@@ -1983,8 +1847,6 @@ entries = [
         "minuscule": ("e", "ḛ"),
         "modifiers": ["tildeBelow"],
         "link": "",
-        "majCodePt": "U+1E1A",
-        "minCodePt": "U+1E1B",
     },
     {
         "name": "E with cedilla and breve",
@@ -1992,8 +1854,6 @@ entries = [
         "minuscule": ("e", "ḝ"),
         "modifiers": ["cedilla", "breve"],
         "link": "",
-        "majCodePt": "U+1E1C",
-        "minCodePt": "U+1E1D",
     },
     {
         "name": "F with dot to above",
@@ -2001,8 +1861,6 @@ entries = [
         "minuscule": ("f", "ḟ"),
         "modifiers": ["dotAbove"],
         "link": "",
-        "majCodePt": "U+1E1E",
-        "minCodePt": "U+1E1F",
     },
     {
         "name": "G with macron",
@@ -2010,8 +1868,6 @@ entries = [
         "minuscule": ("g", "ḡ"),
         "modifiers": ["macron"],
         "link": "",
-        "majCodePt": "U+1E20",
-        "minCodePt": "U+1E21",
     },
     {
         "name": "H with dot above",
@@ -2019,8 +1875,6 @@ entries = [
         "minuscule": ("h", "ḣ"),
         "modifiers": ["dotAbove"],
         "link": "",
-        "majCodePt": "U+1E22",
-        "minCodePt": "U+1E23",
     },
     {
         "name": "H with diaeresis",
@@ -2028,8 +1882,6 @@ entries = [
         "minuscule": ("h", "ḧ"),
         "modifiers": ["diaeresis"],
         "link": "",
-        "majCodePt": "U+1E26",
-        "minCodePt": "U+1E27",
     },
     {
         "name": "H with cedilla",
@@ -2037,8 +1889,6 @@ entries = [
         "minuscule": ("h", "ḩ"),
         "modifiers": ["cedilla"],
         "link": "",
-        "majCodePt": "U+1E28",
-        "minCodePt": "U+1E29",
     },
     {
         "name": "H with breve below",
@@ -2046,8 +1896,6 @@ entries = [
         "minuscule": ("h", "ḫ"),
         "modifiers": ["breveBelow"],
         "link": "",
-        "majCodePt": "U+1E2A",
-        "minCodePt": "U+1E2B",
     },
     {
         "name": "I with tilde below",
@@ -2055,8 +1903,6 @@ entries = [
         "minuscule": ("I", "ḭ"),
         "modifiers": ["tildeBelow"],
         "link": "",
-        "majCodePt": "U+1E2C",
-        "minCodePt": "U+1E2D",
     },
     {
         "name": "I with diaeresis and acute",
@@ -2064,8 +1910,6 @@ entries = [
         "minuscule": ("i", "ḯ"),
         "modifiers": ["diaeresis", "acute"],
         "link": "",
-        "majCodePt": "U+1E2E",
-        "minCodePt": "U+1E2F",
     },
     {
         "name": "K with acute",
@@ -2073,8 +1917,6 @@ entries = [
         "minuscule": ("k", "ḱ"),
         "modifiers": ["acute"],
         "link": "",
-        "majCodePt": "U+1E30",
-        "minCodePt": "U+1E31",
     },
     {
         "name": "K with dot below",
@@ -2082,8 +1924,6 @@ entries = [
         "minuscule": ("k", "ḳ"),
         "modifiers": ["dotBelow"],
         "link": "",
-        "majCodePt": "U+1E32",
-        "minCodePt": "U+1E33",
     },
     {
         "name": "K with line below",
@@ -2091,8 +1931,6 @@ entries = [
         "minuscule": ("k", "ḵ"),
         "modifiers": ["lineBelow"],
         "link": "",
-        "majCodePt": "U+1E34",
-        "minCodePt": "U+1E35",
     },
     {
         "name": "L with dot below and macron",
@@ -2100,8 +1938,6 @@ entries = [
         "minuscule": ("l", "ḹ"),
         "modifiers": ["dotBelow", "macron"],
         "link": "",
-        "majCodePt": "U+1E38",
-        "minCodePt": "U+1E39",
     },
     {
         "name": "L with line below",
@@ -2109,8 +1945,6 @@ entries = [
         "minuscule": ("l", "ḻ"),
         "modifiers": ["lineBelow"],
         "link": "",
-        "majCodePt": "U+1E3A",
-        "minCodePt": "U+1E3B",
     },
     {
         "name": "M with acute",
@@ -2118,8 +1952,6 @@ entries = [
         "minuscule": ("m", "ḿ"),
         "modifiers": ["acute"],
         "link": "",
-        "majCodePt": "U+1E3E",
-        "minCodePt": "U+1E3F",
     },
     {
         "name": "M with dot above",
@@ -2127,8 +1959,6 @@ entries = [
         "minuscule": ("m", "ṁ"),
         "modifiers": ["dotAbove"],
         "link": "",
-        "majCodePt": "U+1E40",
-        "minCodePt": "U+1E41",
     },
     {
         "name": "M with dot below",
@@ -2136,8 +1966,6 @@ entries = [
         "minuscule": ("m", "ṃ"),
         "modifiers": ["dotBelow"],
         "link": "",
-        "majCodePt": "U+1E42",
-        "minCodePt": "U+1E43",
     },
     {
         "name": "N with dot below",
@@ -2145,8 +1973,6 @@ entries = [
         "minuscule": ("n", "ṇ"),
         "modifiers": ["dotBelow"],
         "link": "",
-        "majCodePt": "U+1E46",
-        "minCodePt": "U+1E47",
     },
     {
         "name": "N with line below",
@@ -2154,8 +1980,6 @@ entries = [
         "minuscule": ("n", "ṉ"),
         "modifiers": ["lineBelow"],
         "link": "",
-        "majCodePt": "U+1E48",
-        "minCodePt": "U+1E49",
     },
     {
         "name": "O with tilde and acute",
@@ -2163,8 +1987,6 @@ entries = [
         "minuscule": ("o", "ṍ"),
         "modifiers": ["tilde", "acute"],
         "link": "",
-        "majCodePt": "U+1E4C",
-        "minCodePt": "U+1E4D",
     },
     {
         "name": "O with tilde and diaeresis",
@@ -2172,8 +1994,6 @@ entries = [
         "minuscule": ("o", "ṏ"),
         "modifiers": ["tilde", "diaeresis"],
         "link": "",
-        "majCodePt": "U+1E4E",
-        "minCodePt": "U+1E4F",
     },
     {
         "name": "O with macron and grave",
@@ -2181,8 +2001,6 @@ entries = [
         "minuscule": ("o", "ṑ"),
         "modifiers": ["macron", "grave"],
         "link": "",
-        "majCodePt": "U+1E50",
-        "minCodePt": "U+1E51",
     },
     {
         "name": "O with macron and acute",
@@ -2190,8 +2008,6 @@ entries = [
         "minuscule": ("o", "ṓ"),
         "modifiers": ["macron", "acute"],
         "link": "",
-        "majCodePt": "U+1E52",
-        "minCodePt": "U+1E53",
     },
     {
         "name": "P with acute",
@@ -2199,8 +2015,6 @@ entries = [
         "minuscule": ("p", "ṕ"),
         "modifiers": ["acute"],
         "link": "",
-        "majCodePt": "U+1E54",
-        "minCodePt": "U+1E55",
     },
     {
         "name": "P with dot above",
@@ -2208,8 +2022,6 @@ entries = [
         "minuscule": ("p", "ṗ"),
         "modifiers": ["dotAbove"],
         "link": "",
-        "majCodePt": "U+1E56",
-        "minCodePt": "U+1E57",
     },
     {
         "name": "R with dot above",
@@ -2217,8 +2029,6 @@ entries = [
         "minuscule": ("r", "ṙ"),
         "modifiers": ["dotAbove"],
         "link": "",
-        "majCodePt": "U+1E58",
-        "minCodePt": "U+1E59",
     },
     {
         "name": "R with dot below and macron",
@@ -2226,8 +2036,6 @@ entries = [
         "minuscule": ("r", "ṝ"),
         "modifiers": ["dotBelow", "macron"],
         "link": "",
-        "majCodePt": "U+1E5C",
-        "minCodePt": "U+1E5D",
     },
     {
         "name": "R with line below",
@@ -2235,8 +2043,6 @@ entries = [
         "minuscule": ("r", "ṟ"),
         "modifiers": ["lineBelow"],
         "link": "",
-        "majCodePt": "U+1E5E",
-        "minCodePt": "U+1E5F",
     },
     {
         "name": "S with dot below",
@@ -2244,8 +2050,6 @@ entries = [
         "minuscule": ("s", "ṣ"),
         "modifiers": ["dotBelow"],
         "link": "",
-        "majCodePt": "U+1E62",
-        "minCodePt": "U+1E63",
     },
     {
         "name": "S with acute and dot above",
@@ -2253,8 +2057,6 @@ entries = [
         "minuscule": ("s", "ṥ"),
         "modifiers": ["acute", "dotAbove"],
         "link": "",
-        "majCodePt": "U+1E64",
-        "minCodePt": "U+1E65",
     },
     {
         "name": "S with caron and dot above",
@@ -2262,8 +2064,6 @@ entries = [
         "minuscule": ("s", "ṧ"),
         "modifiers": ["caron", "dotAbove"],
         "link": "",
-        "majCodePt": "U+1E66",
-        "minCodePt": "U+1E67",
     },
     {
         "name": "S with dot below and dot above",
@@ -2271,8 +2071,6 @@ entries = [
         "minuscule": ("s", "ṩ"),
         "modifiers": ["dotBelow", "dotAbove"],
         "link": "",
-        "majCodePt": "U+1E68",
-        "minCodePt": "U+1E69",
     },
     {
         "name": "T with dot above",
@@ -2280,8 +2078,6 @@ entries = [
         "minuscule": ("t", "ṫ"),
         "modifiers": ["dotAbove"],
         "link": "",
-        "majCodePt": "U+1E6A",
-        "minCodePt": "U+1E6B",
     },
     {
         "name": "T with line below",
@@ -2289,8 +2085,6 @@ entries = [
         "minuscule": ("t", "ṯ"),
         "modifiers": ["lineBelow"],
         "link": "",
-        "majCodePt": "U+1E6E",
-        "minCodePt": "U+1E6F",
     },
     {
         "name": "U with diaeresis below",
@@ -2298,8 +2092,6 @@ entries = [
         "minuscule": ("u", "ṳ"),
         "modifiers": ["diaeresisBelow"],
         "link": "",
-        "majCodePt": "U+1E72",
-        "minCodePt": "U+1E73",
     },
     {
         "name": "U with tilde below",
@@ -2307,8 +2099,6 @@ entries = [
         "minuscule": ("u", "ṵ"),
         "modifiers": ["tildeBelow"],
         "link": "",
-        "majCodePt": "U+1E74",
-        "minCodePt": "U+1E75",
     },
     {
         "name": "U with circumflex below",
@@ -2316,8 +2106,6 @@ entries = [
         "minuscule": ("u", "ṷ"),
         "modifiers": ["circumflexBelow"],
         "link": "",
-        "majCodePt": "U+1E76",
-        "minCodePt": "U+1E77",
     },
     {
         "name": "U with tilde and acute",
@@ -2325,8 +2113,6 @@ entries = [
         "minuscule": ("u", "ṹ"),
         "modifiers": ["tilde", "acute"],
         "link": "",
-        "majCodePt": "U+1E78",
-        "minCodePt": "U+1E79",
     },
     {
         "name": "U with macron and diaeresis",
@@ -2334,8 +2120,6 @@ entries = [
         "minuscule": ("u", "ṻ"),
         "modifiers": ["macron", "diaeresis"],
         "link": "",
-        "majCodePt": "U+1E7A",
-        "minCodePt": "U+1E7B",
     },
     {
         "name": "V with tilde",
@@ -2343,8 +2127,6 @@ entries = [
         "minuscule": ("v", "ṽ"),
         "modifiers": ["tilde"],
         "link": "",
-        "majCodePt": "U+1E7C",
-        "minCodePt": "U+1E7D",
     },
     {
         "name": "V with dot below",
@@ -2352,8 +2134,6 @@ entries = [
         "minuscule": ("v", "ṿ"),
         "modifiers": ["dotBelow"],
         "link": "",
-        "majCodePt": "U+1E7E",
-        "minCodePt": "U+1E7F",
     },
     {
         "name": "W with dot above",
@@ -2361,8 +2141,6 @@ entries = [
         "minuscule": ("w", "ẇ"),
         "modifiers": ["dotAbove"],
         "link": "",
-        "majCodePt": "U+1E86",
-        "minCodePt": "U+1E87",
     },
     {
         "name": "W with dot below",
@@ -2370,8 +2148,6 @@ entries = [
         "minuscule": ("w", "ẉ"),
         "modifiers": ["dotBelow"],
         "link": "",
-        "majCodePt": "U+1E88",
-        "minCodePt": "U+1E89",
     },
     {
         "name": "X with diaeresis",
@@ -2379,8 +2155,6 @@ entries = [
         "minuscule": ("x", "ẍ"),
         "modifiers": ["diaeresis"],
         "link": "",
-        "majCodePt": "U+1E8C",
-        "minCodePt": "U+1E8D",
     },
     {
         "name": "Y with dot above",
@@ -2388,8 +2162,6 @@ entries = [
         "minuscule": ("y", "ẏ"),
         "modifiers": ["dotAbove"],
         "link": "",
-        "majCodePt": "U+1E8E",
-        "minCodePt": "U+1E8F",
     },
     {
         "name": "Z with circumflex",
@@ -2397,8 +2169,6 @@ entries = [
         "minuscule": ("z", "ẑ"),
         "modifiers": ["circumflex"],
         "link": "",
-        "majCodePt": "U+1E90",
-        "minCodePt": "U+1E91",
     },
     {
         "name": "Z with line below",
@@ -2406,8 +2176,6 @@ entries = [
         "minuscule": ("z", "ẕ"),
         "modifiers": ["lineBelow"],
         "link": "",
-        "majCodePt": "U+1E94",
-        "minCodePt": "U+1E95",
     },
     {
         "name": "H with line below",
@@ -2415,7 +2183,6 @@ entries = [
         "minuscule": ("h", "ẖ"),
         "modifiers": ["lineBelow"],
         "link": "",
-        "minCodePt": "U+1E96",
     },
     {
         "name": "T with diaeresis",
@@ -2423,7 +2190,6 @@ entries = [
         "minuscule": ("t", "ẗ"),
         "modifiers": ["diaeresis"],
         "link": "",
-        "minCodePt": "U+1E97",
     },
     {
         "name": "W with ring above",
@@ -2431,7 +2197,6 @@ entries = [
         "minuscule": ("w", "ẘ"),
         "modifiers": ["ringAbove"],
         "link": "",
-        "minCodePt": "U+1E98",
     },
     {
         "name": "Y with ring above",
@@ -2439,7 +2204,6 @@ entries = [
         "minuscule": ("y", "ẙ"),
         "modifiers": ["ringAbove"],
         "link": "",
-        "minCodePt": "U+1E99",
     },
     {
         "name": "J with caron",
@@ -2447,7 +2211,6 @@ entries = [
         "minuscule": ("j", "ǰ"),
         "modifiers": ["caron"],
         "link": "",
-        "minCodePt": "U+01F0",
     },
 ]
 
