@@ -284,6 +284,20 @@ tbd = [
         "modifiers": [], # TODO
         "link": "https://en.wikipedia.org/wiki/%C6%9D",
     },
+    {
+        "name": "Reversed C",
+        "majuscule": ("C", "Ↄ"),
+        "minuscule": ("c", "ↄ"),
+        "modifiers": ["reversed"],
+        "link": "https://en.wikipedia.org/wiki/Claudian_letters", # TODO research these
+    },
+    {
+        "name": "Turned F",
+        "majuscule": ("F", "Ⅎ"),
+        "minuscule": ("f", "ⅎ"),
+        "modifiers": ["turned"],
+        "link": "https://en.wikipedia.org/wiki/Claudian_letters", # TODO research these
+    },
 ]
 
 entries = [
@@ -496,20 +510,6 @@ entries = [
         "minuscule": ("y", "ƴ"),
         "modifiers": ["hook"],
         "link": "https://en.wikipedia.org/wiki/%C6%B3",
-    },
-    {
-        "name": "Reversed C",
-        "majuscule": ("C", "Ↄ"),
-        "minuscule": ("c", "ↄ"),
-        "modifiers": ["reversed"],
-        "link": "https://en.wikipedia.org/wiki/Claudian_letters", # TODO research these
-    },
-    {
-        "name": "Turned F",
-        "majuscule": ("F", "Ⅎ"),
-        "minuscule": ("f", "ⅎ"),
-        "modifiers": ["turned"],
-        "link": "https://en.wikipedia.org/wiki/Claudian_letters", # TODO research these
     },
     {
         "name": "A with acute",
@@ -1357,13 +1357,6 @@ entries = [
         "minuscule": ("æ", "ǣ"),
         "modifiers": ["macron"],
         "link": "https://en.wikipedia.org/wiki/%C3%86",
-    },
-    {
-        "name": "AE ligature turned",
-        "majuscule": None,
-        "minuscule": ("æ", "ᴂ"),
-        "modifiers": ["turned"],
-        "link": "https://en.wiktionary.org/wiki/%E1%B4%82#Translingual",
     },
     {
         "name": "Y with hook above",
