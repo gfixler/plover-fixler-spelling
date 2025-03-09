@@ -2237,7 +2237,7 @@ def buildModdedChar (srcDestChars, modStrokes, wraps):
     srcChars, destChar = srcDestChars
     wrapL, wrapR = wraps
     strokes = [coreDict[c] for c in srcChars] + list(modStrokes)
-    return ("/".join(strokes), wrapL + destChar + wrapR)
+    return ("/".join(strokes), wrapL + destChar + wrapR, destChar)
 
 def createOutlines (entry):
     """
@@ -2252,18 +2252,20 @@ def createOutlines (entry):
     return (minuscule, majuscule)
 
 def buildFingerspellingDict ():
-    outlines = {}
+    spellingDict = {}
+
     # create definitions for all character modifications
     for entry in entries:
         minuscule, majuscule = createOutlines(entry)
-        if minuscule != None:
-            k, v = minuscule
-            outlines[k] = v
-        if majuscule != None:
-            k, v = majuscule
-            outlines[k] = v
+        # None means that character + case isn't (yet?) defined in Unicode
+        for scule in [minuscule, majuscule]:
+            if scule != None:
+                (outline, translation, character) = scule
+                # coreDict allows later characters to use earlier characters' outlines
+                coreDict[character] = outline
+                spellingDict[outline] = translation
 
-    return outlines
+    return spellingDict
 
 if __name__ == "__main__":
     fixSpell = buildFingerspellingDict()
