@@ -1012,7 +1012,7 @@ entries = [
     {
         "name": "I with dot above",
         "majuscule": ("I", "İ"),
-        "minuscule": ("i", "i"),
+        "minuscule": None, # Unicode just points this to U+0069, small i
         "modifiers": ["dotAbove"],
         "link": "https://en.wikipedia.org/wiki/%C4%B0",
     },
