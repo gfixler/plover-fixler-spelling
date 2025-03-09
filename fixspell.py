@@ -60,9 +60,12 @@ moddableChars = {
     "ə": "SKHA*",
 }
 
-minWraps = ("{>}{&", "}")
-majWraps = ("{-|}{&", "}")
+# these string pairs are used to wrap output characters to enforce case
+lowerWraps = ("{>}{&", "}")
+upperWraps = ("{-|}{&", "}")
 
+# This the all the modifiers, and info for and about each one.
+# Modifiers include diacritics, ligatures, rotations, and so on.
 modifiers = {
     "acute": {
         "outline": "-RP",
@@ -223,7 +226,7 @@ modifiers = {
     "reversed": {
         "outline": "EURL",
         "name": "Reversed",
-        "docs": "The turned modifier shape, with the '[inverted](#modifier-tweaks)' tweak.<BR><BR>This is not a diacritic, but allows access to characters that are flipped, inverted, or reversed.",
+        "docs": "The turned modifier shape, with the '[inverted](#modifier-tweaks)' tweak.<BR><BR>This allows access to characters that are flipped, inverted, or reversed.",
     },
 }
 
@@ -2208,6 +2211,18 @@ entries = [
 ]
 
 def buildModdedChar (srcDestChars, modStrokes, wraps):
+    """
+    Takes info surrounding character modification.
+    Returns pair of outline and wrapped, modified char.
+
+    srcDestChars: a pair of source/destination characters, like ("a", "á")
+    modStrokes: modifier stroke(s) used to get from source to dest
+    wraps: lowercase or upper case wrapper pair, like ("{>}{&", "}")
+
+    example:
+        >>> buildModdedChar(("a", "á"), "-RP", lowerWraps)
+        ("A*/-RP", "{^}{&á}")
+    """
     if srcDestChars is None:
         return None
     srcChar, destChar = srcDestChars
@@ -2216,13 +2231,20 @@ def buildModdedChar (srcDestChars, modStrokes, wraps):
     return ("/".join(strokes), wrapL + destChar + wrapR)
 
 def createOutlines (entry):
+    """
+    This just simplifies creating the minuscule and majuscule entries for all
+    character modifications. It takes a single entry dictionary, and returns
+    two 3-tuples, with outline, translation (wrapped with Plover case stuff),
+    and translation character by itself.
+    """
     modStrokes = list(map(lambda x: modifiers[x]["outline"], entry["modifiers"]))
-    minuscule = buildModdedChar(entry["minuscule"], modStrokes, minWraps)
-    majuscule = buildModdedChar(entry["majuscule"], modStrokes, majWraps)
+    minuscule = buildModdedChar(entry["minuscule"], modStrokes, lowerWraps)
+    majuscule = buildModdedChar(entry["majuscule"], modStrokes, upperWraps)
     return (minuscule, majuscule)
 
 if __name__ == "__main__":
     outlines = {}
+    # create definitions for all character modifications
     for entry in entries:
         minuscule, majuscule = createOutlines(entry)
         if minuscule != None:
@@ -2231,5 +2253,8 @@ if __name__ == "__main__":
         if majuscule != None:
             k, v = majuscule
             outlines[k] = v
+
+    # dump the dictionary out over stdout
+    # NOTE: ensure_ascii=False to stop "á" converting to "\\u00e1", e.g.
     print(json.dumps(outlines, ensure_ascii=False, indent=0))
 
