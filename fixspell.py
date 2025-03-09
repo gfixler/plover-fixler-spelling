@@ -224,13 +224,8 @@ modifiers = {
     "turned": {
         "outline": "-RL",
         "name": "Turned/Rotated",
-        "docs": "This is not a diacritic, but allows access to characters that are turned, or rotated.",
+        "docs": "This modifier allows access to characters that are turned, or rotated.",
     },
-   # "inverted": {
-   #      "outline": "-RBG",
-   #      "name": "Inverted/Flipped",
-   #      "docs": "",
-   #  },
     "reversed": {
         "outline": "EURL",
         "name": "Reversed",
