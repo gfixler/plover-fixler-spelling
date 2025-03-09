@@ -1,6 +1,6 @@
 import json
 
-moddableChars = {
+latinLetters = {
     "A": "A*P",
     "a": "A*",
     "B": "PW*P",
@@ -59,6 +59,15 @@ moddableChars = {
     "Ə": "SKHA*P",
     "ə": "SKHA*",
 }
+
+# The latin letters are the start of the core fingerspelling dictionary. The
+# core is a mapping of characters to their strokes. It allows later characters
+# to be specified in terms of modified characters. For example, an earlier
+# definition can map "AE" to "Æ" through the ligature modifier, and a later
+# definition can map [the now existing] "Æ" to "Ǽ" through the acute modifier.
+
+# copy, so we don't mess up our clean letters dict (just in case)
+coreDict = latinLetters.copy()
 
 # these string pairs are used to wrap output characters to enforce case
 lowerWraps = ("{>}{&", "}")
@@ -2225,9 +2234,9 @@ def buildModdedChar (srcDestChars, modStrokes, wraps):
     """
     if srcDestChars is None:
         return None
-    srcChar, destChar = srcDestChars
+    srcChars, destChar = srcDestChars
     wrapL, wrapR = wraps
-    strokes = [moddableChars[srcChar]] + list(modStrokes)
+    strokes = [coreDict[c] for c in srcChars] + list(modStrokes)
     return ("/".join(strokes), wrapL + destChar + wrapR)
 
 def createOutlines (entry):
