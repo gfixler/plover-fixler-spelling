@@ -2251,7 +2251,7 @@ def createOutlines (entry):
     majuscule = buildModdedChar(entry["majuscule"], modStrokes, upperWraps)
     return (minuscule, majuscule)
 
-if __name__ == "__main__":
+def buildFingerspellingDict ():
     outlines = {}
     # create definitions for all character modifications
     for entry in entries:
@@ -2263,7 +2263,12 @@ if __name__ == "__main__":
             k, v = majuscule
             outlines[k] = v
 
+    return outlines
+
+if __name__ == "__main__":
+    fixSpell = buildFingerspellingDict()
+
     # dump the dictionary out over stdout
     # NOTE: ensure_ascii=False to stop "á" converting to "\\u00e1", e.g.
-    print(json.dumps(outlines, ensure_ascii=False, indent=0))
+    print(json.dumps(fixSpell, ensure_ascii=False, indent=0))
 
