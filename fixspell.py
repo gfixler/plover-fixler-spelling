@@ -53,11 +53,6 @@ latinLetters = {
     "y": "KWR*",
     "Z": "STKPW*P",
     "z": "STKPW*",
-
-    "Æ": "A*P/E",
-    "æ": "A*/E",
-    "Ə": "SKHA*P",
-    "ə": "SKHA*",
 }
 
 # The latin letters are the start of the core fingerspelling dictionary. The
@@ -221,7 +216,11 @@ modifiers = {
         "name": "Tilde Below",
         "docs": "The tilde modifier shape, with the '[under](#modifier-tweaks)' tweak.",
     },
-
+    "ligature": {
+        "outline": "-FRLG",
+        "name": "Ligature",
+        "docs": "[Ligatures](https://en.wikipedia.org/wiki/Ligature_(writing)) are two or more graphemes joined together, as in Æ. To output an existing ligature, stroke the two letters in left-to-right order, then stroke this modifier to merge them. Think of the two vertical columns as the two graphemes being joined. For characters that modify ligatures, like the AE ligature with circumflex, or the AE ligature turned, create the ligature first, before modifying it further."
+    },
     "turned": {
         "outline": "-RL",
         "name": "Turned/Rotated",
@@ -296,6 +295,189 @@ tbd = [
         "modifiers": [], # TODO
         "link": "https://en.wikipedia.org/wiki/%C6%9D",
     },
+]
+
+entries = [
+    #  _ _             _
+    # | (_) __ _  __ _| |_ _   _ _ __ ___  ___
+    # | | |/ _` |/ _` | __| | | | '__/ _ \/ __|
+    # | | | (_| | (_| | |_| |_| | | |  __/\__ \
+    # |_|_|\__, |\__,_|\__|\__,_|_|  \___||___/
+    #      |___/
+    {
+        "name": "AA ligature",
+        "majuscule": ("AA", "Ꜳ"),
+        "minuscule": ("aa", "ꜳ"),
+        "modifiers": ["ligature"],
+        "link": "https://en.wikipedia.org/wiki/Ligature_(writing)#Ligatures_in_Unicode_(Latin_alphabets)",
+    },
+    {
+        "name": "AE ligature",
+        "majuscule": ("AE", "Æ"),
+        "minuscule": ("ae", "æ"),
+        "modifiers": ["ligature"],
+        "link": "https://en.wikipedia.org/wiki/Ligature_(writing)#Ligatures_in_Unicode_(Latin_alphabets)",
+    },
+    {
+        "name": "AO ligature",
+        "majuscule": ("AO", "Ꜵ"),
+        "minuscule": ("ao", "ꜵ"),
+        "modifiers": ["ligature"],
+        "link": "https://en.wikipedia.org/wiki/Ligature_(writing)#Ligatures_in_Unicode_(Latin_alphabets)",
+    },
+    {
+        "name": "AU ligature",
+        "majuscule": ("AU", "Ꜷ"),
+        "minuscule": ("au", "ꜷ"),
+        "modifiers": ["ligature"],
+        "link": "https://en.wikipedia.org/wiki/Ligature_(writing)#Ligatures_in_Unicode_(Latin_alphabets)",
+    },
+    {
+        "name": "AV ligature",
+        "majuscule": ("AV", "Ꜹ"),
+        "minuscule": ("av", "ꜻ"),
+        "modifiers": ["ligature"],
+        "link": "https://en.wikipedia.org/wiki/Ligature_(writing)#Ligatures_in_Unicode_(Latin_alphabets)",
+    },
+    {
+        "name": "AY ligature",
+        "majuscule": ("AY", "Ꜽ"),
+        "minuscule": ("ay", "ꜽ"),
+        "modifiers": ["ligature"],
+        "link": "https://en.wikipedia.org/wiki/Ligature_(writing)#Ligatures_in_Unicode_(Latin_alphabets)",
+    },
+    {
+        "name": "FF ligature",
+        "majuscule": None,
+        "minuscule": ("ff", "ﬀ"),
+        "modifiers": ["ligature"],
+        "link": "https://en.wikipedia.org/wiki/Ligature_(writing)#Ligatures_in_Unicode_(Latin_alphabets)",
+    },
+    {
+        "name": "FFI ligature",
+        "majuscule": None,
+        "minuscule": ("ffi", "ﬃ"),
+        "modifiers": ["ligature"],
+        "link": "https://en.wikipedia.org/wiki/Ligature_(writing)#Ligatures_in_Unicode_(Latin_alphabets)",
+    },
+    {
+        "name": "FFL ligature",
+        "majuscule": None,
+        "minuscule": ("ffl", "ﬄ"),
+        "modifiers": ["ligature"],
+        "link": "https://en.wikipedia.org/wiki/Ligature_(writing)#Ligatures_in_Unicode_(Latin_alphabets)",
+    },
+    {
+        "name": "FI ligature",
+        "majuscule": None,
+        "minuscule": ("fi", "ﬁ"),
+        "modifiers": ["ligature"],
+        "link": "https://en.wikipedia.org/wiki/Ligature_(writing)#Ligatures_in_Unicode_(Latin_alphabets)",
+    },
+    {
+        "name": "FL ligature",
+        "majuscule": None,
+        "minuscule": ("fl", "ﬂ"),
+        "modifiers": ["ligature"],
+        "link": "https://en.wikipedia.org/wiki/Ligature_(writing)#Ligatures_in_Unicode_(Latin_alphabets)",
+    },
+    {
+        "name": "HV ligature",
+        "majuscule": ("Hv", "Ƕ"),
+        "minuscule": ("hv", "ƕ"),
+        "modifiers": ["ligature"],
+        "link": "https://en.wikipedia.org/wiki/Ligature_(writing)#Ligatures_in_Unicode_(Latin_alphabets)",
+    },
+    {
+        "name": "LB ligature",
+        "majuscule": None,
+        "minuscule": ("lb", "℔"),
+        "modifiers": ["ligature"],
+        "link": "https://en.wikipedia.org/wiki/Ligature_(writing)#Ligatures_in_Unicode_(Latin_alphabets)",
+    },
+    {
+        "name": "IL ligature",
+        "majuscule": ("IL", "Ỻ"),
+        "minuscule": ("il", "ỻ"),
+        "modifiers": ["ligature"],
+        "link": "https://en.wikipedia.org/wiki/Ligature_(writing)#Ligatures_in_Unicode_(Latin_alphabets)",
+    },
+    {
+        "name": "OE ligature",
+        "majuscule": ("OE", "Œ"),
+        "minuscule": ("oe", "œ"),
+        "modifiers": ["ligature"],
+        "link": "https://en.wikipedia.org/wiki/Ligature_(writing)#Ligatures_in_Unicode_(Latin_alphabets)",
+    },
+    {
+        "name": "OO ligature",
+        "majuscule": ("OO", "Ꝏ"),
+        "minuscule": ("oo", "ꝏ"),
+        "modifiers": ["ligature"],
+        "link": "https://en.wikipedia.org/wiki/Ligature_(writing)#Ligatures_in_Unicode_(Latin_alphabets)",
+    },
+    {
+        "name": "ST ligature",
+        "majuscule": None,
+        "minuscule": ("st", "ﬆ"),
+        "modifiers": ["ligature"],
+        "link": "https://en.wikipedia.org/wiki/Ligature_(writing)#Ligatures_in_Unicode_(Latin_alphabets)",
+    },
+    {
+        "name": "TZ ligature",
+        "majuscule": ("TZ", "Ꜩ"),
+        "minuscule": ("tz", "ꜩ"),
+        "modifiers": ["ligature"],
+        "link": "https://en.wikipedia.org/wiki/Ligature_(writing)#Ligatures_in_Unicode_(Latin_alphabets)",
+    },
+    {
+        "name": "UE ligature",
+        "majuscule": None,
+        "minuscule": ("ue", "ᵫ"),
+        "modifiers": ["ligature"],
+        "link": "https://en.wikipedia.org/wiki/Ligature_(writing)#Ligatures_in_Unicode_(Latin_alphabets)",
+    },
+    {
+        "name": "UO ligature",
+        "majuscule": None,
+        "minuscule": ("uo", "ꭣ"),
+        "modifiers": ["ligature"],
+        "link": "https://en.wikipedia.org/wiki/Ligature_(writing)#Ligatures_in_Unicode_(Latin_alphabets)",
+    },
+    {
+        "name": "VV ligature",
+        "majuscule": ("VV", "W"),
+        "minuscule": ("vv", "w"),
+        "modifiers": ["ligature"],
+        "link": "https://en.wikipedia.org/wiki/Ligature_(writing)#Ligatures_in_Unicode_(Latin_alphabets)",
+    },
+    {
+        "name": "VY ligature",
+        "majuscule": ("VY", "Ꝡ"),
+        "minuscule": ("vy", "ꝡ"),
+        "modifiers": ["ligature"],
+        "link": "https://en.wikipedia.org/wiki/Ligature_(writing)#Ligatures_in_Unicode_(Latin_alphabets)",
+    },
+    {
+        "name": "Eszett (SZ ligature)",
+        "majuscule": ("SZ", "ẞ"),
+        "minuscule": ("sz", "ß"),
+        "modifiers": ["ligature"],
+        "link": "https://en.wikipedia.org/wiki/%C3%9F",
+    },
+    #  _                        __
+    # | |_ _ __ __ _ _ __  ___ / _| ___  _ __ _ __ ___  ___
+    # | __| '__/ _` | '_ \/ __| |_ / _ \| '__| '_ ` _ \/ __|
+    # | |_| | | (_| | | | \__ \  _| (_) | |  | | | | | \__ \
+    #  \__|_|  \__,_|_| |_|___/_|  \___/|_|  |_| |_| |_|___/
+    #
+    {
+        "name": "Schwa",
+        "majuscule": ("E", "Ə"),
+        "minuscule": ("e", "ə"),
+        "modifiers": ["turned"],
+        "link": "https://en.wikipedia.org/wiki/Mid_central_vowel",
+    },
     {
         "name": "Reversed C",
         "majuscule": ("C", "Ↄ"),
@@ -310,9 +492,45 @@ tbd = [
         "modifiers": ["turned"],
         "link": "https://en.wikipedia.org/wiki/Claudian_letters", # TODO research these
     },
-]
-
-entries = [
+    #  _ _             _                        _ _                 _ _   _
+    # | (_) __ _  __ _| |_ _   _ _ __ ___    __| (_) __ _  ___ _ __(_) |_(_) ___ ___
+    # | | |/ _` |/ _` | __| | | | '__/ _ \  / _` | |/ _` |/ __| '__| | __| |/ __/ __|
+    # | | | (_| | (_| | |_| |_| | | |  __/ | (_| | | (_| | (__| |  | | |_| | (__\__ \
+    # |_|_|\__, |\__,_|\__|\__,_|_|  \___|  \__,_|_|\__,_|\___|_|  |_|\__|_|\___|___/
+    #      |___/
+    {
+        "name": "AE ligature with acute",
+        "majuscule": ("Æ", "Ǽ"),
+        "minuscule": ("æ", "ǽ"),
+        "modifiers": ["acute"],
+        "link": "https://en.wikipedia.org/wiki/%C3%86",
+    },
+    {
+        "name": "AE ligature with macron",
+        "majuscule": ("Æ", "Ǣ"),
+        "minuscule": ("æ", "ǣ"),
+        "modifiers": ["macron"],
+        "link": "https://en.wikipedia.org/wiki/%C3%86",
+    },
+    #  _                             _   _ _             _
+    # | |_ _   _ _ __ _ __   ___  __| | | (_) __ _  __ _| |_ _   _ _ __ ___  ___
+    # | __| | | | '__| '_ \ / _ \/ _` | | | |/ _` |/ _` | __| | | | '__/ _ \/ __|
+    # | |_| |_| | |  | | | |  __/ (_| | | | | (_| | (_| | |_| |_| | | |  __/\__ \
+    #  \__|\__,_|_|  |_| |_|\___|\__,_| |_|_|\__, |\__,_|\__|\__,_|_|  \___||___/
+    #                                        |___/
+    {
+        "name": "AE ligature turned",
+        "majuscule": None,
+        "minuscule": ("æ", "ᴂ"),
+        "modifiers": ["turned"],
+        "link": "https://en.wiktionary.org/wiki/%E1%B4%82#Translingual",
+    },
+    #      _ _                 _ _   _
+    #   __| (_) __ _  ___ _ __(_) |_(_) ___ ___
+    #  / _` | |/ _` |/ __| '__| | __| |/ __/ __|
+    # | (_| | | (_| | (__| |  | | |_| | (__\__ \
+    #  \__,_|_|\__,_|\___|_|  |_|\__|_|\___|___/
+    #
     {
         "name": "A with ogonek",
         "majuscule": ("A", "Ą"),
