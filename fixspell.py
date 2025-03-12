@@ -495,16 +495,16 @@ entries = [
     #      |___/
     {
         "name": "AE ligature with acute",
-        "majuscule": ("Æ", "Ǽ"),
-        "minuscule": ("æ", "ǽ"),
-        "modifiers": ["acute"],
+        "majuscule": ("AE", "Ǽ"),
+        "minuscule": ("ae", "ǽ"),
+        "modifiers": ["ligature", "acute"],
         "link": "https://en.wikipedia.org/wiki/%C3%86",
     },
     {
         "name": "AE ligature with macron",
-        "majuscule": ("Æ", "Ǣ"),
-        "minuscule": ("æ", "ǣ"),
-        "modifiers": ["macron"],
+        "majuscule": ("AE", "Ǣ"),
+        "minuscule": ("ae", "ǣ"),
+        "modifiers": ["ligature", "macron"],
         "link": "https://en.wikipedia.org/wiki/%C3%86",
     },
     #  _                             _   _ _             _
@@ -516,8 +516,8 @@ entries = [
     {
         "name": "AE ligature turned",
         "majuscule": None,
-        "minuscule": ("æ", "ᴂ"),
-        "modifiers": ["turned"],
+        "minuscule": ("ae", "ᴂ"),
+        "modifiers": ["ligature", "turned"],
         "link": "https://en.wiktionary.org/wiki/%E1%B4%82#Translingual",
     },
     #      _ _                 _ _   _
@@ -1568,20 +1568,6 @@ entries = [
         "minuscule": ("z", "ẓ"),
         "modifiers": ["dotBelow"],
         "link": "https://en.wikipedia.org/wiki/%E1%BA%92",
-    },
-    {
-        "name": "AE ligature with acute",
-        "majuscule": ("Æ", "Ǽ"),
-        "minuscule": ("æ", "ǽ"),
-        "modifiers": ["acute"],
-        "link": "https://en.wikipedia.org/wiki/%C3%86",
-    },
-    {
-        "name": "AE ligature with macron",
-        "majuscule": ("Æ", "Ǣ"),
-        "minuscule": ("æ", "ǣ"),
-        "modifiers": ["macron"],
-        "link": "https://en.wikipedia.org/wiki/%C3%86",
     },
     {
         "name": "Y with hook above",
