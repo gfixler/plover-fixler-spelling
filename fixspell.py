@@ -1,6 +1,6 @@
 import json
 
-latinLetters = {
+latinAlphabet = {
     "A": "A*P",
     "a": "A*",
     "B": "PW*P",
@@ -54,15 +54,6 @@ latinLetters = {
     "Z": "STKPW*P",
     "z": "STKPW*",
 }
-
-# The latin letters are the start of the core fingerspelling dictionary. The
-# core is a mapping of characters to their strokes. It allows later characters
-# to be specified in terms of modified characters. For example, an earlier
-# definition can map "AE" to "Æ" through the ligature modifier, and a later
-# definition can map [the now existing] "Æ" to "Ǽ" through the acute modifier.
-
-# copy, so we don't mess up our clean letters dict (just in case)
-coreDict = latinLetters.copy()
 
 # these string pairs are used to wrap output characters to enforce case
 lowerWraps = ("{>}{&", "}")
@@ -2435,7 +2426,7 @@ def buildModdedChar (srcDestChars, modStrokes, wraps):
         return None
     srcChars, destChar = srcDestChars
     wrapL, wrapR = wraps
-    strokes = [coreDict[c] for c in srcChars] + list(modStrokes)
+    strokes = [latinAlphabet[c] for c in srcChars] + list(modStrokes)
     return ("/".join(strokes), wrapL + destChar + wrapR, destChar)
 
 def createOutlines (entry):
@@ -2456,12 +2447,10 @@ def buildFingerspellingDict ():
     # create definitions for all character modifications
     for entry in entries:
         minuscule, majuscule = createOutlines(entry)
-        # None means that character + case isn't (yet?) defined in Unicode
         for scule in [minuscule, majuscule]:
             if scule != None:
+                # None means character + case isn't defined in Unicode
                 (outline, translation, character) = scule
-                # coreDict allows later characters to use earlier characters' outlines
-                coreDict[character] = outline
                 spellingDict[outline] = translation
 
     return spellingDict
