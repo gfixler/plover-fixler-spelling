@@ -2442,7 +2442,14 @@ def createOutlines (entry):
     return (minuscule, majuscule)
 
 def buildFingerspellingDict ():
+    """
+    This is the main function for assembling all the various part of the
+    system into a single, Plover-ready dictionary, and returning it.
+    """
     spellingDict = {}
+
+    # start with all the English letters
+    spellingDict |= latinAlphabet
 
     # create definitions for all character modifications
     for entry in entries:
