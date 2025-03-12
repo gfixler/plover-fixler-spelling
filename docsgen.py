@@ -1,7 +1,14 @@
 import unicodedata
 
 
-from fixspell import entries, modifiers
+from fixspell import entries, modifiers, buildFingerspellingDict
+
+
+# build entire fingerspelling dictionary
+allCharacters = buildFingerspellingDict()
+
+# get count of all characters for use in docs
+charCount = len(allCharacters)
 
 
 readmeTitle = """
@@ -87,8 +94,8 @@ def ccc_sort_key (c):
     return (base_letter.lower(), normalized[1:], base_letter.islower())
 
 readmeAllCharacters = """
-## Character List
-Here are all the characters this library exports.
+## All Characters List
+Here are [currently] all """ + str(charCount) + """ characters this library exports.
 
 Code points currently link to their associated page on [Compart](https://www.compart.com/en/about-compart)'s site. No affiliation; it just showed up in character searches, seems to have all pages, and it's easy to turn Unicode code points into its various URLs.
 |Char|Code Pt|Name|
@@ -138,14 +145,6 @@ readmeKnownIssues = """
 
 def generateReadme ():
     print(readmeTitle)
-    charCount = 0
-    for entry in entries:
-        if "minuscule" in entry:
-            if entry["minuscule"]:
-                charCount += 1
-        if "majuscule" in entry:
-            if entry["majuscule"]:
-                charCount += 1
     print("This library currently provides quick access to " + str(charCount) + " characters.")
     print(readmeGoals)
     print(readmeNotesOnDesign)
