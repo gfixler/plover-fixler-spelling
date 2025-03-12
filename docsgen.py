@@ -28,7 +28,7 @@ readmeGoals = """
 readmeNotesOnDesign = """
 ## Notes on Design
 ### The Core
-The core of this system is about spelling, and revolves around the Latin letters with diacritics, and alphabets that map well to and from Latin letters. That said, this library is not above including other, fun things that don't exactly fit, but also don't feel terribly out of place here.
+The core of this system is spelling, and revolves around the Latin letters with diacritics, and alphabets that map well to and from Latin letters. That said, this library is not above including other, fun things that don't exactly fit, but also don't feel terribly out of place here.
 
 ### It's Just Outlines
 Modifiers are not currently programmatic, and do not look at stroke history. This is not a Plover Python dictionary. The modifier system simply exports a JSON file filled with multi-stroke outlines that pair a base letter with one or more modifiers. This means "á" ("a with acute") is simply defined as the two-stroke outline, A*/-RP. You can't stroke KAT to write "cat", then stroke a modifier to add a diacritic to the "t" at the end of the word.
@@ -41,8 +41,10 @@ All characters defined in this system—as seen in the "Used by" lists following
 
 ### Stacking Modifiers
 Characters with more than one modifier, like "ẫ" ("a with circumflex and tilde"), are made by stroking the letter chord, followed by each modifier chord in sequence. The order of these is based on the Unicode name, where "ẫ" (Unicode code point U+1EAB) is called "LATIN SMALL LETTER A WITH CIRCUMFLEX AND TILDE", and means you stroke the circumflex modifier before the tilde modifier.<BR><BR>Unicode actually has a collation order for diacritics, based on things like closeness to the base character, and position around the character, but it's [a bit involved](https://www.unicode.org/reports/tr10/). Ultimately, Unicode doesn't care in what order diacritics are combined, and will normalize multiple diacritics back to a canonical ordering. The way around this is to use the [combining grapheme joiner](https://en.wikipedia.org/wiki/Combining_grapheme_joiner), but that's currently outside the scope of this system.
+
+### Playing Nice
+When coming up with alphabet enders, and the starter for combining diacritics, I tried hard not to stomp on some really great systems in the Plover world, including [Emily's Symbols](https://github.com/EPLHREU/emily-symbols), [Emily's Modifiers](https://github.com/EPLHREU/emily-modifiers), and [Jeff's phrasing system](https://github.com/jthlim/jeff-phrasing). That said, I did not scan several other things, like [Lapwing theory](https://lapwing.aerick.ca/), and [Cocoa theory](https://github.com/Kaoffie/cocoa-specs).
 """
-# TODO allow adding character overrides in a user-defined file
 
 readmeSections = """
 ## Modifier Keys
@@ -98,6 +100,15 @@ readmeAllCharacters = """
 Here are [currently] all """ + str(charCount) + """ characters this library exports.
 
 Code points currently link to their associated page on [Compart](https://www.compart.com/en/about-compart)'s site. No affiliation; it just showed up in character searches, seems to have all pages, and it's easy to turn Unicode code points into its various URLs.
+
+There are many ways to sort such a list. I opted not to go with Unicode code point, because it ends up somewhat nonsensical. Instead, I wrote a custom sort based on a 3-tuple of:
+
+    1. lowercase base letter (e.g. "a" for "Â")
+    2. decomposed, Unicode-ordered diacritics list
+    3. True if base letter is lower, otherwise False
+
+This creates a list that feels at least a bit alphabetical in nature, and positions upper and lowercase letters with the same diacritics together.
+
 |Char|Code Pt|Name|
 |-|-|-|"""
 
@@ -139,8 +150,8 @@ readmeKnownIssues = """
 ## Known Issues
 * We'll probably never get all combining diacritics. There are hundreds, including things like [Znamenny Combining Mark Gorazdo Nizko S Kryzhem On Right](https://codepoints.net/znamenny_musical_notation).
 * We're also never getting anywhere near all of Unicode, even just the "spelling" bits, as Unicode v16 now has more than 65,000 code points.
-* The characters native to this system are all precomposed. As you write a character, then add diacritics, you're replacing the single code point character with another that has the diacritic, or several, in the case of stacked diacritics (and if you try to add a diacritic to a character that doesn't exist with that diacritic in Unicode as a single code point, you just get an untrans). This isn't so much a design issue, as a design decision, something for the user to be aware of. The system could try to solve for this and compose a character out of combining diacritics, when a single code point version doesn't exist, but that would just lead to confusion, especially given the next issue...
-* You can star back to remove diacritics (and modifiers) in the reverse order of how you added them, and Plover will simply backtrack through the characters, effectively undoing the addition of each diacritic (and/or modifier), by re-replacing it with the simpler one it came from. If you manually compose a character, however, using the combining diacritical marks, star will simply delete the entire thing in one shot, which can be a bit jarring. I've tried every combo of glue, space suppressor, inside and outside of curly braces... Everything has its own unique set of issues. The current setup is the best so far, with the stated caveat. Backspace, at least for me, always deletes the entire character, with its combining diacritical marks, though this may be system/app dependent.
+* The characters native to this system are all precomposed, i.e. they have a single Unicode code point. As you add diacritics, you're always replacing one single code point character with another. If you try to add a diacritic to a character that doesn't exist as a single code point in Unicode, you'll just get an untrans. All of this goes for non-diacritic modifiers as well. This isn't so much an issue, as a design decision, something for the user to be aware of. The system could try to solve for this and compose a character out of combining diacritics, when a single code point version doesn't exist, but that would be messy, and lead to confusion, especially given the next issue...
+* When you press star to undo the addition of a diacritic or modification, Plover will simply re-replace the character with the previous one it came from. This works for all the single-code-point characters native to the system. However, if you use the combining diacritics feature, this doesn't work; star will delete the entire character you composed, even if you combined in 5 diacritics. This matches how backspace works for me for combined characters in every program I've tried, so it's not super out of the ordinary, but it can be a bit jarring to write a character, combine in two diacritics, star back to remove the last one, and have the entire character vanish. If anyone has a fix for this, let me know.
 """
 
 def generateReadme ():
