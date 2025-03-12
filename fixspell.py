@@ -432,8 +432,8 @@ entries = [
     },
     {
         "name": "VV ligature",
-        "majuscule": ("VV", "W"),
-        "minuscule": ("vv", "w"),
+        "majuscule": ("VV", "W"), # literally just capital W (U+OO57)
+        "minuscule": ("vv", "w"), # literally just lowercase W (U+OO77)
         "modifiers": ["ligature"],
         "link": "https://en.wikipedia.org/wiki/Ligature_(writing)#Ligatures_in_Unicode_(Latin_alphabets)",
     },
@@ -1003,7 +1003,7 @@ entries = [
     {
         "name": "I with dot above",
         "majuscule": ("I", "İ"),
-        "minuscule": None, # Unicode just points this to U+0069, small i
+        "minuscule": ("i", "i"), # literally just lowercase i, U+0069
         "modifiers": ["dotAbove"],
         "link": "https://en.wikipedia.org/wiki/%C4%B0",
     },
