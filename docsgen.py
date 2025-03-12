@@ -63,7 +63,7 @@ Tweaks are added to a modifier stroke using the E and U keys.
 |Tweak|Description|
 |-|-|
 |![EU Up](images/EU_up.png)|Neither E nor U pressed means no tweak to the modifier stroke.|
-|![E Down](images/E_down.png)|Think of E as meaning "extra". This is added to acute and grave strokes to double them.|
+|![E Down](images/E_down.png)|Think of E as meaning "extra". This is added to acute and grave strokes to double them, but also serves as a kind of wildcard when something "extra" is needed from a modifier, whatever that may be.|
 |![U Down](images/U_down.png)|Think of U as meaning "under". This is added to various diacritic strokes to turn them into their "below" versions: breve below, circumflex below, line below, ring below, and tilde below.|
 |![EU Down](images/EU_down.png)|Think of EU (the "i" chord in steno) as meaning "invert".
 """
@@ -72,7 +72,7 @@ readmeAvailableDiacritics = """
 ## Available Diacritics and Other Modifiers
 In general, the diacritic chords are meant to visually resemble their symbols, to ease remembering them all.
 
-For other modifiers, like rotation or inversion, an attempt was made to be memorable. See notes with each modifier.
+For other modifiers, like rotation or inversion, which appear after the diacritics in the below list, an attempt was made to be memorable. See notes with each modifier.
 
 NOTE: Modifier and Tweak are part of the same stroke.
 """
