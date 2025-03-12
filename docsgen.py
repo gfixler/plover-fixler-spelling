@@ -11,11 +11,11 @@ A fingerspelling system for the [Plover](https://www.openstenoproject.org/plover
 
 readmeGoals = """
 ## Design Goals
-* provide upper and lowercase letters, with some extras, like Æ/æ, and Ə/ə
-* systematize writing most precomposed Latin letters with diacritics
-* extend system to allow composing in combining characters
-* add in other symbols, ligatures, etc., on a case-by-case basis
-* include some similar alphabets (NATO, Braille, Morse, Greek, etc.)
+* provide upper and lowercase English alphabet
+* systematize writing many Latin letters with diacritics
+* allow use of many diacritics as combining diacritical marks
+* systematize writing many ligatures, rotations, inversions, etc.
+* include some other alphabets where possible (Greek, NATO, Morse...)
 """
 
 readmeNotesOnDesign = """
@@ -30,10 +30,10 @@ Modifiers are not currently programmatic, and do not look at stroke history. Thi
 Because letter chords are part of the outlines with their modifiers, you must use the letter chords as defined in this library. This means if you use STK for "z", for example, and this system uses STKPW, you must use this system's version to write, e.g., the ẓ character. Currently, the way around this is to modify the Python file, and reexport the dictionary.
 
 ### Precomposed Characters
-All characters defined in this system—as seen in the "Used by" lists following each modifier in the [Available Diacritics and Other Modifiers](#available-diacritics-and-other-modifiers) section below—are "precomposed" characters in Unicode, meaning they have a single code point in The Unicode Standard. Many characters not in these lists, encountered in the wild, are actually composed of a base letter, with one or more [combining characters](https://en.wikipedia.org/wiki/Combining_character) following them. For example, z with acute exists in Unicode, but currently, z with grave does not, so it's not defined in the core system here. If you see a z with grave, it's composed of small letter z (U+007A) and the combining grave diacritic (U+0323). Even characters that do have a precomposed (single code point) version often show up as [composed versions](https://en.wikipedia.org/wiki/Unicode_equivalence) of themselves. (See: [When an é is not an é](https://nation.marketo.com/t5/product-blogs/when-an-e%CC%81-is-not-an-%C3%A9-about-unicode-precomposed-vs-decomposed/ba-p/339051)).
+All characters defined in this system—as seen in the "Used by" lists following each modifier in the [Available Diacritics and Other Modifiers](#available-diacritics-and-other-modifiers) section below—are "precomposed" characters in Unicode, meaning they have a single code point in The Unicode Standard. Many characters not in these lists, encountered in the wild, are actually composed of a base letter, with one or more [combining characters](https://en.wikipedia.org/wiki/Combining_character) following them. For example, z with acute exists in Unicode, but currently (Unicode v16.0), z with grave does not, so it's not defined in the core system here. If you see a z with grave, it's composed of small letter z (U+007A) and the combining grave diacritic (U+0323). Even characters that do have a precomposed (single code point) version often show up in the wild as [composed versions](https://en.wikipedia.org/wiki/Unicode_equivalence) of themselves. (See: [When an é is not an é](https://nation.marketo.com/t5/product-blogs/when-an-e%CC%81-is-not-an-%C3%A9-about-unicode-precomposed-vs-decomposed/ba-p/339051)).
 
 ### Stacking Modifiers
-Characters with more than one modifier, like "ẫ" ("a with circumflex and tilde"), are made by stroking the letter chord, followed by each modifier chord in sequence. The order of these is based on the Unicode name, where "ẫ" (Unicode code point U+1EAB) is called "LATIN SMALL LETTER A WITH CIRCUMFLEX AND TILDE", and means you stroke the circumflex modifier before the tilde modifier.
+Characters with more than one modifier, like "ẫ" ("a with circumflex and tilde"), are made by stroking the letter chord, followed by each modifier chord in sequence. The order of these is based on the Unicode name, where "ẫ" (Unicode code point U+1EAB) is called "LATIN SMALL LETTER A WITH CIRCUMFLEX AND TILDE", and means you stroke the circumflex modifier before the tilde modifier.<BR><BR>Unicode actually has a collation order for diacritics, based on things like closeness to the base character, and position around the character, but it's [a bit involved](https://www.unicode.org/reports/tr10/). Ultimately, Unicode doesn't care in what order diacritics are combined, and will normalize multiple diacritics back to a canonical ordering. The way around this is to use the [combining grapheme joiner](https://en.wikipedia.org/wiki/Combining_grapheme_joiner), but that's currently outside the scope of this system.
 """
 # TODO allow adding character overrides in a user-defined file
 
@@ -90,7 +90,7 @@ readmeAllCharacters = """
 ## Character List
 Here are all the characters this library exports.
 
-Code points currently link to their associated page on [Compart](https://www.compart.com/en/about-compart)'s site.
+Code points currently link to their associated page on [Compart](https://www.compart.com/en/about-compart)'s site. No affiliation; it just showed up in character searches, seems to have all pages, and it's easy to turn Unicode code points into its various URLs.
 |Char|Code Pt|Name|
 |-|-|-|"""
 
@@ -129,6 +129,14 @@ def generateDiacriticsSection ():
         charsStr = " ".join(chars)
         img = "![" + name + "](images/" + name + ".png)"
         print("|" + img + "|![tweak](images/" + tweak + ".png)|" + info + "<BR><BR>Used in: " + charsStr + "|")
+
+readmeKnownIssues = """
+## Known Issues
+* We'll probably never get all combining diacritics. There are hundreds, including things like [Znamenny Combining Mark Gorazdo Nizko S Kryzhem On Right](https://codepoints.net/znamenny_musical_notation).
+* We're also never getting anywhere near all of Unicode, even just the "spelling" bits, as Unicode v16 now has more than 65,000 code points.
+* The characters native to this system are all precomposed. As you write a character, then add diacritics, you're replacing the single code point character with another that has the diacritic, or several, in the case of stacked diacritics (and if you try to add a diacritic to a character that doesn't exist with that diacritic in Unicode as a single code point, you just get an untrans). This isn't so much a design issue, as a design decision, something for the user to be aware of. The system could try to solve for this and compose a character out of combining diacritics, when a single code point version doesn't exist, but that would just lead to confusion, especially given the next issue...
+* You can star back to remove diacritics (and modifiers) in the reverse order of how you added them, and Plover will simply backtrack through the characters, effectively undoing the addition of each diacritic (and/or modifier), by re-replacing it with the simpler one it came from. If you manually compose a character, however, using the combining diacritical marks, star will simply delete the entire thing in one shot, which can be a bit jarring. I've tried every combo of glue, space suppressor, inside and outside of curly braces... Everything has its own unique set of issues. The current setup is the best so far, with the stated caveat. Backspace, at least for me, always deletes the entire character, with its combining diacritical marks, though this may be system/app dependent.
+"""
 
 def generateReadme ():
     print(readmeTitle)
