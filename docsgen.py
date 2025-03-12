@@ -98,6 +98,9 @@ def getEntriesWithModifier (modifier):
     search = lambda x: modifier in x["modifiers"]
     return filter(search, entries)
 
+def getAnchorTextForChar (c):
+     return "-".join(unicodedata.name(c).lower().split())
+
 def generateDiacriticsSection ():
     print("|Modifier|Tweak|Notes|")
     print("|-|-|-|")
@@ -114,19 +117,14 @@ def generateDiacriticsSection ():
             tweak = "U_down"
         print("|" + prettyName + "| |")
         chars = []
-        for e in getEntriesWithModifier(name):
+        for entry in getEntriesWithModifier(name):
             for scule in ["min", "maj"]:
-                if e[scule + "uscule"]:
-                    l = ""
-                    r = ""
-                    if (scule + "CodePt") in e:
-                        l = "["
-                        r = "](" + unicodeCodePtURL + e[scule + "CodePt"] + ")"
-                    elif e["link"]:
-                        l = "["
-                        r = "](" + e["link"] + ")"
-                    chars.append(l + e[scule + "uscule"][1] + r)
-        charsStr = " ".join(chars)
+                sculeData = entry[scule + "uscule"]
+                if sculeData != None:
+                    character = sculeData[1]
+                    anchor = getAnchorTextForChar(character)
+                    chars.append("[" + character + "](#char-" + anchor + ")")
+        charsStr = " ".join(sorted(chars, key=ccc_sort_key))
         img = "![" + name + "](images/" + name + ".png)"
         print("|" + img + "|![tweak](images/" + tweak + ".png)|" + info + "<BR><BR>Used in: " + charsStr + "|")
 
@@ -165,7 +163,9 @@ def generateReadme ():
             chars.append(entry["majuscule"][1])
     cccs = sorted(chars, key=ccc_sort_key)
     for ccc in cccs:
-        print("|" + ccc + "|[" + toCodePt(ccc) + "](" + toURL(ccc) + ")|" + unicodedata.name(ccc) + "|")
+        anchor = "<a name=\"char-" + getAnchorTextForChar(ccc) + "\"></a>"
+        print("|" + anchor + ccc + "|[" + toCodePt(ccc) + "](" + toURL(ccc) + ")|" + unicodedata.name(ccc) + "|")
+    print(readmeKnownIssues)
 
 if __name__ == "__main__":
     generateReadme()
