@@ -65,7 +65,7 @@ modifiers = {
     "acute": {
         "outline": "-RP",
         "name": "Acute",
-        "docs": "Shaped like the acute symbol.",
+        "docs": "Shaped like the [acute accent](https://en.wikipedia.org/wiki/Acute_accent).",
     },
     "acuteDoubled": {
         "outline": "ERP",
