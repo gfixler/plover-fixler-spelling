@@ -2422,6 +2422,19 @@ def parseStroke (stroke):
             pressed.append(False)
     return pressed
 
+def mergeStrokes (a, b):
+    parseA = parseStroke(a)
+    parseB = parseStroke(b)
+    merge = [x | y for x, y in zip(parseA, parseB)]
+    return merge
+
+def renderStroke (stroke):
+    vowels = [stroke[7], stroke[8], stroke[11], stroke[12]] # AOEU
+    if stroke[10] or any(vowels): # if star or any vowels set...
+        stroke[9] = "" # ... don't include dash
+    text = [key for key, state in zip(strokeKeys, stroke) if state]
+    return "".join(text)
+
 def buildModdedChar (srcDestChars, modStrokes, wraps):
     """
     Takes info surrounding character modification.
