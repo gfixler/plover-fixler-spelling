@@ -2409,6 +2409,19 @@ entries = [
     },
 ]
 
+
+strokeKeys = "STKPWHRAO-*EUFRPBLGTSDZ"
+
+def parseStroke (stroke):
+    pressed = []
+    for key in strokeKeys:
+        if stroke.startswith(key):
+            pressed.append(True)
+            stroke = stroke[1:]
+        else:
+            pressed.append(False)
+    return pressed
+
 def buildModdedChar (srcDestChars, modStrokes, wraps):
     """
     Takes info surrounding character modification.
