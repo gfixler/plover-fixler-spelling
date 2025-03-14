@@ -1,5 +1,7 @@
 import json
 
+# TODO allow adding character overrides in a user-defined file
+
 latinAlphabet = {
     "A": "A*P",
     "a": "A*",
@@ -55,11 +57,12 @@ latinAlphabet = {
     "z": "STKPW*",
 }
 
-# these string pairs are used to wrap output characters to enforce case
+
+# These string pairs are used to wrap output characters to enforce case.
 lowerWraps = ("{>}{&", "}")
 upperWraps = ("{-|}{&", "}")
 
-# This the all the modifiers, and info for and about each one.
+# This is all the modifiers, plus info about each one.
 # Modifiers include diacritics, ligatures, rotations, and so on.
 modifiers = {
     "acute": {
@@ -2410,9 +2413,20 @@ entries = [
 ]
 
 
+# This string is used by the stroke parsing/merging/rendering functions.
+# Note the dash before the star, explained further in the functions below.
 strokeKeys = "STKPWHRAO-*EUFRPBLGTSDZ"
 
 def parseStroke (stroke):
+    """
+    Turns a Plover-style stroke string into a list of bools, representing the
+    pressed state of every key, in steno order, with the addition of a dash
+    between the O and star keys, to represent strokes with no vowels, nor star
+    key. Star and dash are never in the same stroke, but in this intermediary
+    format, they are allowed to live side-by-side.
+
+    Note: Parsing does not currently support the steno number key.
+    """
     pressed = []
     for key in strokeKeys:
         if stroke.startswith(key):
@@ -2423,15 +2437,25 @@ def parseStroke (stroke):
     return pressed
 
 def mergeStrokes (a, b):
+    """
+    Merging is nothing more than ORing together all the bools in two strokes.
+    This results in a stroke with all True keys from both strokes set to True.
+    Note: star and dash can both end up set, which is handled at render time.
+    """
     parseA = parseStroke(a)
     parseB = parseStroke(b)
     merge = [x | y for x, y in zip(parseA, parseB)]
     return merge
 
 def renderStroke (stroke):
+    """
+    Rendering a stroke walks through all the bools in the list, turning all
+    Trues into their associated key letters. If any vowels, or the star are
+    set to True, the dash, outputs as the empty string.
+    """
     vowels = [stroke[7], stroke[8], stroke[11], stroke[12]] # AOEU
     if stroke[10] or any(vowels): # if star or any vowels set...
-        stroke[9] = "" # ... don't include dash
+        stroke[9] = "" # ... don't include dash in the render
     text = [key for key, state in zip(strokeKeys, stroke) if state]
     return "".join(text)
 
