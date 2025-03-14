@@ -638,8 +638,8 @@ entries = [
     },
     {
         "name": "O with ogonek",
-        "majuscule": ("Q", "Ǫ"),
-        "minuscule": ("q", "ǫ"),
+        "majuscule": ("O", "Ǫ"),
+        "minuscule": ("o", "ǫ"),
         "modifiers": ["ogonek"],
         "link": "https://en.wikipedia.org/wiki/%C7%AA",
     },
