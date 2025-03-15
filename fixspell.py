@@ -2,61 +2,167 @@ import json
 
 # TODO allow adding character overrides in a user-defined file
 
-latinAlphabet = {
-    "A": "A*P",
-    "a": "A*",
-    "B": "PW*P",
-    "b": "PW*",
-    "C": "KR*P",
-    "c": "KR*",
-    "D": "TK*P",
-    "d": "TK*",
-    "E": "*EP",
-    "e": "*E",
-    "F": "TP*P",
-    "f": "TP*",
-    "G": "TKPW*P",
-    "g": "TKPW*",
-    "H": "H*P",
-    "h": "H*",
-    "I": "*EUP",
-    "i": "*EU",
-    "J": "SKWR*P",
-    "j": "SKWR*",
-    "K": "K*P",
-    "k": "K*",
-    "L": "HR*P",
-    "l": "HR*",
-    "M": "PH*P",
-    "m": "PH*",
-    "N": "TPH*P",
-    "n": "TPH*",
-    "O": "O*P",
-    "o": "O*",
-    "P": "P*P",
-    "p": "P*",
-    "Q": "KW*P",
-    "q": "KW*",
-    "R": "R*P",
-    "r": "R*",
-    "S": "S*P",
-    "s": "S*",
-    "T": "T*P",
-    "t": "T*",
-    "U": "*UP",
-    "u": "*U",
-    "V": "SR*P",
-    "v": "SR*",
-    "W": "W*P",
-    "w": "W*",
-    "X": "KP*P",
-    "x": "KP*",
-    "Y": "KWR*P",
-    "y": "KWR*",
-    "Z": "STKPW*P",
-    "z": "STKPW*",
-}
+latinMinEnder = "*"
+latinMajEnder = "*P"
 
+latinAlphabet = [
+    {
+        "majuscule": "A",
+        "minuscule": "a",
+        "outline": "A",
+        "link": "https://en.wikipedia.org/wiki/A",
+    },
+    {
+        "majuscule": "B",
+        "minuscule": "b",
+        "outline": "PW",
+        "link": "https://en.wikipedia.org/wiki/B",
+    },
+    {
+        "majuscule": "C",
+        "minuscule": "c",
+        "outline": "KR",
+        "link": "https://en.wikipedia.org/wiki/C",
+    },
+    {
+        "majuscule": "D",
+        "minuscule": "d",
+        "outline": "TK",
+        "link": "https://en.wikipedia.org/wiki/D",
+    },
+    {
+        "majuscule": "E",
+        "minuscule": "e",
+        "outline": "E",
+        "link": "https://en.wikipedia.org/wiki/E",
+    },
+    {
+        "majuscule": "F",
+        "minuscule": "f",
+        "outline": "TP",
+        "link": "https://en.wikipedia.org/wiki/F",
+    },
+    {
+        "majuscule": "G",
+        "minuscule": "g",
+        "outline": "TKPW",
+        "link": "https://en.wikipedia.org/wiki/G",
+    },
+    {
+        "majuscule": "H",
+        "minuscule": "h",
+        "outline": "H",
+        "link": "https://en.wikipedia.org/wiki/H",
+    },
+    {
+        "majuscule": "I",
+        "minuscule": "i",
+        "outline": "EU",
+        "link": "https://en.wikipedia.org/wiki/I",
+    },
+    {
+        "majuscule": "J",
+        "minuscule": "j",
+        "outline": "SKWR",
+        "link": "https://en.wikipedia.org/wiki/J",
+    },
+    {
+        "majuscule": "K",
+        "minuscule": "k",
+        "outline": "K",
+        "link": "https://en.wikipedia.org/wiki/K",
+    },
+    {
+        "majuscule": "L",
+        "minuscule": "l",
+        "outline": "HR",
+        "link": "https://en.wikipedia.org/wiki/L",
+    },
+    {
+        "majuscule": "M",
+        "minuscule": "m",
+        "outline": "PH",
+        "link": "https://en.wikipedia.org/wiki/M",
+    },
+    {
+        "majuscule": "N",
+        "minuscule": "n",
+        "outline": "TPH",
+        "link": "https://en.wikipedia.org/wiki/N",
+    },
+    {
+        "majuscule": "O",
+        "minuscule": "o",
+        "outline": "O",
+        "link": "https://en.wikipedia.org/wiki/O",
+    },
+    {
+        "majuscule": "P",
+        "minuscule": "p",
+        "outline": "P",
+        "link": "https://en.wikipedia.org/wiki/P",
+    },
+    {
+        "majuscule": "Q",
+        "minuscule": "q",
+        "outline": "KW",
+        "link": "https://en.wikipedia.org/wiki/Q",
+    },
+    {
+        "majuscule": "R",
+        "minuscule": "r",
+        "outline": "R",
+        "link": "https://en.wikipedia.org/wiki/R",
+    },
+    {
+        "majuscule": "S",
+        "minuscule": "s",
+        "outline": "S",
+        "link": "https://en.wikipedia.org/wiki/S",
+    },
+    {
+        "majuscule": "T",
+        "minuscule": "t",
+        "outline": "T",
+        "link": "https://en.wikipedia.org/wiki/T",
+    },
+    {
+        "majuscule": "U",
+        "minuscule": "u",
+        "outline": "U",
+        "link": "https://en.wikipedia.org/wiki/U",
+    },
+    {
+        "majuscule": "V",
+        "minuscule": "v",
+        "outline": "SR",
+        "link": "https://en.wikipedia.org/wiki/V",
+    },
+    {
+        "majuscule": "W",
+        "minuscule": "w",
+        "outline": "W",
+        "link": "https://en.wikipedia.org/wiki/W",
+    },
+    {
+        "majuscule": "X",
+        "minuscule": "x",
+        "outline": "KP",
+        "link": "https://en.wikipedia.org/wiki/X",
+    },
+    {
+        "majuscule": "Y",
+        "minuscule": "y",
+        "outline": "KWR",
+        "link": "https://en.wikipedia.org/wiki/Y",
+    },
+    {
+        "majuscule": "Z",
+        "minuscule": "z",
+        "outline": "STKPW",
+        "link": "https://en.wikipedia.org/wiki/Z",
+    },
+]
 
 # These string pairs are used to wrap output characters to enforce case.
 minWraps = ("{>}{&", "}")
@@ -2516,7 +2622,7 @@ def buildModdedChar (srcDestChars, modStrokes, wraps):
         return None
     srcChars, destChar = srcDestChars
     wrapL, wrapR = wraps
-    strokes = [latinAlphabet[c] for c in srcChars] + list(modStrokes)
+    strokes = [latinAlphabetLUT[c] for c in srcChars] + list(modStrokes)
     return ("/".join(strokes), wrapL + destChar + wrapR, destChar)
 
 def createOutlines (entry):
@@ -2538,8 +2644,21 @@ def buildFingerspellingDict ():
     """
     spellingDict = {}
 
-    # start with all the English letters
-    spellingDict |= latinAlphabet
+    # add all the letters from every alphabet
+    alphabets = [
+        latinAlphabetLUT,
+    ]
+    for alphabet in alphabets:
+        for character, outline in alphabet.items():
+            if character.isupper():
+                wrapL, wrapR = majWraps
+                translation = wrapL + character + wrapR
+            elif character.islower():
+                wrapL, wrapR = minWraps
+                translation = wrapL + character + wrapR
+            else:
+                translation = character
+            spellingDict[outline] = translation
 
     # create definitions for all character modifications
     for entry in entries:
