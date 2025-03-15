@@ -59,8 +59,8 @@ latinAlphabet = {
 
 
 # These string pairs are used to wrap output characters to enforce case.
-lowerWraps = ("{>}{&", "}")
-upperWraps = ("{-|}{&", "}")
+minWraps = ("{>}{&", "}")
+majWraps = ("{-|}{&", "}")
 
 # This is all the modifiers, plus info about each one.
 # Modifiers include diacritics, ligatures, rotations, and so on.
@@ -2469,7 +2469,7 @@ def buildModdedChar (srcDestChars, modStrokes, wraps):
     wraps: lowercase or upper case wrapper pair, like ("{>}{&", "}")
 
     example:
-        >>> buildModdedChar(("a", "á"), "-RP", lowerWraps)
+        >>> buildModdedChar(("a", "á"), "-RP", minWraps)
         ("A*/-RP", "{^}{&á}")
     """
     if srcDestChars is None:
@@ -2487,8 +2487,8 @@ def createOutlines (entry):
     and translation character by itself.
     """
     modStrokes = list(map(lambda x: modifiers[x]["outline"], entry["modifiers"]))
-    minuscule = buildModdedChar(entry["minuscule"], modStrokes, lowerWraps)
-    majuscule = buildModdedChar(entry["majuscule"], modStrokes, upperWraps)
+    minuscule = buildModdedChar(entry["minuscule"], modStrokes, minWraps)
+    majuscule = buildModdedChar(entry["majuscule"], modStrokes, majWraps)
     return (minuscule, majuscule)
 
 def buildFingerspellingDict ():
