@@ -1,7 +1,13 @@
 import unicodedata
 
 
-from fixspell import entries, modifiers, buildFingerspellingDict
+from fixspell import \
+    entries, \
+    modifiers, \
+    latinAlphabetLUT, \
+    greekAlphabetLUT, \
+    russianAlphabetLUT, \
+    buildFingerspellingDict
 
 
 # build entire fingerspelling dictionary
@@ -171,6 +177,9 @@ def generateReadme ():
             chars.append(entry["minuscule"][1])
         if entry["majuscule"] != None:
             chars.append(entry["majuscule"][1])
+    chars += (latinAlphabetLUT)
+    chars += (greekAlphabetLUT)
+    chars += (russianAlphabetLUT)
     cccs = sorted(chars, key=ccc_sort_key)
     for ccc in cccs:
         anchor = "<a name=\"char-" + getAnchorTextForChar(ccc) + "\"></a>"
