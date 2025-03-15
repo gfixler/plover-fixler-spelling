@@ -177,6 +177,7 @@ greekAlphabet = [
         "minuscule": "α",
         "outline": "A",
         "link": "https://en.wikipedia.org/wiki/Alpha",
+        "docs": "Sounds like A.",
     },
     {
         "name": "beta",
@@ -184,6 +185,7 @@ greekAlphabet = [
         "minuscule": "β",
         "outline": "PW",
         "link": "https://en.wikipedia.org/wiki/Beta",
+        "docs": "Sounds like B.",
     },
     {
         "name": "gamma",
@@ -191,6 +193,7 @@ greekAlphabet = [
         "minuscule": "γ",
         "outline": "TKPW",
         "link": "https://en.wikipedia.org/wiki/Gamma",
+        "docs": "Sounds like G.",
     },
     {
         "name": "delta",
@@ -198,6 +201,7 @@ greekAlphabet = [
         "minuscule": "δ",
         "outline": "TK",
         "link": "https://en.wikipedia.org/wiki/Delta_(letter)",
+        "docs": "Sounds like D.",
     },
     {
         "name": "epsilon",
@@ -205,6 +209,7 @@ greekAlphabet = [
         "minuscule": "ε",
         "outline": "E",
         "link": "https://en.wikipedia.org/wiki/Epsilon",
+        "docs": "Sounds like E",
     },
     {
         "name": "zeta",
@@ -212,6 +217,7 @@ greekAlphabet = [
         "minuscule": "ζ",
         "outline": "STKPW",
         "link": "https://en.wikipedia.org/wiki/Zeta",
+        "docs": "Sounds like Z.",
     },
     {
         "name": "eta",
@@ -219,7 +225,7 @@ greekAlphabet = [
         "minuscule": "η",
         "outline": "AEU",
         "link": "https://en.wikipedia.org/wiki/Eta",
-        "docs": "",
+        "docs": "Makes the Ā sound.",
     },
     {
         "name": "theta",
@@ -227,7 +233,7 @@ greekAlphabet = [
         "minuscule": "θ",
         "outline": "TH",
         "link": "https://en.wikipedia.org/wiki/Theta",
-        "docs": "",
+        "docs": "Makes the TH sound.",
     },
     {
         "name": "iota",
@@ -235,6 +241,7 @@ greekAlphabet = [
         "minuscule": "ι",
         "outline": "EU",
         "link": "https://en.wikipedia.org/wiki/Iota",
+        "docs": "Sounds like I.",
     },
     {
         "name": "kappa",
@@ -242,6 +249,7 @@ greekAlphabet = [
         "minuscule": "κ",
         "outline": "K",
         "link": "https://en.wikipedia.org/wiki/Kappa",
+        "docs": "Sounds like K.",
     },
     {
         "name": "lambda",
@@ -249,6 +257,7 @@ greekAlphabet = [
         "minuscule": "λ",
         "outline": "HR",
         "link": "https://en.wikipedia.org/wiki/Lambda",
+        "docs": "Sounds like L.",
     },
     {
         "name": "mu",
@@ -256,6 +265,7 @@ greekAlphabet = [
         "minuscule": "μ",
         "outline": "PH",
         "link": "https://en.wikipedia.org/wiki/Mu_(letter)",
+        "docs": "Sounds like M.",
     },
     {
         "name": "nu",
@@ -263,7 +273,7 @@ greekAlphabet = [
         "minuscule": "ν",
         "outline": "TPH",
         "link": "https://en.wikipedia.org/wiki/Nu_(letter)",
-        "docs": "",
+        "docs": "We use the N chord, for the sound, even though the lowercase looks like a v.",
     },
     {
         "name": "xi",
@@ -271,6 +281,7 @@ greekAlphabet = [
         "minuscule": "ξ",
         "outline": "KP",
         "link": "https://en.wikipedia.org/wiki/Xi_(letter)",
+        "docs": "Sounds like X.",
     },
     {
         "name": "omicron",
@@ -278,6 +289,7 @@ greekAlphabet = [
         "minuscule": "ο",
         "outline": "O",
         "link": "https://en.wikipedia.org/wiki/Omicron",
+        "docs": "Sounds like O.",
     },
     {
         "name": "pi",
@@ -285,6 +297,7 @@ greekAlphabet = [
         "minuscule": "π",
         "outline": "P",
         "link": "https://en.wikipedia.org/wiki/Pi_(letter)",
+        "docs": "Sounds like P.",
     },
     {
         "name": "rho",
@@ -292,7 +305,7 @@ greekAlphabet = [
         "minuscule": "ρ",
         "outline": "R",
         "link": "https://en.wikipedia.org/wiki/Rho",
-        "docs": "",
+        "docs": "It looks like a P, but we respect that it sounds like an R.",
     },
     {
         "name": "sigma",
@@ -300,6 +313,7 @@ greekAlphabet = [
         "minuscule": "σ",
         "outline": "S",
         "link": "https://en.wikipedia.org/wiki/Sigma",
+        "docs": "Sounds like S.",
     },
     {
         "name": "word-final sigma",
@@ -307,7 +321,7 @@ greekAlphabet = [
         "minuscule": "ς",
         "outline": "SE",
         "link": "https://en.wikipedia.org/wiki/Sigma",
-        "docs": "",
+        "docs": "This system is built around majuscule/minuscule, but then this weirdo second minuscule sigma comes along. The E in the chord is for \"end\" (of word), as it's the word-final variant.",
     },
     {
         "name": "tau",
@@ -315,6 +329,7 @@ greekAlphabet = [
         "minuscule": "τ",
         "outline": "T",
         "link": "https://en.wikipedia.org/wiki/Tau",
+        "docs": "Sounds like T.",
     },
     {
         "name": "upsilon",
@@ -322,7 +337,7 @@ greekAlphabet = [
         "minuscule": "υ",
         "outline": "U",
         "link": "https://en.wikipedia.org/wiki/Upsilon",
-        "docs": "",
+        "docs": "The capital looks like a Y, but we respect that it's a U sound.",
     },
     {
         "name": "phi",
@@ -330,7 +345,7 @@ greekAlphabet = [
         "minuscule": "φ",
         "outline": "TP",
         "link": "https://en.wikipedia.org/wiki/Phi",
-        "docs": "",
+        "docs": "Sounds like F.",
     },
     {
         "name": "chi",
@@ -338,7 +353,7 @@ greekAlphabet = [
         "minuscule": "χ",
         "outline": "KH",
         "link": "https://en.wikipedia.org/wiki/Chi_(letter)",
-        "docs": "",
+        "docs": "It's actual sound is hard to represent in steno, but CH is a reasonable fit.",
     },
     {
         "name": "psi",
@@ -346,7 +361,7 @@ greekAlphabet = [
         "minuscule": "ψ",
         "outline": "SP",
         "link": "https://en.wikipedia.org/wiki/Psi_(Greek)",
-        "docs": "",
+        "docs": "Sounds like PS (as in \"lapse\"), so we used the swapped form, as we don't have a PS sound on the left-hand side, where the consonants live.",
     },
     {
         "name": "omega",
@@ -354,7 +369,7 @@ greekAlphabet = [
         "minuscule": "ω",
         "outline": "OE",
         "link": "https://en.wikipedia.org/wiki/Omega",
-        "docs": "",
+        "docs": "O is taken by omicron, which people pronounce with an initial long or short O sound, but this one is only ever the long O, so we use OE for this one.",
     },
 ]
 
@@ -365,7 +380,7 @@ russianAlphabet = [
         "minuscule": "а",
         "outline": "A",
         "link": "https://en.wikipedia.org/wiki/A_(Cyrillic)",
-        "docs": "",
+        "docs": "Sounds like A.",
     },
     {
         "name": "Бэ",
@@ -373,7 +388,7 @@ russianAlphabet = [
         "minuscule": "б",
         "outline": "PW",
         "link": "https://en.wikipedia.org/wiki/Be_(Cyrillic)",
-        "docs": "",
+        "docs": "Sounds like B.",
     },
     {
         "name": "Вэ",
@@ -381,7 +396,7 @@ russianAlphabet = [
         "minuscule": "в",
         "outline": "SR",
         "link": "https://en.wikipedia.org/wiki/Ve_(Cyrillic)",
-        "docs": "",
+        "docs": "Sounds like V.",
     },
     {
         "name": "Гэ",
@@ -389,7 +404,7 @@ russianAlphabet = [
         "minuscule": "г",
         "outline": "TKPW",
         "link": "https://en.wikipedia.org/wiki/Ge_(Cyrillic)",
-        "docs": "",
+        "docs": "Sounds like G.",
     },
     {
         "name": "Дэ",
@@ -397,7 +412,7 @@ russianAlphabet = [
         "minuscule": "д",
         "outline": "TK",
         "link": "https://en.wikipedia.org/wiki/De_(Cyrillic)",
-        "docs": "",
+        "docs": "Sounds like D.",
     },
     {
         "name": "Е",
@@ -405,24 +420,23 @@ russianAlphabet = [
         "minuscule": "е",
         "outline": "KWRE",
         "link": "https://en.wikipedia.org/wiki/Ye_(Cyrillic)",
-        "docs": "",
+        "docs": "Makes the YE sound, sort of.",
     },
     {
         "name": "Ё",
         "majuscule": "Ё",
         "minuscule": "ё",
-        "outline": "KWRO",
+        "outline": "KWROE",
         "link": "https://en.wikipedia.org/wiki/%D0%81",
-        "docs": "",
+        "docs": "Makes the YŌ sound.",
     },
     {
         "name": "Жэ",
         "majuscule": "Ж",
         "minuscule": "ж",
         "outline": "STKPWH",
-        "alternates": ["STKPW", "SKWR"],
         "link": "https://en.wikipedia.org/wiki/Zhe_(Cyrillic)",
-        "docs": "",
+        "docs": "A literal steno ZH, as when this symbol is transliterated to English, i.e. in \"Dr. Zhivago.\"",
     },
     {
         "name": "Зэ",
@@ -430,15 +444,15 @@ russianAlphabet = [
         "minuscule": "з",
         "outline": "STKPW",
         "link": "https://en.wikipedia.org/wiki/Ze_(Cyrillic)",
-        "docs": "",
+        "docs": "Sounds like Z.",
     },
     {
         "name": "И",
         "majuscule": "И",
         "minuscule": "и",
-        "outline": "EU",
+        "outline": "AOE",
         "link": "https://en.wikipedia.org/wiki/I_(Cyrillic)",
-        "docs": "",
+        "docs": "Makes the Ē sound.",
     },
     {
         "name": "И Краткое",
@@ -446,7 +460,7 @@ russianAlphabet = [
         "minuscule": "й",
         "outline": "KWR",
         "link": "https://en.wikipedia.org/wiki/Short_I_(Cyrillic)",
-        "docs": "",
+        "docs": "Sounds like Y, sort of.",
     },
     {
         "name": "Ка",
@@ -454,7 +468,7 @@ russianAlphabet = [
         "minuscule": "к",
         "outline": "K",
         "link": "https://en.wikipedia.org/wiki/Ka_(Cyrillic)",
-        "docs": "",
+        "docs": "Sounds like K.",
     },
     {
         "name": "Эль",
@@ -462,7 +476,7 @@ russianAlphabet = [
         "minuscule": "л",
         "outline": "HR",
         "link": "https://en.wikipedia.org/wiki/El_(Cyrillic)",
-        "docs": "",
+        "docs": "Sounds like L.",
     },
     {
         "name": "Эм",
@@ -470,7 +484,7 @@ russianAlphabet = [
         "minuscule": "м",
         "outline": "PH",
         "link": "https://en.wikipedia.org/wiki/Em_(Cyrillic)",
-        "docs": "",
+        "docs": "Sounds like M.",
     },
     {
         "name": "Эн",
@@ -478,7 +492,7 @@ russianAlphabet = [
         "minuscule": "н",
         "outline": "TPH",
         "link": "https://en.wikipedia.org/wiki/En_(Cyrillic)",
-        "docs": "",
+        "docs": "Sounds like N.",
     },
     {
         "name": "О",
@@ -486,7 +500,7 @@ russianAlphabet = [
         "minuscule": "о",
         "outline": "O",
         "link": "https://en.wikipedia.org/wiki/O_(Cyrillic)",
-        "docs": "",
+        "docs": "Sounds like O.",
     },
     {
         "name": "Пэ",
@@ -494,7 +508,7 @@ russianAlphabet = [
         "minuscule": "п",
         "outline": "P",
         "link": "https://en.wikipedia.org/wiki/Pe_(Cyrillic)",
-        "docs": "",
+        "docs": "Sounds like P.",
     },
     {
         "name": "Эр",
@@ -502,7 +516,7 @@ russianAlphabet = [
         "minuscule": "р",
         "outline": "R",
         "link": "https://en.wikipedia.org/wiki/Er_(Cyrillic)",
-        "docs": "",
+        "docs": "Sounds like R.",
     },
     {
         "name": "Эс",
@@ -510,7 +524,7 @@ russianAlphabet = [
         "minuscule": "с",
         "outline": "S",
         "link": "https://en.wikipedia.org/wiki/Es_(Cyrillic)",
-        "docs": "",
+        "docs": "Sounds like S.",
     },
     {
         "name": "Тэ",
@@ -518,15 +532,15 @@ russianAlphabet = [
         "minuscule": "т",
         "outline": "T",
         "link": "https://en.wikipedia.org/wiki/Te_(Cyrillic)",
-        "docs": "",
+        "docs": "Sounds like T.",
     },
     {
         "name": "У",
         "majuscule": "У",
         "minuscule": "у",
-        "outline": "U",
+        "outline": "AOU",
         "link": "https://en.wikipedia.org/wiki/U_(Cyrillic)",
-        "docs": "",
+        "docs": "Makes the Ū sound, sort of.",
     },
     {
         "name": "Эф",
@@ -534,7 +548,7 @@ russianAlphabet = [
         "minuscule": "ф",
         "outline": "TP",
         "link": "https://en.wikipedia.org/wiki/Ef_(Cyrillic)",
-        "docs": "",
+        "docs": "Sounds like F.",
     },
     {
         "name": "Ха",
@@ -542,7 +556,7 @@ russianAlphabet = [
         "minuscule": "х",
         "outline": "KP",
         "link": "https://en.wikipedia.org/wiki/Kha_(Cyrillic)",
-        "docs": "",
+        "docs": "Uses orthography to get around the conflict with Ч/ч, which makes the \"ch\" sound. As this looks exactly like an X, we go with the steno X chord. This also matches an alternate provided in the Greek alphabet for the letter, Chi (Χχ), which also looks like an X.",
     },
     {
         "name": "Цэ",
@@ -550,7 +564,7 @@ russianAlphabet = [
         "minuscule": "ц",
         "outline": "ST",
         "link": "https://en.wikipedia.org/wiki/Tse_(Cyrillic)",
-        "docs": "",
+        "docs": "This is supposed to make the TS sound, as in \"cats\", but we don't have that chord on the left-hand side of the board, so we employ the Plover theory trick of allowing one adjacent sound swap.",
     },
     {
         "name": "Че",
@@ -558,7 +572,7 @@ russianAlphabet = [
         "minuscule": "ч",
         "outline": "KH",
         "link": "https://en.wikipedia.org/wiki/Che_(Cyrillic)",
-        "docs": "",
+        "docs": "Makes the CH sound.",
     },
     {
         "name": "Ша",
@@ -566,7 +580,7 @@ russianAlphabet = [
         "minuscule": "ш",
         "outline": "SH",
         "link": "https://en.wikipedia.org/wiki/Sha_(Cyrillic)",
-        "docs": "",
+        "docs": "Makes the SH sound.",
     },
     {
         "name": "Ща",
@@ -574,7 +588,7 @@ russianAlphabet = [
         "minuscule": "щ",
         "outline": "SKH",
         "link": "https://en.wikipedia.org/wiki/Shcha",
-        "docs": "",
+        "docs": "Think of this one as a letter brief. The sound should be SHCH, like the sound between the words in \"fresh cheese,\" but we don't have that in English steno, so we just merge SH and KH (CH).",
     },
     {
         "name": "твёрдый знак",
@@ -582,7 +596,7 @@ russianAlphabet = [
         "minuscule": "ъ",
         "outline": "PWH",
         "link": "https://en.wikipedia.org/wiki/Hard_sign",
-        "docs": "",
+        "docs": "This letter looks like the b in the English alphabet. It doesn't have its own sound, so I'm just leaning on what's visually sensible to an English speaker, and adding the H to denote that this is the hard sign (see: мягкий знак (soft sign)).",
     },
     {
         "name": "Ы",
@@ -590,7 +604,7 @@ russianAlphabet = [
         "minuscule": "ы",
         "outline": "U",
         "link": "https://en.wikipedia.org/wiki/Yery",
-        "docs": "",
+        "docs": "I'm told this letter makes a sound somewhere between the vowels in \"bit\" and \"put\", and my best take on that is the short U sound.",
     },
     {
         "name": "мягкий знак",
@@ -598,7 +612,7 @@ russianAlphabet = [
         "minuscule": "ь",
         "outline": "PWR",
         "link": "https://en.wikipedia.org/wiki/Soft_sign",
-        "docs": "",
+        "docs": "Like the hard sign, but with the R instead of the H, to denote the soft sound. The choice of R is positional; H is hard, and R is the soft version below it. (see: твёрдый знак (hard sign)).",
     },
     {
         "name": "Э",
@@ -606,7 +620,7 @@ russianAlphabet = [
         "minuscule": "э",
         "outline": "E",
         "link": "https://en.wikipedia.org/wiki/E_(Cyrillic)",
-        "docs": "",
+        "docs": "Sounds like E.",
     },
     {
         "name": "Ю",
@@ -614,7 +628,7 @@ russianAlphabet = [
         "minuscule": "ю",
         "outline": "KWRAOU",
         "link": "https://en.wikipedia.org/wiki/Yu_(Cyrillic)",
-        "docs": "",
+        "docs": "Makes the YŪ sound.",
     },
     {
         "name": "Я",
@@ -622,7 +636,7 @@ russianAlphabet = [
         "minuscule": "я",
         "outline": "KWRA",
         "link": "https://en.wikipedia.org/wiki/Ya_(Cyrillic)",
-        "docs": "",
+        "docs": "Makes the YA sound.",
     },
 ]
 
@@ -3279,7 +3293,7 @@ def createOutlines (entry):
 
 def buildFingerspellingDict ():
     """
-    This is the main function for assembling all the various part of the
+    This is the main function for assembling all the various parts of the
     system into a single, Plover-ready dictionary, and returning it.
     """
     spellingDict = {}
