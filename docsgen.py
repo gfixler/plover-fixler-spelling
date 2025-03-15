@@ -95,23 +95,6 @@ def ccc_sort_key (c):
     base_letter = normalized[0]
     return (base_letter.lower(), normalized[1:], base_letter.islower())
 
-readmeAllCharacters = """
-## All Characters List
-Here are [currently] all """ + str(charCount) + """ characters this library exports.
-
-Code points currently link to their associated page on [Compart](https://www.compart.com/en/about-compart)'s site. No affiliation; it just showed up in character searches, seems to have all pages, and it's easy to turn Unicode code points into its various URLs.
-
-There are many ways to sort such a list. I opted not to go with Unicode code point, because it ends up somewhat nonsensical. Instead, I wrote a custom sort based on a 3-tuple of:
-
-    1. lowercase base letter (e.g. "a" for "Â")
-    2. decomposed, Unicode-ordered diacritics list
-    3. True if base letter is lower, otherwise False
-
-This creates a list that feels at least a bit alphabetical in nature, and positions upper and lowercase letters with the same diacritics together.
-
-|Char|Code Pt|Name|
-|-|-|-|"""
-
 def getEntriesWithModifier (modifier):
     search = lambda x: modifier in x["modifiers"]
     return filter(search, entries)
@@ -146,6 +129,23 @@ def generateDiacriticsSection ():
         img = "![" + name + "](images/" + name + ".png)"
         print("|" + img + "|![tweak](images/" + tweak + ".png)|" + info + "<BR><BR>Used in: " + charsStr + "|")
 
+readmeAllCharacters = """
+## All Characters List
+Here are [currently] all """ + str(charCount) + """ characters this library exports.
+
+Code points currently link to their associated page on [Compart](https://www.compart.com/en/about-compart)'s site. No affiliation; it just showed up in character searches, seems to have all pages, and it's easy to turn Unicode code points into its various URLs.
+
+There are many ways to sort such a list. I opted not to go with Unicode code point, because it ends up somewhat nonsensical. Instead, I wrote a custom sort based on a 3-tuple of:
+
+    1. lowercase base letter (e.g. "a" for "Â")
+    2. decomposed, Unicode-ordered diacritics list
+    3. True if base letter is lower, otherwise False
+
+This creates a list that feels at least a bit alphabetical in nature, and positions upper and lowercase letters with the same diacritics together.
+
+|Char|Code Pt|Name|
+|-|-|-|"""
+
 readmeKnownIssues = """
 ## Known Issues
 * We'll probably never get all combining diacritics. There are hundreds, including things like [Znamenny Combining Mark Gorazdo Nizko S Kryzhem On Right](https://codepoints.net/znamenny_musical_notation).
@@ -176,6 +176,7 @@ def generateReadme ():
         anchor = "<a name=\"char-" + getAnchorTextForChar(ccc) + "\"></a>"
         print("|" + anchor + ccc + "|[" + toCodePt(ccc) + "](" + toURL(ccc) + ")|" + unicodedata.name(ccc) + "|")
     print(readmeKnownIssues)
+
 
 if __name__ == "__main__":
     generateReadme()
