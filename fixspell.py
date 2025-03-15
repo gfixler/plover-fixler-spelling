@@ -2459,6 +2459,46 @@ def renderStroke (stroke):
     text = [key for key, state in zip(strokeKeys, stroke) if state]
     return "".join(text)
 
+def buildAlphabet (alphabetData, majOutline, minOutline):
+    """
+    Takes a list of dictionaries, one per letter, with at least these fields:
+
+        {
+            "minuscule": "j",
+            "majuscule": "J",
+            "outline": "SKWR", # only the character part of the stroke
+        }
+
+    If either form is missing, set it to None, e.g. "majuscule": None.
+
+    Also takes outlines for minuscule and majuscule for the given alphabet, to
+    be merged with the letter outline. For example, for the standard steno
+    alphabet for the English letters, minuscule would be "*", and majuscule
+    would be "*P". These would be merged with the above examples to yield the
+    stroke "SKWR*" for minuscule, and "SKWR*P" for majuscule. These are called
+    "outlines", instead of "enders", or "uniqueEnders", to leave room for an
+    alphabet to use a unique starter, and right-hand side letter chords, e.g.
+
+    Returns a dictionary mapping both minuscule and majuscule forms to their
+    composed outlines.
+    """
+    alphabet = {}
+    minMajParts = [
+        ("maj", majOutline, majWraps),
+        ("min", minOutline, minWraps)
+    ]
+    for entry in alphabetData:
+        for scule, sculeOutline, (wrapL, wrapR) in minMajParts:
+            character = entry.get(scule + "uscule")
+            if character is not None:
+                entryOutline = entry["outline"]
+                stroke = mergeStrokes(entryOutline, sculeOutline)
+                alphabet[character] = renderStroke(stroke)
+    return alphabet
+
+# Build alphabets
+latinAlphabetLUT = buildAlphabet(latinAlphabet, latinMajEnder, latinMinEnder)
+
 def buildModdedChar (srcDestChars, modStrokes, wraps):
     """
     Takes info surrounding character modification.
