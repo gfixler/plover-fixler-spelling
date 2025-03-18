@@ -14,6 +14,7 @@ eu = e + u
 RHS = F + R + P + B + L + G + T + S + D + Z
 rhs = f + r + p + b + l + g + t + s + d + z
 
+
 class Test_parseStroke (unittest.TestCase):
 
     def test_starOnly (self):
@@ -106,4 +107,43 @@ class Test_renderStroke (unittest.TestCase):
         stroke = "STR-RPLS"
         result = renderStroke(parseStroke(stroke))
         self.assertEqual(result, stroke)
+
+
+testEmptyAlphabetData = {
+    "minStroke": "",
+    "majStroke": "",
+    "letters": [],
+}
+
+testAlphabetData = {
+    "minStroke": "-DZ",
+    "majStroke": "*DZ",
+    "letters": [
+        {
+            "majuscule": "💤",
+            "minuscule": "🦓",
+            "strokes": ["STKPW", "STK"],
+        },
+        {
+            "majuscule": "👴",
+            "minuscule": "👶",
+            "strokes": ["O"],
+        },
+    ]
+}
+
+class Test_buildAlphabet (unittest.TestCase):
+
+    def test_handlesEmptyAlphabetData (self):
+        self.assertEqual(buildAlphabet(testEmptyAlphabetData), {})
+
+    def test_buildingAlphabet (self):
+        result = buildAlphabet(testAlphabetData)
+        expected = {
+            "🦓": ["STKPW-DZ", "STK-DZ"],
+            "💤": ["STKPW*DZ", "STK*DZ"],
+            "👶": ["ODZ"],
+            "👴": ["O*DZ"],
+        }
+        self.assertEqual(result, expected)
 

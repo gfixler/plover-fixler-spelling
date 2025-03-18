@@ -3222,47 +3222,37 @@ def renderStroke (stroke):
     text = [key for key, state in zip(strokeKeys, stroke) if state]
     return "".join(text)
 
-def buildAlphabet (alphabetData, majOutline, minOutline):
-    """
-    Takes a list of dictionaries, one per letter, with at least these fields:
-
-        {
-            "minuscule": "j",
-            "majuscule": "J",
-            "outline": "SKWR", # only the character part of the stroke
-        }
-
-    If either form is missing, set it to None, e.g. "majuscule": None.
-
-    Also takes outlines for minuscule and majuscule for the given alphabet, to
-    be merged with the letter outline. For example, for the standard steno
-    alphabet for the English letters, minuscule would be "*", and majuscule
-    would be "*P". These would be merged with the above examples to yield the
-    stroke "SKWR*" for minuscule, and "SKWR*P" for majuscule. These are called
-    "outlines", instead of "enders", or "uniqueEnders", to leave room for an
-    alphabet to use a unique starter, and right-hand side letter chords, e.g.
-
-    Returns a dictionary mapping both minuscule and majuscule forms to their
-    composed outlines.
-    """
+def buildAlphabet (alphabetData):
+    # pull out the scule strokes (e.g. "*" for min, "*P" for maj)
+    minStroke = alphabetData["minStroke"]
+    majStroke = alphabetData["majStroke"]
+    # we'll build a dictionary, mapping a letter to list of outlines
     alphabet = {}
-    minMajParts = [
-        ("maj", majOutline, majWraps),
-        ("min", minOutline, minWraps)
-    ]
-    for entry in alphabetData:
-        for scule, sculeOutline, (wrapL, wrapR) in minMajParts:
-            character = entry.get(scule + "uscule")
-            if character is not None:
-                entryOutline = entry["outline"]
-                stroke = mergeStrokes(entryOutline, sculeOutline)
-                alphabet[character] = renderStroke(stroke)
+    # walk the alphabet data's list of letter data dictionaries
+    for letterData in alphabetData["letters"]:
+        # scule just stands for minuscule or majuscule
+        for scule, sculeStroke in [("min", minStroke), ("maj", majStroke)]:
+            # get the current letter, capital or lowercase
+            letter = letterData.get(scule + "uscule")
+            # not all characters have both majuscule and minuscule
+            if letter is not None:
+                # begin a list for all outlines we'll build for this letter
+                alphabet[letter] = []
+                # for each base letter outline (e.g. "SKWR" for J/j)...
+                for charStroke in letterData["strokes"]:
+                    # merge the character and scule strokes into one
+                    # NOTE: the merged stroke will be a list of bools
+                    strokeParts = mergeStrokes(charStroke, sculeStroke)
+                    # render the stroke parts to a stroke string
+                    stroke = renderStroke(strokeParts)
+                    # append letter/stroke pair to alphabet dictionary
+                    alphabet[letter].append(stroke)
     return alphabet
 
 # Build alphabets
-latinAlphabetLUT = buildAlphabet(latinAlphabet, latinMajEnder, latinMinEnder)
-russianAlphabetLUT = buildAlphabet(russianAlphabet, russianMajEnder, russianMinEnder)
-greekAlphabetLUT = buildAlphabet(greekAlphabet, greekMajEnder, greekMinEnder)
+latinAlphabet = buildAlphabet(latinAlphabetData)
+russianAlphabet = buildAlphabet(russianAlphabetData)
+greekAlphabet = buildAlphabet(greekAlphabetData)
 
 def buildModdedChar (srcDestChars, modStrokes, wraps):
     """
@@ -3281,7 +3271,7 @@ def buildModdedChar (srcDestChars, modStrokes, wraps):
         return None
     srcChars, destChar = srcDestChars
     wrapL, wrapR = wraps
-    strokes = [latinAlphabetLUT[c] for c in srcChars] + list(modStrokes)
+    strokes = [latinAlphabet[c] for c in srcChars] + list(modStrokes)
     return ("/".join(strokes), wrapL + destChar + wrapR, destChar)
 
 def createOutlines (entry):
@@ -3305,9 +3295,9 @@ def buildFingerspellingDict ():
 
     # add all the letters from every alphabet
     alphabets = [
-        latinAlphabetLUT,
-        greekAlphabetLUT,
-        russianAlphabetLUT,
+        latinAlphabet,
+        greekAlphabet,
+        russianAlphabet,
     ]
     for alphabet in alphabets:
         for character, outline in alphabet.items():
