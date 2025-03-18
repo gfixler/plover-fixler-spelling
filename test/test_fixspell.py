@@ -29,6 +29,15 @@ class Test_parseStroke (unittest.TestCase):
     def test_rightHandKeys (self):
         self.assertEqual(parseStroke("-RPLGS"), lhs + ao + DASH + star + eu + f + R + P + b + L + G + t + S + d + z)
 
+    def test_leftHandAndVowels (self):
+        self.assertEqual(parseStroke("TPWROU"), s + T + k + P + W + h + R + a + O + dash + star + e + U + rhs)
+
+    def test_rightHandAndVowels (self):
+        self.assertEqual(parseStroke("EFGTS"), lhs + ao + star + dash + E + u + F + r + p + b + l + G + T + S + d + z)
+
+    def test_wholeKeyboard (self):
+        self.assertEqual(parseStroke("KPRO*ERPGTSZ"), s + t + K + P + w + h + R + a + O + dash + STAR + E + u + f + R + P + b + l + G + T + S + d + Z)
+
 
 class Test_mergeStrokes (unittest.TestCase):
 
