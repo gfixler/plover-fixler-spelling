@@ -3315,8 +3315,8 @@ def buildFingerspellingDict ():
     for entry in entries:
         minuscule, majuscule = createOutlines(entry)
         for scule in [minuscule, majuscule]:
+            # None means character + case isn't defined in Unicode
             if scule != None:
-                # None means character + case isn't defined in Unicode
                 (outline, translation, character) = scule
                 spellingDict[outline] = translation
 
