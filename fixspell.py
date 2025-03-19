@@ -1,4 +1,5 @@
 import json
+from itertools import product
 
 # TODO allow adding character overrides in a user-defined file
 
@@ -3254,25 +3255,45 @@ latinAlphabet = buildAlphabet(latinAlphabetData)
 russianAlphabet = buildAlphabet(russianAlphabetData)
 greekAlphabet = buildAlphabet(greekAlphabetData)
 
-def buildModdedChar (srcDestChars, modStrokes, wraps):
+def buildModCharOutlines (alphabet, srcDestChars, modStrokes):
     """
-    Takes info surrounding character modification.
-    Returns pair of outline and wrapped, modified char.
+    Takes an alphabet data dictionary to look up base char strokes, a tuple of
+    (src, dest) chars, and a list of modifier strokes.
 
-    srcDestChars: a pair of source/destination characters, like ("a", "á")
+    Returns a pair of the destination character, with its list of outlines,
+
+    alphabet: a dictionary mapping chars to strokes
+        e.g. {"a": ["A"], ..., "Z": ["STKPW", "STK"]}
+
+    srcDestChars: a pair of source/destination characters
+        e.g. ("a", "á"), ("AE", "Æ"), or ("ae", "ǽ")
+
     modStrokes: modifier stroke(s) used to get from source to dest
-    wraps: lowercase or upper case wrapper pair, like ("{>}{&", "}")
+        e.g. ["-FRLG", "-RP"], for ligature followed by macron
 
-    example:
-        >>> buildModdedChar(("a", "á"), "-RP", minWraps)
-        ("A*/-RP", "{^}{&á}")
+    examples:
+        >>> buildModCharOutlines(latinAlphabet, ("ae", "ǣ"), ["-FRLG", "-FP"])
+        (ǣ, ["A*/*E/-FRLG/-FP"])
+
+        >>> buildModCharOutlines(latinAlphabet, ("Z", "Ẑ"), ["-RPG"])
+        (Ẑ, ["STKPW*P/-RPG", "STK*P/-RPG"]) # note two forms of base Z outline
     """
     if srcDestChars is None:
         return None
+
+    # pull out src and dest chars for this char mod, e.g. "AE", "Æ"
     srcChars, destChar = srcDestChars
-    wrapL, wrapR = wraps
-    strokes = [latinAlphabet[c] for c in srcChars] + list(modStrokes)
-    return ("/".join(strokes), wrapL + destChar + wrapR, destChar)
+
+    # pull out all alphabetic outlines for every character in src chars
+    # e.g. "ze" → [["STKPW", "STK"], ["E"]] # imaginary ze ligature
+    srcCharOutlines = map(lambda c: alphabet[c], srcChars)
+
+    # get the product of all strokes with each character, in order
+    # e.g. [["STKPW", "E"], ["STK", "E"]] for earlier "ze" example
+    srcCharsProduct = list(map(list, product(*srcCharOutlines)))
+
+    outlines = [srcCharsStrokes + modStrokes for srcCharsStrokes in srcCharsProduct]
+    return (destChar, outlines)
 
 def createOutlines (entry):
     """
@@ -3281,9 +3302,9 @@ def createOutlines (entry):
     two 3-tuples, with outline, translation (wrapped with Plover case stuff),
     and translation character by itself.
     """
-    modStrokes = list(map(lambda x: modifiers[x]["outline"], entry["modifiers"]))
-    minuscule = buildModdedChar(entry["minuscule"], modStrokes, minWraps)
-    majuscule = buildModdedChar(entry["majuscule"], modStrokes, majWraps)
+    modStrokes = list(map(lambda x: modifiers[x]["strokes"], entry["modifiers"]))
+    minuscule = buildModCharOutlines(entry["minuscule"], modStrokes, minWraps)
+    majuscule = buildModCharOutlines(entry["majuscule"], modStrokes, majWraps)
     return (minuscule, majuscule)
 
 def buildFingerspellingDict ():

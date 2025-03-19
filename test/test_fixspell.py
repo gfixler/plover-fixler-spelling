@@ -156,3 +156,16 @@ class Test_buildAlphabet (unittest.TestCase):
         }
         self.assertEqual(result, expected)
 
+
+class Test_buildModCharOutlines (unittest.TestCase):
+
+    def test_worksForAToAAcute (self):
+        result = buildModCharOutlines(latinAlphabet, ("a", "á"), ["-RP"])
+        expected = ("á", [["A*", "-RP"]])
+        self.assertEqual(result, expected)
+
+    def test_zeToImaginaryLigature (self):
+        result = buildModCharOutlines(latinAlphabet, ("ze", "🦓"), ["-FRLG"])
+        expected = ("🦓", [["STKPW*", "*E", "-FRLG"], ["STK*", "*E", "-FRLG"]])
+        self.assertEqual(result, expected)
+
