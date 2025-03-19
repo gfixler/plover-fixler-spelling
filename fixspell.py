@@ -3295,16 +3295,28 @@ def buildModCharOutlines (alphabet, srcDestChars, modStrokes):
     outlines = [srcCharsStrokes + modStrokes for srcCharsStrokes in srcCharsProduct]
     return (destChar, outlines)
 
-def createOutlines (entry):
+def createOutlines (alphabet, entry):
     """
-    This just simplifies creating the minuscule and majuscule entries for all
-    character modifications. It takes a single entry dictionary, and returns
-    two 3-tuples, with outline, translation (wrapped with Plover case stuff),
-    and translation character by itself.
+    This creates all outlines for a modified character. It takes an alphabet
+    that maps letters to lists of stroke options for said letters, and a
+    modified letter entry, which is a dictionary of at least the keys shown in
+    this example (where the first parts of the tuples are letters in the
+    passed-in alphabet, i.e. source letters), and the second parts are the
+    target letters they map to:
+
+        {
+            "minuscule": ("a", "á"),
+            "majuscule": ("A", "Á"),
+            "modifiers": ["acute"],
+        }
+
+    It returns a pair of lists of all outlines:
+
+        (minOutlines, majOutlines)
     """
-    modStrokes = list(map(lambda x: modifiers[x]["strokes"], entry["modifiers"]))
-    minuscule = buildModCharOutlines(entry["minuscule"], modStrokes, minWraps)
-    majuscule = buildModCharOutlines(entry["majuscule"], modStrokes, majWraps)
+    modStrokes = list(map(lambda x: modifiers[x]["outline"], entry["modifiers"]))
+    minuscule = buildModCharOutlines(alphabet, entry["minuscule"], modStrokes)
+    majuscule = buildModCharOutlines(alphabet, entry["majuscule"], modStrokes)
     return (minuscule, majuscule)
 
 def buildFingerspellingDict ():

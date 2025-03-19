@@ -169,3 +169,40 @@ class Test_buildModCharOutlines (unittest.TestCase):
         expected = ("🦓", [["STKPW*", "*E", "-FRLG"], ["STK*", "*E", "-FRLG"]])
         self.assertEqual(result, expected)
 
+
+modifier_aWithAcute = {
+    "minuscule": ("a", "á"),
+    "majuscule": ("A", "Á"),
+    "modifiers": ["acute"],
+}
+
+modifier_aeLigature = {
+    "minuscule": ("ae", "æ"),
+    "majuscule": ("AE", "Æ"),
+    "modifiers": ["ligature"],
+}
+
+modifier_aeLigatureWithAcute = {
+    "minuscule": ("ae", "ǽ"),
+    "majuscule": ("AE", "Ǽ"),
+    "modifiers": ["ligature", "acute"],
+}
+
+
+class Test_createOutlines (unittest.TestCase):
+
+    def test_aWithAcute (self):
+        result = createOutlines(latinAlphabet, modifier_aWithAcute)
+        expected = (("á", [["A*", "-RP"]]), ("Á", [["A*P", "-RP"]]))
+        self.assertEqual(result, expected)
+
+    def test_aeLigature (self):
+        result = createOutlines(latinAlphabet, modifier_aeLigature)
+        expected = (("æ", [["A*", "*E", "-FRLG"]]), ("Æ", [["A*P", "*EP", "-FRLG"]]))
+        self.assertEqual(result, expected)
+
+    def test_aeLigatureWithAcute (self):
+        result = createOutlines(latinAlphabet, modifier_aeLigatureWithAcute)
+        expected = (("ǽ", [["A*", "*E", "-FRLG", "-RP"]]), ("Ǽ", [["A*P", "*EP", "-FRLG", "-RP"]]))
+        self.assertEqual(result, expected)
+
