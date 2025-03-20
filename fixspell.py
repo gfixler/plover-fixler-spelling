@@ -829,6 +829,12 @@ majWraps = ("{-|}{&", "}")
 # This is all the modifiers, plus info about each one.
 # Modifiers include diacritics, ligatures, rotations, and so on.
 modifiers = {
+
+    #      _ _                 _ _   _
+    #   __| (_) __ _  ___ _ __(_) |_(_) ___ ___
+    #  / _` | |/ _` |/ __| '__| | __| |/ __/ __|
+    # | (_| | | (_| | (__| |  | | |_| | (__\__ \
+    #  \__,_|_|\__,_|\___|_|  |_|\__|_|\___|___/
     "acute": {
         "outline": "-RP",
         "name": "Acute",
@@ -974,6 +980,12 @@ modifiers = {
         "name": "Tilde Below",
         "docs": "The tilde modifier shape, with the '[under](#modifier-tweaks)' tweak.",
     },
+
+    #                      _ _  __ _           _   _
+    #  _ __ ___   ___   __| (_)/ _(_) ___ __ _| |_(_) ___  _ __  ___
+    # | '_ ` _ \ / _ \ / _` | | |_| |/ __/ _` | __| |/ _ \| '_ \/ __|
+    # | | | | | | (_) | (_| | |  _| | (_| (_| | |_| | (_) | | | \__ \
+    # |_| |_| |_|\___/ \__,_|_|_| |_|\___\__,_|\__|_|\___/|_| |_|___/
     "ligature": {
         "outline": "-FRLG",
         "name": "Ligature",
@@ -1219,6 +1231,7 @@ MODIFIED_LATIN_CHARS = [
         "modifiers": ["ligature"],
         "link": "https://en.wikipedia.org/wiki/%C3%9F",
     },
+
     #  _                        __
     # | |_ _ __ __ _ _ __  ___ / _| ___  _ __ _ __ ___  ___
     # | __| '__/ _` | '_ \/ __| |_ / _ \| '__| '_ ` _ \/ __|
@@ -1246,6 +1259,7 @@ MODIFIED_LATIN_CHARS = [
         "modifiers": ["turned"],
         "link": "https://en.wikipedia.org/wiki/Claudian_letters", # TODO research these
     },
+
     #  _ _             _                        _ _                 _ _   _
     # | (_) __ _  __ _| |_ _   _ _ __ ___    __| (_) __ _  ___ _ __(_) |_(_) ___ ___
     # | | |/ _` |/ _` | __| | | | '__/ _ \  / _` | |/ _` |/ __| '__| | __| |/ __/ __|
@@ -1266,6 +1280,7 @@ MODIFIED_LATIN_CHARS = [
         "modifiers": ["ligature", "macron"],
         "link": "https://en.wikipedia.org/wiki/%C3%86",
     },
+
     #  _                             _   _ _             _
     # | |_ _   _ _ __ _ __   ___  __| | | (_) __ _  __ _| |_ _   _ _ __ ___  ___
     # | __| | | | '__| '_ \ / _ \/ _` | | | |/ _` |/ _` | __| | | | '__/ _ \/ __|
@@ -1279,6 +1294,7 @@ MODIFIED_LATIN_CHARS = [
         "modifiers": ["ligature", "turned"],
         "link": "https://en.wiktionary.org/wiki/%E1%B4%82#Translingual",
     },
+
     #      _ _                 _ _   _
     #   __| (_) __ _  ___ _ __(_) |_(_) ___ ___
     #  / _` | |/ _` |/ __| '__| | __| |/ __/ __|
@@ -3223,6 +3239,7 @@ def renderStroke (stroke):
         stroke[9] = "" # ... don't include dash in the render
     text = [key for key, state in zip(strokeKeys, stroke) if state]
     return "".join(text)
+
 
 def buildAlphabet (alphabetData):
     # pull out the scule strokes (e.g. "*" for min, "*P" for maj)
