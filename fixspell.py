@@ -6764,9 +6764,29 @@ def buildAlphabet (alphabetData):
     return alphabet
 
 # Build alphabets
-latinAlphabet = buildAlphabet(latinAlphabetData)
-russianAlphabet = buildAlphabet(russianAlphabetData)
-greekAlphabet = buildAlphabet(greekAlphabetData)
+LATIN_ALPHABET = buildAlphabet(LATIN_ALPHABET_DATA)
+RUSSIAN_ALPHABET = buildAlphabet(RUSSIAN_ALPHABET_DATA)
+GREEK_ALPHABET = buildAlphabet(GREEK_ALPHABET_DATA)
+
+# dicts mapping alphabet characters to their outlines
+ALPHABETS = [
+    LATIN_ALPHABET,
+    GREEK_ALPHABET,
+    RUSSIAN_ALPHABET,
+]
+
+# lists for building modified characters for each alphabet
+CHAR_MOD_LISTS = [
+    MODIFIED_LATIN_CHARS,
+    MODIFIED_GREEK_CHARS,
+]
+
+# modified character defs paired with their required alphabets
+CHAR_MOD_LISTS_WITH_ALPHABETS = [
+    (MODIFIED_LATIN_CHARS, LATIN_ALPHABET),
+    (MODIFIED_GREEK_CHARS, GREEK_ALPHABET),
+]
+
 
 def buildModCharOutlines (alphabet, srcDestChars, modStrokes):
     """
