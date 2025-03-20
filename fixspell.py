@@ -5,7 +5,7 @@ from itertools import product
 
 enderBraille = "-RPGT"
 
-latinAlphabetData = {
+LATIN_ALPHABET_DATA = {
     "minStroke": "*",
     "majStroke": "*P",
     "letters": [
@@ -168,7 +168,7 @@ latinAlphabetData = {
     ]
 }
 
-greekAlphabetData = {
+GREEK_ALPHABET_DATA = {
     "minStroke": "-FLG",
     "majStroke": "*FLG",
     "letters": [
@@ -375,7 +375,7 @@ greekAlphabetData = {
     ]
 }
 
-russianAlphabetData = {
+RUSSIAN_ALPHABET_DATA = {
     "minStroke": "-RPG",
     "majStroke": "*RPG",
     "letters": [
@@ -1050,7 +1050,8 @@ tbd = [
     },
 ]
 
-entries = [
+MODIFIED_LATIN_CHARS = [
+
     #  _ _             _
     # | (_) __ _  __ _| |_ _   _ _ __ ___  ___
     # | | |/ _` |/ _` | __| | | | '__/ _ \/ __|
@@ -3272,10 +3273,10 @@ def buildModCharOutlines (alphabet, srcDestChars, modStrokes):
         e.g. ["-FRLG", "-RP"], for ligature followed by macron
 
     examples:
-        >>> buildModCharOutlines(latinAlphabet, ("ae", "ǣ"), ["-FRLG", "-FP"])
+        >>> buildModCharOutlines(LATIN_ALPHABET, ("ae", "ǣ"), ["-FRLG", "-FP"])
         (ǣ, ["A*/*E/-FRLG/-FP"])
 
-        >>> buildModCharOutlines(latinAlphabet, ("Z", "Ẑ"), ["-RPG"])
+        >>> buildModCharOutlines(LATIN_ALPHABET, ("Z", "Ẑ"), ["-RPG"])
         (Ẑ, ["STKPW*P/-RPG", "STK*P/-RPG"]) # note two forms of base Z outline
     """
     if srcDestChars is None:
