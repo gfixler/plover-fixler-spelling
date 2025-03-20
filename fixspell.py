@@ -3225,7 +3225,3468 @@ MODIFIED_LATIN_CHARS = [
         "modifiers": ["caron"],
         "link": "",
     },
+
+    #  _        _  _____ ___ _   _   __  __    _  _____ _   _
+    # | |      / \|_   _|_ _| \ | | |  \/  |  / \|_   _| | | |
+    # | |     / _ \ | |  | ||  \| | | |\/| | / _ \ | | | |_| |
+    # | |___ / ___ \| |  | || |\  | | |  | |/ ___ \| | |  _  |
+    # |_____/_/   \_\_| |___|_| \_| |_|  |_/_/   \_\_| |_| |_|
+
+    #  _           _     _
+    # | |__   ___ | | __| |
+    # | '_ \ / _ \| |/ _` |
+    # | |_) | (_) | | (_| |
+    # |_.__/ \___/|_|\__,_|
+    {
+        "name": "Mathematical Bold A",
+        "majuscule": ("A", "𝐀"),
+        "minuscule": ("a", "𝐚"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold B",
+        "majuscule": ("B", "𝐁"),
+        "minuscule": ("b", "𝐛"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold C",
+        "majuscule": ("C", "𝐂"),
+        "minuscule": ("c", "𝐜"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold D",
+        "majuscule": ("D", "𝐃"),
+        "minuscule": ("d", "𝐝"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold E",
+        "majuscule": ("E", "𝐄"),
+        "minuscule": ("e", "𝐞"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold F",
+        "majuscule": ("F", "𝐅"),
+        "minuscule": ("f", "𝐟"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold G",
+        "majuscule": ("G", "𝐆"),
+        "minuscule": ("g", "𝐠"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold H",
+        "majuscule": ("H", "𝐇"),
+        "minuscule": ("h", "𝐡"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold I",
+        "majuscule": ("I", "𝐈"),
+        "minuscule": ("i", "𝐢"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold J",
+        "majuscule": ("J", "𝐉"),
+        "minuscule": ("j", "𝐣"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold K",
+        "majuscule": ("K", "𝐊"),
+        "minuscule": ("k", "𝐤"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold L",
+        "majuscule": ("L", "𝐋"),
+        "minuscule": ("l", "𝐥"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold M",
+        "majuscule": ("M", "𝐌"),
+        "minuscule": ("m", "𝐦"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold N",
+        "majuscule": ("N", "𝐍"),
+        "minuscule": ("n", "𝐧"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold O",
+        "majuscule": ("O", "𝐎"),
+        "minuscule": ("o", "𝐨"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold P",
+        "majuscule": ("P", "𝐏"),
+        "minuscule": ("p", "𝐩"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold Q",
+        "majuscule": ("Q", "𝐐"),
+        "minuscule": ("q", "𝐪"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold R",
+        "majuscule": ("R", "𝐑"),
+        "minuscule": ("r", "𝐫"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold S",
+        "majuscule": ("S", "𝐒"),
+        "minuscule": ("s", "𝐬"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold T",
+        "majuscule": ("T", "𝐓"),
+        "minuscule": ("t", "𝐭"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold U",
+        "majuscule": ("U", "𝐔"),
+        "minuscule": ("u", "𝐮"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold V",
+        "majuscule": ("V", "𝐕"),
+        "minuscule": ("v", "𝐯"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold W",
+        "majuscule": ("W", "𝐖"),
+        "minuscule": ("w", "𝐰"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold X",
+        "majuscule": ("X", "𝐗"),
+        "minuscule": ("x", "𝐱"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold Y",
+        "majuscule": ("Y", "𝐘"),
+        "minuscule": ("y", "𝐲"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold Z",
+        "majuscule": ("Z", "𝐙"),
+        "minuscule": ("z", "𝐳"),
+        "modifiers": ["bold"],
+    },
+
+    #  _ _        _ _
+    # (_) |_ __ _| (_) ___
+    # | | __/ _` | | |/ __|
+    # | | || (_| | | | (__
+    # |_|\__\__,_|_|_|\___|
+    {
+        "name": "Mathematical Italic A",
+        "majuscule": ("A", "𝐴"),
+        "minuscule": ("a", "𝑎"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic B",
+        "majuscule": ("B", "𝐵"),
+        "minuscule": ("b", "𝑏"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic C",
+        "majuscule": ("C", "𝐶"),
+        "minuscule": ("c", "𝑐"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic D",
+        "majuscule": ("D", "𝐷"),
+        "minuscule": ("d", "𝑑"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic E",
+        "majuscule": ("E", "𝐸"),
+        "minuscule": ("e", "𝑒"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic F",
+        "majuscule": ("F", "𝐹"),
+        "minuscule": ("f", "𝑓"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic G",
+        "majuscule": ("G", "𝐺"),
+        "minuscule": ("g", "𝑔"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic H",
+        "majuscule": ("H", "𝐻"),
+        "minuscule": ("h", "𝑯"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic I",
+        "majuscule": ("I", "𝐼"),
+        "minuscule": ("i", "𝑖"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic J",
+        "majuscule": ("J", "𝐽"),
+        "minuscule": ("j", "𝑗"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic K",
+        "majuscule": ("K", "𝐾"),
+        "minuscule": ("k", "𝑘"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic L",
+        "majuscule": ("L", "𝐿"),
+        "minuscule": ("l", "𝑙"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic M",
+        "majuscule": ("M", "𝑀"),
+        "minuscule": ("m", "𝑚"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic N",
+        "majuscule": ("N", "𝑁"),
+        "minuscule": ("n", "𝑛"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic O",
+        "majuscule": ("O", "𝑂"),
+        "minuscule": ("o", "𝑜"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic P",
+        "majuscule": ("P", "𝑃"),
+        "minuscule": ("p", "𝑝"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic Q",
+        "majuscule": ("Q", "𝑄"),
+        "minuscule": ("q", "𝑞"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic R",
+        "majuscule": ("R", "𝑅"),
+        "minuscule": ("r", "𝑟"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic S",
+        "majuscule": ("S", "𝑆"),
+        "minuscule": ("s", "𝑠"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic T",
+        "majuscule": ("T", "𝑇"),
+        "minuscule": ("t", "𝑡"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic U",
+        "majuscule": ("U", "𝑈"),
+        "minuscule": ("u", "𝑢"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic V",
+        "majuscule": ("V", "𝑉"),
+        "minuscule": ("v", "𝑣"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic W",
+        "majuscule": ("W", "𝑊"),
+        "minuscule": ("w", "𝑤"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic X",
+        "majuscule": ("X", "𝑋"),
+        "minuscule": ("x", "𝑥"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic Y",
+        "majuscule": ("Y", "𝑌"),
+        "minuscule": ("y", "𝑦"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic Z",
+        "majuscule": ("Z", "𝑍"),
+        "minuscule": ("z", "𝑧"),
+        "modifiers": ["italic"],
+    },
+
+    #  _           _     _   _ _        _ _
+    # | |__   ___ | | __| | (_) |_ __ _| (_) ___
+    # | '_ \ / _ \| |/ _` | | | __/ _` | | |/ __|
+    # | |_) | (_) | | (_| | | | || (_| | | | (__
+    # |_.__/ \___/|_|\__,_| |_|\__\__,_|_|_|\___|
+    {
+        "name": "Mathematical Bold Italic A",
+        "majuscule": ("A", "𝑨"),
+        "minuscule": ("a", "𝒂"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic B",
+        "majuscule": ("B", "𝑩"),
+        "minuscule": ("b", "𝒃"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic C",
+        "majuscule": ("C", "𝑪"),
+        "minuscule": ("c", "𝒄"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic D",
+        "majuscule": ("D", "𝑫"),
+        "minuscule": ("d", "𝒅"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic E",
+        "majuscule": ("E", "𝑬"),
+        "minuscule": ("e", "𝒆"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic F",
+        "majuscule": ("F", "𝑭"),
+        "minuscule": ("f", "𝒇"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic G",
+        "majuscule": ("G", "𝑮"),
+        "minuscule": ("g", "𝒈"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic H",
+        "majuscule": ("H", "𝑯"),
+        "minuscule": ("h", "𝒉"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic I",
+        "majuscule": ("I", "𝑰"),
+        "minuscule": ("i", "𝒊"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic J",
+        "majuscule": ("J", "𝑱"),
+        "minuscule": ("j", "𝒋"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic K",
+        "majuscule": ("K", "𝑲"),
+        "minuscule": ("k", "𝒌"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic L",
+        "majuscule": ("L", "𝑳"),
+        "minuscule": ("l", "𝒍"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic M",
+        "majuscule": ("M", "𝑴"),
+        "minuscule": ("m", "𝒎"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic N",
+        "majuscule": ("N", "𝑵"),
+        "minuscule": ("n", "𝒏"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic O",
+        "majuscule": ("O", "𝑶"),
+        "minuscule": ("o", "𝒐"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic P",
+        "majuscule": ("P", "𝑷"),
+        "minuscule": ("p", "𝒑"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic Q",
+        "majuscule": ("Q", "𝑸"),
+        "minuscule": ("q", "𝒒"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic R",
+        "majuscule": ("R", "𝑹"),
+        "minuscule": ("r", "𝒓"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic S",
+        "majuscule": ("S", "𝑺"),
+        "minuscule": ("s", "𝒔"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic T",
+        "majuscule": ("T", "𝑻"),
+        "minuscule": ("t", "𝒕"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic U",
+        "majuscule": ("U", "𝑼"),
+        "minuscule": ("u", "𝒖"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic V",
+        "majuscule": ("V", "𝑽"),
+        "minuscule": ("v", "𝒗"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic W",
+        "majuscule": ("W", "𝑾"),
+        "minuscule": ("w", "𝒘"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic X",
+        "majuscule": ("X", "𝑿"),
+        "minuscule": ("x", "𝒙"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic Y",
+        "majuscule": ("Y", "𝒀"),
+        "minuscule": ("y", "𝒚"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic Z",
+        "majuscule": ("Z", "𝒁"),
+        "minuscule": ("z", "𝒛"),
+        "modifiers": ["bold", "italic"],
+    },
+
+    #                _       _
+    #  ___  ___ _ __(_)_ __ | |_
+    # / __|/ __| '__| | '_ \| __|
+    # \__ \ (__| |  | | |_) | |_
+    # |___/\___|_|  |_| .__/ \__|
+    #                 |_|
+    {
+        "name": "Mathematical Script A",
+        "majuscule": ("A", "𝒜"),
+        "minuscule": ("a", "𝒶"),
+        "modifiers": ["script"],
+    },
+    {
+        "name": "Mathematical Script B",
+        "majuscule": ("B", "𝓑"),
+        "minuscule": ("b", "𝒷"),
+        "modifiers": ["script"],
+    },
+    {
+        "name": "Mathematical Script C",
+        "majuscule": ("C", "𝒞"),
+        "minuscule": ("c", "𝒸"),
+        "modifiers": ["script"],
+    },
+    {
+        "name": "Mathematical Script D",
+        "majuscule": ("D", "𝒟"),
+        "minuscule": ("d", "𝒹"),
+        "modifiers": ["script"],
+    },
+    {
+        "name": "Mathematical Script E",
+        "majuscule": ("E", "𝓔"),
+        "minuscule": ("e", "𝓔"),
+        "modifiers": ["script"],
+    },
+    {
+        "name": "Mathematical Script F",
+        "majuscule": ("F", "𝓕"),
+        "minuscule": ("f", "𝒻"),
+        "modifiers": ["script"],
+    },
+    {
+        "name": "Mathematical Script G",
+        "majuscule": ("G", "𝒢"),
+        "minuscule": ("g", "𝓖"),
+        "modifiers": ["script"],
+    },
+    {
+        "name": "Mathematical Script H",
+        "majuscule": ("H", "𝓗"),
+        "minuscule": ("h", "𝒽"),
+        "modifiers": ["script"],
+    },
+    {
+        "name": "Mathematical Script I",
+        "majuscule": ("I", "𝓘"),
+        "minuscule": ("i", "𝒾"),
+        "modifiers": ["script"],
+    },
+    {
+        "name": "Mathematical Script J",
+        "majuscule": ("J", "𝒥"),
+        "minuscule": ("j", "𝒿"),
+        "modifiers": ["script"],
+    },
+    {
+        "name": "Mathematical Script K",
+        "majuscule": ("K", "𝒦"),
+        "minuscule": ("k", "𝓀"),
+        "modifiers": ["script"],
+    },
+    {
+        "name": "Mathematical Script L",
+        "majuscule": ("L", "𝓛"),
+        "minuscule": ("l", "𝓁"),
+        "modifiers": ["script"],
+    },
+    {
+        "name": "Mathematical Script M",
+        "majuscule": ("M", "𝓜"),
+        "minuscule": ("m", "𝓂"),
+        "modifiers": ["script"],
+    },
+    {
+        "name": "Mathematical Script N",
+        "majuscule": ("N", "𝒩"),
+        "minuscule": ("n", "𝓃"),
+        "modifiers": ["script"],
+    },
+    {
+        "name": "Mathematical Script O",
+        "majuscule": ("O", "𝒪"),
+        "minuscule": ("o", "𝓞"),
+        "modifiers": ["script"],
+    },
+    {
+        "name": "Mathematical Script P",
+        "majuscule": ("P", "𝒫"),
+        "minuscule": ("p", "𝓅"),
+        "modifiers": ["script"],
+    },
+    {
+        "name": "Mathematical Script Q",
+        "majuscule": ("Q", "𝒬"),
+        "minuscule": ("q", "𝓆"),
+        "modifiers": ["script"],
+    },
+    {
+        "name": "Mathematical Script R",
+        "majuscule": ("R", "𝓡"),
+        "minuscule": ("r", "𝓇"),
+        "modifiers": ["script"],
+    },
+    {
+        "name": "Mathematical Script S",
+        "majuscule": ("S", "𝒮"),
+        "minuscule": ("s", "𝓈"),
+        "modifiers": ["script"],
+    },
+    {
+        "name": "Mathematical Script T",
+        "majuscule": ("T", "𝒯"),
+        "minuscule": ("t", "𝓉"),
+        "modifiers": ["script"],
+    },
+    {
+        "name": "Mathematical Script U",
+        "majuscule": ("U", "𝒰"),
+        "minuscule": ("u", "𝓊"),
+        "modifiers": ["script"],
+    },
+    {
+        "name": "Mathematical Script V",
+        "majuscule": ("V", "𝒱"),
+        "minuscule": ("v", "𝓋"),
+        "modifiers": ["script"],
+    },
+    {
+        "name": "Mathematical Script W",
+        "majuscule": ("W", "𝒲"),
+        "minuscule": ("w", "𝓌"),
+        "modifiers": ["script"],
+    },
+    {
+        "name": "Mathematical Script X",
+        "majuscule": ("X", "𝒳"),
+        "minuscule": ("x", "𝓍"),
+        "modifiers": ["script"],
+    },
+    {
+        "name": "Mathematical Script Y",
+        "majuscule": ("Y", "𝒴"),
+        "minuscule": ("y", "𝓎"),
+        "modifiers": ["script"],
+    },
+    {
+        "name": "Mathematical Script Z",
+        "majuscule": ("Z", "𝒵"),
+        "minuscule": ("z", "𝓏"),
+        "modifiers": ["script"],
+    },
+
+    #  _           _     _                 _       _
+    # | |__   ___ | | __| |  ___  ___ _ __(_)_ __ | |_
+    # | '_ \ / _ \| |/ _` | / __|/ __| '__| | '_ \| __|
+    # | |_) | (_) | | (_| | \__ \ (__| |  | | |_) | |_
+    # |_.__/ \___/|_|\__,_| |___/\___|_|  |_| .__/ \__|
+    #                                       |_|
+    {
+        "name": "Mathematical Bold Script A",
+        "majuscule": ("A", "𝓐"),
+        "minuscule": ("a", "𝓪"),
+        "modifiers": ["bold", "script"],
+    },
+    {
+        "name": "Mathematical Bold Script B",
+        "majuscule": ("B", "𝓑"),
+        "minuscule": ("b", "𝓫"),
+        "modifiers": ["bold", "script"],
+    },
+    {
+        "name": "Mathematical Bold Script C",
+        "majuscule": ("C", "𝓒"),
+        "minuscule": ("c", "𝓬"),
+        "modifiers": ["bold", "script"],
+    },
+    {
+        "name": "Mathematical Bold Script D",
+        "majuscule": ("D", "𝓓"),
+        "minuscule": ("d", "𝓭"),
+        "modifiers": ["bold", "script"],
+    },
+    {
+        "name": "Mathematical Bold Script E",
+        "majuscule": ("E", "𝓔"),
+        "minuscule": ("e", "𝓮"),
+        "modifiers": ["bold", "script"],
+    },
+    {
+        "name": "Mathematical Bold Script F",
+        "majuscule": ("F", "𝓕"),
+        "minuscule": ("f", "𝓯"),
+        "modifiers": ["bold", "script"],
+    },
+    {
+        "name": "Mathematical Bold Script G",
+        "majuscule": ("G", "𝓖"),
+        "minuscule": ("g", "𝓰"),
+        "modifiers": ["bold", "script"],
+    },
+    {
+        "name": "Mathematical Bold Script H",
+        "majuscule": ("H", "𝓗"),
+        "minuscule": ("h", "𝓱"),
+        "modifiers": ["bold", "script"],
+    },
+    {
+        "name": "Mathematical Bold Script I",
+        "majuscule": ("I", "𝓘"),
+        "minuscule": ("i", "𝓲"),
+        "modifiers": ["bold", "script"],
+    },
+    {
+        "name": "Mathematical Bold Script J",
+        "majuscule": ("J", "𝓙"),
+        "minuscule": ("j", "𝓳"),
+        "modifiers": ["bold", "script"],
+    },
+    {
+        "name": "Mathematical Bold Script K",
+        "majuscule": ("K", "𝓚"),
+        "minuscule": ("k", "𝓴"),
+        "modifiers": ["bold", "script"],
+    },
+    {
+        "name": "Mathematical Bold Script L",
+        "majuscule": ("L", "𝓛"),
+        "minuscule": ("l", "𝓵"),
+        "modifiers": ["bold", "script"],
+    },
+    {
+        "name": "Mathematical Bold Script M",
+        "majuscule": ("M", "𝓜"),
+        "minuscule": ("m", "𝓶"),
+        "modifiers": ["bold", "script"],
+    },
+    {
+        "name": "Mathematical Bold Script N",
+        "majuscule": ("N", "𝓝"),
+        "minuscule": ("n", "𝓷"),
+        "modifiers": ["bold", "script"],
+    },
+    {
+        "name": "Mathematical Bold Script O",
+        "majuscule": ("O", "𝓞"),
+        "minuscule": ("o", "𝓸"),
+        "modifiers": ["bold", "script"],
+    },
+    {
+        "name": "Mathematical Bold Script P",
+        "majuscule": ("P", "𝓟"),
+        "minuscule": ("p", "𝓹"),
+        "modifiers": ["bold", "script"],
+    },
+    {
+        "name": "Mathematical Bold Script Q",
+        "majuscule": ("Q", "𝓠"),
+        "minuscule": ("q", "𝓺"),
+        "modifiers": ["bold", "script"],
+    },
+    {
+        "name": "Mathematical Bold Script R",
+        "majuscule": ("R", "𝓡"),
+        "minuscule": ("r", "𝓻"),
+        "modifiers": ["bold", "script"],
+    },
+    {
+        "name": "Mathematical Bold Script S",
+        "majuscule": ("S", "𝓢"),
+        "minuscule": ("s", "𝓼"),
+        "modifiers": ["bold", "script"],
+    },
+    {
+        "name": "Mathematical Bold Script T",
+        "majuscule": ("T", "𝓣"),
+        "minuscule": ("t", "𝓽"),
+        "modifiers": ["bold", "script"],
+    },
+    {
+        "name": "Mathematical Bold Script U",
+        "majuscule": ("U", "𝓤"),
+        "minuscule": ("u", "𝓾"),
+        "modifiers": ["bold", "script"],
+    },
+    {
+        "name": "Mathematical Bold Script V",
+        "majuscule": ("V", "𝓥"),
+        "minuscule": ("v", "𝓿"),
+        "modifiers": ["bold", "script"],
+    },
+    {
+        "name": "Mathematical Bold Script W",
+        "majuscule": ("W", "𝓦"),
+        "minuscule": ("w", "𝔀"),
+        "modifiers": ["bold", "script"],
+    },
+    {
+        "name": "Mathematical Bold Script X",
+        "majuscule": ("X", "𝓧"),
+        "minuscule": ("x", "𝔁"),
+        "modifiers": ["bold", "script"],
+    },
+    {
+        "name": "Mathematical Bold Script Y",
+        "majuscule": ("Y", "𝓨"),
+        "minuscule": ("y", "𝔂"),
+        "modifiers": ["bold", "script"],
+    },
+    {
+        "name": "Mathematical Bold Script Z",
+        "majuscule": ("Z", "𝓩"),
+        "minuscule": ("z", "𝔃"),
+        "modifiers": ["bold", "script"],
+    },
+
+    #  _____               _    _
+    # |  ___| __ __ _  ___| | _| |_ _   _ _ __
+    # | |_ | '__/ _` |/ __| |/ / __| | | | '__|
+    # |  _|| | | (_| | (__|   <| |_| |_| | |
+    # |_|  |_|  \__,_|\___|_|\_\\__|\__,_|_|
+    {
+        "name": "Mathematical Fraktur A",
+        "majuscule": ("A", "𝔄"),
+        "minuscule": ("a", "𝔞"),
+        "modifiers": ["fraktur"],
+    },
+    {
+        "name": "Mathematical Fraktur B",
+        "majuscule": ("B", "𝔅"),
+        "minuscule": ("b", "𝔟"),
+        "modifiers": ["fraktur"],
+    },
+    {
+        "name": "Mathematical Fraktur C",
+        "majuscule": None,
+        "minuscule": ("c", "𝔠"),
+        "modifiers": ["fraktur"],
+    },
+    {
+        "name": "Mathematical Fraktur D",
+        "majuscule": ("D", "𝔇"),
+        "minuscule": ("d", "𝔡"),
+        "modifiers": ["fraktur"],
+    },
+    {
+        "name": "Mathematical Fraktur E",
+        "majuscule": ("E", "𝔈"),
+        "minuscule": ("e", "𝔢"),
+        "modifiers": ["fraktur"],
+    },
+    {
+        "name": "Mathematical Fraktur F",
+        "majuscule": ("F", "𝔉"),
+        "minuscule": ("f", "𝔣"),
+        "modifiers": ["fraktur"],
+    },
+    {
+        "name": "Mathematical Fraktur G",
+        "majuscule": ("G", "𝔊"),
+        "minuscule": ("g", "𝔤"),
+        "modifiers": ["fraktur"],
+    },
+    {
+        "name": "Mathematical Fraktur H",
+        "majuscule": None,
+        "minuscule": ("h", "𝔥"),
+        "modifiers": ["fraktur"],
+    },
+    {
+        "name": "Mathematical Fraktur I",
+        "majuscule": None,
+        "minuscule": ("i", "𝔦"),
+        "modifiers": ["fraktur"],
+    },
+    {
+        "name": "Mathematical Fraktur J",
+        "majuscule": ("J", "𝔍"),
+        "minuscule": ("j", "𝔧"),
+        "modifiers": ["fraktur"],
+    },
+    {
+        "name": "Mathematical Fraktur K",
+        "majuscule": ("K", "𝔎"),
+        "minuscule": ("k", "𝔨"),
+        "modifiers": ["fraktur"],
+    },
+    {
+        "name": "Mathematical Fraktur L",
+        "majuscule": ("L", "𝔏"),
+        "minuscule": ("l", "𝔩"),
+        "modifiers": ["fraktur"],
+    },
+    {
+        "name": "Mathematical Fraktur M",
+        "majuscule": ("M", "𝔐"),
+        "minuscule": ("m", "𝔪"),
+        "modifiers": ["fraktur"],
+    },
+    {
+        "name": "Mathematical Fraktur N",
+        "majuscule": ("N", "𝔑"),
+        "minuscule": ("n", "𝔫"),
+        "modifiers": ["fraktur"],
+    },
+    {
+        "name": "Mathematical Fraktur O",
+        "majuscule": ("O", "𝔒"),
+        "minuscule": ("o", "𝔬"),
+        "modifiers": ["fraktur"],
+    },
+    {
+        "name": "Mathematical Fraktur P",
+        "majuscule": ("P", "𝔓"),
+        "minuscule": ("p", "𝔭"),
+        "modifiers": ["fraktur"],
+    },
+    {
+        "name": "Mathematical Fraktur Q",
+        "majuscule": ("Q", "𝔔"),
+        "minuscule": ("q", "𝔮"),
+        "modifiers": ["fraktur"],
+    },
+    {
+        "name": "Mathematical Fraktur R",
+        "majuscule": None,
+        "minuscule": ("r", "𝔯"),
+        "modifiers": ["fraktur"],
+    },
+    {
+        "name": "Mathematical Fraktur S",
+        "majuscule": ("S", "𝔖"),
+        "minuscule": ("s", "𝔰"),
+        "modifiers": ["fraktur"],
+    },
+    {
+        "name": "Mathematical Fraktur T",
+        "majuscule": ("T", "𝔗"),
+        "minuscule": ("t", "𝔱"),
+        "modifiers": ["fraktur"],
+    },
+    {
+        "name": "Mathematical Fraktur U",
+        "majuscule": ("U", "𝔘"),
+        "minuscule": ("u", "𝔲"),
+        "modifiers": ["fraktur"],
+    },
+    {
+        "name": "Mathematical Fraktur V",
+        "majuscule": ("V", "𝔙"),
+        "minuscule": ("v", "𝔳"),
+        "modifiers": ["fraktur"],
+    },
+    {
+        "name": "Mathematical Fraktur W",
+        "majuscule": ("W", "𝔚"),
+        "minuscule": ("w", "𝔴"),
+        "modifiers": ["fraktur"],
+    },
+    {
+        "name": "Mathematical Fraktur X",
+        "majuscule": ("X", "𝔛"),
+        "minuscule": ("x", "𝔵"),
+        "modifiers": ["fraktur"],
+    },
+    {
+        "name": "Mathematical Fraktur Y",
+        "majuscule": ("Y", "𝔜"),
+        "minuscule": ("y", "𝔶"),
+        "modifiers": ["fraktur"],
+    },
+    {
+        "name": "Mathematical Fraktur Z",
+        "majuscule": None,
+        "minuscule": ("z", "𝔷"),
+        "modifiers": ["fraktur"],
+    },
+
+    #      _             _     _                _                   _
+    #   __| | ___  _   _| |__ | | ___       ___| |_ _ __ _   _  ___| | __
+    #  / _` |/ _ \| | | | '_ \| |/ _ \_____/ __| __| '__| | | |/ __| |/ /
+    # | (_| | (_) | |_| | |_) | |  __/_____\__ \ |_| |  | |_| | (__|   <
+    #  \__,_|\___/ \__,_|_.__/|_|\___|     |___/\__|_|   \__,_|\___|_|\_\
+    {
+        "name": "Mathematical Double-Struck A",
+        "majuscule": ("A", "𝔸"),
+        "minuscule": ("a", "𝕒"),
+        "modifiers": ["doubleStruck"],
+    },
+    {
+        "name": "Mathematical Double-Struck B",
+        "majuscule": ("B", "𝔹"),
+        "minuscule": ("b", "𝕓"),
+        "modifiers": ["doubleStruck"],
+    },
+    {
+        "name": "Mathematical Double-Struck C",
+        "majuscule": None,
+        "minuscule": ("c", "𝕔"),
+        "modifiers": ["doubleStruck"],
+    },
+    {
+        "name": "Mathematical Double-Struck D",
+        "majuscule": ("D", "𝔻"),
+        "minuscule": ("d", "𝕕"),
+        "modifiers": ["doubleStruck"],
+    },
+    {
+        "name": "Mathematical Double-Struck E",
+        "majuscule": ("E", "𝔼"),
+        "minuscule": ("e", "𝕖"),
+        "modifiers": ["doubleStruck"],
+    },
+    {
+        "name": "Mathematical Double-Struck F",
+        "majuscule": ("F", "𝔽"),
+        "minuscule": ("f", "𝕗"),
+        "modifiers": ["doubleStruck"],
+    },
+    {
+        "name": "Mathematical Double-Struck G",
+        "majuscule": ("G", "𝔾"),
+        "minuscule": ("g", "𝕘"),
+        "modifiers": ["doubleStruck"],
+    },
+    {
+        "name": "Mathematical Double-Struck H",
+        "majuscule": None,
+        "minuscule": ("h", "𝕙"),
+        "modifiers": ["doubleStruck"],
+    },
+    {
+        "name": "Mathematical Double-Struck I",
+        "majuscule": ("I", "𝕀"),
+        "minuscule": ("i", "𝕚"),
+        "modifiers": ["doubleStruck"],
+    },
+    {
+        "name": "Mathematical Double-Struck J",
+        "majuscule": ("J", "𝕁"),
+        "minuscule": ("j", "𝕛"),
+        "modifiers": ["doubleStruck"],
+    },
+    {
+        "name": "Mathematical Double-Struck K",
+        "majuscule": ("K", "𝕂"),
+        "minuscule": ("k", "𝕜"),
+        "modifiers": ["doubleStruck"],
+    },
+    {
+        "name": "Mathematical Double-Struck L",
+        "majuscule": ("L", "𝕃"),
+        "minuscule": ("l", "𝕝"),
+        "modifiers": ["doubleStruck"],
+    },
+    {
+        "name": "Mathematical Double-Struck M",
+        "majuscule": ("M", "𝕄"),
+        "minuscule": ("m", "𝕞"),
+        "modifiers": ["doubleStruck"],
+    },
+    {
+        "name": "Mathematical Double-Struck N",
+        "majuscule": None,
+        "minuscule": ("n", "𝕟"),
+        "modifiers": ["doubleStruck"],
+    },
+    {
+        "name": "Mathematical Double-Struck O",
+        "majuscule": ("O", "𝕆"),
+        "minuscule": ("o", "𝕠"),
+        "modifiers": ["doubleStruck"],
+    },
+    {
+        "name": "Mathematical Double-Struck P",
+        "majuscule": None,
+        "minuscule": ("p", "𝕡"),
+        "modifiers": ["doubleStruck"],
+    },
+    {
+        "name": "Mathematical Double-Struck Q",
+        "majuscule": None,
+        "minuscule": ("q", "𝕢"),
+        "modifiers": ["doubleStruck"],
+    },
+    {
+        "name": "Mathematical Double-Struck R",
+        "majuscule": None,
+        "minuscule": ("r", "𝕣"),
+        "modifiers": ["doubleStruck"],
+    },
+    {
+        "name": "Mathematical Double-Struck S",
+        "majuscule": ("S", "𝕊"),
+        "minuscule": ("s", "𝕤"),
+        "modifiers": ["doubleStruck"],
+    },
+    {
+        "name": "Mathematical Double-Struck T",
+        "majuscule": ("T", "𝕋"),
+        "minuscule": ("t", "𝕥"),
+        "modifiers": ["doubleStruck"],
+    },
+    {
+        "name": "Mathematical Double-Struck U",
+        "majuscule": ("U", "𝕌"),
+        "minuscule": ("u", "𝕦"),
+        "modifiers": ["doubleStruck"],
+    },
+    {
+        "name": "Mathematical Double-Struck V",
+        "majuscule": ("V", "𝕍"),
+        "minuscule": ("v", "𝕧"),
+        "modifiers": ["doubleStruck"],
+    },
+    {
+        "name": "Mathematical Double-Struck W",
+        "majuscule": ("W", "𝕎"),
+        "minuscule": ("w", "𝕨"),
+        "modifiers": ["doubleStruck"],
+    },
+    {
+        "name": "Mathematical Double-Struck X",
+        "majuscule": ("X", "𝕏"),
+        "minuscule": ("x", "𝕩"),
+        "modifiers": ["doubleStruck"],
+    },
+    {
+        "name": "Mathematical Double-Struck Y",
+        "majuscule": ("Y", "𝕐"),
+        "minuscule": ("y", "𝕪"),
+        "modifiers": ["doubleStruck"],
+    },
+    {
+        "name": "Mathematical Double-Struck Z",
+        "majuscule": None,
+        "minuscule": ("z", "𝕫"),
+        "modifiers": ["doubleStruck"],
+    },
+
+    #  _           _     _   _____          _    _
+    # | |__   ___ | | __| | |  ___| __ __ _| | _| |_ _   _ _ __
+    # | '_ \ / _ \| |/ _` | | |_ | '__/ _` | |/ / __| | | | '__|
+    # | |_) | (_) | | (_| | |  _|| | | (_| |   <| |_| |_| | |
+    # |_.__/ \___/|_|\__,_| |_|  |_|  \__,_|_|\_\\__|\__,_|_|
+    {
+        "name": "Mathematical Bold Fraktur A",
+        "majuscule": ("A", "𝕬"),
+        "minuscule": ("a", "𝖆"),
+        "modifiers": ["bold", "fraktur"],
+    },
+    {
+        "name": "Mathematical Bold Fraktur B",
+        "majuscule": ("B", "𝕭"),
+        "minuscule": ("b", "𝖇"),
+        "modifiers": ["bold", "fraktur"],
+    },
+    {
+        "name": "Mathematical Bold Fraktur C",
+        "majuscule": ("C", "𝕮"),
+        "minuscule": ("c", "𝖈"),
+        "modifiers": ["bold", "fraktur"],
+    },
+    {
+        "name": "Mathematical Bold Fraktur D",
+        "majuscule": ("D", "𝕯"),
+        "minuscule": ("d", "𝖉"),
+        "modifiers": ["bold", "fraktur"],
+    },
+    {
+        "name": "Mathematical Bold Fraktur E",
+        "majuscule": ("E", "𝕰"),
+        "minuscule": ("e", "𝖊"),
+        "modifiers": ["bold", "fraktur"],
+    },
+    {
+        "name": "Mathematical Bold Fraktur F",
+        "majuscule": ("F", "𝕱"),
+        "minuscule": ("f", "𝖋"),
+        "modifiers": ["bold", "fraktur"],
+    },
+    {
+        "name": "Mathematical Bold Fraktur G",
+        "majuscule": ("G", "𝕲"),
+        "minuscule": ("g", "𝖌"),
+        "modifiers": ["bold", "fraktur"],
+    },
+    {
+        "name": "Mathematical Bold Fraktur H",
+        "majuscule": ("H", "𝕳"),
+        "minuscule": ("h", "𝖍"),
+        "modifiers": ["bold", "fraktur"],
+    },
+    {
+        "name": "Mathematical Bold Fraktur I",
+        "majuscule": ("I", "𝕴"),
+        "minuscule": ("i", "𝖎"),
+        "modifiers": ["bold", "fraktur"],
+    },
+    {
+        "name": "Mathematical Bold Fraktur J",
+        "majuscule": ("J", "𝕵"),
+        "minuscule": ("j", "𝖏"),
+        "modifiers": ["bold", "fraktur"],
+    },
+    {
+        "name": "Mathematical Bold Fraktur K",
+        "majuscule": ("K", "𝕶"),
+        "minuscule": ("k", "𝖐"),
+        "modifiers": ["bold", "fraktur"],
+    },
+    {
+        "name": "Mathematical Bold Fraktur L",
+        "majuscule": ("L", "𝕷"),
+        "minuscule": ("l", "𝖑"),
+        "modifiers": ["bold", "fraktur"],
+    },
+    {
+        "name": "Mathematical Bold Fraktur M",
+        "majuscule": ("M", "𝕸"),
+        "minuscule": ("m", "𝖒"),
+        "modifiers": ["bold", "fraktur"],
+    },
+    {
+        "name": "Mathematical Bold Fraktur N",
+        "majuscule": ("N", "𝕹"),
+        "minuscule": ("n", "𝖓"),
+        "modifiers": ["bold", "fraktur"],
+    },
+    {
+        "name": "Mathematical Bold Fraktur O",
+        "majuscule": ("O", "𝕺"),
+        "minuscule": ("o", "𝖔"),
+        "modifiers": ["bold", "fraktur"],
+    },
+    {
+        "name": "Mathematical Bold Fraktur P",
+        "majuscule": ("P", "𝕻"),
+        "minuscule": ("p", "𝖕"),
+        "modifiers": ["bold", "fraktur"],
+    },
+    {
+        "name": "Mathematical Bold Fraktur Q",
+        "majuscule": ("Q", "𝕼"),
+        "minuscule": ("q", "𝖖"),
+        "modifiers": ["bold", "fraktur"],
+    },
+    {
+        "name": "Mathematical Bold Fraktur R",
+        "majuscule": ("R", "𝕽"),
+        "minuscule": ("r", "𝖗"),
+        "modifiers": ["bold", "fraktur"],
+    },
+    {
+        "name": "Mathematical Bold Fraktur S",
+        "majuscule": ("S", "𝕾"),
+        "minuscule": ("s", "𝖘"),
+        "modifiers": ["bold", "fraktur"],
+    },
+    {
+        "name": "Mathematical Bold Fraktur T",
+        "majuscule": ("T", "𝕿"),
+        "minuscule": ("t", "𝖙"),
+        "modifiers": ["bold", "fraktur"],
+    },
+    {
+        "name": "Mathematical Bold Fraktur U",
+        "majuscule": ("U", "𝖀"),
+        "minuscule": ("u", "𝖚"),
+        "modifiers": ["bold", "fraktur"],
+    },
+    {
+        "name": "Mathematical Bold Fraktur V",
+        "majuscule": ("V", "𝖁"),
+        "minuscule": ("v", "𝖛"),
+        "modifiers": ["bold", "fraktur"],
+    },
+    {
+        "name": "Mathematical Bold Fraktur W",
+        "majuscule": ("W", "𝖂"),
+        "minuscule": ("w", "𝖜"),
+        "modifiers": ["bold", "fraktur"],
+    },
+    {
+        "name": "Mathematical Bold Fraktur X",
+        "majuscule": ("X", "𝖃"),
+        "minuscule": ("x", "𝖝"),
+        "modifiers": ["bold", "fraktur"],
+    },
+    {
+        "name": "Mathematical Bold Fraktur Y",
+        "majuscule": ("Y", "𝖄"),
+        "minuscule": ("y", "𝖞"),
+        "modifiers": ["bold", "fraktur"],
+    },
+    {
+        "name": "Mathematical Bold Fraktur Z",
+        "majuscule": ("Z", "𝖅"),
+        "minuscule": ("z", "𝖟"),
+        "modifiers": ["bold", "fraktur"],
+    },
+
+    #                                          _  __
+    #  ___  __ _ _ __  ___       ___  ___ _ __(_)/ _|
+    # / __|/ _` | '_ \/ __|_____/ __|/ _ \ '__| | |_
+    # \__ \ (_| | | | \__ \_____\__ \  __/ |  | |  _|
+    # |___/\__,_|_| |_|___/     |___/\___|_|  |_|_|
+    {
+        "name": "Mathematical Sans-Serif A",
+        "majuscule": ("A", "𝖠"),
+        "minuscule": ("a", "𝖺"),
+        "modifiers": ["sansSerif"],
+    },
+    {
+        "name": "Mathematical Sans-Serif B",
+        "majuscule": ("B", "𝖡"),
+        "minuscule": ("b", "𝖻"),
+        "modifiers": ["sansSerif"],
+    },
+    {
+        "name": "Mathematical Sans-Serif C",
+        "majuscule": ("C", "𝖢"),
+        "minuscule": ("c", "𝖼"),
+        "modifiers": ["sansSerif"],
+    },
+    {
+        "name": "Mathematical Sans-Serif D",
+        "majuscule": ("D", "𝖣"),
+        "minuscule": ("d", "𝖽"),
+        "modifiers": ["sansSerif"],
+    },
+    {
+        "name": "Mathematical Sans-Serif E",
+        "majuscule": ("E", "𝖤"),
+        "minuscule": ("e", "𝖾"),
+        "modifiers": ["sansSerif"],
+    },
+    {
+        "name": "Mathematical Sans-Serif F",
+        "majuscule": ("F", "𝖥"),
+        "minuscule": ("f", "𝖿"),
+        "modifiers": ["sansSerif"],
+    },
+    {
+        "name": "Mathematical Sans-Serif G",
+        "majuscule": ("G", "𝖦"),
+        "minuscule": ("g", "𝗀"),
+        "modifiers": ["sansSerif"],
+    },
+    {
+        "name": "Mathematical Sans-Serif H",
+        "majuscule": ("H", "𝖧"),
+        "minuscule": ("h", "𝗁"),
+        "modifiers": ["sansSerif"],
+    },
+    {
+        "name": "Mathematical Sans-Serif I",
+        "majuscule": ("I", "𝖨"),
+        "minuscule": ("i", "𝗂"),
+        "modifiers": ["sansSerif"],
+    },
+    {
+        "name": "Mathematical Sans-Serif J",
+        "majuscule": ("J", "𝖩"),
+        "minuscule": ("j", "𝗃"),
+        "modifiers": ["sansSerif"],
+    },
+    {
+        "name": "Mathematical Sans-Serif K",
+        "majuscule": ("K", "𝖪"),
+        "minuscule": ("k", "𝗄"),
+        "modifiers": ["sansSerif"],
+    },
+    {
+        "name": "Mathematical Sans-Serif L",
+        "majuscule": ("L", "𝖫"),
+        "minuscule": ("l", "𝗅"),
+        "modifiers": ["sansSerif"],
+    },
+    {
+        "name": "Mathematical Sans-Serif M",
+        "majuscule": ("M", "𝖬"),
+        "minuscule": ("m", "𝗆"),
+        "modifiers": ["sansSerif"],
+    },
+    {
+        "name": "Mathematical Sans-Serif N",
+        "majuscule": ("N", "𝖭"),
+        "minuscule": ("n", "𝗇"),
+        "modifiers": ["sansSerif"],
+    },
+    {
+        "name": "Mathematical Sans-Serif O",
+        "majuscule": ("O", "𝖮"),
+        "minuscule": ("o", "𝗈"),
+        "modifiers": ["sansSerif"],
+    },
+    {
+        "name": "Mathematical Sans-Serif P",
+        "majuscule": ("P", "𝖯"),
+        "minuscule": ("p", "𝗉"),
+        "modifiers": ["sansSerif"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Q",
+        "majuscule": ("Q", "𝖰"),
+        "minuscule": ("q", "𝗊"),
+        "modifiers": ["sansSerif"],
+    },
+    {
+        "name": "Mathematical Sans-Serif R",
+        "majuscule": ("R", "𝖱"),
+        "minuscule": ("r", "𝗋"),
+        "modifiers": ["sansSerif"],
+    },
+    {
+        "name": "Mathematical Sans-Serif S",
+        "majuscule": ("S", "𝖲"),
+        "minuscule": ("s", "𝗌"),
+        "modifiers": ["sansSerif"],
+    },
+    {
+        "name": "Mathematical Sans-Serif T",
+        "majuscule": ("T", "𝖳"),
+        "minuscule": ("t", "𝗍"),
+        "modifiers": ["sansSerif"],
+    },
+    {
+        "name": "Mathematical Sans-Serif U",
+        "majuscule": ("U", "𝖴"),
+        "minuscule": ("u", "𝗎"),
+        "modifiers": ["sansSerif"],
+    },
+    {
+        "name": "Mathematical Sans-Serif V",
+        "majuscule": ("V", "𝖵"),
+        "minuscule": ("v", "𝗏"),
+        "modifiers": ["sansSerif"],
+    },
+    {
+        "name": "Mathematical Sans-Serif W",
+        "majuscule": ("W", "𝖶"),
+        "minuscule": ("w", "𝗐"),
+        "modifiers": ["sansSerif"],
+    },
+    {
+        "name": "Mathematical Sans-Serif X",
+        "majuscule": ("X", "𝖷"),
+        "minuscule": ("x", "𝗑"),
+        "modifiers": ["sansSerif"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Y",
+        "majuscule": ("Y", "𝖸"),
+        "minuscule": ("y", "𝗒"),
+        "modifiers": ["sansSerif"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Z",
+        "majuscule": ("Z", "𝖹"),
+        "minuscule": ("z", "𝗓"),
+        "modifiers": ["sansSerif"],
+    },
+
+    #                                          _  __   _           _     _
+    #  ___  __ _ _ __  ___       ___  ___ _ __(_)/ _| | |__   ___ | | __| |
+    # / __|/ _` | '_ \/ __|_____/ __|/ _ \ '__| | |_  | '_ \ / _ \| |/ _` |
+    # \__ \ (_| | | | \__ \_____\__ \  __/ |  | |  _| | |_) | (_) | | (_| |
+    # |___/\__,_|_| |_|___/     |___/\___|_|  |_|_|   |_.__/ \___/|_|\__,_|
+    {
+        "name": "Mathematical Sans-Serif Bold A",
+        "majuscule": ("A", "𝗔"),
+        "minuscule": ("a", "𝗮"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold B",
+        "majuscule": ("B", "𝗕"),
+        "minuscule": ("b", "𝗯"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold C",
+        "majuscule": ("C", "𝗖"),
+        "minuscule": ("c", "𝗰"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold D",
+        "majuscule": ("D", "𝗗"),
+        "minuscule": ("d", "𝗱"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold E",
+        "majuscule": ("E", "𝗘"),
+        "minuscule": ("e", "𝗲"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold F",
+        "majuscule": ("F", "𝗙"),
+        "minuscule": ("f", "𝗳"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold G",
+        "majuscule": ("G", "𝗚"),
+        "minuscule": ("g", "𝗴"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold H",
+        "majuscule": ("H", "𝗛"),
+        "minuscule": ("h", "𝗵"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold I",
+        "majuscule": ("I", "𝗜"),
+        "minuscule": ("i", "𝗶"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold J",
+        "majuscule": ("J", "𝗝"),
+        "minuscule": ("j", "𝗷"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold K",
+        "majuscule": ("K", "𝗞"),
+        "minuscule": ("k", "𝗸"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold L",
+        "majuscule": ("L", "𝗟"),
+        "minuscule": ("l", "𝗹"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold M",
+        "majuscule": ("M", "𝗠"),
+        "minuscule": ("m", "𝗺"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold N",
+        "majuscule": ("N", "𝗡"),
+        "minuscule": ("n", "𝗻"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold O",
+        "majuscule": ("O", "𝗢"),
+        "minuscule": ("o", "𝗼"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold P",
+        "majuscule": ("P", "𝗣"),
+        "minuscule": ("p", "𝗽"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Q",
+        "majuscule": ("Q", "𝗤"),
+        "minuscule": ("q", "𝗾"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold R",
+        "majuscule": ("R", "𝗥"),
+        "minuscule": ("r", "𝗿"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold S",
+        "majuscule": ("S", "𝗦"),
+        "minuscule": ("s", "𝘀"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold T",
+        "majuscule": ("T", "𝗧"),
+        "minuscule": ("t", "𝘁"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold U",
+        "majuscule": ("U", "𝗨"),
+        "minuscule": ("u", "𝘂"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold V",
+        "majuscule": ("V", "𝗩"),
+        "minuscule": ("v", "𝘃"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold W",
+        "majuscule": ("W", "𝗪"),
+        "minuscule": ("w", "𝘄"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold X",
+        "majuscule": ("X", "𝗫"),
+        "minuscule": ("x", "𝘅"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Y",
+        "majuscule": ("Y", "𝗬"),
+        "minuscule": ("y", "𝘆"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Z",
+        "majuscule": ("Z", "𝗭"),
+        "minuscule": ("z", "𝘇"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+
+    #                                          _  __   _ _        _ _
+    #  ___  __ _ _ __  ___       ___  ___ _ __(_)/ _| (_) |_ __ _| (_) ___
+    # / __|/ _` | '_ \/ __|_____/ __|/ _ \ '__| | |_  | | __/ _` | | |/ __|
+    # \__ \ (_| | | | \__ \_____\__ \  __/ |  | |  _| | | || (_| | | | (__
+    # |___/\__,_|_| |_|___/     |___/\___|_|  |_|_|   |_|\__\__,_|_|_|\___|
+    {
+        "name": "Mathematical Sans-Serif Italic A",
+        "majuscule": ("A", "𝘈"),
+        "minuscule": ("a", "𝘢"),
+        "modifiers": ["sansSerif", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Italic B",
+        "majuscule": ("B", "𝘉"),
+        "minuscule": ("b", "𝘣"),
+        "modifiers": ["sansSerif", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Italic C",
+        "majuscule": ("C", "𝘊"),
+        "minuscule": ("c", "𝘤"),
+        "modifiers": ["sansSerif", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Italic D",
+        "majuscule": ("D", "𝘋"),
+        "minuscule": ("d", "𝘥"),
+        "modifiers": ["sansSerif", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Italic E",
+        "majuscule": ("E", "𝘌"),
+        "minuscule": ("e", "𝘦"),
+        "modifiers": ["sansSerif", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Italic F",
+        "majuscule": ("F", "𝘍"),
+        "minuscule": ("f", "𝘧"),
+        "modifiers": ["sansSerif", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Italic G",
+        "majuscule": ("G", "𝘎"),
+        "minuscule": ("g", "𝘨"),
+        "modifiers": ["sansSerif", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Italic H",
+        "majuscule": ("H", "𝘏"),
+        "minuscule": ("h", "𝘩"),
+        "modifiers": ["sansSerif", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Italic I",
+        "majuscule": ("I", "𝘐"),
+        "minuscule": ("i", "𝘪"),
+        "modifiers": ["sansSerif", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Italic J",
+        "majuscule": ("J", "𝘑"),
+        "minuscule": ("j", "𝘫"),
+        "modifiers": ["sansSerif", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Italic K",
+        "majuscule": ("K", "𝘒"),
+        "minuscule": ("k", "𝘬"),
+        "modifiers": ["sansSerif", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Italic L",
+        "majuscule": ("L", "𝘓"),
+        "minuscule": ("l", "𝘭"),
+        "modifiers": ["sansSerif", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Italic M",
+        "majuscule": ("M", "𝘔"),
+        "minuscule": ("m", "𝘮"),
+        "modifiers": ["sansSerif", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Italic N",
+        "majuscule": ("N", "𝘕"),
+        "minuscule": ("n", "𝘯"),
+        "modifiers": ["sansSerif", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Italic O",
+        "majuscule": ("O", "𝘖"),
+        "minuscule": ("o", "𝘰"),
+        "modifiers": ["sansSerif", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Italic P",
+        "majuscule": ("P", "𝘗"),
+        "minuscule": ("p", "𝘱"),
+        "modifiers": ["sansSerif", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Italic Q",
+        "majuscule": ("Q", "𝘘"),
+        "minuscule": ("q", "𝘲"),
+        "modifiers": ["sansSerif", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Italic R",
+        "majuscule": ("R", "𝘙"),
+        "minuscule": ("r", "𝘳"),
+        "modifiers": ["sansSerif", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Italic S",
+        "majuscule": ("S", "𝘚"),
+        "minuscule": ("s", "𝘴"),
+        "modifiers": ["sansSerif", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Italic T",
+        "majuscule": ("T", "𝘛"),
+        "minuscule": ("t", "𝘵"),
+        "modifiers": ["sansSerif", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Italic U",
+        "majuscule": ("U", "𝘜"),
+        "minuscule": ("u", "𝘶"),
+        "modifiers": ["sansSerif", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Italic V",
+        "majuscule": ("V", "𝘝"),
+        "minuscule": ("v", "𝘷"),
+        "modifiers": ["sansSerif", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Italic W",
+        "majuscule": ("W", "𝘞"),
+        "minuscule": ("w", "𝘸"),
+        "modifiers": ["sansSerif", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Italic X",
+        "majuscule": ("X", "𝘟"),
+        "minuscule": ("x", "𝘹"),
+        "modifiers": ["sansSerif", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Italic Y",
+        "majuscule": ("Y", "𝘠"),
+        "minuscule": ("y", "𝘺"),
+        "modifiers": ["sansSerif", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Italic Z",
+        "majuscule": ("Z", "𝘡"),
+        "minuscule": ("z", "𝘻"),
+        "modifiers": ["sansSerif", "italic"],
+    },
+
+    #                                          _  __   _           _     _
+    #  ___  __ _ _ __  ___       ___  ___ _ __(_)/ _| | |__   ___ | | __| |
+    # / __|/ _` | '_ \/ __|_____/ __|/ _ \ '__| | |_  | '_ \ / _ \| |/ _` |
+    # \__ \ (_| | | | \__ \_____\__ \  __/ |  | |  _| | |_) | (_) | | (_| |
+    # |___/\__,_|_| |_|___/     |___/\___|_|  |_|_|   |_.__/ \___/|_|\__,_|
+    #
+    #  _ _        _ _
+    # (_) |_ __ _| (_) ___
+    # | | __/ _` | | |/ __|
+    # | | || (_| | | | (__
+    # |_|\__\__,_|_|_|\___|
+    {
+        "name": "Mathematical Sans-Serif Bold Italic A",
+        "majuscule": ("A", "𝘼"),
+        "minuscule": ("a", "𝙖"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic B",
+        "majuscule": ("B", "𝘽"),
+        "minuscule": ("b", "𝙗"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic C",
+        "majuscule": ("C", "𝘾"),
+        "minuscule": ("c", "𝙘"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic D",
+        "majuscule": ("D", "𝘿"),
+        "minuscule": ("d", "𝙙"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic E",
+        "majuscule": ("E", "𝙀"),
+        "minuscule": ("e", "𝙚"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic F",
+        "majuscule": ("F", "𝙁"),
+        "minuscule": ("f", "𝙛"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic G",
+        "majuscule": ("G", "𝙂"),
+        "minuscule": ("g", "𝙜"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic H",
+        "majuscule": ("H", "𝙃"),
+        "minuscule": ("h", "𝙝"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic I",
+        "majuscule": ("I", "𝙄"),
+        "minuscule": ("i", "𝙞"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic J",
+        "majuscule": ("J", "𝙅"),
+        "minuscule": ("j", "𝙟"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic K",
+        "majuscule": ("K", "𝙆"),
+        "minuscule": ("k", "𝙠"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic L",
+        "majuscule": ("L", "𝙇"),
+        "minuscule": ("l", "𝙡"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic M",
+        "majuscule": ("M", "𝙈"),
+        "minuscule": ("m", "𝙢"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic N",
+        "majuscule": ("N", "𝙉"),
+        "minuscule": ("n", "𝙣"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic O",
+        "majuscule": ("O", "𝙊"),
+        "minuscule": ("o", "𝙤"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic P",
+        "majuscule": ("P", "𝙋"),
+        "minuscule": ("p", "𝙥"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic Q",
+        "majuscule": ("Q", "𝙌"),
+        "minuscule": ("q", "𝙦"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic R",
+        "majuscule": ("R", "𝙍"),
+        "minuscule": ("r", "𝙧"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic S",
+        "majuscule": ("S", "𝙎"),
+        "minuscule": ("s", "𝙨"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic T",
+        "majuscule": ("T", "𝙏"),
+        "minuscule": ("t", "𝙩"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic U",
+        "majuscule": ("U", "𝙐"),
+        "minuscule": ("u", "𝙪"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic V",
+        "majuscule": ("V", "𝙑"),
+        "minuscule": ("v", "𝙫"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic W",
+        "majuscule": ("W", "𝙒"),
+        "minuscule": ("w", "𝙬"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic X",
+        "majuscule": ("X", "𝙓"),
+        "minuscule": ("x", "𝙭"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic Y",
+        "majuscule": ("Y", "𝙔"),
+        "minuscule": ("y", "𝙮"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic Z",
+        "majuscule": ("Z", "𝙕"),
+        "minuscule": ("z", "𝙯"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+
+    #  _ __ ___   ___  _ __   ___  ___ _ __   __ _  ___ ___
+    # | '_ ` _ \ / _ \| '_ \ / _ \/ __| '_ \ / _` |/ __/ _ \
+    # | | | | | | (_) | | | | (_) \__ \ |_) | (_| | (_|  __/
+    # |_| |_| |_|\___/|_| |_|\___/|___/ .__/ \__,_|\___\___|
+    #                                 |_|
+    {
+        "name": "Mathematical Monospace A",
+        "majuscule": ("A", "𝙰"),
+        "minuscule": ("a", "𝚊"),
+        "modifiers": ["monospace"],
+    },
+    {
+        "name": "Mathematical Monospace B",
+        "majuscule": ("B", "𝙱"),
+        "minuscule": ("b", "𝚋"),
+        "modifiers": ["monospace"],
+    },
+    {
+        "name": "Mathematical Monospace C",
+        "majuscule": ("C", "𝙲"),
+        "minuscule": ("c", "𝚌"),
+        "modifiers": ["monospace"],
+    },
+    {
+        "name": "Mathematical Monospace D",
+        "majuscule": ("D", "𝙳"),
+        "minuscule": ("d", "𝚍"),
+        "modifiers": ["monospace"],
+    },
+    {
+        "name": "Mathematical Monospace E",
+        "majuscule": ("E", "𝙴"),
+        "minuscule": ("e", "𝚎"),
+        "modifiers": ["monospace"],
+    },
+    {
+        "name": "Mathematical Monospace F",
+        "majuscule": ("F", "𝙵"),
+        "minuscule": ("f", "𝚏"),
+        "modifiers": ["monospace"],
+    },
+    {
+        "name": "Mathematical Monospace G",
+        "majuscule": ("G", "𝙶"),
+        "minuscule": ("g", "𝚐"),
+        "modifiers": ["monospace"],
+    },
+    {
+        "name": "Mathematical Monospace H",
+        "majuscule": ("H", "𝙷"),
+        "minuscule": ("h", "𝚑"),
+        "modifiers": ["monospace"],
+    },
+    {
+        "name": "Mathematical Monospace I",
+        "majuscule": ("I", "𝙸"),
+        "minuscule": ("i", "𝚒"),
+        "modifiers": ["monospace"],
+    },
+    {
+        "name": "Mathematical Monospace J",
+        "majuscule": ("J", "𝙹"),
+        "minuscule": ("j", "𝚓"),
+        "modifiers": ["monospace"],
+    },
+    {
+        "name": "Mathematical Monospace K",
+        "majuscule": ("K", "𝙺"),
+        "minuscule": ("k", "𝚔"),
+        "modifiers": ["monospace"],
+    },
+    {
+        "name": "Mathematical Monospace L",
+        "majuscule": ("L", "𝙻"),
+        "minuscule": ("l", "𝚕"),
+        "modifiers": ["monospace"],
+    },
+    {
+        "name": "Mathematical Monospace M",
+        "majuscule": ("M", "𝙼"),
+        "minuscule": ("m", "𝚖"),
+        "modifiers": ["monospace"],
+    },
+    {
+        "name": "Mathematical Monospace N",
+        "majuscule": ("N", "𝙽"),
+        "minuscule": ("n", "𝚗"),
+        "modifiers": ["monospace"],
+    },
+    {
+        "name": "Mathematical Monospace O",
+        "majuscule": ("O", "𝙾"),
+        "minuscule": ("o", "𝚘"),
+        "modifiers": ["monospace"],
+    },
+    {
+        "name": "Mathematical Monospace P",
+        "majuscule": ("P", "𝙿"),
+        "minuscule": ("p", "𝚙"),
+        "modifiers": ["monospace"],
+    },
+    {
+        "name": "Mathematical Monospace Q",
+        "majuscule": ("Q", "𝚀"),
+        "minuscule": ("q", "𝚚"),
+        "modifiers": ["monospace"],
+    },
+    {
+        "name": "Mathematical Monospace R",
+        "majuscule": ("R", "𝚁"),
+        "minuscule": ("r", "𝚛"),
+        "modifiers": ["monospace"],
+    },
+    {
+        "name": "Mathematical Monospace S",
+        "majuscule": ("S", "𝚂"),
+        "minuscule": ("s", "𝚜"),
+        "modifiers": ["monospace"],
+    },
+    {
+        "name": "Mathematical Monospace T",
+        "majuscule": ("T", "𝚃"),
+        "minuscule": ("t", "𝚝"),
+        "modifiers": ["monospace"],
+    },
+    {
+        "name": "Mathematical Monospace U",
+        "majuscule": ("U", "𝚄"),
+        "minuscule": ("u", "𝚞"),
+        "modifiers": ["monospace"],
+    },
+    {
+        "name": "Mathematical Monospace V",
+        "majuscule": ("V", "𝚅"),
+        "minuscule": ("v", "𝚟"),
+        "modifiers": ["monospace"],
+    },
+    {
+        "name": "Mathematical Monospace W",
+        "majuscule": ("W", "𝚆"),
+        "minuscule": ("w", "𝚠"),
+        "modifiers": ["monospace"],
+    },
+    {
+        "name": "Mathematical Monospace X",
+        "majuscule": ("X", "𝚇"),
+        "minuscule": ("x", "𝚡"),
+        "modifiers": ["monospace"],
+    },
+    {
+        "name": "Mathematical Monospace Y",
+        "majuscule": ("Y", "𝚈"),
+        "minuscule": ("y", "𝚢"),
+        "modifiers": ["monospace"],
+    },
+    {
+        "name": "Mathematical Monospace Z",
+        "majuscule": ("Z", "𝚉"),
+        "minuscule": ("z", "𝚣"),
+        "modifiers": ["monospace"],
+    },
 ]
+
+MODIFIED_GREEK_CHARS = [
+
+    #   ____ ____  _____ _____ _  __  __  __    _  _____ _   _
+    #  / ___|  _ \| ____| ____| |/ / |  \/  |  / \|_   _| | | |
+    # | |  _| |_) |  _| |  _| | ' /  | |\/| | / _ \ | | | |_| |
+    # | |_| |  _ <| |___| |___| . \  | |  | |/ ___ \| | |  _  |
+    #  \____|_| \_\_____|_____|_|\_\ |_|  |_/_/   \_\_| |_| |_|
+
+    #  _           _     _
+    # | |__   ___ | | __| |
+    # | '_ \ / _ \| |/ _` |
+    # | |_) | (_) | | (_| |
+    # |_.__/ \___/|_|\__,_|
+    {
+        "name": "Mathematical Bold Alpha",
+        "majuscule": ("Α", "𝚨"),
+        "minuscule": ("α", "𝛂"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold Beta",
+        "majuscule": ("Β", "𝚩"),
+        "minuscule": ("β", "𝛃"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold Gamma",
+        "majuscule": ("Γ", "𝚪"),
+        "minuscule": ("γ", "𝛄"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold Delta",
+        "majuscule": ("Δ", "𝚫"),
+        "minuscule": ("δ", "𝛅"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold Epsilon",
+        "majuscule": ("Ε", "𝚬"),
+        "minuscule": ("ε", "𝛆"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold Zeta",
+        "majuscule": ("Ζ", "𝚭"),
+        "minuscule": ("ζ", "𝛇"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold Eta",
+        "majuscule": ("Η", "𝚮"),
+        "minuscule": ("η", "𝛈"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold Theta",
+        "majuscule": ("Θ", "𝚯"),
+        "minuscule": ("θ", "𝛉"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold Iota",
+        "majuscule": ("Ι", "𝚰"),
+        "minuscule": ("ι", "𝛊"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold Kappa",
+        "majuscule": ("Κ", "𝚱"),
+        "minuscule": ("κ", "𝛋"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold Lamda",
+        "majuscule": ("Λ", "𝚲"),
+        "minuscule": ("λ", "𝛌"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold Mu",
+        "majuscule": ("Μ", "𝚳"),
+        "minuscule": ("μ", "𝛍"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold Nu",
+        "majuscule": ("Ν", "𝚴"),
+        "minuscule": ("ν", "𝛎"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold Xi",
+        "majuscule": ("Ξ", "𝚵"),
+        "minuscule": ("ξ", "𝛏"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold Omicron",
+        "majuscule": ("Ο", "𝚶"),
+        "minuscule": ("ο", "𝛐"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold Pi",
+        "majuscule": ("Π", "𝚷"),
+        "minuscule": ("π", "𝛑"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold Rho",
+        "majuscule": ("Ρ", "𝚸"),
+        "minuscule": ("ρ", "𝛒"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold Sigma",
+        "majuscule": ("Σ", "𝚺"),
+        "minuscule": ("σ", "𝛔"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold Final Sigma",
+        "majuscule": None,
+        "minuscule": ("ς", "𝛓"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold Tau",
+        "majuscule": ("Τ", "𝚻"),
+        "minuscule": ("τ", "𝛕"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold Upsilon",
+        "majuscule": ("Υ", "𝚼"),
+        "minuscule": ("υ", "𝛖"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold Phi",
+        "majuscule": ("Φ", "𝚽"),
+        "minuscule": ("φ", "𝛗"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold Chi",
+        "majuscule": ("Χ", "𝚾"),
+        "minuscule": ("χ", "𝛘"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold Psi",
+        "majuscule": ("Ψ", "𝚿"),
+        "minuscule": ("ψ", "𝛙"),
+        "modifiers": ["bold"],
+    },
+    {
+        "name": "Mathematical Bold Omega",
+        "majuscule": ("Ω", "𝛀"),
+        "minuscule": ("ω", "𝛚"),
+        "modifiers": ["bold"],
+    },
+
+    #  _ _        _ _
+    # (_) |_ __ _| (_) ___
+    # | | __/ _` | | |/ __|
+    # | | || (_| | | | (__
+    # |_|\__\__,_|_|_|\___|
+    {
+        "name": "Mathematical Italic Alpha",
+        "majuscule": ("Α", "𝛢"),
+        "minuscule": ("α", "𝛼"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic Beta",
+        "majuscule": ("Β", "𝛣"),
+        "minuscule": ("β", "𝛽"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic Gamma",
+        "majuscule": ("Γ", "𝛤"),
+        "minuscule": ("γ", "𝛾"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic Delta",
+        "majuscule": ("Δ", "𝛥"),
+        "minuscule": ("δ", "𝛿"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic Epsilon",
+        "majuscule": ("Ε", "𝛦"),
+        "minuscule": ("ε", "𝜀"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic Zeta",
+        "majuscule": ("Ζ", "𝛧"),
+        "minuscule": ("ζ", "𝜁"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic Eta",
+        "majuscule": ("Η", "𝛨"),
+        "minuscule": ("η", "𝜂"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic Theta",
+        "majuscule": ("Θ", "𝛩"),
+        "minuscule": ("θ", "𝜃"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic Iota",
+        "majuscule": ("Ι", "𝛪"),
+        "minuscule": ("ι", "𝜄"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic Kappa",
+        "majuscule": ("Κ", "𝛫"),
+        "minuscule": ("κ", "𝜅"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic Lamda",
+        "majuscule": ("Λ", "𝛬"),
+        "minuscule": ("λ", "𝜆"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic Mu",
+        "majuscule": ("Μ", "𝛭"),
+        "minuscule": ("μ", "𝜇"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic Nu",
+        "majuscule": ("Ν", "𝛮"),
+        "minuscule": ("ν", "𝜈"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic Xi",
+        "majuscule": ("Ξ", "𝛯"),
+        "minuscule": ("ξ", "𝜉"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic Omicron",
+        "majuscule": ("Ο", "𝛰"),
+        "minuscule": ("ο", "𝜊"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic Pi",
+        "majuscule": ("Π", "𝛱"),
+        "minuscule": ("π", "𝜋"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic Rho",
+        "majuscule": ("Ρ", "𝛲"),
+        "minuscule": ("ρ", "𝜌"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic Sigma",
+        "majuscule": ("Σ", "𝛴"),
+        "minuscule": ("σ", "𝜎"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic Final Sigma",
+        "majuscule": None,
+        "minuscule": ("ς", "𝜍"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic Tau",
+        "majuscule": ("Τ", "𝛵"),
+        "minuscule": ("τ", "𝜏"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic Upsilon",
+        "majuscule": ("Υ", "𝛶"),
+        "minuscule": ("υ", "𝜐"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic Phi",
+        "majuscule": ("Φ", "𝛷"),
+        "minuscule": ("φ", "𝜑"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic Chi",
+        "majuscule": ("Χ", "𝛸"),
+        "minuscule": ("χ", "𝜒"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic Psi",
+        "majuscule": ("Ψ", "𝛹"),
+        "minuscule": ("ψ", "𝜓"),
+        "modifiers": ["italic"],
+    },
+    {
+        "name": "Mathematical Italic Omega",
+        "majuscule": ("Ω", "𝛺"),
+        "minuscule": ("ω", "𝜔"),
+        "modifiers": ["italic"],
+    },
+
+    #  _           _     _   _ _        _ _
+    # | |__   ___ | | __| | (_) |_ __ _| (_) ___
+    # | '_ \ / _ \| |/ _` | | | __/ _` | | |/ __|
+    # | |_) | (_) | | (_| | | | || (_| | | | (__
+    # |_.__/ \___/|_|\__,_| |_|\__\__,_|_|_|\___|
+    {
+        "name": "Mathematical Bold Italic Alpha",
+        "majuscule": ("Α", "𝜜"),
+        "minuscule": ("α", "𝜶"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic Beta",
+        "majuscule": ("Β", "𝜝"),
+        "minuscule": ("β", "𝜷"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic Gamma",
+        "majuscule": ("Γ", "𝜞"),
+        "minuscule": ("γ", "𝜸"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic Delta",
+        "majuscule": ("Δ", "𝜟"),
+        "minuscule": ("δ", "𝜹"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic Epsilon",
+        "majuscule": ("Ε", "𝜠"),
+        "minuscule": ("ε", "𝜺"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic Zeta",
+        "majuscule": ("Ζ", "𝜡"),
+        "minuscule": ("ζ", "𝜻"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic Eta",
+        "majuscule": ("Η", "𝜢"),
+        "minuscule": ("η", "𝜼"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic Theta",
+        "majuscule": ("Θ", "𝜣"),
+        "minuscule": ("θ", "𝜽"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic Iota",
+        "majuscule": ("Ι", "𝜤"),
+        "minuscule": ("ι", "𝜾"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic Kappa",
+        "majuscule": ("Κ", "𝜥"),
+        "minuscule": ("κ", "𝜿"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic Lamda",
+        "majuscule": ("Λ", "𝜦"),
+        "minuscule": ("λ", "𝝀"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic Mu",
+        "majuscule": ("Μ", "𝜧"),
+        "minuscule": ("μ", "𝝁"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic Nu",
+        "majuscule": ("Ν", "𝜨"),
+        "minuscule": ("ν", "𝝂"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic Xi",
+        "majuscule": ("Ξ", "𝜩"),
+        "minuscule": ("ξ", "𝝃"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic Omicron",
+        "majuscule": ("Ο", "𝜪"),
+        "minuscule": ("ο", "𝝄"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic Pi",
+        "majuscule": ("Π", "𝜫"),
+        "minuscule": ("π", "𝝅"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic Rho",
+        "majuscule": ("Ρ", "𝜬"),
+        "minuscule": ("ρ", "𝝆"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic Theta Symbol",
+        "majuscule": ("Θ", "𝜭"),
+        "minuscule": ("θ", "𝝇"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic Sigma",
+        "majuscule": ("Σ", "𝜮"),
+        "minuscule": ("σ", "𝝈"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic Final Sigma",
+        "majuscule": None,
+        "minuscule": ("ς", "𝝇"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic Tau",
+        "majuscule": ("Τ", "𝜯"),
+        "minuscule": ("τ", "𝝉"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic Upsilon",
+        "majuscule": ("Υ", "𝜰"),
+        "minuscule": ("υ", "𝝊"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic Phi",
+        "majuscule": ("Φ", "𝜱"),
+        "minuscule": ("φ", "𝝋"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic Chi",
+        "majuscule": ("Χ", "𝜲"),
+        "minuscule": ("χ", "𝝌"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic Psi",
+        "majuscule": ("Ψ", "𝜳"),
+        "minuscule": ("ψ", "𝝍"),
+        "modifiers": ["bold", "italic"],
+    },
+    {
+        "name": "Mathematical Bold Italic Omega",
+        "majuscule": ("Ω", "𝜴"),
+        "minuscule": ("ω", "𝝎"),
+        "modifiers": ["bold", "italic"],
+    },
+
+    #                          _  __   _           _     _
+    #  ___       ___  ___ _ __(_)/ _| | |__   ___ | | __| |
+    # / __|_____/ __|/ _ \ '__| | |_  | '_ \ / _ \| |/ _` |
+    # \__ \_____\__ \  __/ |  | |  _| | |_) | (_) | | (_| |
+    # |___/     |___/\___|_|  |_|_|   |_.__/ \___/|_|\__,_|
+    {
+        "name": "Mathematical Sans-Serif Bold Alpha",
+        "majuscule": ("Α", "𝝖"),
+        "minuscule": ("α", "𝝰"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Beta",
+        "majuscule": ("Β", "𝝗"),
+        "minuscule": ("β", "𝝱"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Gamma",
+        "majuscule": ("Γ", "𝝘"),
+        "minuscule": ("γ", "𝝲"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Delta",
+        "majuscule": ("Δ", "𝝙"),
+        "minuscule": ("δ", "𝝳"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Epsilon",
+        "majuscule": ("Ε", "𝝚"),
+        "minuscule": ("ε", "𝝴"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Zeta",
+        "majuscule": ("Ζ", "𝝛"),
+        "minuscule": ("ζ", "𝝵"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Eta",
+        "majuscule": ("Η", "𝝜"),
+        "minuscule": ("η", "𝝶"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Theta",
+        "majuscule": ("Θ", "𝝝"),
+        "minuscule": ("θ", "𝝷"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Iota",
+        "majuscule": ("Ι", "𝝞"),
+        "minuscule": ("ι", "𝝸"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Kappa",
+        "majuscule": ("Κ", "𝝟"),
+        "minuscule": ("κ", "𝝹"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Lamda",
+        "majuscule": ("Λ", "𝝠"),
+        "minuscule": ("λ", "𝝺"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Mu",
+        "majuscule": ("Μ", "𝝡"),
+        "minuscule": ("μ", "𝝻"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Nu",
+        "majuscule": ("Ν", "𝝢"),
+        "minuscule": ("ν", "𝝼"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Xi",
+        "majuscule": ("Ξ", "𝝣"),
+        "minuscule": ("ξ", "𝝽"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Omicron",
+        "majuscule": ("Ο", "𝝤"),
+        "minuscule": ("ο", "𝝾"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Pi",
+        "majuscule": ("Π", "𝝥"),
+        "minuscule": ("π", "𝝿"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Rho",
+        "majuscule": ("Ρ", "𝝦"),
+        "minuscule": ("ρ", "𝞀"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Sigma",
+        "majuscule": ("Σ", "𝝨"),
+        "minuscule": ("σ", "𝞂"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Sigma",
+        "majuscule": None,
+        "minuscule": ("ς", "𝞁"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Tau",
+        "majuscule": ("Τ", "𝝩"),
+        "minuscule": ("τ", "𝞃"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Upsilon",
+        "majuscule": ("Υ", "𝝪"),
+        "minuscule": ("υ", "𝞄"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Phi",
+        "majuscule": ("Φ", "𝝫"),
+        "minuscule": ("φ", "𝞅"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Chi",
+        "majuscule": ("Χ", "𝝬"),
+        "minuscule": ("χ", "𝞆"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Psi",
+        "majuscule": ("Ψ", "𝝭"),
+        "minuscule": ("ψ", "𝞇"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Omega",
+        "majuscule": ("Ω", "𝝮"),
+        "minuscule": ("ω", "𝞈"),
+        "modifiers": ["sansSerif", "bold"],
+    },
+
+    #                          _  __   _           _     _   _ _        _ _
+    #  ___       ___  ___ _ __(_)/ _| | |__   ___ | | __| | (_) |_ __ _| (_) ___
+    # / __|_____/ __|/ _ \ '__| | |_  | '_ \ / _ \| |/ _` | | | __/ _` | | |/ __|
+    # \__ \_____\__ \  __/ |  | |  _| | |_) | (_) | | (_| | | | || (_| | | | (__
+    # |___/     |___/\___|_|  |_|_|   |_.__/ \___/|_|\__,_| |_|\__\__,_|_|_|\___|
+    {
+        "name": "Mathematical Sans-Serif Bold Italic Alpha",
+        "majuscule": ("Α", "𝞐"),
+        "minuscule": ("α", "𝞪"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic Beta",
+        "majuscule": ("Β", "𝞑"),
+        "minuscule": ("β", "𝞫"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic Gamma",
+        "majuscule": ("Γ", "𝞒"),
+        "minuscule": ("γ", "𝞬"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic Delta",
+        "majuscule": ("Δ", "𝞓"),
+        "minuscule": ("δ", "𝞭"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic Epsilon",
+        "majuscule": ("Ε", "𝞔"),
+        "minuscule": ("ε", "𝞮"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic Zeta",
+        "majuscule": ("Ζ", "𝞕"),
+        "minuscule": ("ζ", "𝞯"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic Eta",
+        "majuscule": ("Η", "𝞖"),
+        "minuscule": ("η", "𝞰"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic Theta",
+        "majuscule": ("Θ", "𝞗"),
+        "minuscule": ("θ", "𝞱"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic Iota",
+        "majuscule": ("Ι", "𝞘"),
+        "minuscule": ("ι", "𝞲"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic Kappa",
+        "majuscule": ("Κ", "𝞙"),
+        "minuscule": ("κ", "𝞳"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic Lamda",
+        "majuscule": ("Λ", "𝞚"),
+        "minuscule": ("λ", "𝞴"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic Mu",
+        "majuscule": ("Μ", "𝞛"),
+        "minuscule": ("μ", "𝞵"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic Nu",
+        "majuscule": ("Ν", "𝞜"),
+        "minuscule": ("ν", "𝞶"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic Xi",
+        "majuscule": ("Ξ", "𝞝"),
+        "minuscule": ("ξ", "𝞷"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic Omicron",
+        "majuscule": ("Ο", "𝞞"),
+        "minuscule": ("ο", "𝞸"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic Pi",
+        "majuscule": ("Π", "𝞟"),
+        "minuscule": ("π", "𝞹"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic Rho",
+        "majuscule": ("Ρ", "𝞠"),
+        "minuscule": ("ρ", "𝞺"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic Theta Symbol",
+        "majuscule": ("Θ", "𝞡"),
+        "minuscule": ("θ", "𝞻"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic Sigma",
+        "majuscule": ("Σ", "𝞢"),
+        "minuscule": ("σ", "𝞼"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic Final Sigma",
+        "majuscule": None,
+        "minuscule": ("ς", "𝞻"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic Tau",
+        "majuscule": ("Τ", "𝞣"),
+        "minuscule": ("τ", "𝞽"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic Upsilon",
+        "majuscule": ("Υ", "𝞤"),
+        "minuscule": ("υ", "𝞾"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic Phi",
+        "majuscule": ("Φ", "𝞥"),
+        "minuscule": ("φ", "𝞿"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic Chi",
+        "majuscule": ("Χ", "𝞦"),
+        "minuscule": ("χ", "𝟀"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic Psi",
+        "majuscule": ("Ψ", "𝞧"),
+        "minuscule": ("ψ", "𝟁"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+    {
+        "name": "Mathematical Sans-Serif Bold Italic Omega",
+        "majuscule": ("Ω", "𝞨"),
+        "minuscule": ("ω", "𝟂"),
+        "modifiers": ["sansSerif", "bold", "italic"],
+    },
+]
+
+# #   ____               _                _
+# #  / ___|_ __ ___  ___| | __  _ __ ___ (_)___  ___
+# # | |  _| '__/ _ \/ _ \ |/ / | '_ ` _ \| / __|/ __|
+# # | |_| | | |  __/  __/   <  | | | | | | \__ \ (__ _
+# #  \____|_|  \___|\___|_|\_\ |_| |_| |_|_|___/\___(_)
+# {
+#     "name": "Mathematical Italic Small Dotless I",
+#     "majuscule": ("I", "𝚤"),
+# },
+# {
+#     "name": "Mathematical Italic Small Dotless J",
+#     "majuscule": ("J", "𝚥"),
+# },
+# {
+#     "name": "Mathematical Bold Capital Theta Symbol",
+#     "majuscule": ("Θ", "𝚹"),
+#     "modifiers": ["bold"],
+# },
+# {
+#     "name": "Mathematical Bold Nabla",
+#     "majuscule": ("", "𝛁"),
+#     "modifiers": ["bold"],
+# },
+# {
+#     "name": "Mathematical Bold Partial Differential",
+#     "majuscule": ("", "𝛛"),
+# },
+# {
+#     "name": "Mathematical Bold Epsilon Symbol",
+#     "majuscule": ("", "𝛜"),
+# },
+# {
+#     "name": "Mathematical Bold Theta Symbol",
+#     "majuscule": ("", "𝛝"),
+# },
+# {
+#     "name": "Mathematical Bold Kappa Symbol",
+#     "majuscule": ("", "𝛞"),
+# },
+# {
+#     "name": "Mathematical Bold Phi Symbol",
+#     "majuscule": ("", "𝛟"),
+# },
+# {
+#     "name": "Mathematical Bold Rho Symbol",
+#     "majuscule": ("", "𝛠"),
+# },
+# {
+#     "name": "Mathematical Bold Pi Symbol",
+#     "majuscule": ("", "𝛡"),
+# },
+# {
+#     "name": "Mathematical Italic Capital Theta Symbol",
+#     "majuscule": ("", "𝛳"),
+# },
+# {
+#     "name": "Mathematical Italic Nabla",
+#     "majuscule": ("", "𝛻"),
+# },
+# {
+#     "name": "Mathematical Italic Partial Differential",
+#     "majuscule": ("l", "𝜕"),
+# },
+# {
+#     "name": "Mathematical Italic Epsilon Symbol",
+#     "majuscule": ("l", "𝜖"),
+# },
+# {
+#     "name": "Mathematical Italic Theta Symbol",
+#     "majuscule": ("l", "𝜗"),
+# },
+# {
+#     "name": "Mathematical Italic Kappa Symbol",
+#     "majuscule": ("l", "𝜘"),
+# },
+# {
+#     "name": "Mathematical Italic Phi Symbol",
+#     "majuscule": ("l", "𝜙"),
+# },
+# {
+#     "name": "Mathematical Italic Rho Symbol",
+#     "majuscule": ("l", "𝜚"),
+# },
+# {
+#     "name": "Mathematical Italic Pi Symbol",
+#     "majuscule": ("l", "𝜛"),
+# },
+# {
+#     "name": "Mathematical Sans-Serif Bold Capital Theta Symbol",
+#     "majuscule": ("l", "𝝧"),
+# },
+# {
+#     "name": "Mathematical Sans-Serif Bold Italic Nabla",
+#     "majuscule": ("a", "𝞩"),
+# },
+# {
+#     "name": "Mathematical Bold Italic Nabla",
+#     "majuscule": ("a", "𝜵"),
+# },
+# {
+#     "name": "Mathematical Bold Italic Partial Differential",
+#     "majuscule": ("l", "𝝏"),
+# },
+# {
+#     "name": "Mathematical Bold Italic Epsilon Symbol",
+#     "majuscule": ("l", "𝝐"),
+# },
+# {
+#     "name": "Mathematical Bold Italic Theta Symbol",
+#     "majuscule": ("l", "𝝑"),
+# },
+# {
+#     "name": "Mathematical Bold Italic Kappa Symbol",
+#     "majuscule": ("l", "𝝒"),
+# },
+# {
+#     "name": "Mathematical Bold Italic Phi Symbol",
+#     "majuscule": ("l", "𝝓"),
+# },
+# {
+#     "name": "Mathematical Bold Italic Rho Symbol",
+#     "majuscule": ("l", "𝝔"),
+# },
+# {
+#     "name": "Mathematical Bold Italic Pi Symbol",
+#     "majuscule": ("l", "𝝕"),
+# },
+# {
+#     "name": "Mathematical Sans-Serif Bold Nabla",
+#     "majuscule": ("a", "𝝯"),
+# },
+# {
+#     "name": "Mathematical Sans-Serif Bold Partial Differential",
+#     "majuscule": ("l", "𝞉"),
+# },
+# {
+#     "name": "Mathematical Sans-Serif Bold Epsilon Symbol",
+#     "majuscule": ("l", "𝞊"),
+# },
+# {
+#     "name": "Mathematical Sans-Serif Bold Theta Symbol",
+#     "majuscule": ("l", "𝞋"),
+# },
+# {
+#     "name": "Mathematical Sans-Serif Bold Kappa Symbol",
+#     "majuscule": ("l", "𝞌"),
+# },
+# {
+#     "name": "Mathematical Sans-Serif Bold Phi Symbol",
+#     "majuscule": ("l", "𝞍"),
+# },
+# {
+#     "name": "Mathematical Sans-Serif Bold Rho Symbol",
+#     "majuscule": ("l", "𝞎"),
+# },
+# {
+#     "name": "Mathematical Sans-Serif Bold Pi Symbol",
+#     "majuscule": ("l", "𝞏"),
+# },
+# {
+#     "name": "Mathematical Sans-Serif Bold Italic Partial Differential",
+#     "majuscule": ("l", "𝟃"),
+# },
+# {
+#     "name": "Mathematical Sans-Serif Bold Italic Epsilon Symbol",
+#     "majuscule": ("l", "𝟄"),
+# },
+# {
+#     "name": "Mathematical Sans-Serif Bold Italic Theta Symbol",
+#     "majuscule": ("l", "𝟅"),
+# },
+# {
+#     "name": "Mathematical Sans-Serif Bold Italic Kappa Symbol",
+#     "majuscule": ("l", "𝟆"),
+# },
+# {
+#     "name": "Mathematical Sans-Serif Bold Italic Phi Symbol",
+#     "majuscule": ("l", "𝟇"),
+# },
+# {
+#     "name": "Mathematical Sans-Serif Bold Italic Rho Symbol",
+#     "majuscule": ("l", "𝟈"),
+# },
+# {
+#     "name": "Mathematical Sans-Serif Bold Italic Pi Symbol",
+#     "majuscule": ("l", "𝟉"),
+# },
+# {
+#     "name": "Mathematical Bold Capital Digamma",
+#     "majuscule": ("a", "𝟊"),
+# },
+# {
+#     "name": "Mathematical Bold Small Digamma",
+#     "majuscule": ("a", "𝟋"),
+# },
+
+
+#                        _
+#  _ __  _   _ _ __ ___ | |__   ___ _ __ ___
+# | '_ \| | | | '_ ` _ \| '_ \ / _ \ '__/ __|
+# | | | | |_| | | | | | | |_) |  __/ |  \__ \
+# |_| |_|\__,_|_| |_| |_|_.__/ \___|_|  |___/
+
+##  _           _     _     _  _
+## | |__   ___ | | __| |  _| || |_
+## | '_ \ / _ \| |/ _` | |_  ..  _|
+## | |_) | (_) | | (_| | |_      _|
+## |_.__/ \___/|_|\__,_|   |_||_|
+#{
+#    "name": "Mathematical Bold Digit Zero",
+#    "majuscule": None,
+#    "minuscule": ("0", "𝟎"),
+#    "modifiers": ["bold"],
+#},
+#{
+#    "name": "Mathematical Bold Digit One",
+#    "majuscule": None,
+#    "minuscule": ("1", "𝟏"),
+#    "modifiers": ["bold"],
+#},
+#{
+#    "name": "Mathematical Bold Digit Two",
+#    "majuscule": None,
+#    "minuscule": ("2", "𝟐"),
+#    "modifiers": ["bold"],
+#},
+#{
+#    "name": "Mathematical Bold Digit Three",
+#    "majuscule": None,
+#    "minuscule": ("3", "𝟑"),
+#    "modifiers": ["bold"],
+#},
+#{
+#    "name": "Mathematical Bold Digit Four",
+#    "majuscule": None,
+#    "minuscule": ("4", "𝟒"),
+#    "modifiers": ["bold"],
+#},
+#{
+#    "name": "Mathematical Bold Digit Five",
+#    "majuscule": None,
+#    "minuscule": ("5", "𝟓"),
+#    "modifiers": ["bold"],
+#},
+#{
+#    "name": "Mathematical Bold Digit Six",
+#    "majuscule": None,
+#    "minuscule": ("6", "𝟔"),
+#    "modifiers": ["bold"],
+#},
+#{
+#    "name": "Mathematical Bold Digit Seven",
+#    "majuscule": None,
+#    "minuscule": ("7", "𝟕"),
+#    "modifiers": ["bold"],
+#},
+#{
+#    "name": "Mathematical Bold Digit Eight",
+#    "majuscule": None,
+#    "minuscule": ("8", "𝟖"),
+#    "modifiers": ["bold"],
+#},
+#{
+#    "name": "Mathematical Bold Digit Nine",
+#    "majuscule": None,
+#    "minuscule": ("9", "𝟗"),
+#    "modifiers": ["bold"],
+#},
+
+##      _             _     _                _                   _        _  _
+##   __| | ___  _   _| |__ | | ___       ___| |_ _ __ _   _  ___| | __  _| || |_
+##  / _` |/ _ \| | | | '_ \| |/ _ \_____/ __| __| '__| | | |/ __| |/ / |_  ..  _|
+## | (_| | (_) | |_| | |_) | |  __/_____\__ \ |_| |  | |_| | (__|   <  |_      _|
+##  \__,_|\___/ \__,_|_.__/|_|\___|     |___/\__|_|   \__,_|\___|_|\_\   |_||_|
+#{
+#    "name": "Mathematical Double-Struck Digit Zero",
+#    "majuscule": None,
+#    "minuscule": ("0", "𝟘"),
+#    "modifiers": ["doubleStruck"],
+#},
+#{
+#    "name": "Mathematical Double-Struck Digit One",
+#    "majuscule": None,
+#    "minuscule": ("1", "𝟙"),
+#    "modifiers": ["doubleStruck"],
+#},
+#{
+#    "name": "Mathematical Double-Struck Digit Two",
+#    "majuscule": None,
+#    "minuscule": ("2", "𝟚"),
+#    "modifiers": ["doubleStruck"],
+#},
+#{
+#    "name": "Mathematical Double-Struck Digit Three",
+#    "majuscule": None,
+#    "minuscule": ("3", "𝟛"),
+#    "modifiers": ["doubleStruck"],
+#},
+#{
+#    "name": "Mathematical Double-Struck Digit Four",
+#    "majuscule": None,
+#    "minuscule": ("4", "𝟜"),
+#    "modifiers": ["doubleStruck"],
+#},
+#{
+#    "name": "Mathematical Double-Struck Digit Five",
+#    "majuscule": None,
+#    "minuscule": ("5", "𝟝"),
+#    "modifiers": ["doubleStruck"],
+#},
+#{
+#    "name": "Mathematical Double-Struck Digit Six",
+#    "majuscule": None,
+#    "minuscule": ("6", "𝟞"),
+#    "modifiers": ["doubleStruck"],
+#},
+#{
+#    "name": "Mathematical Double-Struck Digit Seven",
+#    "majuscule": None,
+#    "minuscule": ("7", "𝟟"),
+#    "modifiers": ["doubleStruck"],
+#},
+#{
+#    "name": "Mathematical Double-Struck Digit Eight",
+#    "majuscule": None,
+#    "minuscule": ("8", "𝟠"),
+#    "modifiers": ["doubleStruck"],
+#},
+#{
+#    "name": "Mathematical Double-Struck Digit Nine",
+#    "majuscule": None,
+#    "minuscule": ("9", "𝟡"),
+#    "modifiers": ["doubleStruck"],
+#},
+
+##                                          _  __     _  _
+##  ___  __ _ _ __  ___       ___  ___ _ __(_)/ _|  _| || |_
+## / __|/ _` | '_ \/ __|_____/ __|/ _ \ '__| | |_  |_  ..  _|
+## \__ \ (_| | | | \__ \_____\__ \  __/ |  | |  _| |_      _|
+## |___/\__,_|_| |_|___/     |___/\___|_|  |_|_|     |_||_|
+#{
+#    "name": "Mathematical Sans-Serif Digit Zero",
+#    "majuscule": None,
+#    "minuscule": ("0", "𝟢"),
+#    "modifiers": ["sansSerif"],
+#},
+#{
+#    "name": "Mathematical Sans-Serif Digit One",
+#    "majuscule": None,
+#    "minuscule": ("1", "𝟣"),
+#    "modifiers": ["sansSerif"],
+#},
+#{
+#    "name": "Mathematical Sans-Serif Digit Two",
+#    "majuscule": None,
+#    "minuscule": ("2", "𝟤"),
+#    "modifiers": ["sansSerif"],
+#},
+#{
+#    "name": "Mathematical Sans-Serif Digit Three",
+#    "majuscule": None,
+#    "minuscule": ("3", "𝟥"),
+#    "modifiers": ["sansSerif"],
+#},
+#{
+#    "name": "Mathematical Sans-Serif Digit Four",
+#    "majuscule": None,
+#    "minuscule": ("4", "𝟦"),
+#    "modifiers": ["sansSerif"],
+#},
+#{
+#    "name": "Mathematical Sans-Serif Digit Five",
+#    "majuscule": None,
+#    "minuscule": ("5", "𝟧"),
+#    "modifiers": ["sansSerif"],
+#},
+#{
+#    "name": "Mathematical Sans-Serif Digit Six",
+#    "majuscule": None,
+#    "minuscule": ("6", "𝟨"),
+#    "modifiers": ["sansSerif"],
+#},
+#{
+#    "name": "Mathematical Sans-Serif Digit Seven",
+#    "majuscule": None,
+#    "minuscule": ("7", "𝟩"),
+#    "modifiers": ["sansSerif"],
+#},
+#{
+#    "name": "Mathematical Sans-Serif Digit Eight",
+#    "majuscule": None,
+#    "minuscule": ("8", "𝟪"),
+#    "modifiers": ["sansSerif"],
+#},
+#{
+#    "name": "Mathematical Sans-Serif Digit Nine",
+#    "majuscule": None,
+#    "minuscule": ("9", "𝟫"),
+#    "modifiers": ["sansSerif"],
+#},
+
+##                                          _  __   _           _     _
+##  ___  __ _ _ __  ___       ___  ___ _ __(_)/ _| | |__   ___ | | __| |
+## / __|/ _` | '_ \/ __|_____/ __|/ _ \ '__| | |_  | '_ \ / _ \| |/ _` |
+## \__ \ (_| | | | \__ \_____\__ \  __/ |  | |  _| | |_) | (_) | | (_| |
+## |___/\__,_|_| |_|___/     |___/\___|_|  |_|_|   |_.__/ \___/|_|\__,_|
+##
+##    _  _
+##  _| || |_
+## |_  ..  _|
+## |_      _|
+##   |_||_|
+#{
+#    "name": "Mathematical Sans-Serif Bold Digit Zero",
+#    "majuscule": None,
+#    "minuscule": ("0", "𝟬"),
+#    "modifiers": ["sansSerif", "bold"],
+#},
+#{
+#    "name": "Mathematical Sans-Serif Bold Digit One",
+#    "majuscule": None,
+#    "minuscule": ("1", "𝟭"),
+#    "modifiers": ["sansSerif", "bold"],
+#},
+#{
+#    "name": "Mathematical Sans-Serif Bold Digit Two",
+#    "majuscule": None,
+#    "minuscule": ("2", "𝟮"),
+#    "modifiers": ["sansSerif", "bold"],
+#},
+#{
+#    "name": "Mathematical Sans-Serif Bold Digit Three",
+#    "majuscule": None,
+#    "minuscule": ("3", "𝟯"),
+#    "modifiers": ["sansSerif", "bold"],
+#},
+#{
+#    "name": "Mathematical Sans-Serif Bold Digit Four",
+#    "majuscule": None,
+#    "minuscule": ("4", "𝟰"),
+#    "modifiers": ["sansSerif", "bold"],
+#},
+#{
+#    "name": "Mathematical Sans-Serif Bold Digit Five",
+#    "majuscule": None,
+#    "minuscule": ("5", "𝟱"),
+#    "modifiers": ["sansSerif", "bold"],
+#},
+#{
+#    "name": "Mathematical Sans-Serif Bold Digit Six",
+#    "majuscule": None,
+#    "minuscule": ("6", "𝟲"),
+#    "modifiers": ["sansSerif", "bold"],
+#},
+#{
+#    "name": "Mathematical Sans-Serif Bold Digit Seven",
+#    "majuscule": None,
+#    "minuscule": ("7", "𝟳"),
+#    "modifiers": ["sansSerif", "bold"],
+#},
+#{
+#    "name": "Mathematical Sans-Serif Bold Digit Eight",
+#    "majuscule": None,
+#    "minuscule": ("8", "𝟴"),
+#    "modifiers": ["sansSerif", "bold"],
+#},
+#{
+#    "name": "Mathematical Sans-Serif Bold Digit Nine",
+#    "majuscule": None,
+#    "minuscule": ("9", "𝟵"),
+#    "modifiers": ["sansSerif", "bold"],
+#},
+
+##                                                           _  _
+##  _ __ ___   ___  _ __   ___  ___ _ __   __ _  ___ ___   _| || |_
+## | '_ ` _ \ / _ \| '_ \ / _ \/ __| '_ \ / _` |/ __/ _ \ |_  ..  _|
+## | | | | | | (_) | | | | (_) \__ \ |_) | (_| | (_|  __/ |_      _|
+## |_| |_| |_|\___/|_| |_|\___/|___/ .__/ \__,_|\___\___|   |_||_|
+##                                 |_|
+#{
+#    "name": "Mathematical Monospace Digit Zero",
+#    "majuscule": None,
+#    "minuscule": ("0", "𝟶"),
+#    "modifiers": ["monoSpace"],
+#},
+#{
+#    "name": "Mathematical Monospace Digit One",
+#    "majuscule": None,
+#    "minuscule": ("1", "𝟷"),
+#    "modifiers": ["monoSpace"],
+#},
+#{
+#    "name": "Mathematical Monospace Digit Two",
+#    "majuscule": None,
+#    "minuscule": ("2", "𝟸"),
+#    "modifiers": ["monoSpace"],
+#},
+#{
+#    "name": "Mathematical Monospace Digit Three",
+#    "majuscule": None,
+#    "minuscule": ("3", "𝟹"),
+#    "modifiers": ["monoSpace"],
+#},
+#{
+#    "name": "Mathematical Monospace Digit Four",
+#    "majuscule": None,
+#    "minuscule": ("4", "𝟺"),
+#    "modifiers": ["monoSpace"],
+#},
+#{
+#    "name": "Mathematical Monospace Digit Five",
+#    "majuscule": None,
+#    "minuscule": ("5", "𝟻"),
+#    "modifiers": ["monoSpace"],
+#},
+#{
+#    "name": "Mathematical Monospace Digit Six",
+#    "majuscule": None,
+#    "minuscule": ("6", "𝟼"),
+#    "modifiers": ["monoSpace"],
+#},
+#{
+#    "name": "Mathematical Monospace Digit Seven",
+#    "majuscule": None,
+#    "minuscule": ("7", "𝟽"),
+#    "modifiers": ["monoSpace"],
+#},
+#{
+#    "name": "Mathematical Monospace Digit Eight",
+#    "majuscule": None,
+#    "minuscule": ("8", "𝟾"),
+#    "modifiers": ["monoSpace"],
+#},
+#{
+#    "name": "Mathematical Monospace Digit Nine",
+#    "majuscule": None,
+#    "minuscule": ("9", "𝟿"),
+#    "modifiers": ["monoSpace"],
+#},
 
 
 # This string is used by the stroke parsing/merging/rendering functions.
