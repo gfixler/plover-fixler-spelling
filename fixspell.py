@@ -1001,6 +1001,40 @@ modifiers = {
         "name": "Reversed",
         "docs": "The turned modifier shape, with the '[inverted](#modifier-tweaks)' tweak.<BR><BR>This allows access to characters that are flipped, inverted, or reversed.",
     },
+    "bold": {
+        "outline": "-FRPBLG",
+        "name": "Bold",
+        "docs": "All the keys. So bold.",
+    },
+    "italic": {
+        "outline": "EUFRPBLG",
+        "name": "Italic",
+        "docs": "The bold modifier shape, with the '[inverted](#modifier-tweaks)' tweak. In this case, the I (EU) of the tweak stands for \"italic\".",
+    },
+    "script": {
+        "outline": "-RPBL",
+        "name": "Script",
+        "docs": "Shaped like an S",
+    },
+    "doubleStruck": {
+        "outline": "EFRLG",
+        "name": "Double Struck",
+        "docs": "Two columns, to represent the two strikes, plus the '[extra](#modifier-tweaks)' tweak, to really sell the doubleness of it all.",
+    },
+    "fraktur": {
+        "outline": "EFR",
+        "name": "Fraktur",
+        "docs": "FR, for \"Fraktur\", plus the '[extra](#modifier-tweaks)' tweak, for extra frakting, and because FR alone was already in use.",
+    },
+    "sansSerif": {
+        "outline": "UFPBL",
+        "name": "Sans-Serif",
+        "docs": "Shaped like a serifed ascender, with the '[under](#modifier-tweaks)' tweak, here, representing \"un–\", because we're _not_ seriffing. I apologize for verbing \"serif\". Twice.",
+    },
+    "monospace": {
+    "outline": "-PBL",
+    "docs": "Tough one to think of a chord for. This is just the right-hand side's M and N chords, for \"MoNo\", superimposed."
+    },
 }
 
 tbd = [
