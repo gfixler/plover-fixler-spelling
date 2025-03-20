@@ -6826,7 +6826,7 @@ def buildModCharOutlines (alphabet, srcDestChars, modStrokes):
     srcCharsProduct = list(map(list, product(*srcCharOutlines)))
 
     outlines = [srcCharsStrokes + modStrokes for srcCharsStrokes in srcCharsProduct]
-    return (destChar, outlines)
+    return outlines
 
 def createOutlines (alphabet, entry):
     """
@@ -6857,38 +6857,49 @@ def buildFingerspellingDict ():
     This is the main function for assembling all the various parts of the
     system into a single, Plover-ready dictionary, and returning it.
     """
+    # this dict will collect all definitions for export
     spellingDict = {}
 
-    # add all the letters from every alphabet
-    alphabets = [
-        latinAlphabet,
-        greekAlphabet,
-        russianAlphabet,
-    ]
-    for alphabet in alphabets:
-        for character, outline in alphabet.items():
-            if character.isupper():
-                wrapL, wrapR = majWraps
-                translation = wrapL + character + wrapR
-            elif character.islower():
-                wrapL, wrapR = minWraps
-                translation = wrapL + character + wrapR
-            else:
-                translation = character
-            spellingDict[outline] = translation
+    # strings to force upper/lowercase through Plover
+    majL, majR = majWraps
+    minL, minR = minWraps
 
-    # create definitions for all character modifications
-    for entry in entries:
-        minuscule, majuscule = createOutlines(entry)
-        for scule in [minuscule, majuscule]:
-            # None means character + case isn't defined in Unicode
-            if scule != None:
-                (outline, translation, character) = scule
+    # add all the letters from every alphabet
+    for alphabet in ALPHABETS:
+        for character, outlines in alphabet.items():
+            for outline in outlines:
+                # wrap translation in Plover directives to enforce case
+                if character.isupper():
+                    translation = majL + character + minR
+                elif character.islower():
+                    translation = minL + character + minR
+                else:
+                    translation = character
+                # add entire definition to the final spelling dict
                 spellingDict[outline] = translation
 
+    # create definitions for all character modifications
+    for charMods, alphabet in CHAR_MOD_LISTS_WITH_ALPHABETS:
+        for entry in charMods:
+            minuscule, majuscule = createOutlines(alphabet, entry)
+            for scule, wrapL, wrapR, outlines in [
+                    ("min", minL, minR, minuscule),
+                    ("maj", majL, majR, majuscule)
+                ]:
+                # None means character + case isn't defined in Unicode
+                if outlines != None:
+                    _, translation = entry[scule + "uscule"]
+                    for outline in outlines:
+                        outlineStr = "/".join(outline)
+                        # add entire definition to the final spelling dict
+                        spellingDict[outlineStr] = wrapL + translation + wrapR
+
+    # return the complete fingerspelling dictionary
     return spellingDict
 
+
 if __name__ == "__main__":
+    # assemble the entire fingerspelling dictionary
     fixSpell = buildFingerspellingDict()
 
     # dump the dictionary out over stdout
