@@ -352,9 +352,9 @@ greekAlphabetData = {
             "name": "chi",
             "majuscule": "Χ",
             "minuscule": "χ",
-            "strokes": ["KH", "KP"],
+            "strokes": ["KH"],
             "link": "https://en.wikipedia.org/wiki/Chi_(letter)",
-            "docs": "It's actual sound is hard to represent in steno, but CH is a reasonable fit. An alternate, orthographic KP is provided, if you just want to write it as X, which matches an alternate in the Russian alphabet for the letter (Хх) that also looks like an X.",
+            "docs": "It's actual sound is hard to represent in steno, but CH is a reasonable fit. The Latin English steno X shape is in use by Xi, so we he can't provide it as an orthographic alternate for this one.",
         },
         {
             "name": "psi",
@@ -561,7 +561,7 @@ russianAlphabetData = {
             "minuscule": "х",
             "strokes": ["KP"],
             "link": "https://en.wikipedia.org/wiki/Kha_(Cyrillic)",
-            "docs": "Uses orthography to get around the conflict with Ч/ч, which makes the \"ch\" sound. As this looks exactly like an X, we go with the steno X chord. This also matches an alternate provided in the Greek alphabet for the letter, Chi (Χχ), which also looks like an X.",
+            "docs": "Uses orthography to get around the conflict with Ч/ч, which makes the \"ch\" sound. As this looks exactly like an X, we go with the steno X chord.",
         },
         {
             "name": "Цэ",
