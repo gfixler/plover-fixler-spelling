@@ -828,7 +828,7 @@ majWraps = ("{-|}{&", "}")
 
 # This is all the modifiers, plus info about each one.
 # Modifiers include diacritics, ligatures, rotations, and so on.
-modifiers = {
+MODIFIERS = {
 
     #      _ _                 _ _   _
     #   __| (_) __ _  ___ _ __(_) |_(_) ___ ___
@@ -1019,7 +1019,7 @@ modifiers = {
     "doubleStruck": {
         "outline": "EFRLG",
         "name": "Double Struck",
-        "docs": "Two columns, to represent the two strikes, plus the '[extra](#modifier-tweaks)' tweak, to really sell the doubleness of it all.",
+        "docs": "Two columns, to represent the two strikes, plus the '[extra](#modifier-tweaks)' tweak, to really hammer home the doubleness of it all.",
     },
     "fraktur": {
         "outline": "EFR",
@@ -1029,11 +1029,12 @@ modifiers = {
     "sansSerif": {
         "outline": "UFPBL",
         "name": "Sans-Serif",
-        "docs": "Shaped like a serifed ascender, with the '[under](#modifier-tweaks)' tweak, here, representing \"un–\", because we're _not_ seriffing. I apologize for verbing \"serif\". Twice.",
+        "docs": "Shaped like a serifed ascender, with the '[under](#modifier-tweaks)' tweak − here, representing \"un–\", because we're *_not_* seriffing. I apologize for verbing \"serif\".",
     },
     "monospace": {
-    "outline": "-PBL",
-    "docs": "Tough one to think of a chord for. This is just the right-hand side's M and N chords, for \"MoNo\", superimposed."
+        "outline": "-PBL",
+        "name": "Monospace",
+        "docs": "Tough one to think of a chord for. This is just the right-hand side's M and N chords, for \"MoNo\", superimposed."
     },
 }
 
@@ -6847,7 +6848,7 @@ def createOutlines (alphabet, entry):
 
         (minOutlines, majOutlines)
     """
-    modStrokes = list(map(lambda x: modifiers[x]["outline"], entry["modifiers"]))
+    modStrokes = list(map(lambda x: MODIFIERS[x]["outline"], entry["modifiers"]))
     minuscule = buildModCharOutlines(alphabet, entry["minuscule"], modStrokes)
     majuscule = buildModCharOutlines(alphabet, entry["majuscule"], modStrokes)
     return (minuscule, majuscule)
