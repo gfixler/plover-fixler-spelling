@@ -2,11 +2,9 @@ import unicodedata
 
 
 from fixspell import \
-    entries, \
-    modifiers, \
-    latinAlphabetLUT, \
-    greekAlphabetLUT, \
-    russianAlphabetLUT, \
+    MODIFIERS, \
+    ALPHABETS, \
+    CHAR_MOD_LISTS, \
     buildFingerspellingDict
 
 
@@ -101,17 +99,17 @@ def ccc_sort_key (c):
     base_letter = normalized[0]
     return (base_letter.lower(), normalized[1:], base_letter.islower())
 
-def getEntriesWithModifier (modifier):
-    search = lambda x: modifier in x["modifiers"]
-    return filter(search, entries)
+def getEntriesWithModifiers (charModLists, usedMods):
+    search = lambda x: usedMods in x["modifiers"]
+    return filter(search, charModLists)
 
 def getAnchorTextForChar (c):
      return "-".join(unicodedata.name(c).lower().split())
 
-def generateDiacriticsSection ():
+def generateModifiersSection ():
     print("|Modifier|Tweak|Notes|")
     print("|-|-|-|")
-    for name, data in modifiers.items():
+    for name, data in MODIFIERS.items():
         prettyName = data["name"]
         info = data["docs"]
         stroke = data["outline"]
@@ -124,14 +122,15 @@ def generateDiacriticsSection ():
             tweak = "U_down"
         print("|" + prettyName + "| |")
         chars = []
-        for entry in getEntriesWithModifier(name):
-            for scule in ["min", "maj"]:
-                sculeData = entry[scule + "uscule"]
-                if sculeData != None:
-                    character = sculeData[1]
-                    anchor = getAnchorTextForChar(character)
-                    chars.append("[" + character + "](#char-" + anchor + ")")
-        charsStr = " ".join(sorted(chars, key=ccc_sort_key))
+        for charModList in CHAR_MOD_LISTS:
+            for entry in getEntriesWithModifiers(charModList, name):
+                for scule in ["min", "maj"]:
+                    sculeData = entry[scule + "uscule"]
+                    if sculeData != None:
+                        character = sculeData[1]
+                        anchor = getAnchorTextForChar(character)
+                        chars.append("[" + character + "](#char-" + anchor + ")")
+            charsStr = " ".join(sorted(chars, key=ccc_sort_key))
         img = "![" + name + "](images/" + name + ".png)"
         print("|" + img + "|![tweak](images/" + tweak + ".png)|" + info + "<BR><BR>Used in: " + charsStr + "|")
 
@@ -169,21 +168,21 @@ def generateReadme ():
     print(readmeUsingModifiers)
     print(readmeTweaks)
     print(readmeAvailableDiacritics)
-    generateDiacriticsSection()
+    generateModifiersSection()
     print(readmeAllCharacters)
     chars = []
-    for entry in entries:
-        if entry["minuscule"] != None:
-            chars.append(entry["minuscule"][1])
-        if entry["majuscule"] != None:
-            chars.append(entry["majuscule"][1])
-    chars += (latinAlphabetLUT)
-    chars += (greekAlphabetLUT)
-    chars += (russianAlphabetLUT)
+    for charModList in CHAR_MOD_LISTS:
+        for entry in charModList:
+            if entry["minuscule"] != None:
+                chars.append(entry["minuscule"][1])
+            if entry["majuscule"] != None:
+                chars.append(entry["majuscule"][1])
+    for alphabet in ALPHABETS:
+        chars += alphabet.keys()
     cccs = sorted(chars, key=ccc_sort_key)
     for ccc in cccs:
         anchor = "<a name=\"char-" + getAnchorTextForChar(ccc) + "\"></a>"
-        print("|" + anchor + ccc + "|[" + toCodePt(ccc) + "](" + toURL(ccc) + ")|" + unicodedata.name(ccc) + "|")
+        print("|" + anchor + ccc + "|[" + toCodePt(ccc) + "](" + toURL(ccc) + ")|" + unicodedata.name(ccc) + "||")
     print(readmeKnownIssues)
 
 
