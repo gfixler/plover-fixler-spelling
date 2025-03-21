@@ -14,6 +14,7 @@ eu = e + u
 RHS = F + R + P + B + L + G + T + S + D + Z
 rhs = f + r + p + b + l + g + t + s + d + z
 
+
 class Test_parseStroke (unittest.TestCase):
 
     def test_starOnly (self):
@@ -27,6 +28,15 @@ class Test_parseStroke (unittest.TestCase):
 
     def test_rightHandKeys (self):
         self.assertEqual(parseStroke("-RPLGS"), lhs + ao + DASH + star + eu + f + R + P + b + L + G + t + S + d + z)
+
+    def test_leftHandAndVowels (self):
+        self.assertEqual(parseStroke("TPWROU"), s + T + k + P + W + h + R + a + O + dash + star + e + U + rhs)
+
+    def test_rightHandAndVowels (self):
+        self.assertEqual(parseStroke("EFGTS"), lhs + ao + star + dash + E + u + F + r + p + b + l + G + T + S + d + z)
+
+    def test_wholeKeyboard (self):
+        self.assertEqual(parseStroke("KPRO*ERPGTSZ"), s + t + K + P + w + h + R + a + O + dash + STAR + E + u + f + R + P + b + l + G + T + S + d + Z)
 
 
 class Test_mergeStrokes (unittest.TestCase):
@@ -106,4 +116,93 @@ class Test_renderStroke (unittest.TestCase):
         stroke = "STR-RPLS"
         result = renderStroke(parseStroke(stroke))
         self.assertEqual(result, stroke)
+
+
+testEmptyAlphabetData = {
+    "minStroke": "",
+    "majStroke": "",
+    "letters": [],
+}
+
+testAlphabetData = {
+    "minStroke": "-DZ",
+    "majStroke": "*DZ",
+    "letters": [
+        {
+            "majuscule": "💤",
+            "minuscule": "🦓",
+            "strokes": ["STKPW", "STK"],
+        },
+        {
+            "majuscule": "👴",
+            "minuscule": "👶",
+            "strokes": ["O"],
+        },
+    ]
+}
+
+class Test_buildAlphabet (unittest.TestCase):
+
+    def test_handlesEmptyAlphabetData (self):
+        self.assertEqual(buildAlphabet(testEmptyAlphabetData), {})
+
+    def test_buildingAlphabet (self):
+        result = buildAlphabet(testAlphabetData)
+        expected = {
+            "🦓": ["STKPW-DZ", "STK-DZ"],
+            "💤": ["STKPW*DZ", "STK*DZ"],
+            "👶": ["ODZ"],
+            "👴": ["O*DZ"],
+        }
+        self.assertEqual(result, expected)
+
+
+class Test_buildModCharOutlines (unittest.TestCase):
+
+    def test_worksForAToAAcute (self):
+        result = buildModCharOutlines(LATIN_ALPHABET_DATA, ("a", "á"), ["-RP"])
+        expected = [["A*", "-RP"]]
+        self.assertEqual(result, expected)
+
+    def test_zeToImaginaryLigature (self):
+        result = buildModCharOutlines(LATIN_ALPHABET_DATA, ("ze", "🦓"), ["-FRLG"])
+        expected = [["STKPW*", "*E", "-FRLG"], ["STK*", "*E", "-FRLG"]]
+        self.assertEqual(result, expected)
+
+
+modifier_aWithAcute = {
+    "minuscule": ("a", "á"),
+    "majuscule": ("A", "Á"),
+    "modifiers": ["acute"],
+}
+
+modifier_aeLigature = {
+    "minuscule": ("ae", "æ"),
+    "majuscule": ("AE", "Æ"),
+    "modifiers": ["ligature"],
+}
+
+modifier_aeLigatureWithAcute = {
+    "minuscule": ("ae", "ǽ"),
+    "majuscule": ("AE", "Ǽ"),
+    "modifiers": ["ligature", "acute"],
+}
+
+
+class Test_createOutlines (unittest.TestCase):
+
+    def test_aWithAcute (self):
+        result = createOutlines(LATIN_ALPHABET_DATA, modifier_aWithAcute)
+        expected = ([["A*", "-RP"]], [["A*P", "-RP"]])
+        self.assertEqual(result, expected)
+
+    def test_aeLigature (self):
+        result = createOutlines(LATIN_ALPHABET_DATA, modifier_aeLigature)
+        expected = ([["A*", "*E", "-FRLG"]], [["A*P", "*EP", "-FRLG"]])
+        self.assertEqual(result, expected)
+
+    def test_aeLigatureWithAcute (self):
+        result = createOutlines(LATIN_ALPHABET_DATA, modifier_aeLigatureWithAcute)
+        expected = ([["A*", "*E", "-FRLG", "-RP"]], [["A*P", "*EP", "-FRLG", "-RP"]])
+        self.assertEqual(result, expected)
 
