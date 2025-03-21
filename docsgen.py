@@ -9,10 +9,12 @@ from fixspell import \
 
 
 # build entire fingerspelling dictionary
-allCharacters = buildFingerspellingDict()
+fullSpellingDict = buildFingerspellingDict()
 
 # get count of all characters for use in docs
-charCount = len(allCharacters)
+charCount = len(fullSpellingDict)
+
+superAlphabet = dict([kv for d in ALPHABETS for kv in d.items()])
 
 
 readmeTitle = """
@@ -130,7 +132,7 @@ def generateModifiersSection ():
             tweak = "E_down"
         elif "U" in stroke:
             tweak = "U_down"
-        print("|" + prettyName + "| |")
+        print("|" + prettyName + "| | |")
         chars = []
         for charModList in CHAR_MOD_LISTS:
             for entry in getEntriesWithModifiers(charModList, name):
@@ -193,7 +195,7 @@ def generateReadme ():
     cccs = sorted(chars, key=ccc_sort_key)
     for ccc in cccs:
         anchor = "<a name=\"char-" + getAnchorTextForChar(ccc) + "\"></a>"
-        print("|" + anchor + ccc + "|[" + toCodePt(ccc) + "](" + toURL(ccc) + ")|" + unicodedata.name(ccc) + "||")
+        print("|" + anchor + ccc + "|[" + toCodePt(ccc) + "](" + toURL(ccc) + ")|" + unicodedata.name(ccc) + "|")
     print(readmeKnownIssues)
 
 
