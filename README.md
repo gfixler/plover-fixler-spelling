@@ -49,14 +49,14 @@ See the following section, [Using Modifiers](#using-modifiers), for usage instru
 Modify base letters by stroking a diacritic or modifier outline, or sequences thereof, immediately after a base letter. See [Available Diacritics and Other Modifiers](#available-diacritics-and-other-modifiers) section.
 
 #### Examples
-á (A with acute): Stroke letter a, then the acute diacritic
-AE (AE ligature): Stroke a, then e, then the ligature modifier
-ẫ (A with circumflex and tilde) Stroke a, then each diacritic
-ǽ (AE ligature with acute) Stroke a, e, ligature, then acute
+* á (A with acute): Stroke letter a, then the acute diacritic modifier  
+* AE (AE ligature): Stroke a, then e, then the ligature modifier  
+* ẫ (A with circumflex and tilde) Stroke a, then each diacritic  
+* ǽ (AE ligature with acute) Stroke a, e, ligature, then acute  
 
 
 ## Modifier Tweaks
-Tweaks are added to a modifier stroke using the E and U keys.
+Tweaks are added to a modifier stroke, using the E and U keys.
 
 |Tweak|Description|
 |-|-|
