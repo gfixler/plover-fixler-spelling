@@ -197,19 +197,31 @@ def generateReadme ():
     generateModifiersSection()
 
     print(readmeAllCharacters)
-    chars = []
+    chars = [] # for collecting every exported character on its own
+    modHowTos = {} # reverse lookup of mod strokes per character
+    # go through all modified character data lists
     for charModList in CHAR_MOD_LISTS:
         for entry in charModList:
-            if entry["minuscule"] != None:
-                chars.append(entry["minuscule"][1])
-            if entry["majuscule"] != None:
-                chars.append(entry["majuscule"][1])
+            for scule in ["min", "maj"]:
+                # not every character has both minuscule and majuscule
+                if entry[scule + "uscule"] != None:
+                    src, dest = entry[scule + "uscule"]
+                    # remember how to build the character
+                    # e.g. "ẫ": ["a", "circumflex", "tilde"]
+                    modHowTos[dest] = [src] + entry["modifiers"]
+            # record this character in the list of exported
+            chars.append(dest)
+    # add all base characters from all alphabets
     for alphabet in ALPHABETS:
         chars += alphabet.keys()
+    # sort all characters into a decent sorting for output
     cccs = sorted(chars, key=ccc_sort_key)
     for ccc in cccs:
+        # create anchor, so other parts of readme can link to each character
         anchor = "<a name=\"char-" + getAnchorTextForChar(ccc) + "\"></a>"
-        print("|" + anchor + ccc + "|[" + toCodePt(ccc) + "](" + toURL(ccc) + ")|" + unicodedata.name(ccc) + "|")
+        # assemble parts of character to show how to build it in strokes
+        howTo = " + ".join(modHowTos[ccc]) if ccc in modHowTos else ""
+        print("|" + anchor + ccc + "|[" + toCodePt(ccc) + "](" + toURL(ccc) + ")|" + unicodedata.name(ccc) + "<BR>" + howTo + "|")
 
     print(readmeKnownIssues)
 
