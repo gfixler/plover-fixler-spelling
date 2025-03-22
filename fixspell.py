@@ -1036,6 +1036,16 @@ MODIFIERS = {
         "name": "Monospace",
         "docs": "Tough one to think of a chord for. This is just the right-hand side's M and N chords, for \"MoNo\", superimposed."
     },
+    "currency": {
+        "outline": "-PB",
+        "name": "Currency with Bar",
+        "docs": "A lot of currency signs [use a bar](https://en.wikipedia.org/wiki/Bar_(diacritic)#Currency_signs_with_bar) through a letter. Not all of them use a vertical bar, but we have to pick a stroke, and this also helps to differentiate this bar from the more typically horizontal bar diacritics through many of the same letters. See Currency with Double Bar.",
+    },
+    "doubleCurrency": {
+        "outline": "EPB",
+        "name": "Currency with Double Bar",
+        "docs": "Like the Currency with Bar characters, but for those with double bars. See Currency with Bar.",
+    },
 }
 
 tbd = [
@@ -5346,6 +5356,203 @@ MODIFIED_LATIN_CHARS = [
         "minuscule": ("z", "𝚣"),
         "modifiers": ["monospace"],
     },
+
+    #   ___ _   _ _ __ _ __ ___ _ __   ___ _   _
+    #  / __| | | | '__| '__/ _ \ '_ \ / __| | | |
+    # | (__| |_| | |  | | |  __/ | | | (__| |_| |
+    #  \___|\__,_|_|  |_|  \___|_| |_|\___|\__, |
+    #  A bit of a hack with Latin letters  |___/
+    {
+        "name": "Thai Baht",
+        "majuscule": ("B", "฿"),
+        "minuscule": None,
+        "modifiers": ["currency"],
+        "link": "https://en.wikipedia.org/wiki/Thai_baht",
+    },
+    {
+        "name": "Ghanaian Cedi",
+        "majuscule": ("C", "₵"),
+        "minuscule": None,
+        "modifiers": ["currency"],
+        "link": "https://en.wikipedia.org/wiki/Ghanaian_cedi",
+    },
+    {
+        "name": "United States Cent",
+        "majuscule": ("c", "¢"),
+        "minuscule": None,
+        "modifiers": ["currency"],
+        "link": "https://en.wikipedia.org/wiki/Cent_(currency)",
+    },
+    {
+        "name": "Vietnamese Đồng",
+        "majuscule": None,
+        "minuscule": ("d", "₫"),
+        "modifiers": ["currency"],
+        "link": "https://en.wikipedia.org/wiki/Vietnamese_%C4%91%E1%BB%93ng",
+    },
+    {
+        "name": "French Franc",
+        "majuscule": ("F", "₣"),
+        "minuscule": None,
+        "modifiers": ["currency"],
+        "link": "https://en.wikipedia.org/wiki/French_franc",
+    },
+    {
+        "name": "Paraguayan Guaraní",
+        "majuscule": ("G", "₲"),
+        "minuscule": None,
+        "modifiers": ["currency"],
+        "link": "https://en.wikipedia.org/wiki/Paraguayan_guaran%C3%AD",
+    },
+    {
+        "name": "Laotian Kip",
+        "majuscule": ("K", "₭"),
+        "minuscule": None,
+        "modifiers": ["currency"],
+        "link": "https://en.wikipedia.org/wiki/Lao_kip",
+    },
+    {
+        "name": "British Pound",
+        "majuscule": ("L", "£"),
+        "minuscule": None,
+        "modifiers": ["currency"],
+        "link": "https://en.wikipedia.org/wiki/Pound_sign",
+    },
+    {
+        "name": "Mill (currency)",
+        "majuscule": None,
+        "minuscule": ("m", "₥"),
+        "modifiers": ["currency"],
+        "link": "https://en.wikipedia.org/wiki/Mill_(currency)",
+    },
+    {
+        "name": "United States Dollar",
+        "majuscule": ("S", "$"),
+        "minuscule": None,
+        "modifiers": ["currency"],
+        "link": "https://en.wikipedia.org/wiki/Dollar_sign",
+    },
+    {
+        "name": "Bangladeshi Taka",
+        "majuscule": None,
+        "minuscule": ("t", "৳"),
+        "modifiers": ["currency"],
+        "link": "https://en.wikipedia.org/wiki/Bangladeshi_taka",
+    },
+    {
+        "name": "Cambodian Riel",
+        "majuscule": None,
+        "minuscule": ("r", "៛"),
+        "modifiers": ["currency"],
+        "link": "https://en.wikipedia.org/wiki/Cambodian_riel",
+    },
+    {
+        "name": "Argentine Austral",
+        "majuscule": ("A", "₳"),
+        "minuscule": None,
+        "modifiers": ["doubleCurrency"],
+        "link": "https://en.wikipedia.org/wiki/Argentine_austral",
+    },
+    {
+        "name": "Bitcoin",
+        "majuscule": ("B", "₿"),
+        "minuscule": None,
+        "modifiers": ["doubleCurrency"],
+        "link": "https://en.wikipedia.org/wiki/Bitcoin",
+    },
+    {
+        "name": "Costa Rican Colón",
+        "majuscule": ("C", "₡"),
+        "minuscule": None,
+        "modifiers": ["doubleCurrency"],
+        "link": "https://en.wikipedia.org/wiki/Costa_Rican_col%C3%B3n",
+    },
+    {
+        "name": "Euro",
+        "majuscule": ("E", "€"),
+        "minuscule": None,
+        "modifiers": ["doubleCurrency"],
+        "link": "https://en.wikipedia.org/wiki/Euro_sign",
+    },
+    {
+        "name": "Georgian Lari",
+        "majuscule": ("C", "₾"),
+        "minuscule": None,
+        "modifiers": ["doubleCurrency"],
+        "link": "https://en.wikipedia.org/wiki/Georgian_lari",
+    },
+    {
+        "name": "Ukrainian Hryvnia",
+        "majuscule": ("S", "₴"),
+        "minuscule": None,
+        "modifiers": ["doubleCurrency"],
+        "link": "https://en.wikipedia.org/wiki/Hryvnia_sign",
+    },
+    {
+        "name": "Italian Lira",
+        "majuscule": ("L", "₤"),
+        "minuscule": None,
+        "modifiers": ["doubleCurrency"],
+        "link": "https://en.wikipedia.org/wiki/Lira",
+    },
+    {
+        "name": "Turkish Lira",
+        "majuscule": None,
+        "minuscule": ("l", "₺"),
+        "modifiers": ["doubleCurrency"],
+        "link": "https://en.wikipedia.org/wiki/Lira",
+        "docs": "Had to go with the lowercase L, because the Italian lira took the capital.",
+    },
+    {
+        "name": "Nigerian Naira",
+        "majuscule": ("N", "₦"),
+        "minuscule": None,
+        "modifiers": ["doubleCurrency"],
+        "link": "https://en.wikipedia.org/wiki/Nigerian_naira",
+    },
+    {
+        "name": "Philippine Peso",
+        "majuscule": ("P", "₱"),
+        "minuscule": None,
+        "modifiers": ["doubleCurrency"],
+        "link": "https://en.wikipedia.org/wiki/Philippine_peso_sign",
+    },
+    {
+        "name": "Armenian Dram",
+        "majuscule": ("D", "֏"),
+        "minuscule": None,
+        "modifiers": ["doubleCurrency"],
+        "link": "https://en.wikipedia.org/wiki/Armenian_dram_sign",
+        "docs": "We don't [yet?] have the Armenian alphabet, so this uses the English D.",
+    },
+    {
+        "name": "Mongolian tögrög",
+        "majuscule": ("T", "₮"),
+        "minuscule": None,
+        "modifiers": ["doubleCurrency"],
+        "link": "https://en.wikipedia.org/wiki/Mongolian_t%C3%B6gr%C3%B6g",
+    },
+    {
+        "name": "Korean Won",
+        "majuscule": ("W", "₩"),
+        "minuscule": None,
+        "modifiers": ["doubleCurrency"],
+        "link": "https://en.wikipedia.org/wiki/Won_sign",
+    },
+    {
+        "name": "Japanese Yen",
+        "majuscule": ("Y", "¥"),
+        "minuscule": None,
+        "modifiers": ["doubleCurrency"],
+        "link": "https://en.wikipedia.org/wiki/Japanese_yen",
+    },
+    {
+        "name": "Indian Rupee",
+        "majuscule": ("R", "₹"),
+        "minuscule": None,
+        "modifiers": ["doubleCurrency"],
+        "link": "https://en.wikipedia.org/wiki/Indian_rupee_sign",
+    },
 ]
 
 MODIFIED_GREEK_CHARS = [
@@ -6688,6 +6895,23 @@ MODIFIED_GREEK_CHARS = [
 #    "minuscule": ("9", "𝟿"),
 #    "modifiers": ["monoSpace"],
 #},
+
+MODIFIED_RUSSIAN_CHARS = [
+
+    #   ___ _   _ _ __ _ __ ___ _ __   ___ _   _
+    #  / __| | | | '__| '__/ _ \ '_ \ / __| | | |
+    # | (__| |_| | |  | | |  __/ | | | (__| |_| |
+    #  \___|\__,_|_|  |_|  \___|_| |_|\___|\__, |
+    #  A bit of a hack with Russian letters|___/
+    {
+        "name": "Russian Ruble",
+        "majuscule": ("Р", "₽"),
+        "minuscule": None,
+        "modifiers": ["doubleCurrency"],
+        "link": "https://en.wikipedia.org/wiki/Ruble_sign",
+        "docs": "This uses the Russian эр (rolled R, which looks like P/p in English).",
+    },
+]
 
 
 # This string is used by the stroke parsing/merging/rendering functions.
