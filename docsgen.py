@@ -68,7 +68,7 @@ When coming up with alphabet enders, and the starter for combining diacritics, I
 # TODO allow stroking diacritics and modifiers in any order
 # TODO allow customizing starters, enders, letters, etc.
 
-readmeSections = """
+readmeKeyboardSections = """
 ## Modifier Keys
 The following 6 keys are used to add diacritics and other modifiers.
 
@@ -190,7 +190,7 @@ def generateReadme ():
     print(readmeTOC)
     print(readmeGoals)
     print(readmeNotesOnDesign)
-    print(readmeSections)
+    print(readmeKeyboardSections)
     print(readmeUsingModifiers)
     print(readmeTweaks)
     print(readmeAvailableDiacritics)
