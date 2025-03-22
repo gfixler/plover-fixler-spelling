@@ -20,6 +20,8 @@ superAlphabet = dict([kv for d in ALPHABETS for kv in d.items()])
 readmeTitle = """
 # Fixler Spelling for Plover
 A fingerspelling system for the [Plover](https://www.openstenoproject.org/plover/) steno software.
+
+This library currently provides quick access to """ + str(charCount) + """ characters."
 """
 
 readmeTOC = """
@@ -185,7 +187,6 @@ readmeKnownIssues = """
 
 def generateReadme ():
     print(readmeTitle)
-    print("This library currently provides quick access to " + str(charCount) + " characters.")
     print(readmeTOC)
     print(readmeGoals)
     print(readmeNotesOnDesign)
@@ -194,6 +195,7 @@ def generateReadme ():
     print(readmeTweaks)
     print(readmeAvailableDiacritics)
     generateModifiersSection()
+
     print(readmeAllCharacters)
     chars = []
     for charModList in CHAR_MOD_LISTS:
@@ -208,6 +210,7 @@ def generateReadme ():
     for ccc in cccs:
         anchor = "<a name=\"char-" + getAnchorTextForChar(ccc) + "\"></a>"
         print("|" + anchor + ccc + "|[" + toCodePt(ccc) + "](" + toURL(ccc) + ")|" + unicodedata.name(ccc) + "|")
+
     print(readmeKnownIssues)
 
 
