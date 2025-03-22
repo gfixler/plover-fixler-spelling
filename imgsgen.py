@@ -1,6 +1,6 @@
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
-from fixspell import modifiers
+from fixspell import MODIFIERS
 
 
 defaultKeyOpts = {
@@ -131,7 +131,7 @@ def genDiacriticStrokeImage (stroke="", keyOpts=defaultKeyOpts, keyCols=defaultK
     return image
 
 def genDiacriticImages ():
-    for modName, modData in modifiers.items():
+    for modName, modData in MODIFIERS.items():
         image = genDiacriticStrokeImage(modData["outline"])
         image.save("images/" + modName + ".png", "PNG")
 
