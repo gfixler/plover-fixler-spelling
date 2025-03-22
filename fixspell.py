@@ -868,7 +868,7 @@ MODIFIERS = {
     "cedilla": {
         "outline": "EB",
         "name": "Cedilla",
-        "docs": "The [cedilla](https://en.wikipedia.org/wiki/Cedilla) is based on the the comma modifier stroke, with the '[extra](#modifier-tweaks)' tweak, because it's like a comma, but a little bit more than a comma.",
+        "docs": "The [cedilla](https://en.wikipedia.org/wiki/Cedilla) is based on the the \"comma below\" modifier stroke, with the '[extra](#modifier-tweaks)' tweak, because it's like a comma, but a little bit more than a comma.",
     },
     "circumflex": {
         "outline": "-RPG",
