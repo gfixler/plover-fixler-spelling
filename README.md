@@ -4,6 +4,13 @@ A fingerspelling system for the [Plover](https://www.openstenoproject.org/plover
 
 This library currently provides quick access to 1699 characters.
 
+## Table of Contents
+This is a long readme. GitHub provides a table of contents under the hamburger menu, at the top right of this readme.
+
+The burger menu looks like this:
+![burger menu](images/hamburgerMenu.png)
+
+
 ## Design Goals
 * provide upper and lowercase English alphabet
 * systematize writing many Latin letters with diacritics
