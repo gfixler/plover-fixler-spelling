@@ -209,8 +209,8 @@ def generateReadme ():
                     # remember how to build the character
                     # e.g. "ẫ": ["a", "circumflex", "tilde"]
                     modHowTos[dest] = [src] + entry["modifiers"]
-            # record this character in the list of exported
-            chars.append(dest)
+                # record this character in the list of exported
+                chars.append(dest)
     # add all base characters from all alphabets
     for alphabet in ALPHABETS:
         chars += alphabet.keys()

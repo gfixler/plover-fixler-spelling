@@ -868,7 +868,7 @@ MODIFIERS = {
     "cedilla": {
         "outline": "EB",
         "name": "Cedilla",
-        "docs": "The [cedilla](https://en.wikipedia.org/wiki/Cedilla) is based on the the \"comma below\" modifier stroke, with the '[extra](#modifier-tweaks)' tweak, because it's like a comma, but a little bit more than a comma.",
+        "docs": "The [cedilla](https://en.wikipedia.org/wiki/Cedilla) is based on the \"comma below\" modifier stroke, with the '[extra](#modifier-tweaks)' tweak, because it's like a comma, but a little bit more than a comma.",
     },
     "circumflex": {
         "outline": "-RPG",
@@ -7004,12 +7004,14 @@ ALPHABETS = [
 CHAR_MOD_LISTS = [
     MODIFIED_LATIN_CHARS,
     MODIFIED_GREEK_CHARS,
+    MODIFIED_RUSSIAN_CHARS,
 ]
 
 # modified character defs paired with their required alphabets
 CHAR_MOD_LISTS_WITH_ALPHABETS = [
     (MODIFIED_LATIN_CHARS, LATIN_ALPHABET),
     (MODIFIED_GREEK_CHARS, GREEK_ALPHABET),
+    (MODIFIED_RUSSIAN_CHARS, RUSSIAN_ALPHABET),
 ]
 
 
