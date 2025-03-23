@@ -176,6 +176,7 @@ Code points currently link to their associated page on [Compart](https://www.com
         majStroke = alphabet["majStroke"]
         minStroke = alphabet["minStroke"]
         print("### " + name)
+        print(alphabet["enderThoughts"] + "<BR>")
         print("**Majuscule Ender:** `" + majStroke + "`<BR>")
         print("**Minuscule Ender:** `" + minStroke + "`<BR>")
         print("<BR>")

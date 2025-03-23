@@ -9,6 +9,7 @@ LATIN_ALPHABET_DATA = {
     "minStroke": "*",
     "majStroke": "*P",
     "name": "English Latin Alphabet",
+    "enderThoughts": "Standard English steno enders.",
     "docs": "English steno theories come with alphabets, but for sake of completeness...",
     "letters": [
         {
@@ -174,6 +175,7 @@ GREEK_ALPHABET_DATA = {
     "minStroke": "-FLG",
     "majStroke": "*FLG",
     "name": "Greek Alphabet",
+    "enderThoughts": "\"For Love of Greece!\"",
     "docs": "Many Greek letters match up nicely with English; some do not. Read the notes for each letter to see how we get around the discrepancies.",
     "letters": [
         {
@@ -383,6 +385,7 @@ RUSSIAN_ALPHABET_DATA = {
     "minStroke": "-RPG",
     "majStroke": "*RPG",
     "name": "Russian Cyrillic Alphabet",
+    "enderThoughts": "\"Russian is Pretty Good!\"<BR>Russians also play a lot of RPGs [citation needed], and shoot a lot of [RPGs](https://en.wikipedia.org/wiki/RPG-7).",
     "docs": "The Russian alphabet has a number of discrepancies with English. All attempts were made to come up with mnemonically memorable strokes. See the descriptions following each letter.",
     "letters": [
         {
