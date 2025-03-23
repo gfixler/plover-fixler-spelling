@@ -2,6 +2,7 @@ import unicodedata
 
 
 from fixspell import \
+    DIACRITICS, \
     MODIFIERS, \
     ALPHABET_DATA, \
     ALPHABETS, \
@@ -119,11 +120,6 @@ The descriptions explain the general idea of each, but liberties are taken here 
 
 readmeAvailableDiacritics = """
 ## Available Diacritics and Other Modifiers
-In general, the diacritic chords are meant to visually resemble their symbols, to ease recall.
-
-For other modifiers—like rotation or inversion, which appear after the diacritics in the list below—an attempt was made to be memorable. See notes with each modifier.
-
-NOTE: Modifier and Tweak are part of the same stroke.
 """
 
 unicodeCodePtURL = "https://www.compart.com/en/unicode/"
@@ -143,32 +139,35 @@ def getAnchorTextForChar (c):
      return "-".join(unicodedata.name(c).lower().split())
 
 def generateModifiersSection ():
-    print("|Modifier|Tweak|Notes|")
-    print("|-|-|-|")
-    for name, data in MODIFIERS.items():
-        prettyName = data["name"]
-        info = data["docs"]
-        stroke = data["outline"]
-        tweak = "EU_up"
-        if "E" in stroke and "U" in stroke:
-            tweak = "EU_down"
-        elif "E" in stroke:
-            tweak = "E_down"
-        elif "U" in stroke:
-            tweak = "U_down"
-        print("|" + prettyName + "| | |")
-        chars = []
-        for charModList in CHAR_MOD_LISTS:
-            for entry in getEntriesWithModifiers(charModList, name):
-                for scule in ["min", "maj"]:
-                    sculeData = entry[scule + "uscule"]
-                    if sculeData != None:
-                        character = sculeData[1]
-                        anchor = getAnchorTextForChar(character)
-                        chars.append("[" + character + "](#char-" + anchor + ")")
-            charsStr = " ".join(sorted(chars, key=ccc_sort_key))
-        img = "![" + name + "](images/" + name + ".png)"
-        print("|" + img + "|![tweak](images/" + tweak + ".png)|" + info + "<BR><BR>Used in: " + charsStr + "|")
+    for modDict in [DIACRITICS, MODIFIERS]:
+        print("## " + modDict["name"] + "<BR>")
+        print(modDict["docs"])
+        print("|Chord|Tweak|Notes|")
+        print("|-|-|-|")
+        for name, data in modDict["modifiers"].items():
+            prettyName = data["name"]
+            info = data["docs"]
+            stroke = data["outline"]
+            tweak = "EU_up"
+            if "E" in stroke and "U" in stroke:
+                tweak = "EU_down"
+            elif "E" in stroke:
+                tweak = "E_down"
+            elif "U" in stroke:
+                tweak = "U_down"
+            print("|" + prettyName + "| | |")
+            chars = []
+            for charModList in CHAR_MOD_LISTS:
+                for entry in getEntriesWithModifiers(charModList, name):
+                    for scule in ["min", "maj"]:
+                        sculeData = entry[scule + "uscule"]
+                        if sculeData != None:
+                            character = sculeData[1]
+                            anchor = getAnchorTextForChar(character)
+                            chars.append("[" + character + "](#char-" + anchor + ")")
+                charsStr = " ".join(sorted(chars, key=ccc_sort_key))
+            img = "![" + name + "](images/" + name + ".png)"
+            print("|" + img + "|![tweak](images/" + tweak + ".png)|" + info + "<BR><BR>Used in: " + charsStr + "|")
 
 def generateAllCharactersSection ():
     print("""## All Characters List

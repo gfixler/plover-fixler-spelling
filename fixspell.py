@@ -835,226 +835,233 @@ cyrillicNonSlavicAlphabet = [
 minWraps = ("{>}{&", "}")
 majWraps = ("{-|}{&", "}")
 
-# This is all the modifiers, plus info about each one.
-# Modifiers include diacritics, ligatures, rotations, and so on.
+DIACRITICS = {
+    "name": "Diacritics",
+    "docs": """In general, the diacritic chords are meant to visually resemble their symbols, to ease recall.
+
+Diacritics are only a part of letter modification. See the rest in the modifiers section.
+
+NOTE: Diacritics and their tweaks are part of the same stroke.
+""",
+    "modifiers": {
+        "acute": {
+            "outline": "-RP",
+            "name": "Acute",
+            "docs": "Shaped like the [acute accent](https://en.wikipedia.org/wiki/Acute_accent).",
+        },
+        "acuteDoubled": {
+            "outline": "ERP",
+            "name": "Double Acute",
+            "docs": "The [double acute accent](https://en.wikipedia.org/wiki/Double_acute_accent) uses the acute modifier shape, with the '[extra](#modifier-tweaks)' tweak.",
+        },
+        "breve": {
+            "outline": "-FRBLG",
+            "name": "Breve",
+            "docs": "Shaped like the [breve](https://en.wikipedia.org/wiki/Breve).",
+        },
+        "breveBelow": {
+            "outline": "UFRBLG",
+            "name": "Breve Below",
+            "docs": "The [breve below](https://en.wikipedia.org/wiki/Breve#Breve_below) uses the breve modifier shape, with the '[under](#modifier-tweaks)' tweak.",
+        },
+        "breveInverted": {
+            "outline": "-FRPLG",
+            "name": "Breve Inverted",
+            "docs": "Shaped like the [inverted breve](https://en.wikipedia.org/wiki/Inverted_breve) symbol.",
+        },
+        "caron": {
+            "outline": "-FBL",
+            "name": "Caron",
+            "docs": "Shaped like the [caron](https://en.wikipedia.org/wiki/Caron).",
+        },
+        "cedilla": {
+            "outline": "EB",
+            "name": "Cedilla",
+            "docs": "The [cedilla](https://en.wikipedia.org/wiki/Cedilla) is based on the \"comma below\" modifier stroke, with the '[extra](#modifier-tweaks)' tweak, because it's like a comma, but a little bit more than a comma.",
+        },
+        "circumflex": {
+            "outline": "-RPG",
+            "name": "Circumflex",
+            "docs": "Shaped like the [circumflex](https://en.wikipedia.org/wiki/Circumflex).",
+        },
+        "circumflexBelow": {
+            "outline": "URPG",
+            "name": "Circumflex Below",
+            "docs": "The [circumflex below](https://en.wikipedia.org/wiki/Circumflex#Circumflex_below) uses the circumflex modifier shape, with the '[under](#modifier-tweaks)' tweak.",
+        },
+        "commaBelow": {
+            "outline": "-B",
+            "name": "Comma Below",
+            "docs": "The [comma below](https://en.wikipedia.org/wiki/Comma#Diacritical_usage) mirrors the shape used for the comma in the [Emily's Symbols](https://github.com/EPLHREU/emily-symbols) plugin.",
+        },
+        "diaeresis": {
+            "outline": "-FL",
+            "name": "Diaeresis/Umlaut",
+            "docs": "Shaped like the [diaeresis/umlaut](https://en.wikipedia.org/wiki/Two_dots_(diacritic)) symbols.<BR><BR>NOTE: [diaeresis](https://en.wikipedia.org/wiki/Diaeresis_(diacritic)) and [umlaut](https://en.wikipedia.org/wiki/Umlaut_(diacritic)) are distinct concepts, with separate uses, but are represented by the same Unicode code points. They are created via the same outline in this spelling system.",
+        },
+        "diaeresisBelow": {
+            "outline": "-RG",
+            "name": "Diaeresis Below",
+            "docs": "The diaeresis/umlaut shape, but lower.",
+        },
+        "dotAbove": {
+            "outline": "-F",
+            "name": "Dot Above",
+            "docs": "A single key, up high, like a [dot above](https://en.wikipedia.org/wiki/Dot_(diacritic)). See dot below.",
+        },
+        "dotBelow": {
+            "outline": "-R",
+            "name": "Dot Below",
+            "docs": "The [dot below](https://en.wikipedia.org/wiki/Dot_(diacritic)) stroke is chosen to mirror the shape used for the period in the [Emily's Symbols](https://github.com/EPLHREU/emily-symbols) plugin. A single key, down low, like a dot below. See dot above.",
+        },
+        "grave": {
+            "outline": "-FB",
+            "name": "Grave",
+            "docs": "Shaped like the [grave accent](https://en.wikipedia.org/wiki/Grave_accent).",
+        },
+        "graveDoubled": {
+            "outline": "EFB",
+            "name": "Double Grave",
+            "docs": "The [double grave](https://en.wikipedia.org/wiki/Double_grave_accent) uses the grave modifier shape, with the '[extra](#modifier-tweaks)' tweak.",
+        },
+        "hookAbove": {
+            "outline": "-FPB",
+            "name": "Hook Above",
+            "docs": "Shaped like the [hook above](https://en.wikipedia.org/wiki/Hook_above) symbol, sticking up, and curling to the left.",
+        },
+        "hook": {
+            "outline": "-FRP",
+            "name": "Hook",
+            "docs": "Distinct from 'hook above', which is a detached diacritic, the [hook](https://en.wikipedia.org/wiki/Hook_(diacritic)) is for characters with an attached hook. The hook modifier shape was chosen to match most of its examples in this system, which either curl up, then to the right, or to the left, then down, which makes the same curve. Imagine the chord shape attaching to some at the −R, and others at the −P. Ultimately, however, this one, of all the diacritic modifier chords, will just need to be memorized, because it doesn't visually match every example.",
+        },
+        "horn": {
+            "outline": "-BLG",
+            "name": "Horn",
+            "docs": "Shaped like the [horn](https://en.wikipedia.org/wiki/Horn_(diacritic)), sticking out to the right and curving upward. The shape is also on the right-hand side of the modifier keys cluster, as the horn attaches to the upper right side of its characters.",
+        },
+        "interpunct": {
+            "outline": "-FR",
+            "name": "Interpunct",
+            "docs": "The [interpunct](https://en.wikipedia.org/wiki/Interpunct) is an odd one, which joins the dot above and dot below characters. Think of it as the midpoint of the above and below dots, made by stroking both together.",
+        },
+        "lineBelow": {
+            "outline": "UFP",
+            "name": "Line Below",
+            "docs": "When [line below](https://en.wikipedia.org/wiki/Macron_below) is decomposed into base character + diacritic, the combining character for this set of Unicode composed characters is the macron below. Rather than use the the lower version of the chord, on the bottom row, this uses the '[under](#modifier-tweaks)' tweak with the macron shape, to respect this relation.",
+        },
+        "macron": {
+            "outline": "-FP",
+            "name": "Macron",
+            "docs": "Shaped like the [macron](https://en.wikipedia.org/wiki/Macron_(diacritic)).",
+        },
+        "ogonek": {
+            "outline": "-PBG", # "little tail"
+            "name": "Ogonek",
+            "docs": "The [ogonek](https://en.wikipedia.org/wiki/Ogonek), meaning 'little tail' in Polish, hangs off the bottom of its character, curling down and to the right.",
+        },
+        "ringAbove": {
+            "outline": "-FRPB",
+            "name": "Ring Above",
+            "docs": "For the [ring above](https://en.wikipedia.org/wiki/Ring_(diacritic)) think of this square of keys like a little circle, or ring.",
+        },
+        "ringBelow": {
+            "outline": "UFRPB",
+            "name": "Ring Below",
+            "docs": "The [ring below](https://en.wikipedia.org/wiki/Ring_(diacritic)) uses the ring above modifier shape, with the '[under](#modifier-tweaks)' tweak.",
+        },
+        "stroke": {
+            "outline": "-RB",
+            "name": "Stroke",
+            "docs": "The [stroke](https://en.wikipedia.org/wiki/Bar_(diacritic)), or bar, modifier is like the macron, but lower, because it cuts through the character, rather than flying above it.",
+        },
+        "slash": {
+            "outline": "-BL",
+            "name": "Slash",
+            "docs": "The [slash](https://en.wikipedia.org/wiki/Bar_(diacritic)) is really just a version of the bar, or stroke, but, because certain letters exist in both forms, I gave it its own modifier, to help differentiate between horizontal and vertical strokes/bars. The symbol is like the acute, but shifted, to indicate that it's lower, and cuts through the character. A bit of a stretch, as it's shifted to the right, not down, but other options were used up. Maybe think of it like moving to the right while reading this text, which eventually wraps, and takes you down a line.",
+        },
+        "tilde": {
+            "outline": "-FPBG",
+            "name": "Tilde",
+            "docs": "Shaped like the [tilde](https://en.wikipedia.org/wiki/Tilde).",
+        },
+        "tildeBelow": {
+            "outline": "UFPBG",
+            "name": "Tilde Below",
+            "docs": "The tilde modifier shape, with the '[under](#modifier-tweaks)' tweak.",
+        },
+    }
+}
+
 MODIFIERS = {
+    "name": "Modifiers",
+    "docs": """Modifiers don't share the same, easy, visual mnemonics of diacritics, but every attempt was made to still make them memorable. See the notes with each.
 
-    #      _ _                 _ _   _
-    #   __| (_) __ _  ___ _ __(_) |_(_) ___ ___
-    #  / _` | |/ _` |/ __| '__| | __| |/ __/ __|
-    # | (_| | | (_| | (__| |  | | |_| | (__\__ \
-    #  \__,_|_|\__,_|\___|_|  |_|\__|_|\___|___/
-    "acute": {
-        "outline": "-RP",
-        "name": "Acute",
-        "docs": "Shaped like the [acute accent](https://en.wikipedia.org/wiki/Acute_accent).",
-    },
-    "acuteDoubled": {
-        "outline": "ERP",
-        "name": "Double Acute",
-        "docs": "The [double acute accent](https://en.wikipedia.org/wiki/Double_acute_accent) uses the acute modifier shape, with the '[extra](#modifier-tweaks)' tweak.",
-    },
-    "breve": {
-        "outline": "-FRBLG",
-        "name": "Breve",
-        "docs": "Shaped like the [breve](https://en.wikipedia.org/wiki/Breve).",
-    },
-    "breveBelow": {
-        "outline": "UFRBLG",
-        "name": "Breve Below",
-        "docs": "The [breve below](https://en.wikipedia.org/wiki/Breve#Breve_below) uses the breve modifier shape, with the '[under](#modifier-tweaks)' tweak.",
-    },
-    "breveInverted": {
-        "outline": "-FRPLG",
-        "name": "Breve Inverted",
-        "docs": "Shaped like the [inverted breve](https://en.wikipedia.org/wiki/Inverted_breve) symbol.",
-    },
-    "caron": {
-        "outline": "-FBL",
-        "name": "Caron",
-        "docs": "Shaped like the [caron](https://en.wikipedia.org/wiki/Caron).",
-    },
-    "cedilla": {
-        "outline": "EB",
-        "name": "Cedilla",
-        "docs": "The [cedilla](https://en.wikipedia.org/wiki/Cedilla) is based on the \"comma below\" modifier stroke, with the '[extra](#modifier-tweaks)' tweak, because it's like a comma, but a little bit more than a comma.",
-    },
-    "circumflex": {
-        "outline": "-RPG",
-        "name": "Circumflex",
-        "docs": "Shaped like the [circumflex](https://en.wikipedia.org/wiki/Circumflex).",
-    },
-    "circumflexBelow": {
-        "outline": "URPG",
-        "name": "Circumflex Below",
-        "docs": "The [circumflex below](https://en.wikipedia.org/wiki/Circumflex#Circumflex_below) uses the circumflex modifier shape, with the '[under](#modifier-tweaks)' tweak.",
-    },
-    "commaBelow": {
-        "outline": "-B",
-        "name": "Comma Below",
-        "docs": "The [comma below](https://en.wikipedia.org/wiki/Comma#Diacritical_usage) mirrors the shape used for the comma in the [Emily's Symbols](https://github.com/EPLHREU/emily-symbols) plugin.",
-    },
-    "diaeresis": {
-        "outline": "-FL",
-        "name": "Diaeresis/Umlaut",
-        "docs": "Shaped like the [diaeresis/umlaut](https://en.wikipedia.org/wiki/Two_dots_(diacritic)) symbols.<BR><BR>NOTE: [diaeresis](https://en.wikipedia.org/wiki/Diaeresis_(diacritic)) and [umlaut](https://en.wikipedia.org/wiki/Umlaut_(diacritic)) are distinct concepts, with separate uses, but are represented by the same Unicode code points. They are created via the same outline in this spelling system.",
-    },
-    "diaeresisBelow": {
-        "outline": "-RG",
-        "name": "Diaeresis Below",
-        "docs": "The diaeresis/umlaut shape, but lower.",
-    },
-    "dotAbove": {
-        "outline": "-F",
-        "name": "Dot Above",
-        "docs": "A single key, up high, like a [dot above](https://en.wikipedia.org/wiki/Dot_(diacritic)). See dot below.",
-    },
-    "dotBelow": {
-        "outline": "-R",
-        "name": "Dot Below",
-        "docs": "The [dot below](https://en.wikipedia.org/wiki/Dot_(diacritic)) stroke is chosen to mirror the shape used for the period in the [Emily's Symbols](https://github.com/EPLHREU/emily-symbols) plugin. A single key, down low, like a dot below. See dot above.",
-    },
-    "grave": {
-        "outline": "-FB",
-        "name": "Grave",
-        "docs": "Shaped like the [grave accent](https://en.wikipedia.org/wiki/Grave_accent).",
-    },
-    "graveDoubled": {
-        "outline": "EFB",
-        "name": "Double Grave",
-        "docs": "The [double grave](https://en.wikipedia.org/wiki/Double_grave_accent) uses the grave modifier shape, with the '[extra](#modifier-tweaks)' tweak.",
-    },
-    "hookAbove": {
-        "outline": "-FPB",
-        "name": "Hook Above",
-        "docs": "Shaped like the [hook above](https://en.wikipedia.org/wiki/Hook_above) symbol, sticking up, and curling to the left.",
-    },
-    "hook": {
-        "outline": "-FRP",
-        "name": "Hook",
-        "docs": "Distinct from 'hook above', which is a detached diacritic, the [hook](https://en.wikipedia.org/wiki/Hook_(diacritic)) is for characters with an attached hook. The hook modifier shape was chosen to match most of its examples in this system, which either curl up, then to the right, or to the left, then down, which makes the same curve. Imagine the chord shape attaching to some at the −R, and others at the −P. Ultimately, however, this one, of all the diacritic modifier chords, will just need to be memorized, because it doesn't visually match every example.",
-    },
-    "horn": {
-        "outline": "-BLG",
-        "name": "Horn",
-        "docs": "Shaped like the [horn](https://en.wikipedia.org/wiki/Horn_(diacritic)), sticking out to the right and curving upward. The shape is also on the right-hand side of the modifier keys cluster, as the horn attaches to the upper right side of its characters.",
-    },
-    "interpunct": {
-        "outline": "-FR",
-        "name": "Interpunct",
-        "docs": "The [interpunct](https://en.wikipedia.org/wiki/Interpunct) is an odd one, which joins the dot above and dot below characters. Think of it as the midpoint of the above and below dots, made by stroking both together.",
-    },
-    "lineBelow": {
-        "outline": "UFP",
-        "name": "Line Below",
-        "docs": "When [line below](https://en.wikipedia.org/wiki/Macron_below) is decomposed into base character + diacritic, the combining character for this set of Unicode composed characters is the macron below. Rather than use the the lower version of the chord, on the bottom row, this uses the '[under](#modifier-tweaks)' tweak with the macron shape, to respect this relation.",
-    },
-    "macron": {
-        "outline": "-FP",
-        "name": "Macron",
-        "docs": "Shaped like the [macron](https://en.wikipedia.org/wiki/Macron_(diacritic)).",
-    },
-    "ogonek": {
-        "outline": "-PBG", # "little tail"
-        "name": "Ogonek",
-        "docs": "The [ogonek](https://en.wikipedia.org/wiki/Ogonek), meaning 'little tail' in Polish, hangs off the bottom of its character, curling down and to the right.",
-    },
-    "ringAbove": {
-        "outline": "-FRPB",
-        "name": "Ring Above",
-        "docs": "For the [ring above](https://en.wikipedia.org/wiki/Ring_(diacritic)) think of this square of keys like a little circle, or ring.",
-    },
-    "ringBelow": {
-        "outline": "UFRPB",
-        "name": "Ring Below",
-        "docs": "The [ring below](https://en.wikipedia.org/wiki/Ring_(diacritic)) uses the ring above modifier shape, with the '[under](#modifier-tweaks)' tweak.",
-    },
-    "stroke": {
-        "outline": "-RB",
-        "name": "Stroke",
-        "docs": "The [stroke](https://en.wikipedia.org/wiki/Bar_(diacritic)), or bar, modifier is like the macron, but lower, because it cuts through the character, rather than flying above it.",
-    },
-    "slash": {
-        "outline": "-BL",
-        "name": "Slash",
-        "docs": "The [slash](https://en.wikipedia.org/wiki/Bar_(diacritic)) is really just a version of the bar, or stroke, but, because certain letters exist in both forms, I gave it its own modifier, to help differentiate between horizontal and vertical strokes/bars. The symbol is like the acute, but shifted, to indicate that it's lower, and cuts through the character. A bit of a stretch, as it's shifted to the right, not down, but other options were used up. Maybe think of it like moving to the right while reading this text, which eventually wraps, and takes you down a line.",
-    },
-    "tilde": {
-        "outline": "-FPBG",
-        "name": "Tilde",
-        "docs": "Shaped like the [tilde](https://en.wikipedia.org/wiki/Tilde).",
-    },
-    "tildeBelow": {
-        "outline": "UFPBG",
-        "name": "Tilde Below",
-        "docs": "The tilde modifier shape, with the '[under](#modifier-tweaks)' tweak.",
-    },
+Modifiers are only a part of letter modification. See the rest in the diacritics section.
 
-    #                      _ _  __ _           _   _
-    #  _ __ ___   ___   __| (_)/ _(_) ___ __ _| |_(_) ___  _ __  ___
-    # | '_ ` _ \ / _ \ / _` | | |_| |/ __/ _` | __| |/ _ \| '_ \/ __|
-    # | | | | | | (_) | (_| | |  _| | (_| (_| | |_| | (_) | | | \__ \
-    # |_| |_| |_|\___/ \__,_|_|_| |_|\___\__,_|\__|_|\___/|_| |_|___/
-    "ligature": {
-        "outline": "-FRLG",
-        "name": "Ligature",
-        "docs": "[Ligatures](https://en.wikipedia.org/wiki/Ligature_(writing)) are two or more graphemes joined together, as in Æ. To output an existing ligature, stroke the two letters in left-to-right order, then stroke this modifier to merge them. Think of the two vertical columns as the two graphemes being joined. For characters that modify ligatures, like the AE ligature with circumflex, or the AE ligature turned, create the ligature first, before modifying it further."
-    },
-    "turned": {
-        "outline": "-RL",
-        "name": "Turned/Rotated",
-        "docs": "This modifier allows access to characters that are turned, or [rotated](https://en.wikipedia.org/wiki/Rotated_letter).",
-    },
-    "reversed": {
-        "outline": "EURL",
-        "name": "Reversed",
-        "docs": "The turned modifier shape, with the '[inverted](#modifier-tweaks)' tweak.<BR><BR>This allows access to characters that are flipped, inverted, or reversed.",
-    },
-    "bold": {
-        "outline": "-FRPBLG",
-        "name": "Bold",
-        "docs": "All the keys. So bold.",
-    },
-    "italic": {
-        "outline": "EUFRPBLG",
-        "name": "Italic",
-        "docs": "The bold modifier shape, with the '[inverted](#modifier-tweaks)' tweak. In this case, the I (EU) of the tweak stands for \"italic\".",
-    },
-    "script": {
-        "outline": "-RPBL",
-        "name": "Script",
-        "docs": "Shaped like an S",
-    },
-    "doubleStruck": {
-        "outline": "EFRLG",
-        "name": "Double Struck",
-        "docs": "Two columns, to represent the two strikes, plus the '[extra](#modifier-tweaks)' tweak, to really hammer home the doubleness of it all.",
-    },
-    "fraktur": {
-        "outline": "EFR",
-        "name": "Fraktur",
-        "docs": "FR, for \"Fraktur\", plus the '[extra](#modifier-tweaks)' tweak, for extra frakting, and because FR alone was already in use.",
-    },
-    "sansSerif": {
-        "outline": "UFPBL",
-        "name": "Sans-Serif",
-        "docs": "Shaped like a serifed ascender, with the '[under](#modifier-tweaks)' tweak − here, representing \"un–\", because we're *_not_* seriffing. I apologize for verbing \"serif\".",
-    },
-    "monospace": {
-        "outline": "-PBL",
-        "name": "Monospace",
-        "docs": "Tough one to think of a chord for. This is just the right-hand side's M and N chords, for \"MoNo\", superimposed."
-    },
-    "currency": {
-        "outline": "-PB",
-        "name": "Currency with Bar",
-        "docs": "A lot of currency signs [use a bar](https://en.wikipedia.org/wiki/Bar_(diacritic)#Currency_signs_with_bar) through a letter. Not all of them use a vertical bar, but we have to pick a stroke, and this also helps to differentiate this bar from the more typically horizontal bar diacritics through many of the same letters. See Currency with Double Bar.",
-    },
-    "doubleCurrency": {
-        "outline": "EPB",
-        "name": "Currency with Double Bar",
-        "docs": "Like the Currency with Bar characters, but for those with double bars. See Currency with Bar.",
-    },
+NOTE: Diacritics and their tweaks are part of the same stroke.
+""",
+    "modifiers": {
+        "ligature": {
+            "outline": "-FRLG",
+            "name": "Ligature",
+            "docs": "[Ligatures](https://en.wikipedia.org/wiki/Ligature_(writing)) are two or more graphemes joined together, as in Æ. To output an existing ligature, stroke the two letters in left-to-right order, then stroke this modifier to merge them. Think of the two vertical columns as the two graphemes being joined. For characters that modify ligatures, like the AE ligature with circumflex, or the AE ligature turned, create the ligature first, before modifying it further."
+        },
+        "turned": {
+            "outline": "-RL",
+            "name": "Turned/Rotated",
+            "docs": "This modifier allows access to characters that are turned, or [rotated](https://en.wikipedia.org/wiki/Rotated_letter).",
+        },
+        "reversed": {
+            "outline": "EURL",
+            "name": "Reversed",
+            "docs": "The turned modifier shape, with the '[inverted](#modifier-tweaks)' tweak.<BR><BR>This allows access to characters that are flipped, inverted, or reversed.",
+        },
+        "bold": {
+            "outline": "-FRPBLG",
+            "name": "Bold",
+            "docs": "All the keys. So bold.",
+        },
+        "italic": {
+            "outline": "EUFRPBLG",
+            "name": "Italic",
+            "docs": "The bold modifier shape, with the '[inverted](#modifier-tweaks)' tweak. In this case, the I (EU) of the tweak stands for \"italic\".",
+        },
+        "script": {
+            "outline": "-RPBL",
+            "name": "Script",
+            "docs": "Shaped like an S",
+        },
+        "doubleStruck": {
+            "outline": "EFRLG",
+            "name": "Double Struck",
+            "docs": "Two columns, to represent the two strikes, plus the '[extra](#modifier-tweaks)' tweak, to really hammer home the doubleness of it all.",
+        },
+        "fraktur": {
+            "outline": "EFR",
+            "name": "Fraktur",
+            "docs": "FR, for \"Fraktur\", plus the '[extra](#modifier-tweaks)' tweak, for extra frakting, and because FR alone was already in use.",
+        },
+        "sansSerif": {
+            "outline": "UFPBL",
+            "name": "Sans-Serif",
+            "docs": "Shaped like a serifed ascender, with the '[under](#modifier-tweaks)' tweak − here, representing \"un–\", because we're *_not_* seriffing. I apologize for verbing \"serif\".",
+        },
+        "monospace": {
+            "outline": "-PBL",
+            "name": "Monospace",
+            "docs": "Tough one to think of a chord for. This is just the right-hand side's M and N chords, for \"MoNo\", superimposed."
+        },
+        "currency": {
+            "outline": "-PB",
+            "name": "Currency with Bar",
+            "docs": "A lot of currency signs [use a bar](https://en.wikipedia.org/wiki/Bar_(diacritic)#Currency_signs_with_bar) through a letter. Not all of them use a vertical bar, but we have to pick a stroke, and this also helps to differentiate this bar from the more typically horizontal bar diacritics through many of the same letters. See Currency with Double Bar.",
+        },
+        "doubleCurrency": {
+            "outline": "EPB",
+            "name": "Currency with Double Bar",
+            "docs": "Like the Currency with Bar characters, but for those with double bars. See Currency with Bar.",
+        },
+    }
 }
 
 tbd = [
@@ -7090,7 +7097,7 @@ def createOutlines (alphabet, entry):
 
         (minOutlines, majOutlines)
     """
-    modStrokes = list(map(lambda x: MODIFIERS[x]["outline"], entry["modifiers"]))
+    modStrokes = list(map(lambda x: (DIACRITICS["modifiers"] | MODIFIERS["modifiers"])[x]["outline"], entry["modifiers"]))
     minuscule = buildModCharOutlines(alphabet, entry["minuscule"], modStrokes)
     majuscule = buildModCharOutlines(alphabet, entry["majuscule"], modStrokes)
     return (minuscule, majuscule)
