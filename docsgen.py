@@ -181,8 +181,8 @@ Code points currently link to their associated page on [Compart](https://www.com
         print("**Minuscule Ender:** `" + minStroke + "`<BR>")
         print("<BR>")
         print(docs + "<BR>")
-        print("|Character|Name|Stroke(s)|Notes|")
-        print("|-|-|-|-|")
+        print("|Letter|Code Pt|Name|Stroke(s)|Notes|")
+        print("|-|-|-|-|-|")
         for letter in letters:
             for scule, sculeStroke in [("maj", majStroke), ("min", minStroke)]:
                 char = letter[scule + "uscule"]
@@ -190,7 +190,7 @@ Code points currently link to their associated page on [Compart](https://www.com
                     docs = letter["docs"] if "docs" in letter else ""
                     strokes = ["`" + renderStroke(mergeStrokes(sculeStroke, stroke)) + "`" for stroke in letter["strokes"]]
                     strokesStr = "<BR>".join(strokes)
-                    print("|" + char + "|" + unicodedata.name(char) + "|" + strokesStr + "|" + docs + "|")
+                    print("|" + char + "|[" + toCodePt(char) + "](" + toURL(char) + ")|" + unicodedata.name(char) + "|" + strokesStr + "|" + docs + "|")
 
     print("""### All Composed Characters
 
