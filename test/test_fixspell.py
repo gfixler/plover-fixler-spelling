@@ -160,12 +160,12 @@ class Test_buildAlphabet (unittest.TestCase):
 class Test_buildModCharOutlines (unittest.TestCase):
 
     def test_worksForAToAAcute (self):
-        result = buildModCharOutlines(LATIN_ALPHABET_DATA, ("a", "á"), ["-RP"])
+        result = buildModCharOutlines(LATIN_ALPHABET, ("a", "á"), ["-RP"])
         expected = [["A*", "-RP"]]
         self.assertEqual(result, expected)
 
     def test_zeToImaginaryLigature (self):
-        result = buildModCharOutlines(LATIN_ALPHABET_DATA, ("ze", "🦓"), ["-FRLG"])
+        result = buildModCharOutlines(LATIN_ALPHABET, ("ze", "🦓"), ["-FRLG"])
         expected = [["STKPW*", "*E", "-FRLG"], ["STK*", "*E", "-FRLG"]]
         self.assertEqual(result, expected)
 
@@ -192,17 +192,17 @@ modifier_aeLigatureWithAcute = {
 class Test_createOutlines (unittest.TestCase):
 
     def test_aWithAcute (self):
-        result = createOutlines(LATIN_ALPHABET_DATA, modifier_aWithAcute)
+        result = createOutlines(LATIN_ALPHABET, modifier_aWithAcute)
         expected = ([["A*", "-RP"]], [["A*P", "-RP"]])
         self.assertEqual(result, expected)
 
     def test_aeLigature (self):
-        result = createOutlines(LATIN_ALPHABET_DATA, modifier_aeLigature)
+        result = createOutlines(LATIN_ALPHABET, modifier_aeLigature)
         expected = ([["A*", "*E", "-FRLG"]], [["A*P", "*EP", "-FRLG"]])
         self.assertEqual(result, expected)
 
     def test_aeLigatureWithAcute (self):
-        result = createOutlines(LATIN_ALPHABET_DATA, modifier_aeLigatureWithAcute)
+        result = createOutlines(LATIN_ALPHABET, modifier_aeLigatureWithAcute)
         expected = ([["A*", "*E", "-FRLG", "-RP"]], [["A*P", "*EP", "-FRLG", "-RP"]])
         self.assertEqual(result, expected)
 
