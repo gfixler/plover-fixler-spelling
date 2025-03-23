@@ -3,8 +3,11 @@ import unicodedata
 
 from fixspell import \
     MODIFIERS, \
+    ALPHABET_DATA, \
     ALPHABETS, \
     CHAR_MOD_LISTS, \
+    mergeStrokes, \
+    renderStroke, \
     buildFingerspellingDict
 
 
@@ -159,11 +162,36 @@ def generateModifiersSection ():
         img = "![" + name + "](images/" + name + ".png)"
         print("|" + img + "|![tweak](images/" + tweak + ".png)|" + info + "<BR><BR>Used in: " + charsStr + "|")
 
-readmeAllCharacters = """
-## All Characters List
-Here are [currently] all """ + str(charCount) + """ characters this library exports.
+def generateAllCharactersSection ():
+    print("""## All Characters List
+Here are [currently] all """ + str(charCount) + """ characters this library exports, base alphabets first, followed by all composed characters built from them.
 
 Code points currently link to their associated page on [Compart](https://www.compart.com/en/about-compart)'s site. No affiliation; it just showed up in character searches, seems to have all pages, and it's easy to turn Unicode code points into its URLs.
+""")
+    # first, the alphabets
+    for alphabet in ALPHABET_DATA:
+        name = alphabet["name"]
+        docs = alphabet["docs"]
+        letters = alphabet["letters"]
+        majStroke = alphabet["majStroke"]
+        minStroke = alphabet["minStroke"]
+        print("### " + name)
+        print("**Majuscule Ender:** `" + majStroke + "`<BR>")
+        print("**Minuscule Ender:** `" + minStroke + "`<BR>")
+        print("<BR>")
+        print(docs + "<BR>")
+        print("|Character|Name|Stroke(s)|Notes|")
+        print("|-|-|-|-|")
+        for letter in letters:
+            for scule, sculeStroke in [("maj", majStroke), ("min", minStroke)]:
+                char = letter[scule + "uscule"]
+                if char is not None:
+                    docs = letter["docs"] if "docs" in letter else ""
+                    strokes = ["`" + renderStroke(mergeStrokes(sculeStroke, stroke)) + "`" for stroke in letter["strokes"]]
+                    strokesStr = "<BR>".join(strokes)
+                    print("|" + char + "|" + unicodedata.name(char) + "|" + strokesStr + "|" + docs + "|")
+
+    print("""### All Composed Characters
 
 There are many ways to sort such a list. I opted not to go with Unicode code point, because it ends up somewhat nonsensical. Instead, this uses a custom sort based on a 3-tuple of:
 
@@ -172,9 +200,31 @@ There are many ways to sort such a list. I opted not to go with Unicode code poi
 3. True, if base letter is lower, otherwise False
 
 This creates a list that feels at least a bit alphabetical in nature, and positions upper and lowercase letters with the same diacritics together.
+""")
+    chars = [] # for collecting every exported character on its own
+    modHowTos = {} # reverse lookup of mod strokes per character
+    print("|Char|Code Pt|Name|\n|-|-|-|")
+    # go through all modified character data lists
+    for charModList in CHAR_MOD_LISTS:
+        for entry in charModList:
+            for scule in ["min", "maj"]:
+                # not every character has both minuscule and majuscule
+                if entry[scule + "uscule"] != None:
+                    src, dest = entry[scule + "uscule"]
+                    # remember how to build the character
+                    # e.g. "ẫ": ["a", "circumflex", "tilde"]
+                    modHowTos[dest] = [src] + entry["modifiers"]
+                    # record this character in the list of exported
+                    chars.append(dest)
+    # sort all characters into a decent sorting for output
+    cccs = sorted(chars, key=ccc_sort_key)
+    for ccc in cccs:
+        # create anchor, so other parts of readme can link to each character
+        anchor = "<a name=\"char-" + getAnchorTextForChar(ccc) + "\"></a>"
+        # assemble parts of character to show how to build it in strokes
+        howTo = " + ".join(modHowTos[ccc]) if ccc in modHowTos else ""
+        print("|" + anchor + ccc + "|[" + toCodePt(ccc) + "](" + toURL(ccc) + ")|" + unicodedata.name(ccc) + "<BR>" + howTo + "|")
 
-|Char|Code Pt|Name|
-|-|-|-|"""
 
 readmeKnownIssues = """
 ## Known Issues
@@ -187,42 +237,15 @@ readmeKnownIssues = """
 
 def generateReadme ():
     print(readmeTitle)
-    print(readmeTOC)
     print(readmeGoals)
+    print(readmeTOC)
     print(readmeNotesOnDesign)
     print(readmeKeyboardSections)
     print(readmeUsingModifiers)
     print(readmeTweaks)
     print(readmeAvailableDiacritics)
     generateModifiersSection()
-
-    print(readmeAllCharacters)
-    chars = [] # for collecting every exported character on its own
-    modHowTos = {} # reverse lookup of mod strokes per character
-    # go through all modified character data lists
-    for charModList in CHAR_MOD_LISTS:
-        for entry in charModList:
-            for scule in ["min", "maj"]:
-                # not every character has both minuscule and majuscule
-                if entry[scule + "uscule"] != None:
-                    src, dest = entry[scule + "uscule"]
-                    # remember how to build the character
-                    # e.g. "ẫ": ["a", "circumflex", "tilde"]
-                    modHowTos[dest] = [src] + entry["modifiers"]
-                # record this character in the list of exported
-                chars.append(dest)
-    # add all base characters from all alphabets
-    for alphabet in ALPHABETS:
-        chars += alphabet.keys()
-    # sort all characters into a decent sorting for output
-    cccs = sorted(chars, key=ccc_sort_key)
-    for ccc in cccs:
-        # create anchor, so other parts of readme can link to each character
-        anchor = "<a name=\"char-" + getAnchorTextForChar(ccc) + "\"></a>"
-        # assemble parts of character to show how to build it in strokes
-        howTo = " + ".join(modHowTos[ccc]) if ccc in modHowTos else ""
-        print("|" + anchor + ccc + "|[" + toCodePt(ccc) + "](" + toURL(ccc) + ")|" + unicodedata.name(ccc) + "<BR>" + howTo + "|")
-
+    generateAllCharactersSection()
     print(readmeKnownIssues)
 
 
