@@ -16,9 +16,16 @@ This library currently provides quick access to 1726 characters.
 ## Table of Contents
 This is a long readme. GitHub provides a table of contents under the hamburger menu, at the top right of this readme.
 
-The burger menu looks like this:
+The hamburger menu looks like this:
 
 ![burger menu](images/hamburgerMenu.png)
+
+
+## Installation
+
+Just save the `fixler-spelling.json` file somewhere locally, probably in your Plover config directory (`File → Open config folder` in Plover). Then add it to your dictionaries in Plover, wherever makes sense to you, or at the top, if you're not sure.
+
+Note: This is not a Python dictionary.
 
 
 ## Notes on Design
@@ -32,15 +39,15 @@ Modifiers are not currently programmatic, and do not look at stroke history. Thi
 Because letter chords are part of the outlines with their modifiers, you must use the letter chords as defined in this library. This means if you use STK for "z", for example, and this system only exports STKPW, you must use this system's version when composing, e.g., the ẓ ("Z with dot below") character. Currently, the way around this is to modify the Python file, and reexport the dictionary. Note: This system does export both of those chords for Z/z, and their compositions..
 
 ### Precomposed Characters
-All characters defined in this system, as seen in the "Used by" lists following each modifier in the [Available Diacritics and Other Modifiers](#available-diacritics-and-other-modifiers) section, and in the [All Characters List](#all-characters-list), are "precomposed" characters in Unicode, meaning they have a single code point in The Unicode Standard. Many characters encountered in the wild, are actually composed of a base letter, with one or more [combining characters](https://en.wikipedia.org/wiki/Combining_character) following them, and your font rendering system does the work of displaying them in composed form, although they can look different, and may fail to render well, or not at all.
+All characters defined in this system, as seen in the "Used by" lists following each modifier in the [Available Diacritics and Other Modifiers](#available-diacritics-and-other-modifiers) section, and in the [All Characters List](#all-characters-list), are "precomposed" characters in Unicode, meaning they have a single code point in The Unicode Standard. Many letters with diacritics, encountered in the wild, are really composed of a base letter, with one or more [combining characters](https://en.wikipedia.org/wiki/Combining_character) following them, and your font rendering system does the work of displaying them in composed form, although they can look different, and may fail to render well, or not at all.
 
-For example, "Z with acute" exists in Unicode (Ź: U+0179, ź: U+017A), but currently (Unicode v16.0), "Z with grave" does not, so it's **not** defined in the core system here. If you see a z with grave, it's composed of small letter z (U+007A) followed by the combining grave diacritic (U+0323). Even characters that do have a precomposed (single code point) version often show up in the wild as [composed versions](https://en.wikipedia.org/wiki/Unicode_equivalence) of themselves. (See: [When an é is not an é](https://nation.marketo.com/t5/product-blogs/when-an-e%CC%81-is-not-an-%C3%A9-about-unicode-precomposed-vs-decomposed/ba-p/339051)).
+For example, "Z with acute" exists in Unicode (Ź: U+0179, ź: U+017A), and is thus defined in this system, but currently (Unicode v16.0), "Z with grave" does not, so it's **not** defined here. If you see a z with grave, somewhere, it's composed of small letter z (U+007A) followed by the combining grave diacritic (U+0323). Even characters that do have a precomposed (single code point) version often show up in the wild as [composed versions](https://en.wikipedia.org/wiki/Unicode_equivalence) of themselves. (See: [When an é is not an é](https://nation.marketo.com/t5/product-blogs/when-an-e%CC%81-is-not-an-%C3%A9-about-unicode-precomposed-vs-decomposed/ba-p/339051)).
 
 ### Stacking Modifiers
 Characters with more than one modifier, like "ẫ" ("A with circumflex and tilde"), are made by stroking the letter chord, followed by each modifier chord in sequence. The order of these is based on the Unicode name, where "ẫ" (Unicode code point U+1EAB) is called "LATIN SMALL LETTER A WITH CIRCUMFLEX AND TILDE", and means you stroke the circumflex modifier before the tilde modifier.<BR><BR>Unicode has a collation order for diacritics, based on things like "closeness" to, and position around, the base character, but it's [a bit involved](https://www.unicode.org/reports/tr10/). Ultimately, Unicode doesn't care in what order diacritics are combined, and will normalize multiple diacritics back to a canonical ordering. Side note: The way around this is to use the [combining grapheme joiner](https://en.wikipedia.org/wiki/Combining_grapheme_joiner), but that's currently outside the scope of this system.
 
 ### Playing Nice
-When coming up with alphabet enders, and the starter for combining diacritics, I tried hard not to stomp on some really great systems in the Plover world, including [Emily's Symbols](https://github.com/EPLHREU/emily-symbols), [Emily's Modifiers](https://github.com/EPLHREU/emily-modifiers), and [Jeff's phrasing system](https://github.com/jthlim/jeff-phrasing).<BR><BR>I also wrote some code to scour Plover's main.json, to find unique enders that don't conflict, when combined with the standard steno alphabet. For example,  I wouldn't use -FR as an ender, because AFR is the after– prefix, and EFR is "every". Tons of chords are open on the right-hand side, but are very uncomfortable to stroke. I tried to find things with some mnemonic aspect, that still felt ergonomic. That said, I did not scan everything out there for conflicts, like [Lapwing theory](https://lapwing.aerick.ca/), and [Cocoa theory](https://github.com/Kaoffie/cocoa-specs).
+When coming up with alphabet enders, and the starter for combining diacritics, I tried hard not to stomp on some really great systems in the Plover world, including [Emily's Symbols](https://github.com/EPLHREU/emily-symbols), [Emily's Modifiers](https://github.com/EPLHREU/emily-modifiers), and [Jeff's phrasing system](https://github.com/jthlim/jeff-phrasing).<BR><BR>I also wrote some code to scour Plover's main.json, to find unique enders that don't conflict, when combined with the standard steno alphabet chords. For example,  I wouldn't use -FR as an ender, because AFR is the after– prefix, and EFR is "every". Tons of chords are open on the right-hand side, but are very uncomfortable to stroke. I tried to find things with some mnemonic aspect, that still felt ergonomic. That said, I did not scan everything out there for conflicts, like [Lapwing theory](https://lapwing.aerick.ca/), and [Cocoa theory](https://github.com/Kaoffie/cocoa-specs).
 
 
 ## Modifier Keys
@@ -67,7 +74,7 @@ Modify base letters by stroking a diacritic or modifier outline, or sequences th
 ## Modifier Tweaks
 Tweaks are added to a modifier stroke using the E and U keys.
 
-The descriptions explain the general idea of each, but liberties are taken here and there by some modifiers, to eke more abilities from each, like using the I (EU) tweak to mean "italic". See notes with each modifier in the [Available Diacritics and Other Modifiers](#available-diacritics-and-other-modifiers) section.
+The descriptions explain the general idea of each, but liberties are taken here and there by some modifiers, to eke more abilities from each, like, in one example, using the I (EU) tweak to mean "italic". See notes with each modifier in the [Available Diacritics and Other Modifiers](#available-diacritics-and-other-modifiers) section.
 
 |Tweak|Description|
 |-|-|
@@ -78,13 +85,15 @@ The descriptions explain the general idea of each, but liberties are taken here 
 
 
 ## Available Diacritics and Other Modifiers
+
+## Diacritics<BR>
 In general, the diacritic chords are meant to visually resemble their symbols, to ease recall.
 
-For other modifiers—like rotation or inversion, which appear after the diacritics in the list below—an attempt was made to be memorable. See notes with each modifier.
+Diacritics are only a part of letter modification. See the rest in the modifiers section.
 
-NOTE: Modifier and Tweak are part of the same stroke.
+NOTE: Diacritics and their tweaks are part of the same stroke.
 
-|Modifier|Tweak|Notes|
+|Chord|Tweak|Notes|
 |-|-|-|
 |Acute| | |
 |![acute](images/acute.png)|![tweak](images/EU_up.png)|Shaped like the [acute accent](https://en.wikipedia.org/wiki/Acute_accent).<BR><BR>Used in: [Á](#char-latin-capital-letter-a-with-acute) [Ấ](#char-latin-capital-letter-a-with-circumflex-and-acute) [Ắ](#char-latin-capital-letter-a-with-breve-and-acute) [Ć](#char-latin-capital-letter-c-with-acute) [Ḉ](#char-latin-capital-letter-c-with-cedilla-and-acute) [É](#char-latin-capital-letter-e-with-acute) [Ế](#char-latin-capital-letter-e-with-circumflex-and-acute) [Ḗ](#char-latin-capital-letter-e-with-macron-and-acute) [Ǵ](#char-latin-capital-letter-g-with-acute) [Í](#char-latin-capital-letter-i-with-acute) [Ḯ](#char-latin-capital-letter-i-with-diaeresis-and-acute) [Ḱ](#char-latin-capital-letter-k-with-acute) [Ĺ](#char-latin-capital-letter-l-with-acute) [Ḿ](#char-latin-capital-letter-m-with-acute) [Ń](#char-latin-capital-letter-n-with-acute) [Ó](#char-latin-capital-letter-o-with-acute) [Ố](#char-latin-capital-letter-o-with-circumflex-and-acute) [Ṍ](#char-latin-capital-letter-o-with-tilde-and-acute) [Ṓ](#char-latin-capital-letter-o-with-macron-and-acute) [Ớ](#char-latin-capital-letter-o-with-horn-and-acute) [Ṕ](#char-latin-capital-letter-p-with-acute) [Ŕ](#char-latin-capital-letter-r-with-acute) [Ś](#char-latin-capital-letter-s-with-acute) [Ṥ](#char-latin-capital-letter-s-with-acute-and-dot-above) [Ú](#char-latin-capital-letter-u-with-acute) [Ṹ](#char-latin-capital-letter-u-with-tilde-and-acute) [Ǘ](#char-latin-capital-letter-u-with-diaeresis-and-acute) [Ứ](#char-latin-capital-letter-u-with-horn-and-acute) [Ẃ](#char-latin-capital-letter-w-with-acute) [Ý](#char-latin-capital-letter-y-with-acute) [Ź](#char-latin-capital-letter-z-with-acute) [á](#char-latin-small-letter-a-with-acute) [ấ](#char-latin-small-letter-a-with-circumflex-and-acute) [ắ](#char-latin-small-letter-a-with-breve-and-acute) [ć](#char-latin-small-letter-c-with-acute) [ḉ](#char-latin-small-letter-c-with-cedilla-and-acute) [é](#char-latin-small-letter-e-with-acute) [ế](#char-latin-small-letter-e-with-circumflex-and-acute) [ḗ](#char-latin-small-letter-e-with-macron-and-acute) [ǵ](#char-latin-small-letter-g-with-acute) [í](#char-latin-small-letter-i-with-acute) [ḯ](#char-latin-small-letter-i-with-diaeresis-and-acute) [ḱ](#char-latin-small-letter-k-with-acute) [ĺ](#char-latin-small-letter-l-with-acute) [ḿ](#char-latin-small-letter-m-with-acute) [ń](#char-latin-small-letter-n-with-acute) [ó](#char-latin-small-letter-o-with-acute) [ố](#char-latin-small-letter-o-with-circumflex-and-acute) [ṍ](#char-latin-small-letter-o-with-tilde-and-acute) [ṓ](#char-latin-small-letter-o-with-macron-and-acute) [ớ](#char-latin-small-letter-o-with-horn-and-acute) [ṕ](#char-latin-small-letter-p-with-acute) [ŕ](#char-latin-small-letter-r-with-acute) [ś](#char-latin-small-letter-s-with-acute) [ṥ](#char-latin-small-letter-s-with-acute-and-dot-above) [ú](#char-latin-small-letter-u-with-acute) [ṹ](#char-latin-small-letter-u-with-tilde-and-acute) [ǘ](#char-latin-small-letter-u-with-diaeresis-and-acute) [ứ](#char-latin-small-letter-u-with-horn-and-acute) [ẃ](#char-latin-small-letter-w-with-acute) [ý](#char-latin-small-letter-y-with-acute) [ź](#char-latin-small-letter-z-with-acute) [Ǽ](#char-latin-capital-letter-ae-with-acute) [Ǿ](#char-latin-capital-letter-o-with-stroke-and-acute) [ǽ](#char-latin-small-letter-ae-with-acute) [ǿ](#char-latin-small-letter-o-with-stroke-and-acute)|
@@ -144,6 +153,15 @@ NOTE: Modifier and Tweak are part of the same stroke.
 |![tilde](images/tilde.png)|![tweak](images/EU_up.png)|Shaped like the [tilde](https://en.wikipedia.org/wiki/Tilde).<BR><BR>Used in: [Ẫ](#char-latin-capital-letter-a-with-circumflex-and-tilde) [Ã](#char-latin-capital-letter-a-with-tilde) [Ẵ](#char-latin-capital-letter-a-with-breve-and-tilde) [Ễ](#char-latin-capital-letter-e-with-circumflex-and-tilde) [Ẽ](#char-latin-capital-letter-e-with-tilde) [Ĩ](#char-latin-capital-letter-i-with-tilde) [Ñ](#char-latin-capital-letter-n-with-tilde) [Ỗ](#char-latin-capital-letter-o-with-circumflex-and-tilde) [Õ](#char-latin-capital-letter-o-with-tilde) [Ṍ](#char-latin-capital-letter-o-with-tilde-and-acute) [Ȭ](#char-latin-capital-letter-o-with-tilde-and-macron) [Ṏ](#char-latin-capital-letter-o-with-tilde-and-diaeresis) [Ỡ](#char-latin-capital-letter-o-with-horn-and-tilde) [Ũ](#char-latin-capital-letter-u-with-tilde) [Ṹ](#char-latin-capital-letter-u-with-tilde-and-acute) [Ữ](#char-latin-capital-letter-u-with-horn-and-tilde) [Ṽ](#char-latin-capital-letter-v-with-tilde) [Ỹ](#char-latin-capital-letter-y-with-tilde) [ẫ](#char-latin-small-letter-a-with-circumflex-and-tilde) [ã](#char-latin-small-letter-a-with-tilde) [ẵ](#char-latin-small-letter-a-with-breve-and-tilde) [ễ](#char-latin-small-letter-e-with-circumflex-and-tilde) [ẽ](#char-latin-small-letter-e-with-tilde) [ĩ](#char-latin-small-letter-i-with-tilde) [ñ](#char-latin-small-letter-n-with-tilde) [ỗ](#char-latin-small-letter-o-with-circumflex-and-tilde) [õ](#char-latin-small-letter-o-with-tilde) [ṍ](#char-latin-small-letter-o-with-tilde-and-acute) [ȭ](#char-latin-small-letter-o-with-tilde-and-macron) [ṏ](#char-latin-small-letter-o-with-tilde-and-diaeresis) [ỡ](#char-latin-small-letter-o-with-horn-and-tilde) [ũ](#char-latin-small-letter-u-with-tilde) [ṹ](#char-latin-small-letter-u-with-tilde-and-acute) [ữ](#char-latin-small-letter-u-with-horn-and-tilde) [ṽ](#char-latin-small-letter-v-with-tilde) [ỹ](#char-latin-small-letter-y-with-tilde)|
 |Tilde Below| | |
 |![tildeBelow](images/tildeBelow.png)|![tweak](images/U_down.png)|The tilde modifier shape, with the '[under](#modifier-tweaks)' tweak.<BR><BR>Used in: [Ḛ](#char-latin-capital-letter-e-with-tilde-below) [Ḭ](#char-latin-capital-letter-i-with-tilde-below) [Ṵ](#char-latin-capital-letter-u-with-tilde-below) [ḛ](#char-latin-small-letter-e-with-tilde-below) [ḭ](#char-latin-small-letter-i-with-tilde-below) [ṵ](#char-latin-small-letter-u-with-tilde-below)|
+## Modifiers<BR>
+Modifiers don't share the same, easy, visual mnemonics of diacritics, but every attempt was made to still make them memorable. See the notes with each.
+
+Modifiers are only a part of letter modification. See the rest in the diacritics section.
+
+NOTE: Diacritics and their tweaks are part of the same stroke.
+
+|Chord|Tweak|Notes|
+|-|-|-|
 |Ligature| | |
 |![ligature](images/ligature.png)|![tweak](images/EU_up.png)|[Ligatures](https://en.wikipedia.org/wiki/Ligature_(writing)) are two or more graphemes joined together, as in Æ. To output an existing ligature, stroke the two letters in left-to-right order, then stroke this modifier to merge them. Think of the two vertical columns as the two graphemes being joined. For characters that modify ligatures, like the AE ligature with circumflex, or the AE ligature turned, create the ligature first, before modifying it further.<BR><BR>Used in: [W](#char-latin-capital-letter-w) [w](#char-latin-small-letter-w) [Æ](#char-latin-capital-letter-ae) [Ǽ](#char-latin-capital-letter-ae-with-acute) [Ǣ](#char-latin-capital-letter-ae-with-macron) [ß](#char-latin-small-letter-sharp-s) [æ](#char-latin-small-letter-ae) [ǽ](#char-latin-small-letter-ae-with-acute) [ǣ](#char-latin-small-letter-ae-with-macron) [Œ](#char-latin-capital-ligature-oe) [œ](#char-latin-small-ligature-oe) [ƕ](#char-latin-small-letter-hv) [Ƕ](#char-latin-capital-letter-hwair) [ᴂ](#char-latin-small-letter-turned-ae) [ᵫ](#char-latin-small-letter-ue) [ẞ](#char-latin-capital-letter-sharp-s) [Ỻ](#char-latin-capital-letter-middle-welsh-ll) [ỻ](#char-latin-small-letter-middle-welsh-ll) [℔](#char-l-b-bar-symbol) [Ꜩ](#char-latin-capital-letter-tz) [ꜩ](#char-latin-small-letter-tz) [Ꜳ](#char-latin-capital-letter-aa) [ꜳ](#char-latin-small-letter-aa) [Ꜵ](#char-latin-capital-letter-ao) [ꜵ](#char-latin-small-letter-ao) [Ꜷ](#char-latin-capital-letter-au) [ꜷ](#char-latin-small-letter-au) [Ꜹ](#char-latin-capital-letter-av) [ꜻ](#char-latin-small-letter-av-with-horizontal-bar) [Ꜽ](#char-latin-capital-letter-ay) [ꜽ](#char-latin-small-letter-ay) [Ꝏ](#char-latin-capital-letter-oo) [ꝏ](#char-latin-small-letter-oo) [Ꝡ](#char-latin-capital-letter-vy) [ꝡ](#char-latin-small-letter-vy) [ꭣ](#char-latin-small-letter-uo) [ﬀ](#char-latin-small-ligature-ff) [ﬁ](#char-latin-small-ligature-fi) [ﬂ](#char-latin-small-ligature-fl) [ﬃ](#char-latin-small-ligature-ffi) [ﬄ](#char-latin-small-ligature-ffl) [ﬆ](#char-latin-small-ligature-st)|
 |Turned/Rotated| | |
@@ -374,7 +392,7 @@ There are many ways to sort such a list. I opted not to go with Unicode code poi
 
 This creates a list that feels at least a bit alphabetical in nature, and positions upper and lowercase letters with the same diacritics together.
 
-|Char|Code Pt|Name|
+|Char|Code Pt|Name + How To Stroke|
 |-|-|-|
 |<a name="char-dollar-sign"></a>$|[U+0024](https://www.compart.com/en/unicode/U+0024)|DOLLAR SIGN<BR>S + currency|
 |<a name="char-latin-capital-letter-a-with-grave"></a>À|[U+00C0](https://www.compart.com/en/unicode/U+00C0)|LATIN CAPITAL LETTER A WITH GRAVE<BR>A + grave|
