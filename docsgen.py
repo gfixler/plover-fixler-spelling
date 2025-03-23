@@ -40,7 +40,7 @@ readmeTOC = """
 ## Table of Contents
 This is a long readme. GitHub provides a table of contents under the hamburger menu, at the top right of this readme.
 
-The burger menu looks like this:
+The hamburger menu looks like this:
 
 ![burger menu](images/hamburgerMenu.png)
 """
@@ -57,15 +57,15 @@ Modifiers are not currently programmatic, and do not look at stroke history. Thi
 Because letter chords are part of the outlines with their modifiers, you must use the letter chords as defined in this library. This means if you use STK for "z", for example, and this system only exports STKPW, you must use this system's version when composing, e.g., the ẓ ("Z with dot below") character. Currently, the way around this is to modify the Python file, and reexport the dictionary. Note: This system does export both of those chords for Z/z, and their compositions..
 
 ### Precomposed Characters
-All characters defined in this system, as seen in the "Used by" lists following each modifier in the [Available Diacritics and Other Modifiers](#available-diacritics-and-other-modifiers) section, and in the [All Characters List](#all-characters-list), are "precomposed" characters in Unicode, meaning they have a single code point in The Unicode Standard. Many characters encountered in the wild, are actually composed of a base letter, with one or more [combining characters](https://en.wikipedia.org/wiki/Combining_character) following them, and your font rendering system does the work of displaying them in composed form, although they can look different, and may fail to render well, or not at all.
+All characters defined in this system, as seen in the "Used by" lists following each modifier in the [Available Diacritics and Other Modifiers](#available-diacritics-and-other-modifiers) section, and in the [All Characters List](#all-characters-list), are "precomposed" characters in Unicode, meaning they have a single code point in The Unicode Standard. Many letters with diacritics, encountered in the wild, are really composed of a base letter, with one or more [combining characters](https://en.wikipedia.org/wiki/Combining_character) following them, and your font rendering system does the work of displaying them in composed form, although they can look different, and may fail to render well, or not at all.
 
-For example, "Z with acute" exists in Unicode (Ź: U+0179, ź: U+017A), but currently (Unicode v16.0), "Z with grave" does not, so it's **not** defined in the core system here. If you see a z with grave, it's composed of small letter z (U+007A) followed by the combining grave diacritic (U+0323). Even characters that do have a precomposed (single code point) version often show up in the wild as [composed versions](https://en.wikipedia.org/wiki/Unicode_equivalence) of themselves. (See: [When an é is not an é](https://nation.marketo.com/t5/product-blogs/when-an-e%CC%81-is-not-an-%C3%A9-about-unicode-precomposed-vs-decomposed/ba-p/339051)).
+For example, "Z with acute" exists in Unicode (Ź: U+0179, ź: U+017A), and is thus defined in this system, but currently (Unicode v16.0), "Z with grave" does not, so it's **not** defined here. If you see a z with grave, somewhere, it's composed of small letter z (U+007A) followed by the combining grave diacritic (U+0323). Even characters that do have a precomposed (single code point) version often show up in the wild as [composed versions](https://en.wikipedia.org/wiki/Unicode_equivalence) of themselves. (See: [When an é is not an é](https://nation.marketo.com/t5/product-blogs/when-an-e%CC%81-is-not-an-%C3%A9-about-unicode-precomposed-vs-decomposed/ba-p/339051)).
 
 ### Stacking Modifiers
 Characters with more than one modifier, like "ẫ" ("A with circumflex and tilde"), are made by stroking the letter chord, followed by each modifier chord in sequence. The order of these is based on the Unicode name, where "ẫ" (Unicode code point U+1EAB) is called "LATIN SMALL LETTER A WITH CIRCUMFLEX AND TILDE", and means you stroke the circumflex modifier before the tilde modifier.<BR><BR>Unicode has a collation order for diacritics, based on things like "closeness" to, and position around, the base character, but it's [a bit involved](https://www.unicode.org/reports/tr10/). Ultimately, Unicode doesn't care in what order diacritics are combined, and will normalize multiple diacritics back to a canonical ordering. Side note: The way around this is to use the [combining grapheme joiner](https://en.wikipedia.org/wiki/Combining_grapheme_joiner), but that's currently outside the scope of this system.
 
 ### Playing Nice
-When coming up with alphabet enders, and the starter for combining diacritics, I tried hard not to stomp on some really great systems in the Plover world, including [Emily's Symbols](https://github.com/EPLHREU/emily-symbols), [Emily's Modifiers](https://github.com/EPLHREU/emily-modifiers), and [Jeff's phrasing system](https://github.com/jthlim/jeff-phrasing).<BR><BR>I also wrote some code to scour Plover's main.json, to find unique enders that don't conflict, when combined with the standard steno alphabet. For example,  I wouldn't use -FR as an ender, because AFR is the after– prefix, and EFR is "every". Tons of chords are open on the right-hand side, but are very uncomfortable to stroke. I tried to find things with some mnemonic aspect, that still felt ergonomic. That said, I did not scan everything out there for conflicts, like [Lapwing theory](https://lapwing.aerick.ca/), and [Cocoa theory](https://github.com/Kaoffie/cocoa-specs).
+When coming up with alphabet enders, and the starter for combining diacritics, I tried hard not to stomp on some really great systems in the Plover world, including [Emily's Symbols](https://github.com/EPLHREU/emily-symbols), [Emily's Modifiers](https://github.com/EPLHREU/emily-modifiers), and [Jeff's phrasing system](https://github.com/jthlim/jeff-phrasing).<BR><BR>I also wrote some code to scour Plover's main.json, to find unique enders that don't conflict, when combined with the standard steno alphabet chords. For example,  I wouldn't use -FR as an ender, because AFR is the after– prefix, and EFR is "every". Tons of chords are open on the right-hand side, but are very uncomfortable to stroke. I tried to find things with some mnemonic aspect, that still felt ergonomic. That said, I did not scan everything out there for conflicts, like [Lapwing theory](https://lapwing.aerick.ca/), and [Cocoa theory](https://github.com/Kaoffie/cocoa-specs).
 """
 
 # TODO allow stroking diacritics and modifiers in any order
@@ -99,7 +99,7 @@ readmeTweaks = """
 ## Modifier Tweaks
 Tweaks are added to a modifier stroke using the E and U keys.
 
-The descriptions explain the general idea of each, but liberties are taken here and there by some modifiers, to eke more abilities from each, like using the I (EU) tweak to mean "italic". See notes with each modifier in the [Available Diacritics and Other Modifiers](#available-diacritics-and-other-modifiers) section.
+The descriptions explain the general idea of each, but liberties are taken here and there by some modifiers, to eke more abilities from each, like, in one example, using the I (EU) tweak to mean "italic". See notes with each modifier in the [Available Diacritics and Other Modifiers](#available-diacritics-and-other-modifiers) section.
 
 |Tweak|Description|
 |-|-|
@@ -204,7 +204,7 @@ This creates a list that feels at least a bit alphabetical in nature, and positi
 """)
     chars = [] # for collecting every exported character on its own
     modHowTos = {} # reverse lookup of mod strokes per character
-    print("|Char|Code Pt|Name|\n|-|-|-|")
+    print("|Char|Code Pt|Name + How To Stroke|\n|-|-|-|")
     # go through all modified character data lists
     for charModList in CHAR_MOD_LISTS:
         for entry in charModList:
