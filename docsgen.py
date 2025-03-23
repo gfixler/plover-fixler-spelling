@@ -140,7 +140,7 @@ def getAnchorTextForChar (c):
 
 def generateModifiersSection ():
     for modDict in [DIACRITICS, MODIFIERS]:
-        print("## " + modDict["name"] + "<BR>")
+        print("### " + modDict["name"] + "<BR>")
         print(modDict["docs"])
         print("|Chord|Tweak|Notes|")
         print("|-|-|-|")

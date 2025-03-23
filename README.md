@@ -86,7 +86,7 @@ The descriptions explain the general idea of each, but liberties are taken here 
 
 ## Available Diacritics and Other Modifiers
 
-## Diacritics<BR>
+### Diacritics<BR>
 In general, the diacritic chords are meant to visually resemble their symbols, to ease recall.
 
 Diacritics are only a part of letter modification. See the rest in the modifiers section.
@@ -153,7 +153,7 @@ NOTE: Diacritics and their tweaks are part of the same stroke.
 |![tilde](images/tilde.png)|![tweak](images/EU_up.png)|Shaped like the [tilde](https://en.wikipedia.org/wiki/Tilde).<BR><BR>Used in: [Ẫ](#char-latin-capital-letter-a-with-circumflex-and-tilde) [Ã](#char-latin-capital-letter-a-with-tilde) [Ẵ](#char-latin-capital-letter-a-with-breve-and-tilde) [Ễ](#char-latin-capital-letter-e-with-circumflex-and-tilde) [Ẽ](#char-latin-capital-letter-e-with-tilde) [Ĩ](#char-latin-capital-letter-i-with-tilde) [Ñ](#char-latin-capital-letter-n-with-tilde) [Ỗ](#char-latin-capital-letter-o-with-circumflex-and-tilde) [Õ](#char-latin-capital-letter-o-with-tilde) [Ṍ](#char-latin-capital-letter-o-with-tilde-and-acute) [Ȭ](#char-latin-capital-letter-o-with-tilde-and-macron) [Ṏ](#char-latin-capital-letter-o-with-tilde-and-diaeresis) [Ỡ](#char-latin-capital-letter-o-with-horn-and-tilde) [Ũ](#char-latin-capital-letter-u-with-tilde) [Ṹ](#char-latin-capital-letter-u-with-tilde-and-acute) [Ữ](#char-latin-capital-letter-u-with-horn-and-tilde) [Ṽ](#char-latin-capital-letter-v-with-tilde) [Ỹ](#char-latin-capital-letter-y-with-tilde) [ẫ](#char-latin-small-letter-a-with-circumflex-and-tilde) [ã](#char-latin-small-letter-a-with-tilde) [ẵ](#char-latin-small-letter-a-with-breve-and-tilde) [ễ](#char-latin-small-letter-e-with-circumflex-and-tilde) [ẽ](#char-latin-small-letter-e-with-tilde) [ĩ](#char-latin-small-letter-i-with-tilde) [ñ](#char-latin-small-letter-n-with-tilde) [ỗ](#char-latin-small-letter-o-with-circumflex-and-tilde) [õ](#char-latin-small-letter-o-with-tilde) [ṍ](#char-latin-small-letter-o-with-tilde-and-acute) [ȭ](#char-latin-small-letter-o-with-tilde-and-macron) [ṏ](#char-latin-small-letter-o-with-tilde-and-diaeresis) [ỡ](#char-latin-small-letter-o-with-horn-and-tilde) [ũ](#char-latin-small-letter-u-with-tilde) [ṹ](#char-latin-small-letter-u-with-tilde-and-acute) [ữ](#char-latin-small-letter-u-with-horn-and-tilde) [ṽ](#char-latin-small-letter-v-with-tilde) [ỹ](#char-latin-small-letter-y-with-tilde)|
 |Tilde Below| | |
 |![tildeBelow](images/tildeBelow.png)|![tweak](images/U_down.png)|The tilde modifier shape, with the '[under](#modifier-tweaks)' tweak.<BR><BR>Used in: [Ḛ](#char-latin-capital-letter-e-with-tilde-below) [Ḭ](#char-latin-capital-letter-i-with-tilde-below) [Ṵ](#char-latin-capital-letter-u-with-tilde-below) [ḛ](#char-latin-small-letter-e-with-tilde-below) [ḭ](#char-latin-small-letter-i-with-tilde-below) [ṵ](#char-latin-small-letter-u-with-tilde-below)|
-## Modifiers<BR>
+### Modifiers<BR>
 Modifiers don't share the same, easy, visual mnemonics of diacritics, but every attempt was made to still make them memorable. See the notes with each.
 
 Modifiers are only a part of letter modification. See the rest in the diacritics section.
