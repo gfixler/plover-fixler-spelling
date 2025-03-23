@@ -8,6 +8,8 @@ enderBraille = "-RPGT"
 LATIN_ALPHABET_DATA = {
     "minStroke": "*",
     "majStroke": "*P",
+    "name": "English Latin Alphabet",
+    "docs": "English steno theories come with alphabets, but for sake of completeness...",
     "letters": [
         {
             "majuscule": "A",
@@ -171,6 +173,8 @@ LATIN_ALPHABET_DATA = {
 GREEK_ALPHABET_DATA = {
     "minStroke": "-FLG",
     "majStroke": "*FLG",
+    "name": "Greek Alphabet",
+    "docs": "Many Greek letters match up nicely with English; some do not. Read the notes for each letter to see how we get around the discrepancies.",
     "letters": [
         {
             "name": "alpha",
@@ -378,6 +382,8 @@ GREEK_ALPHABET_DATA = {
 RUSSIAN_ALPHABET_DATA = {
     "minStroke": "-RPG",
     "majStroke": "*RPG",
+    "name": "Russian Cyrillic Alphabet",
+    "docs": "The Russian alphabet has a number of discrepancies with English. All attempts were made to come up with mnemonically memorable strokes. See the descriptions following each letter.",
     "letters": [
         {
             "name": "А",
@@ -6988,10 +6994,17 @@ def buildAlphabet (alphabetData):
                     alphabet[letter].append(stroke)
     return alphabet
 
-# Build alphabets
+# alphabet data
+ALPHABET_DATA = [
+    LATIN_ALPHABET_DATA,
+    GREEK_ALPHABET_DATA,
+    RUSSIAN_ALPHABET_DATA,
+]
+
+# build alphabets
 LATIN_ALPHABET = buildAlphabet(LATIN_ALPHABET_DATA)
-RUSSIAN_ALPHABET = buildAlphabet(RUSSIAN_ALPHABET_DATA)
 GREEK_ALPHABET = buildAlphabet(GREEK_ALPHABET_DATA)
+RUSSIAN_ALPHABET = buildAlphabet(RUSSIAN_ALPHABET_DATA)
 
 # dicts mapping alphabet characters to their outlines
 ALPHABETS = [
