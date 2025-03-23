@@ -2,15 +2,7 @@
 # Fixler Spelling for Plover
 A fingerspelling system for the [Plover](https://www.openstenoproject.org/plover/) steno software.
 
-This library currently provides quick access to 1726 characters."
-
-
-## Table of Contents
-This is a long readme. GitHub provides a table of contents under the hamburger menu, at the top right of this readme.
-
-The burger menu looks like this:
-
-![burger menu](images/hamburgerMenu.png)
+This library currently provides quick access to 1726 characters.
 
 
 ## Design Goals
@@ -21,6 +13,14 @@ The burger menu looks like this:
 * include some other alphabets where possible (Greek, Russian, NATO...)
 
 
+## Table of Contents
+This is a long readme. GitHub provides a table of contents under the hamburger menu, at the top right of this readme.
+
+The burger menu looks like this:
+
+![burger menu](images/hamburgerMenu.png)
+
+
 ## Notes on Design
 ### The Core
 The core of this system is fingerspelling, and revolves around the Latin letters with diacritics, and alphabets that map well to and from Latin letters. That said, this library is not above including other, fun things that don't exactly fit, but also don't feel terribly out of place here.
@@ -29,7 +29,7 @@ The core of this system is fingerspelling, and revolves around the Latin letters
 Modifiers are not currently programmatic, and do not look at stroke history. This is not a Plover Python dictionary. The modifier system simply exports a JSON file mapping letters to outlines.
 
 ### System Letters
-Because letter chords are part of the outlines with their modifiers, you must use the letter chords as defined in this library. This means if you use STK for "z", for example, and this system only exports STKPW, you must use this system's version when composition, e.g., the ẓ ("Z with dot below") character. Currently, the way around this is to modify the Python file, and reexport the dictionary.
+Because letter chords are part of the outlines with their modifiers, you must use the letter chords as defined in this library. This means if you use STK for "z", for example, and this system only exports STKPW, you must use this system's version when composing, e.g., the ẓ ("Z with dot below") character. Currently, the way around this is to modify the Python file, and reexport the dictionary. Note: This system does export both of those chords for Z/z, and their compositions..
 
 ### Precomposed Characters
 All characters defined in this system, as seen in the "Used by" lists following each modifier in the [Available Diacritics and Other Modifiers](#available-diacritics-and-other-modifiers) section, and in the [All Characters List](#all-characters-list), are "precomposed" characters in Unicode, meaning they have a single code point in The Unicode Standard. Many characters encountered in the wild, are actually composed of a base letter, with one or more [combining characters](https://en.wikipedia.org/wiki/Combining_character) following them, and your font rendering system does the work of displaying them in composed form, although they can look different, and may fail to render well, or not at all.
@@ -55,7 +55,7 @@ See the following section, [Using Modifiers](#using-modifiers), for usage instru
 
 
 ## Using Modifiers
-Modify base letters by stroking a diacritic or modifier outline, or sequences thereof, immediately after a base letter. See [Available Diacritics and Other Modifiers](#available-diacritics-and-other-modifiers) section.
+Modify base letters by stroking a diacritic or modifier outline, or sequences thereof, immediately after a base letter. See the [Available Diacritics and Other Modifiers](#available-diacritics-and-other-modifiers) section.
 
 #### Examples
 * á (A with acute): Stroke letter a, then the acute diacritic
@@ -168,25 +168,212 @@ NOTE: Modifier and Tweak are part of the same stroke.
 |![currency](images/currency.png)|![tweak](images/EU_up.png)|A lot of currency signs [use a bar](https://en.wikipedia.org/wiki/Bar_(diacritic)#Currency_signs_with_bar) through a letter. Not all of them use a vertical bar, but we have to pick a stroke, and this also helps to differentiate this bar from the more typically horizontal bar diacritics through many of the same letters. See Currency with Double Bar.<BR><BR>Used in: [$](#char-dollar-sign) [¢](#char-cent-sign) [£](#char-pound-sign) [৳](#char-bengali-rupee-sign) [฿](#char-thai-currency-symbol-baht) [៛](#char-khmer-currency-symbol-riel) [₣](#char-french-franc-sign) [₥](#char-mill-sign) [₫](#char-dong-sign) [₭](#char-kip-sign) [₲](#char-guarani-sign) [₵](#char-cedi-sign)|
 |Currency with Double Bar| | |
 |![doubleCurrency](images/doubleCurrency.png)|![tweak](images/E_down.png)|Like the Currency with Bar characters, but for those with double bars. See Currency with Bar.<BR><BR>Used in: [¥](#char-yen-sign) [֏](#char-armenian-dram-sign) [₡](#char-colon-sign) [₤](#char-lira-sign) [₦](#char-naira-sign) [₩](#char-won-sign) [€](#char-euro-sign) [₮](#char-tugrik-sign) [₱](#char-peso-sign) [₳](#char-austral-sign) [₴](#char-hryvnia-sign) [₹](#char-indian-rupee-sign) [₺](#char-turkish-lira-sign) [₽](#char-ruble-sign) [₾](#char-lari-sign) [₿](#char-bitcoin-sign)|
-
 ## All Characters List
-Here are [currently] all 1726 characters this library exports.
+Here are [currently] all 1726 characters this library exports, base alphabets first, followed by all composed characters built from them.
 
 Code points currently link to their associated page on [Compart](https://www.compart.com/en/about-compart)'s site. No affiliation; it just showed up in character searches, seems to have all pages, and it's easy to turn Unicode code points into its URLs.
 
+### English Latin Alphabet
+**Majuscule Ender:** `*P`<BR>
+**Minuscule Ender:** `*`<BR>
+<BR>
+English steno theories come with alphabets, but for sake of completeness...<BR>
+|Character|Name|Stroke(s)|Notes|
+|-|-|-|-|
+|A|LATIN CAPITAL LETTER A|`A*P`||
+|a|LATIN SMALL LETTER A|`A*`||
+|B|LATIN CAPITAL LETTER B|`PW*P`||
+|b|LATIN SMALL LETTER B|`PW*`||
+|C|LATIN CAPITAL LETTER C|`KR*P`||
+|c|LATIN SMALL LETTER C|`KR*`||
+|D|LATIN CAPITAL LETTER D|`TK*P`||
+|d|LATIN SMALL LETTER D|`TK*`||
+|E|LATIN CAPITAL LETTER E|`*EP`||
+|e|LATIN SMALL LETTER E|`*E`||
+|F|LATIN CAPITAL LETTER F|`TP*P`||
+|f|LATIN SMALL LETTER F|`TP*`||
+|G|LATIN CAPITAL LETTER G|`TKPW*P`||
+|g|LATIN SMALL LETTER G|`TKPW*`||
+|H|LATIN CAPITAL LETTER H|`H*P`||
+|h|LATIN SMALL LETTER H|`H*`||
+|I|LATIN CAPITAL LETTER I|`*EUP`||
+|i|LATIN SMALL LETTER I|`*EU`||
+|J|LATIN CAPITAL LETTER J|`SKWR*P`||
+|j|LATIN SMALL LETTER J|`SKWR*`||
+|K|LATIN CAPITAL LETTER K|`K*P`||
+|k|LATIN SMALL LETTER K|`K*`||
+|L|LATIN CAPITAL LETTER L|`HR*P`||
+|l|LATIN SMALL LETTER L|`HR*`||
+|M|LATIN CAPITAL LETTER M|`PH*P`||
+|m|LATIN SMALL LETTER M|`PH*`||
+|N|LATIN CAPITAL LETTER N|`TPH*P`||
+|n|LATIN SMALL LETTER N|`TPH*`||
+|O|LATIN CAPITAL LETTER O|`O*P`||
+|o|LATIN SMALL LETTER O|`O*`||
+|P|LATIN CAPITAL LETTER P|`P*P`||
+|p|LATIN SMALL LETTER P|`P*`||
+|Q|LATIN CAPITAL LETTER Q|`KW*P`||
+|q|LATIN SMALL LETTER Q|`KW*`||
+|R|LATIN CAPITAL LETTER R|`R*P`||
+|r|LATIN SMALL LETTER R|`R*`||
+|S|LATIN CAPITAL LETTER S|`S*P`||
+|s|LATIN SMALL LETTER S|`S*`||
+|T|LATIN CAPITAL LETTER T|`T*P`||
+|t|LATIN SMALL LETTER T|`T*`||
+|U|LATIN CAPITAL LETTER U|`*UP`||
+|u|LATIN SMALL LETTER U|`*U`||
+|V|LATIN CAPITAL LETTER V|`SR*P`||
+|v|LATIN SMALL LETTER V|`SR*`||
+|W|LATIN CAPITAL LETTER W|`W*P`||
+|w|LATIN SMALL LETTER W|`W*`||
+|X|LATIN CAPITAL LETTER X|`KP*P`||
+|x|LATIN SMALL LETTER X|`KP*`||
+|Y|LATIN CAPITAL LETTER Y|`KWR*P`||
+|y|LATIN SMALL LETTER Y|`KWR*`||
+|Z|LATIN CAPITAL LETTER Z|`STKPW*P`<BR>`STK*P`||
+|z|LATIN SMALL LETTER Z|`STKPW*`<BR>`STK*`||
+### Greek Alphabet
+**Majuscule Ender:** `*FLG`<BR>
+**Minuscule Ender:** `-FLG`<BR>
+<BR>
+Many Greek letters match up nicely with English; some do not. Read the notes for each letter to see how we get around the discrepancies.<BR>
+|Character|Name|Stroke(s)|Notes|
+|-|-|-|-|
+|Α|GREEK CAPITAL LETTER ALPHA|`A*FLG`|Sounds like A.|
+|α|GREEK SMALL LETTER ALPHA|`AFLG`|Sounds like A.|
+|Β|GREEK CAPITAL LETTER BETA|`PW*FLG`|Sounds like B.|
+|β|GREEK SMALL LETTER BETA|`PW-FLG`|Sounds like B.|
+|Γ|GREEK CAPITAL LETTER GAMMA|`TKPW*FLG`|Sounds like G.|
+|γ|GREEK SMALL LETTER GAMMA|`TKPW-FLG`|Sounds like G.|
+|Δ|GREEK CAPITAL LETTER DELTA|`TK*FLG`|Sounds like D.|
+|δ|GREEK SMALL LETTER DELTA|`TK-FLG`|Sounds like D.|
+|Ε|GREEK CAPITAL LETTER EPSILON|`*EFLG`|Sounds like E|
+|ε|GREEK SMALL LETTER EPSILON|`EFLG`|Sounds like E|
+|Ζ|GREEK CAPITAL LETTER ZETA|`STKPW*FLG`|Sounds like Z.|
+|ζ|GREEK SMALL LETTER ZETA|`STKPW-FLG`|Sounds like Z.|
+|Η|GREEK CAPITAL LETTER ETA|`A*EUFLG`|Makes the Ā sound.|
+|η|GREEK SMALL LETTER ETA|`AEUFLG`|Makes the Ā sound.|
+|Θ|GREEK CAPITAL LETTER THETA|`TH*FLG`|Makes the TH sound.|
+|θ|GREEK SMALL LETTER THETA|`TH-FLG`|Makes the TH sound.|
+|Ι|GREEK CAPITAL LETTER IOTA|`*EUFLG`|Sounds like I.|
+|ι|GREEK SMALL LETTER IOTA|`EUFLG`|Sounds like I.|
+|Κ|GREEK CAPITAL LETTER KAPPA|`K*FLG`|Sounds like K.|
+|κ|GREEK SMALL LETTER KAPPA|`K-FLG`|Sounds like K.|
+|Λ|GREEK CAPITAL LETTER LAMDA|`HR*FLG`|Sounds like L.|
+|λ|GREEK SMALL LETTER LAMDA|`HR-FLG`|Sounds like L.|
+|Μ|GREEK CAPITAL LETTER MU|`PH*FLG`|Sounds like M.|
+|μ|GREEK SMALL LETTER MU|`PH-FLG`|Sounds like M.|
+|Ν|GREEK CAPITAL LETTER NU|`TPH*FLG`|We use the N chord, for the sound, even though the lowercase looks like a v.|
+|ν|GREEK SMALL LETTER NU|`TPH-FLG`|We use the N chord, for the sound, even though the lowercase looks like a v.|
+|Ξ|GREEK CAPITAL LETTER XI|`KP*FLG`|Sounds like X.|
+|ξ|GREEK SMALL LETTER XI|`KP-FLG`|Sounds like X.|
+|Ο|GREEK CAPITAL LETTER OMICRON|`O*FLG`|Sounds like O.|
+|ο|GREEK SMALL LETTER OMICRON|`OFLG`|Sounds like O.|
+|Π|GREEK CAPITAL LETTER PI|`P*FLG`|Sounds like P.|
+|π|GREEK SMALL LETTER PI|`P-FLG`|Sounds like P.|
+|Ρ|GREEK CAPITAL LETTER RHO|`R*FLG`|It looks like a P, but we respect that it sounds like an R.|
+|ρ|GREEK SMALL LETTER RHO|`R-FLG`|It looks like a P, but we respect that it sounds like an R.|
+|Σ|GREEK CAPITAL LETTER SIGMA|`S*FLG`|Sounds like S.|
+|σ|GREEK SMALL LETTER SIGMA|`S-FLG`|Sounds like S.|
+|ς|GREEK SMALL LETTER FINAL SIGMA|`SEFLG`|This system is built around majuscule/minuscule, but then this weirdo second minuscule sigma comes along. The E in the chord is for "end" (of word), as it's the word-final variant.|
+|Τ|GREEK CAPITAL LETTER TAU|`T*FLG`|Sounds like T.|
+|τ|GREEK SMALL LETTER TAU|`T-FLG`|Sounds like T.|
+|Υ|GREEK CAPITAL LETTER UPSILON|`*UFLG`|The capital looks like a Y, but we respect that it's a U sound.|
+|υ|GREEK SMALL LETTER UPSILON|`UFLG`|The capital looks like a Y, but we respect that it's a U sound.|
+|Φ|GREEK CAPITAL LETTER PHI|`TP*FLG`|Sounds like F.|
+|φ|GREEK SMALL LETTER PHI|`TP-FLG`|Sounds like F.|
+|Χ|GREEK CAPITAL LETTER CHI|`KH*FLG`|It's actual sound is hard to represent in steno, but CH is a reasonable fit. The Latin English steno X shape is in use by Xi, so we he can't provide it as an orthographic alternate for this one.|
+|χ|GREEK SMALL LETTER CHI|`KH-FLG`|It's actual sound is hard to represent in steno, but CH is a reasonable fit. The Latin English steno X shape is in use by Xi, so we he can't provide it as an orthographic alternate for this one.|
+|Ψ|GREEK CAPITAL LETTER PSI|`SP*FLG`|Sounds like PS (as in "lapse"), so we used the swapped form, as we don't have a PS sound on the left-hand side, where the consonants live.|
+|ψ|GREEK SMALL LETTER PSI|`SP-FLG`|Sounds like PS (as in "lapse"), so we used the swapped form, as we don't have a PS sound on the left-hand side, where the consonants live.|
+|Ω|GREEK CAPITAL LETTER OMEGA|`O*EFLG`|O is taken by omicron, which people pronounce with an initial long or short O sound, but this one is only ever the long O, so we use OE for this one.|
+|ω|GREEK SMALL LETTER OMEGA|`OEFLG`|O is taken by omicron, which people pronounce with an initial long or short O sound, but this one is only ever the long O, so we use OE for this one.|
+### Russian Cyrillic Alphabet
+**Majuscule Ender:** `*RPG`<BR>
+**Minuscule Ender:** `-RPG`<BR>
+<BR>
+The Russian alphabet has a number of discrepancies with English. All attempts were made to come up with mnemonically memorable strokes. See the descriptions following each letter.<BR>
+|Character|Name|Stroke(s)|Notes|
+|-|-|-|-|
+|А|CYRILLIC CAPITAL LETTER A|`A*RPG`|Sounds like A.|
+|а|CYRILLIC SMALL LETTER A|`ARPG`|Sounds like A.|
+|Б|CYRILLIC CAPITAL LETTER BE|`PW*RPG`|Sounds like B.|
+|б|CYRILLIC SMALL LETTER BE|`PW-RPG`|Sounds like B.|
+|В|CYRILLIC CAPITAL LETTER VE|`SR*RPG`|Sounds like V.|
+|в|CYRILLIC SMALL LETTER VE|`SR-RPG`|Sounds like V.|
+|Г|CYRILLIC CAPITAL LETTER GHE|`TKPW*RPG`|Sounds like G.|
+|г|CYRILLIC SMALL LETTER GHE|`TKPW-RPG`|Sounds like G.|
+|Д|CYRILLIC CAPITAL LETTER DE|`TK*RPG`|Sounds like D.|
+|д|CYRILLIC SMALL LETTER DE|`TK-RPG`|Sounds like D.|
+|Е|CYRILLIC CAPITAL LETTER IE|`KWR*ERPG`|Makes the YE sound, sort of.|
+|е|CYRILLIC SMALL LETTER IE|`KWRERPG`|Makes the YE sound, sort of.|
+|Ё|CYRILLIC CAPITAL LETTER IO|`KWRO*ERPG`<BR>`KWRO*RPG`|Makes the YŌ sound. Slightly simpler YO alternate provided.|
+|ё|CYRILLIC SMALL LETTER IO|`KWROERPG`<BR>`KWRORPG`|Makes the YŌ sound. Slightly simpler YO alternate provided.|
+|Ж|CYRILLIC CAPITAL LETTER ZHE|`STKPWH*RPG`<BR>`STKPW*RPG`<BR>`SKWR*RPG`|A literal steno ZH, as when this symbol is transliterated to English, i.e. in "Dr. Zhivago." Alternate, simpler form of Z provided, and an alternate J sound as well.|
+|ж|CYRILLIC SMALL LETTER ZHE|`STKPWH-RPG`<BR>`STKPW-RPG`<BR>`SKWR-RPG`|A literal steno ZH, as when this symbol is transliterated to English, i.e. in "Dr. Zhivago." Alternate, simpler form of Z provided, and an alternate J sound as well.|
+|З|CYRILLIC CAPITAL LETTER ZE|`STKPW*RPG`|Sounds like Z.|
+|з|CYRILLIC SMALL LETTER ZE|`STKPW-RPG`|Sounds like Z.|
+|И|CYRILLIC CAPITAL LETTER I|`AO*ERPG`<BR>`*EURPG`|Makes the Ē sound. A simpler I-sound alternate is provided for anyone who can imagine I as a long E sound; in my Spanish dictionary, I just use I (EU) for all letters I, and don't think of it like the English short I when working in that language.|
+|и|CYRILLIC SMALL LETTER I|`AOERPG`<BR>`EURPG`|Makes the Ē sound. A simpler I-sound alternate is provided for anyone who can imagine I as a long E sound; in my Spanish dictionary, I just use I (EU) for all letters I, and don't think of it like the English short I when working in that language.|
+|Й|CYRILLIC CAPITAL LETTER SHORT I|`KWR*RPG`|Sounds like Y, sort of.|
+|й|CYRILLIC SMALL LETTER SHORT I|`KWR-RPG`|Sounds like Y, sort of.|
+|К|CYRILLIC CAPITAL LETTER KA|`K*RPG`|Sounds like K.|
+|к|CYRILLIC SMALL LETTER KA|`K-RPG`|Sounds like K.|
+|Л|CYRILLIC CAPITAL LETTER EL|`HR*RPG`|Sounds like L.|
+|л|CYRILLIC SMALL LETTER EL|`HR-RPG`|Sounds like L.|
+|М|CYRILLIC CAPITAL LETTER EM|`PH*RPG`|Sounds like M.|
+|м|CYRILLIC SMALL LETTER EM|`PH-RPG`|Sounds like M.|
+|Н|CYRILLIC CAPITAL LETTER EN|`TPH*RPG`|Sounds like N.|
+|н|CYRILLIC SMALL LETTER EN|`TPH-RPG`|Sounds like N.|
+|О|CYRILLIC CAPITAL LETTER O|`O*RPG`|Sounds like O.|
+|о|CYRILLIC SMALL LETTER O|`ORPG`|Sounds like O.|
+|П|CYRILLIC CAPITAL LETTER PE|`P*RPG`|Sounds like P.|
+|п|CYRILLIC SMALL LETTER PE|`P-RPG`|Sounds like P.|
+|Р|CYRILLIC CAPITAL LETTER ER|`R*RPG`|Sounds like R.|
+|р|CYRILLIC SMALL LETTER ER|`R-RPG`|Sounds like R.|
+|С|CYRILLIC CAPITAL LETTER ES|`S*RPG`|Sounds like S.|
+|с|CYRILLIC SMALL LETTER ES|`S-RPG`|Sounds like S.|
+|Т|CYRILLIC CAPITAL LETTER TE|`T*RPG`|Sounds like T.|
+|т|CYRILLIC SMALL LETTER TE|`T-RPG`|Sounds like T.|
+|У|CYRILLIC CAPITAL LETTER U|`AO*URPG`<BR>`AO*RPG`|Makes the Ū sound, sort of. An alternate form is included, for anyone who wants to think of that sound from the viewpoint of the orthographic AO →"oo" spelling trick in Plover theory.|
+|у|CYRILLIC SMALL LETTER U|`AOURPG`<BR>`AORPG`|Makes the Ū sound, sort of. An alternate form is included, for anyone who wants to think of that sound from the viewpoint of the orthographic AO →"oo" spelling trick in Plover theory.|
+|Ф|CYRILLIC CAPITAL LETTER EF|`TP*RPG`|Sounds like F.|
+|ф|CYRILLIC SMALL LETTER EF|`TP-RPG`|Sounds like F.|
+|Х|CYRILLIC CAPITAL LETTER HA|`KP*RPG`|Uses orthography to get around the conflict with Ч/ч, which makes the "ch" sound. As this looks exactly like an X, we go with the steno X chord.|
+|х|CYRILLIC SMALL LETTER HA|`KP-RPG`|Uses orthography to get around the conflict with Ч/ч, which makes the "ch" sound. As this looks exactly like an X, we go with the steno X chord.|
+|Ц|CYRILLIC CAPITAL LETTER TSE|`ST*RPG`|This is supposed to make the TS sound, as in "cats", but we don't have that chord on the left-hand side of the board, so we employ the Plover theory trick of allowing one adjacent sound swap.|
+|ц|CYRILLIC SMALL LETTER TSE|`ST-RPG`|This is supposed to make the TS sound, as in "cats", but we don't have that chord on the left-hand side of the board, so we employ the Plover theory trick of allowing one adjacent sound swap.|
+|Ч|CYRILLIC CAPITAL LETTER CHE|`KH*RPG`|Makes the CH sound.|
+|ч|CYRILLIC SMALL LETTER CHE|`KH-RPG`|Makes the CH sound.|
+|Ш|CYRILLIC CAPITAL LETTER SHA|`SH*RPG`|Makes the SH sound.|
+|ш|CYRILLIC SMALL LETTER SHA|`SH-RPG`|Makes the SH sound.|
+|Щ|CYRILLIC CAPITAL LETTER SHCHA|`SKH*RPG`|Think of this one as a letter brief. The sound should be SHCH, like the sound between the words in "fresh cheese," but we don't have that in English steno, so we just merge SH and KH (CH).|
+|щ|CYRILLIC SMALL LETTER SHCHA|`SKH-RPG`|Think of this one as a letter brief. The sound should be SHCH, like the sound between the words in "fresh cheese," but we don't have that in English steno, so we just merge SH and KH (CH).|
+|Ъ|CYRILLIC CAPITAL LETTER HARD SIGN|`PWH*RPG`|This letter looks like the b in the English alphabet. It doesn't have its own sound, so I'm just leaning on what's visually sensible to an English speaker, and adding the H to denote that this is the hard sign (see: мягкий знак (soft sign)).|
+|ъ|CYRILLIC SMALL LETTER HARD SIGN|`PWH-RPG`|This letter looks like the b in the English alphabet. It doesn't have its own sound, so I'm just leaning on what's visually sensible to an English speaker, and adding the H to denote that this is the hard sign (see: мягкий знак (soft sign)).|
+|Ы|CYRILLIC CAPITAL LETTER YERU|`*URPG`|I'm told this letter makes a sound somewhere between the vowels in "bit" and "put", and my best take on that is the short U sound.|
+|ы|CYRILLIC SMALL LETTER YERU|`URPG`|I'm told this letter makes a sound somewhere between the vowels in "bit" and "put", and my best take on that is the short U sound.|
+|Ь|CYRILLIC CAPITAL LETTER SOFT SIGN|`PWR*RPG`|Like the hard sign, but with the R instead of the H, to denote the soft sound. The choice of R is positional; H is hard, and R is the soft version below it. (see: твёрдый знак (hard sign)).|
+|ь|CYRILLIC SMALL LETTER SOFT SIGN|`PWR-RPG`|Like the hard sign, but with the R instead of the H, to denote the soft sound. The choice of R is positional; H is hard, and R is the soft version below it. (see: твёрдый знак (hard sign)).|
+|Э|CYRILLIC CAPITAL LETTER E|`*ERPG`|Sounds like E.|
+|э|CYRILLIC SMALL LETTER E|`ERPG`|Sounds like E.|
+|Ю|CYRILLIC CAPITAL LETTER YU|`KWRAO*URPG`|Makes the YŪ sound.|
+|ю|CYRILLIC SMALL LETTER YU|`KWRAOURPG`|Makes the YŪ sound.|
+|Я|CYRILLIC CAPITAL LETTER YA|`KWRA*RPG`|Makes the YA sound.|
+|я|CYRILLIC SMALL LETTER YA|`KWRARPG`|Makes the YA sound.|
+### All Composed Characters
+
 There are many ways to sort such a list. I opted not to go with Unicode code point, because it ends up somewhat nonsensical. Instead, this uses a custom sort based on a 3-tuple of:
 
-    1. lowercase base letter (e.g. "a" for "Â")
-    2. decomposed, Unicode-ordered, diacritics list
-    3. True, if base letter is lower, otherwise False
+1. lowercase base letter (e.g. "a" for "Â")
+2. decomposed, Unicode-ordered, diacritics list
+3. True, if base letter is lower, otherwise False
 
 This creates a list that feels at least a bit alphabetical in nature, and positions upper and lowercase letters with the same diacritics together.
 
 |Char|Code Pt|Name|
 |-|-|-|
 |<a name="char-dollar-sign"></a>$|[U+0024](https://www.compart.com/en/unicode/U+0024)|DOLLAR SIGN<BR>S + currency|
-|<a name="char-latin-capital-letter-a"></a>A|[U+0041](https://www.compart.com/en/unicode/U+0041)|LATIN CAPITAL LETTER A<BR>|
-|<a name="char-latin-small-letter-a"></a>a|[U+0061](https://www.compart.com/en/unicode/U+0061)|LATIN SMALL LETTER A<BR>|
 |<a name="char-latin-capital-letter-a-with-grave"></a>À|[U+00C0](https://www.compart.com/en/unicode/U+00C0)|LATIN CAPITAL LETTER A WITH GRAVE<BR>A + grave|
 |<a name="char-latin-small-letter-a-with-grave"></a>à|[U+00E0](https://www.compart.com/en/unicode/U+00E0)|LATIN SMALL LETTER A WITH GRAVE<BR>a + grave|
 |<a name="char-latin-capital-letter-a-with-acute"></a>Á|[U+00C1](https://www.compart.com/en/unicode/U+00C1)|LATIN CAPITAL LETTER A WITH ACUTE<BR>A + acute|
@@ -243,16 +430,12 @@ This creates a list that feels at least a bit alphabetical in nature, and positi
 |<a name="char-latin-small-letter-a-with-ring-below"></a>ḁ|[U+1E01](https://www.compart.com/en/unicode/U+1E01)|LATIN SMALL LETTER A WITH RING BELOW<BR>a + ringBelow|
 |<a name="char-latin-capital-letter-a-with-ogonek"></a>Ą|[U+0104](https://www.compart.com/en/unicode/U+0104)|LATIN CAPITAL LETTER A WITH OGONEK<BR>A + ogonek|
 |<a name="char-latin-small-letter-a-with-ogonek"></a>ą|[U+0105](https://www.compart.com/en/unicode/U+0105)|LATIN SMALL LETTER A WITH OGONEK<BR>a + ogonek|
-|<a name="char-latin-capital-letter-b"></a>B|[U+0042](https://www.compart.com/en/unicode/U+0042)|LATIN CAPITAL LETTER B<BR>|
-|<a name="char-latin-small-letter-b"></a>b|[U+0062](https://www.compart.com/en/unicode/U+0062)|LATIN SMALL LETTER B<BR>|
 |<a name="char-latin-capital-letter-b-with-dot-above"></a>Ḃ|[U+1E02](https://www.compart.com/en/unicode/U+1E02)|LATIN CAPITAL LETTER B WITH DOT ABOVE<BR>B + dotAbove|
 |<a name="char-latin-small-letter-b-with-dot-above"></a>ḃ|[U+1E03](https://www.compart.com/en/unicode/U+1E03)|LATIN SMALL LETTER B WITH DOT ABOVE<BR>b + dotAbove|
 |<a name="char-latin-capital-letter-b-with-dot-below"></a>Ḅ|[U+1E04](https://www.compart.com/en/unicode/U+1E04)|LATIN CAPITAL LETTER B WITH DOT BELOW<BR>B + dotBelow|
 |<a name="char-latin-small-letter-b-with-dot-below"></a>ḅ|[U+1E05](https://www.compart.com/en/unicode/U+1E05)|LATIN SMALL LETTER B WITH DOT BELOW<BR>b + dotBelow|
 |<a name="char-latin-capital-letter-b-with-line-below"></a>Ḇ|[U+1E06](https://www.compart.com/en/unicode/U+1E06)|LATIN CAPITAL LETTER B WITH LINE BELOW<BR>B + lineBelow|
 |<a name="char-latin-small-letter-b-with-line-below"></a>ḇ|[U+1E07](https://www.compart.com/en/unicode/U+1E07)|LATIN SMALL LETTER B WITH LINE BELOW<BR>b + lineBelow|
-|<a name="char-latin-capital-letter-c"></a>C|[U+0043](https://www.compart.com/en/unicode/U+0043)|LATIN CAPITAL LETTER C<BR>|
-|<a name="char-latin-small-letter-c"></a>c|[U+0063](https://www.compart.com/en/unicode/U+0063)|LATIN SMALL LETTER C<BR>|
 |<a name="char-latin-capital-letter-c-with-acute"></a>Ć|[U+0106](https://www.compart.com/en/unicode/U+0106)|LATIN CAPITAL LETTER C WITH ACUTE<BR>C + acute|
 |<a name="char-latin-small-letter-c-with-acute"></a>ć|[U+0107](https://www.compart.com/en/unicode/U+0107)|LATIN SMALL LETTER C WITH ACUTE<BR>c + acute|
 |<a name="char-latin-capital-letter-c-with-circumflex"></a>Ĉ|[U+0108](https://www.compart.com/en/unicode/U+0108)|LATIN CAPITAL LETTER C WITH CIRCUMFLEX<BR>C + circumflex|
@@ -265,8 +448,6 @@ This creates a list that feels at least a bit alphabetical in nature, and positi
 |<a name="char-latin-small-letter-c-with-cedilla"></a>ç|[U+00E7](https://www.compart.com/en/unicode/U+00E7)|LATIN SMALL LETTER C WITH CEDILLA<BR>c + cedilla|
 |<a name="char-latin-capital-letter-c-with-cedilla-and-acute"></a>Ḉ|[U+1E08](https://www.compart.com/en/unicode/U+1E08)|LATIN CAPITAL LETTER C WITH CEDILLA AND ACUTE<BR>C + cedilla + acute|
 |<a name="char-latin-small-letter-c-with-cedilla-and-acute"></a>ḉ|[U+1E09](https://www.compart.com/en/unicode/U+1E09)|LATIN SMALL LETTER C WITH CEDILLA AND ACUTE<BR>c + cedilla + acute|
-|<a name="char-latin-capital-letter-d"></a>D|[U+0044](https://www.compart.com/en/unicode/U+0044)|LATIN CAPITAL LETTER D<BR>|
-|<a name="char-latin-small-letter-d"></a>d|[U+0064](https://www.compart.com/en/unicode/U+0064)|LATIN SMALL LETTER D<BR>|
 |<a name="char-latin-capital-letter-d-with-dot-above"></a>Ḋ|[U+1E0A](https://www.compart.com/en/unicode/U+1E0A)|LATIN CAPITAL LETTER D WITH DOT ABOVE<BR>D + dotAbove|
 |<a name="char-latin-small-letter-d-with-dot-above"></a>ḋ|[U+1E0B](https://www.compart.com/en/unicode/U+1E0B)|LATIN SMALL LETTER D WITH DOT ABOVE<BR>d + dotAbove|
 |<a name="char-latin-capital-letter-d-with-caron"></a>Ď|[U+010E](https://www.compart.com/en/unicode/U+010E)|LATIN CAPITAL LETTER D WITH CARON<BR>D + caron|
@@ -279,8 +460,6 @@ This creates a list that feels at least a bit alphabetical in nature, and positi
 |<a name="char-latin-small-letter-d-with-circumflex-below"></a>ḓ|[U+1E13](https://www.compart.com/en/unicode/U+1E13)|LATIN SMALL LETTER D WITH CIRCUMFLEX BELOW<BR>d + circumflex|
 |<a name="char-latin-capital-letter-d-with-line-below"></a>Ḏ|[U+1E0E](https://www.compart.com/en/unicode/U+1E0E)|LATIN CAPITAL LETTER D WITH LINE BELOW<BR>D + lineBelow|
 |<a name="char-latin-small-letter-d-with-line-below"></a>ḏ|[U+1E0F](https://www.compart.com/en/unicode/U+1E0F)|LATIN SMALL LETTER D WITH LINE BELOW<BR>d + lineBelow|
-|<a name="char-latin-capital-letter-e"></a>E|[U+0045](https://www.compart.com/en/unicode/U+0045)|LATIN CAPITAL LETTER E<BR>|
-|<a name="char-latin-small-letter-e"></a>e|[U+0065](https://www.compart.com/en/unicode/U+0065)|LATIN SMALL LETTER E<BR>|
 |<a name="char-latin-capital-letter-e-with-grave"></a>È|[U+00C8](https://www.compart.com/en/unicode/U+00C8)|LATIN CAPITAL LETTER E WITH GRAVE<BR>E + grave|
 |<a name="char-latin-small-letter-e-with-grave"></a>è|[U+00E8](https://www.compart.com/en/unicode/U+00E8)|LATIN SMALL LETTER E WITH GRAVE<BR>e + grave|
 |<a name="char-latin-capital-letter-e-with-acute"></a>É|[U+00C9](https://www.compart.com/en/unicode/U+00C9)|LATIN CAPITAL LETTER E WITH ACUTE<BR>E + acute|
@@ -331,12 +510,8 @@ This creates a list that feels at least a bit alphabetical in nature, and positi
 |<a name="char-latin-small-letter-e-with-circumflex-below"></a>ḙ|[U+1E19](https://www.compart.com/en/unicode/U+1E19)|LATIN SMALL LETTER E WITH CIRCUMFLEX BELOW<BR>e + circumflexBelow|
 |<a name="char-latin-capital-letter-e-with-tilde-below"></a>Ḛ|[U+1E1A](https://www.compart.com/en/unicode/U+1E1A)|LATIN CAPITAL LETTER E WITH TILDE BELOW<BR>E + tildeBelow|
 |<a name="char-latin-small-letter-e-with-tilde-below"></a>ḛ|[U+1E1B](https://www.compart.com/en/unicode/U+1E1B)|LATIN SMALL LETTER E WITH TILDE BELOW<BR>e + tildeBelow|
-|<a name="char-latin-capital-letter-f"></a>F|[U+0046](https://www.compart.com/en/unicode/U+0046)|LATIN CAPITAL LETTER F<BR>|
-|<a name="char-latin-small-letter-f"></a>f|[U+0066](https://www.compart.com/en/unicode/U+0066)|LATIN SMALL LETTER F<BR>|
 |<a name="char-latin-capital-letter-f-with-dot-above"></a>Ḟ|[U+1E1E](https://www.compart.com/en/unicode/U+1E1E)|LATIN CAPITAL LETTER F WITH DOT ABOVE<BR>F + dotAbove|
 |<a name="char-latin-small-letter-f-with-dot-above"></a>ḟ|[U+1E1F](https://www.compart.com/en/unicode/U+1E1F)|LATIN SMALL LETTER F WITH DOT ABOVE<BR>f + dotAbove|
-|<a name="char-latin-capital-letter-g"></a>G|[U+0047](https://www.compart.com/en/unicode/U+0047)|LATIN CAPITAL LETTER G<BR>|
-|<a name="char-latin-small-letter-g"></a>g|[U+0067](https://www.compart.com/en/unicode/U+0067)|LATIN SMALL LETTER G<BR>|
 |<a name="char-latin-capital-letter-g-with-acute"></a>Ǵ|[U+01F4](https://www.compart.com/en/unicode/U+01F4)|LATIN CAPITAL LETTER G WITH ACUTE<BR>G + acute|
 |<a name="char-latin-small-letter-g-with-acute"></a>ǵ|[U+01F5](https://www.compart.com/en/unicode/U+01F5)|LATIN SMALL LETTER G WITH ACUTE<BR>g + acute|
 |<a name="char-latin-capital-letter-g-with-circumflex"></a>Ĝ|[U+011C](https://www.compart.com/en/unicode/U+011C)|LATIN CAPITAL LETTER G WITH CIRCUMFLEX<BR>G + circumflex|
@@ -351,8 +526,6 @@ This creates a list that feels at least a bit alphabetical in nature, and positi
 |<a name="char-latin-small-letter-g-with-caron"></a>ǧ|[U+01E7](https://www.compart.com/en/unicode/U+01E7)|LATIN SMALL LETTER G WITH CARON<BR>g + caron|
 |<a name="char-latin-capital-letter-g-with-cedilla"></a>Ģ|[U+0122](https://www.compart.com/en/unicode/U+0122)|LATIN CAPITAL LETTER G WITH CEDILLA<BR>G + cedilla|
 |<a name="char-latin-small-letter-g-with-cedilla"></a>ģ|[U+0123](https://www.compart.com/en/unicode/U+0123)|LATIN SMALL LETTER G WITH CEDILLA<BR>g + cedilla|
-|<a name="char-latin-capital-letter-h"></a>H|[U+0048](https://www.compart.com/en/unicode/U+0048)|LATIN CAPITAL LETTER H<BR>|
-|<a name="char-latin-small-letter-h"></a>h|[U+0068](https://www.compart.com/en/unicode/U+0068)|LATIN SMALL LETTER H<BR>|
 |<a name="char-latin-capital-letter-h-with-circumflex"></a>Ĥ|[U+0124](https://www.compart.com/en/unicode/U+0124)|LATIN CAPITAL LETTER H WITH CIRCUMFLEX<BR>H + circumflex|
 |<a name="char-latin-small-letter-h-with-circumflex"></a>ĥ|[U+0125](https://www.compart.com/en/unicode/U+0125)|LATIN SMALL LETTER H WITH CIRCUMFLEX<BR>h + circumflex|
 |<a name="char-latin-capital-letter-h-with-dot-above"></a>Ḣ|[U+1E22](https://www.compart.com/en/unicode/U+1E22)|LATIN CAPITAL LETTER H WITH DOT ABOVE<BR>H + dotAbove|
@@ -368,9 +541,6 @@ This creates a list that feels at least a bit alphabetical in nature, and positi
 |<a name="char-latin-capital-letter-h-with-breve-below"></a>Ḫ|[U+1E2A](https://www.compart.com/en/unicode/U+1E2A)|LATIN CAPITAL LETTER H WITH BREVE BELOW<BR>H + breveBelow|
 |<a name="char-latin-small-letter-h-with-breve-below"></a>ḫ|[U+1E2B](https://www.compart.com/en/unicode/U+1E2B)|LATIN SMALL LETTER H WITH BREVE BELOW<BR>h + breveBelow|
 |<a name="char-latin-small-letter-h-with-line-below"></a>ẖ|[U+1E96](https://www.compart.com/en/unicode/U+1E96)|LATIN SMALL LETTER H WITH LINE BELOW<BR>h + lineBelow|
-|<a name="char-latin-small-letter-h-with-line-below"></a>ẖ|[U+1E96](https://www.compart.com/en/unicode/U+1E96)|LATIN SMALL LETTER H WITH LINE BELOW<BR>h + lineBelow|
-|<a name="char-latin-capital-letter-i"></a>I|[U+0049](https://www.compart.com/en/unicode/U+0049)|LATIN CAPITAL LETTER I<BR>|
-|<a name="char-latin-small-letter-i"></a>i|[U+0069](https://www.compart.com/en/unicode/U+0069)|LATIN SMALL LETTER I<BR>i + dotAbove|
 |<a name="char-latin-small-letter-i"></a>i|[U+0069](https://www.compart.com/en/unicode/U+0069)|LATIN SMALL LETTER I<BR>i + dotAbove|
 |<a name="char-latin-capital-letter-i-with-grave"></a>Ì|[U+00CC](https://www.compart.com/en/unicode/U+00CC)|LATIN CAPITAL LETTER I WITH GRAVE<BR>I + grave|
 |<a name="char-latin-small-letter-i-with-grave"></a>ì|[U+00EC](https://www.compart.com/en/unicode/U+00EC)|LATIN SMALL LETTER I WITH GRAVE<BR>i + grave|
@@ -403,14 +573,9 @@ This creates a list that feels at least a bit alphabetical in nature, and positi
 |<a name="char-latin-small-letter-i-with-ogonek"></a>į|[U+012F](https://www.compart.com/en/unicode/U+012F)|LATIN SMALL LETTER I WITH OGONEK<BR>i + ogonek|
 |<a name="char-latin-capital-letter-i-with-tilde-below"></a>Ḭ|[U+1E2C](https://www.compart.com/en/unicode/U+1E2C)|LATIN CAPITAL LETTER I WITH TILDE BELOW<BR>I + tildeBelow|
 |<a name="char-latin-small-letter-i-with-tilde-below"></a>ḭ|[U+1E2D](https://www.compart.com/en/unicode/U+1E2D)|LATIN SMALL LETTER I WITH TILDE BELOW<BR>I + tildeBelow|
-|<a name="char-latin-capital-letter-j"></a>J|[U+004A](https://www.compart.com/en/unicode/U+004A)|LATIN CAPITAL LETTER J<BR>|
-|<a name="char-latin-small-letter-j"></a>j|[U+006A](https://www.compart.com/en/unicode/U+006A)|LATIN SMALL LETTER J<BR>|
 |<a name="char-latin-capital-letter-j-with-circumflex"></a>Ĵ|[U+0134](https://www.compart.com/en/unicode/U+0134)|LATIN CAPITAL LETTER J WITH CIRCUMFLEX<BR>J + circumflex|
 |<a name="char-latin-small-letter-j-with-circumflex"></a>ĵ|[U+0135](https://www.compart.com/en/unicode/U+0135)|LATIN SMALL LETTER J WITH CIRCUMFLEX<BR>j + circumflex|
 |<a name="char-latin-small-letter-j-with-caron"></a>ǰ|[U+01F0](https://www.compart.com/en/unicode/U+01F0)|LATIN SMALL LETTER J WITH CARON<BR>j + caron|
-|<a name="char-latin-small-letter-j-with-caron"></a>ǰ|[U+01F0](https://www.compart.com/en/unicode/U+01F0)|LATIN SMALL LETTER J WITH CARON<BR>j + caron|
-|<a name="char-latin-capital-letter-k"></a>K|[U+004B](https://www.compart.com/en/unicode/U+004B)|LATIN CAPITAL LETTER K<BR>|
-|<a name="char-latin-small-letter-k"></a>k|[U+006B](https://www.compart.com/en/unicode/U+006B)|LATIN SMALL LETTER K<BR>|
 |<a name="char-latin-capital-letter-k-with-acute"></a>Ḱ|[U+1E30](https://www.compart.com/en/unicode/U+1E30)|LATIN CAPITAL LETTER K WITH ACUTE<BR>K + acute|
 |<a name="char-latin-small-letter-k-with-acute"></a>ḱ|[U+1E31](https://www.compart.com/en/unicode/U+1E31)|LATIN SMALL LETTER K WITH ACUTE<BR>k + acute|
 |<a name="char-latin-capital-letter-k-with-caron"></a>Ǩ|[U+01E8](https://www.compart.com/en/unicode/U+01E8)|LATIN CAPITAL LETTER K WITH CARON<BR>K + caron|
@@ -421,8 +586,6 @@ This creates a list that feels at least a bit alphabetical in nature, and positi
 |<a name="char-latin-small-letter-k-with-cedilla"></a>ķ|[U+0137](https://www.compart.com/en/unicode/U+0137)|LATIN SMALL LETTER K WITH CEDILLA<BR>k + cedilla|
 |<a name="char-latin-capital-letter-k-with-line-below"></a>Ḵ|[U+1E34](https://www.compart.com/en/unicode/U+1E34)|LATIN CAPITAL LETTER K WITH LINE BELOW<BR>K + lineBelow|
 |<a name="char-latin-small-letter-k-with-line-below"></a>ḵ|[U+1E35](https://www.compart.com/en/unicode/U+1E35)|LATIN SMALL LETTER K WITH LINE BELOW<BR>k + lineBelow|
-|<a name="char-latin-capital-letter-l"></a>L|[U+004C](https://www.compart.com/en/unicode/U+004C)|LATIN CAPITAL LETTER L<BR>|
-|<a name="char-latin-small-letter-l"></a>l|[U+006C](https://www.compart.com/en/unicode/U+006C)|LATIN SMALL LETTER L<BR>|
 |<a name="char-latin-capital-letter-l-with-acute"></a>Ĺ|[U+0139](https://www.compart.com/en/unicode/U+0139)|LATIN CAPITAL LETTER L WITH ACUTE<BR>L + acute|
 |<a name="char-latin-small-letter-l-with-acute"></a>ĺ|[U+013A](https://www.compart.com/en/unicode/U+013A)|LATIN SMALL LETTER L WITH ACUTE<BR>l + acute|
 |<a name="char-latin-capital-letter-l-with-caron"></a>Ľ|[U+013D](https://www.compart.com/en/unicode/U+013D)|LATIN CAPITAL LETTER L WITH CARON<BR>L + caron|
@@ -437,16 +600,12 @@ This creates a list that feels at least a bit alphabetical in nature, and positi
 |<a name="char-latin-small-letter-l-with-circumflex-below"></a>ḽ|[U+1E3D](https://www.compart.com/en/unicode/U+1E3D)|LATIN SMALL LETTER L WITH CIRCUMFLEX BELOW<BR>l + circumflex|
 |<a name="char-latin-capital-letter-l-with-line-below"></a>Ḻ|[U+1E3A](https://www.compart.com/en/unicode/U+1E3A)|LATIN CAPITAL LETTER L WITH LINE BELOW<BR>L + lineBelow|
 |<a name="char-latin-small-letter-l-with-line-below"></a>ḻ|[U+1E3B](https://www.compart.com/en/unicode/U+1E3B)|LATIN SMALL LETTER L WITH LINE BELOW<BR>l + lineBelow|
-|<a name="char-latin-capital-letter-m"></a>M|[U+004D](https://www.compart.com/en/unicode/U+004D)|LATIN CAPITAL LETTER M<BR>|
-|<a name="char-latin-small-letter-m"></a>m|[U+006D](https://www.compart.com/en/unicode/U+006D)|LATIN SMALL LETTER M<BR>|
 |<a name="char-latin-capital-letter-m-with-acute"></a>Ḿ|[U+1E3E](https://www.compart.com/en/unicode/U+1E3E)|LATIN CAPITAL LETTER M WITH ACUTE<BR>M + acute|
 |<a name="char-latin-small-letter-m-with-acute"></a>ḿ|[U+1E3F](https://www.compart.com/en/unicode/U+1E3F)|LATIN SMALL LETTER M WITH ACUTE<BR>m + acute|
 |<a name="char-latin-capital-letter-m-with-dot-above"></a>Ṁ|[U+1E40](https://www.compart.com/en/unicode/U+1E40)|LATIN CAPITAL LETTER M WITH DOT ABOVE<BR>M + dotAbove|
 |<a name="char-latin-small-letter-m-with-dot-above"></a>ṁ|[U+1E41](https://www.compart.com/en/unicode/U+1E41)|LATIN SMALL LETTER M WITH DOT ABOVE<BR>m + dotAbove|
 |<a name="char-latin-capital-letter-m-with-dot-below"></a>Ṃ|[U+1E42](https://www.compart.com/en/unicode/U+1E42)|LATIN CAPITAL LETTER M WITH DOT BELOW<BR>M + dotBelow|
 |<a name="char-latin-small-letter-m-with-dot-below"></a>ṃ|[U+1E43](https://www.compart.com/en/unicode/U+1E43)|LATIN SMALL LETTER M WITH DOT BELOW<BR>m + dotBelow|
-|<a name="char-latin-capital-letter-n"></a>N|[U+004E](https://www.compart.com/en/unicode/U+004E)|LATIN CAPITAL LETTER N<BR>|
-|<a name="char-latin-small-letter-n"></a>n|[U+006E](https://www.compart.com/en/unicode/U+006E)|LATIN SMALL LETTER N<BR>|
 |<a name="char-latin-capital-letter-n-with-grave"></a>Ǹ|[U+01F8](https://www.compart.com/en/unicode/U+01F8)|LATIN CAPITAL LETTER N WITH GRAVE<BR>N + grave|
 |<a name="char-latin-small-letter-n-with-grave"></a>ǹ|[U+01F9](https://www.compart.com/en/unicode/U+01F9)|LATIN SMALL LETTER N WITH GRAVE<BR>n + grave|
 |<a name="char-latin-capital-letter-n-with-acute"></a>Ń|[U+0143](https://www.compart.com/en/unicode/U+0143)|LATIN CAPITAL LETTER N WITH ACUTE<BR>N + acute|
@@ -465,8 +624,6 @@ This creates a list that feels at least a bit alphabetical in nature, and positi
 |<a name="char-latin-small-letter-n-with-circumflex-below"></a>ṋ|[U+1E4B](https://www.compart.com/en/unicode/U+1E4B)|LATIN SMALL LETTER N WITH CIRCUMFLEX BELOW<BR>n + circumflex|
 |<a name="char-latin-capital-letter-n-with-line-below"></a>Ṉ|[U+1E48](https://www.compart.com/en/unicode/U+1E48)|LATIN CAPITAL LETTER N WITH LINE BELOW<BR>N + lineBelow|
 |<a name="char-latin-small-letter-n-with-line-below"></a>ṉ|[U+1E49](https://www.compart.com/en/unicode/U+1E49)|LATIN SMALL LETTER N WITH LINE BELOW<BR>n + lineBelow|
-|<a name="char-latin-capital-letter-o"></a>O|[U+004F](https://www.compart.com/en/unicode/U+004F)|LATIN CAPITAL LETTER O<BR>|
-|<a name="char-latin-small-letter-o"></a>o|[U+006F](https://www.compart.com/en/unicode/U+006F)|LATIN SMALL LETTER O<BR>|
 |<a name="char-latin-capital-letter-o-with-grave"></a>Ò|[U+00D2](https://www.compart.com/en/unicode/U+00D2)|LATIN CAPITAL LETTER O WITH GRAVE<BR>O + grave|
 |<a name="char-latin-small-letter-o-with-grave"></a>ò|[U+00F2](https://www.compart.com/en/unicode/U+00F2)|LATIN SMALL LETTER O WITH GRAVE<BR>o + grave|
 |<a name="char-latin-capital-letter-o-with-acute"></a>Ó|[U+00D3](https://www.compart.com/en/unicode/U+00D3)|LATIN CAPITAL LETTER O WITH ACUTE<BR>O + acute|
@@ -537,16 +694,10 @@ This creates a list that feels at least a bit alphabetical in nature, and positi
 |<a name="char-latin-small-letter-o-with-ogonek"></a>ǫ|[U+01EB](https://www.compart.com/en/unicode/U+01EB)|LATIN SMALL LETTER O WITH OGONEK<BR>o + ogonek|
 |<a name="char-latin-capital-letter-o-with-ogonek-and-macron"></a>Ǭ|[U+01EC](https://www.compart.com/en/unicode/U+01EC)|LATIN CAPITAL LETTER O WITH OGONEK AND MACRON<BR>O + ogonek + macron|
 |<a name="char-latin-small-letter-o-with-ogonek-and-macron"></a>ǭ|[U+01ED](https://www.compart.com/en/unicode/U+01ED)|LATIN SMALL LETTER O WITH OGONEK AND MACRON<BR>o + ogonek + macron|
-|<a name="char-latin-capital-letter-p"></a>P|[U+0050](https://www.compart.com/en/unicode/U+0050)|LATIN CAPITAL LETTER P<BR>|
-|<a name="char-latin-small-letter-p"></a>p|[U+0070](https://www.compart.com/en/unicode/U+0070)|LATIN SMALL LETTER P<BR>|
 |<a name="char-latin-capital-letter-p-with-acute"></a>Ṕ|[U+1E54](https://www.compart.com/en/unicode/U+1E54)|LATIN CAPITAL LETTER P WITH ACUTE<BR>P + acute|
 |<a name="char-latin-small-letter-p-with-acute"></a>ṕ|[U+1E55](https://www.compart.com/en/unicode/U+1E55)|LATIN SMALL LETTER P WITH ACUTE<BR>p + acute|
 |<a name="char-latin-capital-letter-p-with-dot-above"></a>Ṗ|[U+1E56](https://www.compart.com/en/unicode/U+1E56)|LATIN CAPITAL LETTER P WITH DOT ABOVE<BR>P + dotAbove|
 |<a name="char-latin-small-letter-p-with-dot-above"></a>ṗ|[U+1E57](https://www.compart.com/en/unicode/U+1E57)|LATIN SMALL LETTER P WITH DOT ABOVE<BR>p + dotAbove|
-|<a name="char-latin-capital-letter-q"></a>Q|[U+0051](https://www.compart.com/en/unicode/U+0051)|LATIN CAPITAL LETTER Q<BR>|
-|<a name="char-latin-small-letter-q"></a>q|[U+0071](https://www.compart.com/en/unicode/U+0071)|LATIN SMALL LETTER Q<BR>|
-|<a name="char-latin-capital-letter-r"></a>R|[U+0052](https://www.compart.com/en/unicode/U+0052)|LATIN CAPITAL LETTER R<BR>|
-|<a name="char-latin-small-letter-r"></a>r|[U+0072](https://www.compart.com/en/unicode/U+0072)|LATIN SMALL LETTER R<BR>|
 |<a name="char-latin-capital-letter-r-with-acute"></a>Ŕ|[U+0154](https://www.compart.com/en/unicode/U+0154)|LATIN CAPITAL LETTER R WITH ACUTE<BR>R + acute|
 |<a name="char-latin-small-letter-r-with-acute"></a>ŕ|[U+0155](https://www.compart.com/en/unicode/U+0155)|LATIN SMALL LETTER R WITH ACUTE<BR>r + acute|
 |<a name="char-latin-capital-letter-r-with-dot-above"></a>Ṙ|[U+1E58](https://www.compart.com/en/unicode/U+1E58)|LATIN CAPITAL LETTER R WITH DOT ABOVE<BR>R + dotAbove|
@@ -565,8 +716,6 @@ This creates a list that feels at least a bit alphabetical in nature, and positi
 |<a name="char-latin-small-letter-r-with-cedilla"></a>ŗ|[U+0157](https://www.compart.com/en/unicode/U+0157)|LATIN SMALL LETTER R WITH CEDILLA<BR>r + cedilla|
 |<a name="char-latin-capital-letter-r-with-line-below"></a>Ṟ|[U+1E5E](https://www.compart.com/en/unicode/U+1E5E)|LATIN CAPITAL LETTER R WITH LINE BELOW<BR>R + lineBelow|
 |<a name="char-latin-small-letter-r-with-line-below"></a>ṟ|[U+1E5F](https://www.compart.com/en/unicode/U+1E5F)|LATIN SMALL LETTER R WITH LINE BELOW<BR>r + lineBelow|
-|<a name="char-latin-capital-letter-s"></a>S|[U+0053](https://www.compart.com/en/unicode/U+0053)|LATIN CAPITAL LETTER S<BR>|
-|<a name="char-latin-small-letter-s"></a>s|[U+0073](https://www.compart.com/en/unicode/U+0073)|LATIN SMALL LETTER S<BR>|
 |<a name="char-latin-capital-letter-s-with-acute"></a>Ś|[U+015A](https://www.compart.com/en/unicode/U+015A)|LATIN CAPITAL LETTER S WITH ACUTE<BR>S + acute|
 |<a name="char-latin-small-letter-s-with-acute"></a>ś|[U+015B](https://www.compart.com/en/unicode/U+015B)|LATIN SMALL LETTER S WITH ACUTE<BR>s + acute|
 |<a name="char-latin-capital-letter-s-with-acute-and-dot-above"></a>Ṥ|[U+1E64](https://www.compart.com/en/unicode/U+1E64)|LATIN CAPITAL LETTER S WITH ACUTE AND DOT ABOVE<BR>S + acute + dotAbove|
@@ -589,11 +738,8 @@ This creates a list that feels at least a bit alphabetical in nature, and positi
 |<a name="char-latin-small-letter-s-with-comma-below"></a>ș|[U+0219](https://www.compart.com/en/unicode/U+0219)|LATIN SMALL LETTER S WITH COMMA BELOW<BR>s + dotBelow|
 |<a name="char-latin-capital-letter-s-with-cedilla"></a>Ş|[U+015E](https://www.compart.com/en/unicode/U+015E)|LATIN CAPITAL LETTER S WITH CEDILLA<BR>S + cedilla|
 |<a name="char-latin-small-letter-s-with-cedilla"></a>ş|[U+015F](https://www.compart.com/en/unicode/U+015F)|LATIN SMALL LETTER S WITH CEDILLA<BR>s + cedilla|
-|<a name="char-latin-capital-letter-t"></a>T|[U+0054](https://www.compart.com/en/unicode/U+0054)|LATIN CAPITAL LETTER T<BR>|
-|<a name="char-latin-small-letter-t"></a>t|[U+0074](https://www.compart.com/en/unicode/U+0074)|LATIN SMALL LETTER T<BR>|
 |<a name="char-latin-capital-letter-t-with-dot-above"></a>Ṫ|[U+1E6A](https://www.compart.com/en/unicode/U+1E6A)|LATIN CAPITAL LETTER T WITH DOT ABOVE<BR>T + dotAbove|
 |<a name="char-latin-small-letter-t-with-dot-above"></a>ṫ|[U+1E6B](https://www.compart.com/en/unicode/U+1E6B)|LATIN SMALL LETTER T WITH DOT ABOVE<BR>t + dotAbove|
-|<a name="char-latin-small-letter-t-with-diaeresis"></a>ẗ|[U+1E97](https://www.compart.com/en/unicode/U+1E97)|LATIN SMALL LETTER T WITH DIAERESIS<BR>t + diaeresis|
 |<a name="char-latin-small-letter-t-with-diaeresis"></a>ẗ|[U+1E97](https://www.compart.com/en/unicode/U+1E97)|LATIN SMALL LETTER T WITH DIAERESIS<BR>t + diaeresis|
 |<a name="char-latin-capital-letter-t-with-caron"></a>Ť|[U+0164](https://www.compart.com/en/unicode/U+0164)|LATIN CAPITAL LETTER T WITH CARON<BR>T + caron|
 |<a name="char-latin-small-letter-t-with-caron"></a>ť|[U+0165](https://www.compart.com/en/unicode/U+0165)|LATIN SMALL LETTER T WITH CARON<BR>t + caron|
@@ -607,8 +753,6 @@ This creates a list that feels at least a bit alphabetical in nature, and positi
 |<a name="char-latin-small-letter-t-with-circumflex-below"></a>ṱ|[U+1E71](https://www.compart.com/en/unicode/U+1E71)|LATIN SMALL LETTER T WITH CIRCUMFLEX BELOW<BR>t + circumflex|
 |<a name="char-latin-capital-letter-t-with-line-below"></a>Ṯ|[U+1E6E](https://www.compart.com/en/unicode/U+1E6E)|LATIN CAPITAL LETTER T WITH LINE BELOW<BR>T + lineBelow|
 |<a name="char-latin-small-letter-t-with-line-below"></a>ṯ|[U+1E6F](https://www.compart.com/en/unicode/U+1E6F)|LATIN SMALL LETTER T WITH LINE BELOW<BR>t + lineBelow|
-|<a name="char-latin-capital-letter-u"></a>U|[U+0055](https://www.compart.com/en/unicode/U+0055)|LATIN CAPITAL LETTER U<BR>|
-|<a name="char-latin-small-letter-u"></a>u|[U+0075](https://www.compart.com/en/unicode/U+0075)|LATIN SMALL LETTER U<BR>|
 |<a name="char-latin-capital-letter-u-with-grave"></a>Ù|[U+00D9](https://www.compart.com/en/unicode/U+00D9)|LATIN CAPITAL LETTER U WITH GRAVE<BR>U + grave|
 |<a name="char-latin-small-letter-u-with-grave"></a>ù|[U+00F9](https://www.compart.com/en/unicode/U+00F9)|LATIN SMALL LETTER U WITH GRAVE<BR>u + grave|
 |<a name="char-latin-capital-letter-u-with-acute"></a>Ú|[U+00DA](https://www.compart.com/en/unicode/U+00DA)|LATIN CAPITAL LETTER U WITH ACUTE<BR>U + acute|
@@ -669,15 +813,11 @@ This creates a list that feels at least a bit alphabetical in nature, and positi
 |<a name="char-latin-small-letter-u-with-circumflex-below"></a>ṷ|[U+1E77](https://www.compart.com/en/unicode/U+1E77)|LATIN SMALL LETTER U WITH CIRCUMFLEX BELOW<BR>u + circumflexBelow|
 |<a name="char-latin-capital-letter-u-with-tilde-below"></a>Ṵ|[U+1E74](https://www.compart.com/en/unicode/U+1E74)|LATIN CAPITAL LETTER U WITH TILDE BELOW<BR>U + tildeBelow|
 |<a name="char-latin-small-letter-u-with-tilde-below"></a>ṵ|[U+1E75](https://www.compart.com/en/unicode/U+1E75)|LATIN SMALL LETTER U WITH TILDE BELOW<BR>u + tildeBelow|
-|<a name="char-latin-capital-letter-v"></a>V|[U+0056](https://www.compart.com/en/unicode/U+0056)|LATIN CAPITAL LETTER V<BR>|
-|<a name="char-latin-small-letter-v"></a>v|[U+0076](https://www.compart.com/en/unicode/U+0076)|LATIN SMALL LETTER V<BR>|
 |<a name="char-latin-capital-letter-v-with-tilde"></a>Ṽ|[U+1E7C](https://www.compart.com/en/unicode/U+1E7C)|LATIN CAPITAL LETTER V WITH TILDE<BR>V + tilde|
 |<a name="char-latin-small-letter-v-with-tilde"></a>ṽ|[U+1E7D](https://www.compart.com/en/unicode/U+1E7D)|LATIN SMALL LETTER V WITH TILDE<BR>v + tilde|
 |<a name="char-latin-capital-letter-v-with-dot-below"></a>Ṿ|[U+1E7E](https://www.compart.com/en/unicode/U+1E7E)|LATIN CAPITAL LETTER V WITH DOT BELOW<BR>V + dotBelow|
 |<a name="char-latin-small-letter-v-with-dot-below"></a>ṿ|[U+1E7F](https://www.compart.com/en/unicode/U+1E7F)|LATIN SMALL LETTER V WITH DOT BELOW<BR>v + dotBelow|
 |<a name="char-latin-capital-letter-w"></a>W|[U+0057](https://www.compart.com/en/unicode/U+0057)|LATIN CAPITAL LETTER W<BR>VV + ligature|
-|<a name="char-latin-capital-letter-w"></a>W|[U+0057](https://www.compart.com/en/unicode/U+0057)|LATIN CAPITAL LETTER W<BR>VV + ligature|
-|<a name="char-latin-small-letter-w"></a>w|[U+0077](https://www.compart.com/en/unicode/U+0077)|LATIN SMALL LETTER W<BR>vv + ligature|
 |<a name="char-latin-small-letter-w"></a>w|[U+0077](https://www.compart.com/en/unicode/U+0077)|LATIN SMALL LETTER W<BR>vv + ligature|
 |<a name="char-latin-capital-letter-w-with-grave"></a>Ẁ|[U+1E80](https://www.compart.com/en/unicode/U+1E80)|LATIN CAPITAL LETTER W WITH GRAVE<BR>W + grave|
 |<a name="char-latin-small-letter-w-with-grave"></a>ẁ|[U+1E81](https://www.compart.com/en/unicode/U+1E81)|LATIN SMALL LETTER W WITH GRAVE<BR>w + grave|
@@ -690,17 +830,12 @@ This creates a list that feels at least a bit alphabetical in nature, and positi
 |<a name="char-latin-capital-letter-w-with-diaeresis"></a>Ẅ|[U+1E84](https://www.compart.com/en/unicode/U+1E84)|LATIN CAPITAL LETTER W WITH DIAERESIS<BR>W + diaeresis|
 |<a name="char-latin-small-letter-w-with-diaeresis"></a>ẅ|[U+1E85](https://www.compart.com/en/unicode/U+1E85)|LATIN SMALL LETTER W WITH DIAERESIS<BR>w + diaeresis|
 |<a name="char-latin-small-letter-w-with-ring-above"></a>ẘ|[U+1E98](https://www.compart.com/en/unicode/U+1E98)|LATIN SMALL LETTER W WITH RING ABOVE<BR>w + ringAbove|
-|<a name="char-latin-small-letter-w-with-ring-above"></a>ẘ|[U+1E98](https://www.compart.com/en/unicode/U+1E98)|LATIN SMALL LETTER W WITH RING ABOVE<BR>w + ringAbove|
 |<a name="char-latin-capital-letter-w-with-dot-below"></a>Ẉ|[U+1E88](https://www.compart.com/en/unicode/U+1E88)|LATIN CAPITAL LETTER W WITH DOT BELOW<BR>W + dotBelow|
 |<a name="char-latin-small-letter-w-with-dot-below"></a>ẉ|[U+1E89](https://www.compart.com/en/unicode/U+1E89)|LATIN SMALL LETTER W WITH DOT BELOW<BR>w + dotBelow|
-|<a name="char-latin-capital-letter-x"></a>X|[U+0058](https://www.compart.com/en/unicode/U+0058)|LATIN CAPITAL LETTER X<BR>|
-|<a name="char-latin-small-letter-x"></a>x|[U+0078](https://www.compart.com/en/unicode/U+0078)|LATIN SMALL LETTER X<BR>|
 |<a name="char-latin-capital-letter-x-with-dot-above"></a>Ẋ|[U+1E8A](https://www.compart.com/en/unicode/U+1E8A)|LATIN CAPITAL LETTER X WITH DOT ABOVE<BR>X + dotAbove|
 |<a name="char-latin-small-letter-x-with-dot-above"></a>ẋ|[U+1E8B](https://www.compart.com/en/unicode/U+1E8B)|LATIN SMALL LETTER X WITH DOT ABOVE<BR>x + dotAbove|
 |<a name="char-latin-capital-letter-x-with-diaeresis"></a>Ẍ|[U+1E8C](https://www.compart.com/en/unicode/U+1E8C)|LATIN CAPITAL LETTER X WITH DIAERESIS<BR>X + diaeresis|
 |<a name="char-latin-small-letter-x-with-diaeresis"></a>ẍ|[U+1E8D](https://www.compart.com/en/unicode/U+1E8D)|LATIN SMALL LETTER X WITH DIAERESIS<BR>x + diaeresis|
-|<a name="char-latin-capital-letter-y"></a>Y|[U+0059](https://www.compart.com/en/unicode/U+0059)|LATIN CAPITAL LETTER Y<BR>|
-|<a name="char-latin-small-letter-y"></a>y|[U+0079](https://www.compart.com/en/unicode/U+0079)|LATIN SMALL LETTER Y<BR>|
 |<a name="char-latin-capital-letter-y-with-grave"></a>Ỳ|[U+1EF2](https://www.compart.com/en/unicode/U+1EF2)|LATIN CAPITAL LETTER Y WITH GRAVE<BR>Y + grave|
 |<a name="char-latin-small-letter-y-with-grave"></a>ỳ|[U+1EF3](https://www.compart.com/en/unicode/U+1EF3)|LATIN SMALL LETTER Y WITH GRAVE<BR>y + grave|
 |<a name="char-latin-capital-letter-y-with-acute"></a>Ý|[U+00DD](https://www.compart.com/en/unicode/U+00DD)|LATIN CAPITAL LETTER Y WITH ACUTE<BR>Y + acute|
@@ -718,11 +853,8 @@ This creates a list that feels at least a bit alphabetical in nature, and positi
 |<a name="char-latin-capital-letter-y-with-hook-above"></a>Ỷ|[U+1EF6](https://www.compart.com/en/unicode/U+1EF6)|LATIN CAPITAL LETTER Y WITH HOOK ABOVE<BR>Y + hookAbove|
 |<a name="char-latin-small-letter-y-with-hook-above"></a>ỷ|[U+1EF7](https://www.compart.com/en/unicode/U+1EF7)|LATIN SMALL LETTER Y WITH HOOK ABOVE<BR>y + hookAbove|
 |<a name="char-latin-small-letter-y-with-ring-above"></a>ẙ|[U+1E99](https://www.compart.com/en/unicode/U+1E99)|LATIN SMALL LETTER Y WITH RING ABOVE<BR>y + ringAbove|
-|<a name="char-latin-small-letter-y-with-ring-above"></a>ẙ|[U+1E99](https://www.compart.com/en/unicode/U+1E99)|LATIN SMALL LETTER Y WITH RING ABOVE<BR>y + ringAbove|
 |<a name="char-latin-capital-letter-y-with-dot-below"></a>Ỵ|[U+1EF4](https://www.compart.com/en/unicode/U+1EF4)|LATIN CAPITAL LETTER Y WITH DOT BELOW<BR>Y + dotBelow|
 |<a name="char-latin-small-letter-y-with-dot-below"></a>ỵ|[U+1EF5](https://www.compart.com/en/unicode/U+1EF5)|LATIN SMALL LETTER Y WITH DOT BELOW<BR>y + dotBelow|
-|<a name="char-latin-capital-letter-z"></a>Z|[U+005A](https://www.compart.com/en/unicode/U+005A)|LATIN CAPITAL LETTER Z<BR>|
-|<a name="char-latin-small-letter-z"></a>z|[U+007A](https://www.compart.com/en/unicode/U+007A)|LATIN SMALL LETTER Z<BR>|
 |<a name="char-latin-capital-letter-z-with-acute"></a>Ź|[U+0179](https://www.compart.com/en/unicode/U+0179)|LATIN CAPITAL LETTER Z WITH ACUTE<BR>Z + acute|
 |<a name="char-latin-small-letter-z-with-acute"></a>ź|[U+017A](https://www.compart.com/en/unicode/U+017A)|LATIN SMALL LETTER Z WITH ACUTE<BR>z + acute|
 |<a name="char-latin-capital-letter-z-with-circumflex"></a>Ẑ|[U+1E90](https://www.compart.com/en/unicode/U+1E90)|LATIN CAPITAL LETTER Z WITH CIRCUMFLEX<BR>Z + circumflex|
@@ -737,7 +869,6 @@ This creates a list that feels at least a bit alphabetical in nature, and positi
 |<a name="char-latin-small-letter-z-with-line-below"></a>ẕ|[U+1E95](https://www.compart.com/en/unicode/U+1E95)|LATIN SMALL LETTER Z WITH LINE BELOW<BR>z + lineBelow|
 |<a name="char-cent-sign"></a>¢|[U+00A2](https://www.compart.com/en/unicode/U+00A2)|CENT SIGN<BR>c + currency|
 |<a name="char-pound-sign"></a>£|[U+00A3](https://www.compart.com/en/unicode/U+00A3)|POUND SIGN<BR>L + currency|
-|<a name="char-yen-sign"></a>¥|[U+00A5](https://www.compart.com/en/unicode/U+00A5)|YEN SIGN<BR>Y + doubleCurrency|
 |<a name="char-yen-sign"></a>¥|[U+00A5](https://www.compart.com/en/unicode/U+00A5)|YEN SIGN<BR>Y + doubleCurrency|
 |<a name="char-latin-capital-letter-sharp-s"></a>ẞ|[U+1E9E](https://www.compart.com/en/unicode/U+1E9E)|LATIN CAPITAL LETTER SHARP S<BR>SZ + ligature|
 |<a name="char-latin-small-letter-sharp-s"></a>ß|[U+00DF](https://www.compart.com/en/unicode/U+00DF)|LATIN SMALL LETTER SHARP S<BR>sz + ligature|
@@ -795,179 +926,36 @@ This creates a list that feels at least a bit alphabetical in nature, and positi
 |<a name="char-latin-small-letter-i-with-stroke"></a>ɨ|[U+0268](https://www.compart.com/en/unicode/U+0268)|LATIN SMALL LETTER I WITH STROKE<BR>i + stroke|
 |<a name="char-latin-capital-letter-u-bar"></a>Ʉ|[U+0244](https://www.compart.com/en/unicode/U+0244)|LATIN CAPITAL LETTER U BAR<BR>U + stroke|
 |<a name="char-latin-small-letter-u-bar"></a>ʉ|[U+0289](https://www.compart.com/en/unicode/U+0289)|LATIN SMALL LETTER U BAR<BR>u + stroke|
-|<a name="char-greek-capital-letter-alpha"></a>Α|[U+0391](https://www.compart.com/en/unicode/U+0391)|GREEK CAPITAL LETTER ALPHA<BR>|
-|<a name="char-greek-small-letter-alpha"></a>α|[U+03B1](https://www.compart.com/en/unicode/U+03B1)|GREEK SMALL LETTER ALPHA<BR>|
-|<a name="char-greek-capital-letter-beta"></a>Β|[U+0392](https://www.compart.com/en/unicode/U+0392)|GREEK CAPITAL LETTER BETA<BR>|
-|<a name="char-greek-small-letter-beta"></a>β|[U+03B2](https://www.compart.com/en/unicode/U+03B2)|GREEK SMALL LETTER BETA<BR>|
-|<a name="char-greek-capital-letter-gamma"></a>Γ|[U+0393](https://www.compart.com/en/unicode/U+0393)|GREEK CAPITAL LETTER GAMMA<BR>|
-|<a name="char-greek-small-letter-gamma"></a>γ|[U+03B3](https://www.compart.com/en/unicode/U+03B3)|GREEK SMALL LETTER GAMMA<BR>|
-|<a name="char-greek-capital-letter-delta"></a>Δ|[U+0394](https://www.compart.com/en/unicode/U+0394)|GREEK CAPITAL LETTER DELTA<BR>|
-|<a name="char-greek-small-letter-delta"></a>δ|[U+03B4](https://www.compart.com/en/unicode/U+03B4)|GREEK SMALL LETTER DELTA<BR>|
-|<a name="char-greek-capital-letter-epsilon"></a>Ε|[U+0395](https://www.compart.com/en/unicode/U+0395)|GREEK CAPITAL LETTER EPSILON<BR>|
-|<a name="char-greek-small-letter-epsilon"></a>ε|[U+03B5](https://www.compart.com/en/unicode/U+03B5)|GREEK SMALL LETTER EPSILON<BR>|
-|<a name="char-greek-capital-letter-zeta"></a>Ζ|[U+0396](https://www.compart.com/en/unicode/U+0396)|GREEK CAPITAL LETTER ZETA<BR>|
-|<a name="char-greek-small-letter-zeta"></a>ζ|[U+03B6](https://www.compart.com/en/unicode/U+03B6)|GREEK SMALL LETTER ZETA<BR>|
-|<a name="char-greek-capital-letter-eta"></a>Η|[U+0397](https://www.compart.com/en/unicode/U+0397)|GREEK CAPITAL LETTER ETA<BR>|
-|<a name="char-greek-small-letter-eta"></a>η|[U+03B7](https://www.compart.com/en/unicode/U+03B7)|GREEK SMALL LETTER ETA<BR>|
-|<a name="char-greek-capital-letter-theta"></a>Θ|[U+0398](https://www.compart.com/en/unicode/U+0398)|GREEK CAPITAL LETTER THETA<BR>|
-|<a name="char-greek-small-letter-theta"></a>θ|[U+03B8](https://www.compart.com/en/unicode/U+03B8)|GREEK SMALL LETTER THETA<BR>|
-|<a name="char-greek-capital-letter-iota"></a>Ι|[U+0399](https://www.compart.com/en/unicode/U+0399)|GREEK CAPITAL LETTER IOTA<BR>|
-|<a name="char-greek-small-letter-iota"></a>ι|[U+03B9](https://www.compart.com/en/unicode/U+03B9)|GREEK SMALL LETTER IOTA<BR>|
-|<a name="char-greek-capital-letter-kappa"></a>Κ|[U+039A](https://www.compart.com/en/unicode/U+039A)|GREEK CAPITAL LETTER KAPPA<BR>|
-|<a name="char-greek-small-letter-kappa"></a>κ|[U+03BA](https://www.compart.com/en/unicode/U+03BA)|GREEK SMALL LETTER KAPPA<BR>|
-|<a name="char-greek-capital-letter-lamda"></a>Λ|[U+039B](https://www.compart.com/en/unicode/U+039B)|GREEK CAPITAL LETTER LAMDA<BR>|
-|<a name="char-greek-small-letter-lamda"></a>λ|[U+03BB](https://www.compart.com/en/unicode/U+03BB)|GREEK SMALL LETTER LAMDA<BR>|
-|<a name="char-greek-capital-letter-mu"></a>Μ|[U+039C](https://www.compart.com/en/unicode/U+039C)|GREEK CAPITAL LETTER MU<BR>|
-|<a name="char-greek-small-letter-mu"></a>μ|[U+03BC](https://www.compart.com/en/unicode/U+03BC)|GREEK SMALL LETTER MU<BR>|
-|<a name="char-greek-capital-letter-nu"></a>Ν|[U+039D](https://www.compart.com/en/unicode/U+039D)|GREEK CAPITAL LETTER NU<BR>|
-|<a name="char-greek-small-letter-nu"></a>ν|[U+03BD](https://www.compart.com/en/unicode/U+03BD)|GREEK SMALL LETTER NU<BR>|
-|<a name="char-greek-capital-letter-xi"></a>Ξ|[U+039E](https://www.compart.com/en/unicode/U+039E)|GREEK CAPITAL LETTER XI<BR>|
-|<a name="char-greek-small-letter-xi"></a>ξ|[U+03BE](https://www.compart.com/en/unicode/U+03BE)|GREEK SMALL LETTER XI<BR>|
-|<a name="char-greek-capital-letter-omicron"></a>Ο|[U+039F](https://www.compart.com/en/unicode/U+039F)|GREEK CAPITAL LETTER OMICRON<BR>|
-|<a name="char-greek-small-letter-omicron"></a>ο|[U+03BF](https://www.compart.com/en/unicode/U+03BF)|GREEK SMALL LETTER OMICRON<BR>|
-|<a name="char-greek-capital-letter-pi"></a>Π|[U+03A0](https://www.compart.com/en/unicode/U+03A0)|GREEK CAPITAL LETTER PI<BR>|
-|<a name="char-greek-small-letter-pi"></a>π|[U+03C0](https://www.compart.com/en/unicode/U+03C0)|GREEK SMALL LETTER PI<BR>|
-|<a name="char-greek-capital-letter-rho"></a>Ρ|[U+03A1](https://www.compart.com/en/unicode/U+03A1)|GREEK CAPITAL LETTER RHO<BR>|
-|<a name="char-greek-small-letter-rho"></a>ρ|[U+03C1](https://www.compart.com/en/unicode/U+03C1)|GREEK SMALL LETTER RHO<BR>|
-|<a name="char-greek-small-letter-final-sigma"></a>ς|[U+03C2](https://www.compart.com/en/unicode/U+03C2)|GREEK SMALL LETTER FINAL SIGMA<BR>|
-|<a name="char-greek-capital-letter-sigma"></a>Σ|[U+03A3](https://www.compart.com/en/unicode/U+03A3)|GREEK CAPITAL LETTER SIGMA<BR>|
-|<a name="char-greek-small-letter-sigma"></a>σ|[U+03C3](https://www.compart.com/en/unicode/U+03C3)|GREEK SMALL LETTER SIGMA<BR>|
-|<a name="char-greek-capital-letter-tau"></a>Τ|[U+03A4](https://www.compart.com/en/unicode/U+03A4)|GREEK CAPITAL LETTER TAU<BR>|
-|<a name="char-greek-small-letter-tau"></a>τ|[U+03C4](https://www.compart.com/en/unicode/U+03C4)|GREEK SMALL LETTER TAU<BR>|
-|<a name="char-greek-capital-letter-upsilon"></a>Υ|[U+03A5](https://www.compart.com/en/unicode/U+03A5)|GREEK CAPITAL LETTER UPSILON<BR>|
-|<a name="char-greek-small-letter-upsilon"></a>υ|[U+03C5](https://www.compart.com/en/unicode/U+03C5)|GREEK SMALL LETTER UPSILON<BR>|
-|<a name="char-greek-capital-letter-phi"></a>Φ|[U+03A6](https://www.compart.com/en/unicode/U+03A6)|GREEK CAPITAL LETTER PHI<BR>|
-|<a name="char-greek-small-letter-phi"></a>φ|[U+03C6](https://www.compart.com/en/unicode/U+03C6)|GREEK SMALL LETTER PHI<BR>|
-|<a name="char-greek-capital-letter-chi"></a>Χ|[U+03A7](https://www.compart.com/en/unicode/U+03A7)|GREEK CAPITAL LETTER CHI<BR>|
-|<a name="char-greek-small-letter-chi"></a>χ|[U+03C7](https://www.compart.com/en/unicode/U+03C7)|GREEK SMALL LETTER CHI<BR>|
-|<a name="char-greek-capital-letter-psi"></a>Ψ|[U+03A8](https://www.compart.com/en/unicode/U+03A8)|GREEK CAPITAL LETTER PSI<BR>|
-|<a name="char-greek-small-letter-psi"></a>ψ|[U+03C8](https://www.compart.com/en/unicode/U+03C8)|GREEK SMALL LETTER PSI<BR>|
-|<a name="char-greek-capital-letter-omega"></a>Ω|[U+03A9](https://www.compart.com/en/unicode/U+03A9)|GREEK CAPITAL LETTER OMEGA<BR>|
-|<a name="char-greek-small-letter-omega"></a>ω|[U+03C9](https://www.compart.com/en/unicode/U+03C9)|GREEK SMALL LETTER OMEGA<BR>|
-|<a name="char-cyrillic-capital-letter-a"></a>А|[U+0410](https://www.compart.com/en/unicode/U+0410)|CYRILLIC CAPITAL LETTER A<BR>|
-|<a name="char-cyrillic-small-letter-a"></a>а|[U+0430](https://www.compart.com/en/unicode/U+0430)|CYRILLIC SMALL LETTER A<BR>|
-|<a name="char-cyrillic-capital-letter-be"></a>Б|[U+0411](https://www.compart.com/en/unicode/U+0411)|CYRILLIC CAPITAL LETTER BE<BR>|
-|<a name="char-cyrillic-small-letter-be"></a>б|[U+0431](https://www.compart.com/en/unicode/U+0431)|CYRILLIC SMALL LETTER BE<BR>|
-|<a name="char-cyrillic-capital-letter-ve"></a>В|[U+0412](https://www.compart.com/en/unicode/U+0412)|CYRILLIC CAPITAL LETTER VE<BR>|
-|<a name="char-cyrillic-small-letter-ve"></a>в|[U+0432](https://www.compart.com/en/unicode/U+0432)|CYRILLIC SMALL LETTER VE<BR>|
-|<a name="char-cyrillic-capital-letter-ghe"></a>Г|[U+0413](https://www.compart.com/en/unicode/U+0413)|CYRILLIC CAPITAL LETTER GHE<BR>|
-|<a name="char-cyrillic-small-letter-ghe"></a>г|[U+0433](https://www.compart.com/en/unicode/U+0433)|CYRILLIC SMALL LETTER GHE<BR>|
-|<a name="char-cyrillic-capital-letter-de"></a>Д|[U+0414](https://www.compart.com/en/unicode/U+0414)|CYRILLIC CAPITAL LETTER DE<BR>|
-|<a name="char-cyrillic-small-letter-de"></a>д|[U+0434](https://www.compart.com/en/unicode/U+0434)|CYRILLIC SMALL LETTER DE<BR>|
-|<a name="char-cyrillic-capital-letter-ie"></a>Е|[U+0415](https://www.compart.com/en/unicode/U+0415)|CYRILLIC CAPITAL LETTER IE<BR>|
-|<a name="char-cyrillic-small-letter-ie"></a>е|[U+0435](https://www.compart.com/en/unicode/U+0435)|CYRILLIC SMALL LETTER IE<BR>|
-|<a name="char-cyrillic-capital-letter-io"></a>Ё|[U+0401](https://www.compart.com/en/unicode/U+0401)|CYRILLIC CAPITAL LETTER IO<BR>|
-|<a name="char-cyrillic-small-letter-io"></a>ё|[U+0451](https://www.compart.com/en/unicode/U+0451)|CYRILLIC SMALL LETTER IO<BR>|
-|<a name="char-cyrillic-capital-letter-zhe"></a>Ж|[U+0416](https://www.compart.com/en/unicode/U+0416)|CYRILLIC CAPITAL LETTER ZHE<BR>|
-|<a name="char-cyrillic-small-letter-zhe"></a>ж|[U+0436](https://www.compart.com/en/unicode/U+0436)|CYRILLIC SMALL LETTER ZHE<BR>|
-|<a name="char-cyrillic-capital-letter-ze"></a>З|[U+0417](https://www.compart.com/en/unicode/U+0417)|CYRILLIC CAPITAL LETTER ZE<BR>|
-|<a name="char-cyrillic-small-letter-ze"></a>з|[U+0437](https://www.compart.com/en/unicode/U+0437)|CYRILLIC SMALL LETTER ZE<BR>|
-|<a name="char-cyrillic-capital-letter-i"></a>И|[U+0418](https://www.compart.com/en/unicode/U+0418)|CYRILLIC CAPITAL LETTER I<BR>|
-|<a name="char-cyrillic-small-letter-i"></a>и|[U+0438](https://www.compart.com/en/unicode/U+0438)|CYRILLIC SMALL LETTER I<BR>|
-|<a name="char-cyrillic-capital-letter-short-i"></a>Й|[U+0419](https://www.compart.com/en/unicode/U+0419)|CYRILLIC CAPITAL LETTER SHORT I<BR>|
-|<a name="char-cyrillic-small-letter-short-i"></a>й|[U+0439](https://www.compart.com/en/unicode/U+0439)|CYRILLIC SMALL LETTER SHORT I<BR>|
-|<a name="char-cyrillic-capital-letter-ka"></a>К|[U+041A](https://www.compart.com/en/unicode/U+041A)|CYRILLIC CAPITAL LETTER KA<BR>|
-|<a name="char-cyrillic-small-letter-ka"></a>к|[U+043A](https://www.compart.com/en/unicode/U+043A)|CYRILLIC SMALL LETTER KA<BR>|
-|<a name="char-cyrillic-capital-letter-el"></a>Л|[U+041B](https://www.compart.com/en/unicode/U+041B)|CYRILLIC CAPITAL LETTER EL<BR>|
-|<a name="char-cyrillic-small-letter-el"></a>л|[U+043B](https://www.compart.com/en/unicode/U+043B)|CYRILLIC SMALL LETTER EL<BR>|
-|<a name="char-cyrillic-capital-letter-em"></a>М|[U+041C](https://www.compart.com/en/unicode/U+041C)|CYRILLIC CAPITAL LETTER EM<BR>|
-|<a name="char-cyrillic-small-letter-em"></a>м|[U+043C](https://www.compart.com/en/unicode/U+043C)|CYRILLIC SMALL LETTER EM<BR>|
-|<a name="char-cyrillic-capital-letter-en"></a>Н|[U+041D](https://www.compart.com/en/unicode/U+041D)|CYRILLIC CAPITAL LETTER EN<BR>|
-|<a name="char-cyrillic-small-letter-en"></a>н|[U+043D](https://www.compart.com/en/unicode/U+043D)|CYRILLIC SMALL LETTER EN<BR>|
-|<a name="char-cyrillic-capital-letter-o"></a>О|[U+041E](https://www.compart.com/en/unicode/U+041E)|CYRILLIC CAPITAL LETTER O<BR>|
-|<a name="char-cyrillic-small-letter-o"></a>о|[U+043E](https://www.compart.com/en/unicode/U+043E)|CYRILLIC SMALL LETTER O<BR>|
-|<a name="char-cyrillic-capital-letter-pe"></a>П|[U+041F](https://www.compart.com/en/unicode/U+041F)|CYRILLIC CAPITAL LETTER PE<BR>|
-|<a name="char-cyrillic-small-letter-pe"></a>п|[U+043F](https://www.compart.com/en/unicode/U+043F)|CYRILLIC SMALL LETTER PE<BR>|
-|<a name="char-cyrillic-capital-letter-er"></a>Р|[U+0420](https://www.compart.com/en/unicode/U+0420)|CYRILLIC CAPITAL LETTER ER<BR>|
-|<a name="char-cyrillic-small-letter-er"></a>р|[U+0440](https://www.compart.com/en/unicode/U+0440)|CYRILLIC SMALL LETTER ER<BR>|
-|<a name="char-cyrillic-capital-letter-es"></a>С|[U+0421](https://www.compart.com/en/unicode/U+0421)|CYRILLIC CAPITAL LETTER ES<BR>|
-|<a name="char-cyrillic-small-letter-es"></a>с|[U+0441](https://www.compart.com/en/unicode/U+0441)|CYRILLIC SMALL LETTER ES<BR>|
-|<a name="char-cyrillic-capital-letter-te"></a>Т|[U+0422](https://www.compart.com/en/unicode/U+0422)|CYRILLIC CAPITAL LETTER TE<BR>|
-|<a name="char-cyrillic-small-letter-te"></a>т|[U+0442](https://www.compart.com/en/unicode/U+0442)|CYRILLIC SMALL LETTER TE<BR>|
-|<a name="char-cyrillic-capital-letter-u"></a>У|[U+0423](https://www.compart.com/en/unicode/U+0423)|CYRILLIC CAPITAL LETTER U<BR>|
-|<a name="char-cyrillic-small-letter-u"></a>у|[U+0443](https://www.compart.com/en/unicode/U+0443)|CYRILLIC SMALL LETTER U<BR>|
 |<a name="char-cyrillic-capital-letter-u-with-double-acute"></a>Ӳ|[U+04F2](https://www.compart.com/en/unicode/U+04F2)|CYRILLIC CAPITAL LETTER U WITH DOUBLE ACUTE<BR>Y + acuteDoubled|
 |<a name="char-cyrillic-small-letter-u-with-double-acute"></a>ӳ|[U+04F3](https://www.compart.com/en/unicode/U+04F3)|CYRILLIC SMALL LETTER U WITH DOUBLE ACUTE<BR>y + acuteDoubled|
-|<a name="char-cyrillic-capital-letter-ef"></a>Ф|[U+0424](https://www.compart.com/en/unicode/U+0424)|CYRILLIC CAPITAL LETTER EF<BR>|
-|<a name="char-cyrillic-small-letter-ef"></a>ф|[U+0444](https://www.compart.com/en/unicode/U+0444)|CYRILLIC SMALL LETTER EF<BR>|
-|<a name="char-cyrillic-capital-letter-ha"></a>Х|[U+0425](https://www.compart.com/en/unicode/U+0425)|CYRILLIC CAPITAL LETTER HA<BR>|
-|<a name="char-cyrillic-small-letter-ha"></a>х|[U+0445](https://www.compart.com/en/unicode/U+0445)|CYRILLIC SMALL LETTER HA<BR>|
-|<a name="char-cyrillic-capital-letter-tse"></a>Ц|[U+0426](https://www.compart.com/en/unicode/U+0426)|CYRILLIC CAPITAL LETTER TSE<BR>|
-|<a name="char-cyrillic-small-letter-tse"></a>ц|[U+0446](https://www.compart.com/en/unicode/U+0446)|CYRILLIC SMALL LETTER TSE<BR>|
-|<a name="char-cyrillic-capital-letter-che"></a>Ч|[U+0427](https://www.compart.com/en/unicode/U+0427)|CYRILLIC CAPITAL LETTER CHE<BR>|
-|<a name="char-cyrillic-small-letter-che"></a>ч|[U+0447](https://www.compart.com/en/unicode/U+0447)|CYRILLIC SMALL LETTER CHE<BR>|
-|<a name="char-cyrillic-capital-letter-sha"></a>Ш|[U+0428](https://www.compart.com/en/unicode/U+0428)|CYRILLIC CAPITAL LETTER SHA<BR>|
-|<a name="char-cyrillic-small-letter-sha"></a>ш|[U+0448](https://www.compart.com/en/unicode/U+0448)|CYRILLIC SMALL LETTER SHA<BR>|
-|<a name="char-cyrillic-capital-letter-shcha"></a>Щ|[U+0429](https://www.compart.com/en/unicode/U+0429)|CYRILLIC CAPITAL LETTER SHCHA<BR>|
-|<a name="char-cyrillic-small-letter-shcha"></a>щ|[U+0449](https://www.compart.com/en/unicode/U+0449)|CYRILLIC SMALL LETTER SHCHA<BR>|
-|<a name="char-cyrillic-capital-letter-hard-sign"></a>Ъ|[U+042A](https://www.compart.com/en/unicode/U+042A)|CYRILLIC CAPITAL LETTER HARD SIGN<BR>|
-|<a name="char-cyrillic-small-letter-hard-sign"></a>ъ|[U+044A](https://www.compart.com/en/unicode/U+044A)|CYRILLIC SMALL LETTER HARD SIGN<BR>|
-|<a name="char-cyrillic-capital-letter-yeru"></a>Ы|[U+042B](https://www.compart.com/en/unicode/U+042B)|CYRILLIC CAPITAL LETTER YERU<BR>|
-|<a name="char-cyrillic-small-letter-yeru"></a>ы|[U+044B](https://www.compart.com/en/unicode/U+044B)|CYRILLIC SMALL LETTER YERU<BR>|
-|<a name="char-cyrillic-capital-letter-soft-sign"></a>Ь|[U+042C](https://www.compart.com/en/unicode/U+042C)|CYRILLIC CAPITAL LETTER SOFT SIGN<BR>|
-|<a name="char-cyrillic-small-letter-soft-sign"></a>ь|[U+044C](https://www.compart.com/en/unicode/U+044C)|CYRILLIC SMALL LETTER SOFT SIGN<BR>|
-|<a name="char-cyrillic-capital-letter-e"></a>Э|[U+042D](https://www.compart.com/en/unicode/U+042D)|CYRILLIC CAPITAL LETTER E<BR>|
-|<a name="char-cyrillic-small-letter-e"></a>э|[U+044D](https://www.compart.com/en/unicode/U+044D)|CYRILLIC SMALL LETTER E<BR>|
-|<a name="char-cyrillic-capital-letter-yu"></a>Ю|[U+042E](https://www.compart.com/en/unicode/U+042E)|CYRILLIC CAPITAL LETTER YU<BR>|
-|<a name="char-cyrillic-small-letter-yu"></a>ю|[U+044E](https://www.compart.com/en/unicode/U+044E)|CYRILLIC SMALL LETTER YU<BR>|
-|<a name="char-cyrillic-capital-letter-ya"></a>Я|[U+042F](https://www.compart.com/en/unicode/U+042F)|CYRILLIC CAPITAL LETTER YA<BR>|
-|<a name="char-cyrillic-small-letter-ya"></a>я|[U+044F](https://www.compart.com/en/unicode/U+044F)|CYRILLIC SMALL LETTER YA<BR>|
-|<a name="char-armenian-dram-sign"></a>֏|[U+058F](https://www.compart.com/en/unicode/U+058F)|ARMENIAN DRAM SIGN<BR>D + doubleCurrency|
 |<a name="char-armenian-dram-sign"></a>֏|[U+058F](https://www.compart.com/en/unicode/U+058F)|ARMENIAN DRAM SIGN<BR>D + doubleCurrency|
 |<a name="char-bengali-rupee-sign"></a>৳|[U+09F3](https://www.compart.com/en/unicode/U+09F3)|BENGALI RUPEE SIGN<BR>t + currency|
-|<a name="char-bengali-rupee-sign"></a>৳|[U+09F3](https://www.compart.com/en/unicode/U+09F3)|BENGALI RUPEE SIGN<BR>t + currency|
-|<a name="char-thai-currency-symbol-baht"></a>฿|[U+0E3F](https://www.compart.com/en/unicode/U+0E3F)|THAI CURRENCY SYMBOL BAHT<BR>B + currency|
 |<a name="char-thai-currency-symbol-baht"></a>฿|[U+0E3F](https://www.compart.com/en/unicode/U+0E3F)|THAI CURRENCY SYMBOL BAHT<BR>B + currency|
 |<a name="char-khmer-currency-symbol-riel"></a>៛|[U+17DB](https://www.compart.com/en/unicode/U+17DB)|KHMER CURRENCY SYMBOL RIEL<BR>r + currency|
-|<a name="char-khmer-currency-symbol-riel"></a>៛|[U+17DB](https://www.compart.com/en/unicode/U+17DB)|KHMER CURRENCY SYMBOL RIEL<BR>r + currency|
-|<a name="char-khmer-currency-symbol-riel"></a>៛|[U+17DB](https://www.compart.com/en/unicode/U+17DB)|KHMER CURRENCY SYMBOL RIEL<BR>r + currency|
 |<a name="char-latin-small-letter-turned-ae"></a>ᴂ|[U+1D02](https://www.compart.com/en/unicode/U+1D02)|LATIN SMALL LETTER TURNED AE<BR>ae + ligature + turned|
-|<a name="char-latin-small-letter-turned-ae"></a>ᴂ|[U+1D02](https://www.compart.com/en/unicode/U+1D02)|LATIN SMALL LETTER TURNED AE<BR>ae + ligature + turned|
-|<a name="char-latin-small-letter-ue"></a>ᵫ|[U+1D6B](https://www.compart.com/en/unicode/U+1D6B)|LATIN SMALL LETTER UE<BR>ue + ligature|
 |<a name="char-latin-small-letter-ue"></a>ᵫ|[U+1D6B](https://www.compart.com/en/unicode/U+1D6B)|LATIN SMALL LETTER UE<BR>ue + ligature|
 |<a name="char-latin-capital-letter-middle-welsh-ll"></a>Ỻ|[U+1EFA](https://www.compart.com/en/unicode/U+1EFA)|LATIN CAPITAL LETTER MIDDLE-WELSH LL<BR>IL + ligature|
 |<a name="char-latin-small-letter-middle-welsh-ll"></a>ỻ|[U+1EFB](https://www.compart.com/en/unicode/U+1EFB)|LATIN SMALL LETTER MIDDLE-WELSH LL<BR>il + ligature|
 |<a name="char-colon-sign"></a>₡|[U+20A1](https://www.compart.com/en/unicode/U+20A1)|COLON SIGN<BR>C + doubleCurrency|
-|<a name="char-colon-sign"></a>₡|[U+20A1](https://www.compart.com/en/unicode/U+20A1)|COLON SIGN<BR>C + doubleCurrency|
-|<a name="char-french-franc-sign"></a>₣|[U+20A3](https://www.compart.com/en/unicode/U+20A3)|FRENCH FRANC SIGN<BR>F + currency|
 |<a name="char-french-franc-sign"></a>₣|[U+20A3](https://www.compart.com/en/unicode/U+20A3)|FRENCH FRANC SIGN<BR>F + currency|
 |<a name="char-lira-sign"></a>₤|[U+20A4](https://www.compart.com/en/unicode/U+20A4)|LIRA SIGN<BR>L + doubleCurrency|
 |<a name="char-mill-sign"></a>₥|[U+20A5](https://www.compart.com/en/unicode/U+20A5)|MILL SIGN<BR>m + currency|
-|<a name="char-mill-sign"></a>₥|[U+20A5](https://www.compart.com/en/unicode/U+20A5)|MILL SIGN<BR>m + currency|
-|<a name="char-mill-sign"></a>₥|[U+20A5](https://www.compart.com/en/unicode/U+20A5)|MILL SIGN<BR>m + currency|
-|<a name="char-naira-sign"></a>₦|[U+20A6](https://www.compart.com/en/unicode/U+20A6)|NAIRA SIGN<BR>N + doubleCurrency|
 |<a name="char-naira-sign"></a>₦|[U+20A6](https://www.compart.com/en/unicode/U+20A6)|NAIRA SIGN<BR>N + doubleCurrency|
 |<a name="char-won-sign"></a>₩|[U+20A9](https://www.compart.com/en/unicode/U+20A9)|WON SIGN<BR>W + doubleCurrency|
-|<a name="char-won-sign"></a>₩|[U+20A9](https://www.compart.com/en/unicode/U+20A9)|WON SIGN<BR>W + doubleCurrency|
-|<a name="char-dong-sign"></a>₫|[U+20AB](https://www.compart.com/en/unicode/U+20AB)|DONG SIGN<BR>d + currency|
-|<a name="char-dong-sign"></a>₫|[U+20AB](https://www.compart.com/en/unicode/U+20AB)|DONG SIGN<BR>d + currency|
 |<a name="char-dong-sign"></a>₫|[U+20AB](https://www.compart.com/en/unicode/U+20AB)|DONG SIGN<BR>d + currency|
 |<a name="char-euro-sign"></a>€|[U+20AC](https://www.compart.com/en/unicode/U+20AC)|EURO SIGN<BR>E + doubleCurrency|
-|<a name="char-euro-sign"></a>€|[U+20AC](https://www.compart.com/en/unicode/U+20AC)|EURO SIGN<BR>E + doubleCurrency|
-|<a name="char-kip-sign"></a>₭|[U+20AD](https://www.compart.com/en/unicode/U+20AD)|KIP SIGN<BR>K + currency|
 |<a name="char-kip-sign"></a>₭|[U+20AD](https://www.compart.com/en/unicode/U+20AD)|KIP SIGN<BR>K + currency|
 |<a name="char-tugrik-sign"></a>₮|[U+20AE](https://www.compart.com/en/unicode/U+20AE)|TUGRIK SIGN<BR>T + doubleCurrency|
-|<a name="char-tugrik-sign"></a>₮|[U+20AE](https://www.compart.com/en/unicode/U+20AE)|TUGRIK SIGN<BR>T + doubleCurrency|
-|<a name="char-peso-sign"></a>₱|[U+20B1](https://www.compart.com/en/unicode/U+20B1)|PESO SIGN<BR>P + doubleCurrency|
 |<a name="char-peso-sign"></a>₱|[U+20B1](https://www.compart.com/en/unicode/U+20B1)|PESO SIGN<BR>P + doubleCurrency|
 |<a name="char-guarani-sign"></a>₲|[U+20B2](https://www.compart.com/en/unicode/U+20B2)|GUARANI SIGN<BR>G + currency|
-|<a name="char-guarani-sign"></a>₲|[U+20B2](https://www.compart.com/en/unicode/U+20B2)|GUARANI SIGN<BR>G + currency|
-|<a name="char-austral-sign"></a>₳|[U+20B3](https://www.compart.com/en/unicode/U+20B3)|AUSTRAL SIGN<BR>A + doubleCurrency|
 |<a name="char-austral-sign"></a>₳|[U+20B3](https://www.compart.com/en/unicode/U+20B3)|AUSTRAL SIGN<BR>A + doubleCurrency|
 |<a name="char-hryvnia-sign"></a>₴|[U+20B4](https://www.compart.com/en/unicode/U+20B4)|HRYVNIA SIGN<BR>S + doubleCurrency|
-|<a name="char-hryvnia-sign"></a>₴|[U+20B4](https://www.compart.com/en/unicode/U+20B4)|HRYVNIA SIGN<BR>S + doubleCurrency|
-|<a name="char-cedi-sign"></a>₵|[U+20B5](https://www.compart.com/en/unicode/U+20B5)|CEDI SIGN<BR>C + currency|
 |<a name="char-cedi-sign"></a>₵|[U+20B5](https://www.compart.com/en/unicode/U+20B5)|CEDI SIGN<BR>C + currency|
 |<a name="char-indian-rupee-sign"></a>₹|[U+20B9](https://www.compart.com/en/unicode/U+20B9)|INDIAN RUPEE SIGN<BR>R + doubleCurrency|
 |<a name="char-turkish-lira-sign"></a>₺|[U+20BA](https://www.compart.com/en/unicode/U+20BA)|TURKISH LIRA SIGN<BR>l + doubleCurrency|
-|<a name="char-turkish-lira-sign"></a>₺|[U+20BA](https://www.compart.com/en/unicode/U+20BA)|TURKISH LIRA SIGN<BR>l + doubleCurrency|
-|<a name="char-turkish-lira-sign"></a>₺|[U+20BA](https://www.compart.com/en/unicode/U+20BA)|TURKISH LIRA SIGN<BR>l + doubleCurrency|
 |<a name="char-ruble-sign"></a>₽|[U+20BD](https://www.compart.com/en/unicode/U+20BD)|RUBLE SIGN<BR>Р + doubleCurrency|
 |<a name="char-lari-sign"></a>₾|[U+20BE](https://www.compart.com/en/unicode/U+20BE)|LARI SIGN<BR>C + doubleCurrency|
-|<a name="char-lari-sign"></a>₾|[U+20BE](https://www.compart.com/en/unicode/U+20BE)|LARI SIGN<BR>C + doubleCurrency|
 |<a name="char-bitcoin-sign"></a>₿|[U+20BF](https://www.compart.com/en/unicode/U+20BF)|BITCOIN SIGN<BR>B + doubleCurrency|
-|<a name="char-bitcoin-sign"></a>₿|[U+20BF](https://www.compart.com/en/unicode/U+20BF)|BITCOIN SIGN<BR>B + doubleCurrency|
-|<a name="char-l-b-bar-symbol"></a>℔|[U+2114](https://www.compart.com/en/unicode/U+2114)|L B BAR SYMBOL<BR>lb + ligature|
 |<a name="char-l-b-bar-symbol"></a>℔|[U+2114](https://www.compart.com/en/unicode/U+2114)|L B BAR SYMBOL<BR>lb + ligature|
 |<a name="char-turned-capital-f"></a>Ⅎ|[U+2132](https://www.compart.com/en/unicode/U+2132)|TURNED CAPITAL F<BR>F + turned|
 |<a name="char-turned-small-f"></a>ⅎ|[U+214E](https://www.compart.com/en/unicode/U+214E)|TURNED SMALL F<BR>f + turned|
@@ -990,18 +978,11 @@ This creates a list that feels at least a bit alphabetical in nature, and positi
 |<a name="char-latin-capital-letter-vy"></a>Ꝡ|[U+A760](https://www.compart.com/en/unicode/U+A760)|LATIN CAPITAL LETTER VY<BR>VY + ligature|
 |<a name="char-latin-small-letter-vy"></a>ꝡ|[U+A761](https://www.compart.com/en/unicode/U+A761)|LATIN SMALL LETTER VY<BR>vy + ligature|
 |<a name="char-latin-small-letter-uo"></a>ꭣ|[U+AB63](https://www.compart.com/en/unicode/U+AB63)|LATIN SMALL LETTER UO<BR>uo + ligature|
-|<a name="char-latin-small-letter-uo"></a>ꭣ|[U+AB63](https://www.compart.com/en/unicode/U+AB63)|LATIN SMALL LETTER UO<BR>uo + ligature|
-|<a name="char-latin-small-ligature-ff"></a>ﬀ|[U+FB00](https://www.compart.com/en/unicode/U+FB00)|LATIN SMALL LIGATURE FF<BR>ff + ligature|
 |<a name="char-latin-small-ligature-ff"></a>ﬀ|[U+FB00](https://www.compart.com/en/unicode/U+FB00)|LATIN SMALL LIGATURE FF<BR>ff + ligature|
 |<a name="char-latin-small-ligature-fi"></a>ﬁ|[U+FB01](https://www.compart.com/en/unicode/U+FB01)|LATIN SMALL LIGATURE FI<BR>fi + ligature|
-|<a name="char-latin-small-ligature-fi"></a>ﬁ|[U+FB01](https://www.compart.com/en/unicode/U+FB01)|LATIN SMALL LIGATURE FI<BR>fi + ligature|
-|<a name="char-latin-small-ligature-fl"></a>ﬂ|[U+FB02](https://www.compart.com/en/unicode/U+FB02)|LATIN SMALL LIGATURE FL<BR>fl + ligature|
 |<a name="char-latin-small-ligature-fl"></a>ﬂ|[U+FB02](https://www.compart.com/en/unicode/U+FB02)|LATIN SMALL LIGATURE FL<BR>fl + ligature|
 |<a name="char-latin-small-ligature-ffi"></a>ﬃ|[U+FB03](https://www.compart.com/en/unicode/U+FB03)|LATIN SMALL LIGATURE FFI<BR>ffi + ligature|
-|<a name="char-latin-small-ligature-ffi"></a>ﬃ|[U+FB03](https://www.compart.com/en/unicode/U+FB03)|LATIN SMALL LIGATURE FFI<BR>ffi + ligature|
 |<a name="char-latin-small-ligature-ffl"></a>ﬄ|[U+FB04](https://www.compart.com/en/unicode/U+FB04)|LATIN SMALL LIGATURE FFL<BR>ffl + ligature|
-|<a name="char-latin-small-ligature-ffl"></a>ﬄ|[U+FB04](https://www.compart.com/en/unicode/U+FB04)|LATIN SMALL LIGATURE FFL<BR>ffl + ligature|
-|<a name="char-latin-small-ligature-st"></a>ﬆ|[U+FB06](https://www.compart.com/en/unicode/U+FB06)|LATIN SMALL LIGATURE ST<BR>st + ligature|
 |<a name="char-latin-small-ligature-st"></a>ﬆ|[U+FB06](https://www.compart.com/en/unicode/U+FB06)|LATIN SMALL LIGATURE ST<BR>st + ligature|
 |<a name="char-mathematical-bold-capital-a"></a>𝐀|[U+D400](https://www.compart.com/en/unicode/U+D400)|MATHEMATICAL BOLD CAPITAL A<BR>A + bold|
 |<a name="char-mathematical-bold-capital-b"></a>𝐁|[U+D401](https://www.compart.com/en/unicode/U+D401)|MATHEMATICAL BOLD CAPITAL B<BR>B + bold|
@@ -1287,14 +1268,11 @@ This creates a list that feels at least a bit alphabetical in nature, and positi
 |<a name="char-mathematical-fraktur-small-a"></a>𝔞|[U+D51E](https://www.compart.com/en/unicode/U+D51E)|MATHEMATICAL FRAKTUR SMALL A<BR>a + fraktur|
 |<a name="char-mathematical-fraktur-small-b"></a>𝔟|[U+D51F](https://www.compart.com/en/unicode/U+D51F)|MATHEMATICAL FRAKTUR SMALL B<BR>b + fraktur|
 |<a name="char-mathematical-fraktur-small-c"></a>𝔠|[U+D520](https://www.compart.com/en/unicode/U+D520)|MATHEMATICAL FRAKTUR SMALL C<BR>c + fraktur|
-|<a name="char-mathematical-fraktur-small-c"></a>𝔠|[U+D520](https://www.compart.com/en/unicode/U+D520)|MATHEMATICAL FRAKTUR SMALL C<BR>c + fraktur|
 |<a name="char-mathematical-fraktur-small-d"></a>𝔡|[U+D521](https://www.compart.com/en/unicode/U+D521)|MATHEMATICAL FRAKTUR SMALL D<BR>d + fraktur|
 |<a name="char-mathematical-fraktur-small-e"></a>𝔢|[U+D522](https://www.compart.com/en/unicode/U+D522)|MATHEMATICAL FRAKTUR SMALL E<BR>e + fraktur|
 |<a name="char-mathematical-fraktur-small-f"></a>𝔣|[U+D523](https://www.compart.com/en/unicode/U+D523)|MATHEMATICAL FRAKTUR SMALL F<BR>f + fraktur|
 |<a name="char-mathematical-fraktur-small-g"></a>𝔤|[U+D524](https://www.compart.com/en/unicode/U+D524)|MATHEMATICAL FRAKTUR SMALL G<BR>g + fraktur|
 |<a name="char-mathematical-fraktur-small-h"></a>𝔥|[U+D525](https://www.compart.com/en/unicode/U+D525)|MATHEMATICAL FRAKTUR SMALL H<BR>h + fraktur|
-|<a name="char-mathematical-fraktur-small-h"></a>𝔥|[U+D525](https://www.compart.com/en/unicode/U+D525)|MATHEMATICAL FRAKTUR SMALL H<BR>h + fraktur|
-|<a name="char-mathematical-fraktur-small-i"></a>𝔦|[U+D526](https://www.compart.com/en/unicode/U+D526)|MATHEMATICAL FRAKTUR SMALL I<BR>i + fraktur|
 |<a name="char-mathematical-fraktur-small-i"></a>𝔦|[U+D526](https://www.compart.com/en/unicode/U+D526)|MATHEMATICAL FRAKTUR SMALL I<BR>i + fraktur|
 |<a name="char-mathematical-fraktur-small-j"></a>𝔧|[U+D527](https://www.compart.com/en/unicode/U+D527)|MATHEMATICAL FRAKTUR SMALL J<BR>j + fraktur|
 |<a name="char-mathematical-fraktur-small-k"></a>𝔨|[U+D528](https://www.compart.com/en/unicode/U+D528)|MATHEMATICAL FRAKTUR SMALL K<BR>k + fraktur|
@@ -1305,7 +1283,6 @@ This creates a list that feels at least a bit alphabetical in nature, and positi
 |<a name="char-mathematical-fraktur-small-p"></a>𝔭|[U+D52D](https://www.compart.com/en/unicode/U+D52D)|MATHEMATICAL FRAKTUR SMALL P<BR>p + fraktur|
 |<a name="char-mathematical-fraktur-small-q"></a>𝔮|[U+D52E](https://www.compart.com/en/unicode/U+D52E)|MATHEMATICAL FRAKTUR SMALL Q<BR>q + fraktur|
 |<a name="char-mathematical-fraktur-small-r"></a>𝔯|[U+D52F](https://www.compart.com/en/unicode/U+D52F)|MATHEMATICAL FRAKTUR SMALL R<BR>r + fraktur|
-|<a name="char-mathematical-fraktur-small-r"></a>𝔯|[U+D52F](https://www.compart.com/en/unicode/U+D52F)|MATHEMATICAL FRAKTUR SMALL R<BR>r + fraktur|
 |<a name="char-mathematical-fraktur-small-s"></a>𝔰|[U+D530](https://www.compart.com/en/unicode/U+D530)|MATHEMATICAL FRAKTUR SMALL S<BR>s + fraktur|
 |<a name="char-mathematical-fraktur-small-t"></a>𝔱|[U+D531](https://www.compart.com/en/unicode/U+D531)|MATHEMATICAL FRAKTUR SMALL T<BR>t + fraktur|
 |<a name="char-mathematical-fraktur-small-u"></a>𝔲|[U+D532](https://www.compart.com/en/unicode/U+D532)|MATHEMATICAL FRAKTUR SMALL U<BR>u + fraktur|
@@ -1313,7 +1290,6 @@ This creates a list that feels at least a bit alphabetical in nature, and positi
 |<a name="char-mathematical-fraktur-small-w"></a>𝔴|[U+D534](https://www.compart.com/en/unicode/U+D534)|MATHEMATICAL FRAKTUR SMALL W<BR>w + fraktur|
 |<a name="char-mathematical-fraktur-small-x"></a>𝔵|[U+D535](https://www.compart.com/en/unicode/U+D535)|MATHEMATICAL FRAKTUR SMALL X<BR>x + fraktur|
 |<a name="char-mathematical-fraktur-small-y"></a>𝔶|[U+D536](https://www.compart.com/en/unicode/U+D536)|MATHEMATICAL FRAKTUR SMALL Y<BR>y + fraktur|
-|<a name="char-mathematical-fraktur-small-z"></a>𝔷|[U+D537](https://www.compart.com/en/unicode/U+D537)|MATHEMATICAL FRAKTUR SMALL Z<BR>z + fraktur|
 |<a name="char-mathematical-fraktur-small-z"></a>𝔷|[U+D537](https://www.compart.com/en/unicode/U+D537)|MATHEMATICAL FRAKTUR SMALL Z<BR>z + fraktur|
 |<a name="char-mathematical-double-struck-capital-a"></a>𝔸|[U+D538](https://www.compart.com/en/unicode/U+D538)|MATHEMATICAL DOUBLE-STRUCK CAPITAL A<BR>A + doubleStruck|
 |<a name="char-mathematical-double-struck-capital-b"></a>𝔹|[U+D539](https://www.compart.com/en/unicode/U+D539)|MATHEMATICAL DOUBLE-STRUCK CAPITAL B<BR>B + doubleStruck|
@@ -1337,12 +1313,10 @@ This creates a list that feels at least a bit alphabetical in nature, and positi
 |<a name="char-mathematical-double-struck-small-a"></a>𝕒|[U+D552](https://www.compart.com/en/unicode/U+D552)|MATHEMATICAL DOUBLE-STRUCK SMALL A<BR>a + doubleStruck|
 |<a name="char-mathematical-double-struck-small-b"></a>𝕓|[U+D553](https://www.compart.com/en/unicode/U+D553)|MATHEMATICAL DOUBLE-STRUCK SMALL B<BR>b + doubleStruck|
 |<a name="char-mathematical-double-struck-small-c"></a>𝕔|[U+D554](https://www.compart.com/en/unicode/U+D554)|MATHEMATICAL DOUBLE-STRUCK SMALL C<BR>c + doubleStruck|
-|<a name="char-mathematical-double-struck-small-c"></a>𝕔|[U+D554](https://www.compart.com/en/unicode/U+D554)|MATHEMATICAL DOUBLE-STRUCK SMALL C<BR>c + doubleStruck|
 |<a name="char-mathematical-double-struck-small-d"></a>𝕕|[U+D555](https://www.compart.com/en/unicode/U+D555)|MATHEMATICAL DOUBLE-STRUCK SMALL D<BR>d + doubleStruck|
 |<a name="char-mathematical-double-struck-small-e"></a>𝕖|[U+D556](https://www.compart.com/en/unicode/U+D556)|MATHEMATICAL DOUBLE-STRUCK SMALL E<BR>e + doubleStruck|
 |<a name="char-mathematical-double-struck-small-f"></a>𝕗|[U+D557](https://www.compart.com/en/unicode/U+D557)|MATHEMATICAL DOUBLE-STRUCK SMALL F<BR>f + doubleStruck|
 |<a name="char-mathematical-double-struck-small-g"></a>𝕘|[U+D558](https://www.compart.com/en/unicode/U+D558)|MATHEMATICAL DOUBLE-STRUCK SMALL G<BR>g + doubleStruck|
-|<a name="char-mathematical-double-struck-small-h"></a>𝕙|[U+D559](https://www.compart.com/en/unicode/U+D559)|MATHEMATICAL DOUBLE-STRUCK SMALL H<BR>h + doubleStruck|
 |<a name="char-mathematical-double-struck-small-h"></a>𝕙|[U+D559](https://www.compart.com/en/unicode/U+D559)|MATHEMATICAL DOUBLE-STRUCK SMALL H<BR>h + doubleStruck|
 |<a name="char-mathematical-double-struck-small-i"></a>𝕚|[U+D55A](https://www.compart.com/en/unicode/U+D55A)|MATHEMATICAL DOUBLE-STRUCK SMALL I<BR>i + doubleStruck|
 |<a name="char-mathematical-double-struck-small-j"></a>𝕛|[U+D55B](https://www.compart.com/en/unicode/U+D55B)|MATHEMATICAL DOUBLE-STRUCK SMALL J<BR>j + doubleStruck|
@@ -1350,13 +1324,9 @@ This creates a list that feels at least a bit alphabetical in nature, and positi
 |<a name="char-mathematical-double-struck-small-l"></a>𝕝|[U+D55D](https://www.compart.com/en/unicode/U+D55D)|MATHEMATICAL DOUBLE-STRUCK SMALL L<BR>l + doubleStruck|
 |<a name="char-mathematical-double-struck-small-m"></a>𝕞|[U+D55E](https://www.compart.com/en/unicode/U+D55E)|MATHEMATICAL DOUBLE-STRUCK SMALL M<BR>m + doubleStruck|
 |<a name="char-mathematical-double-struck-small-n"></a>𝕟|[U+D55F](https://www.compart.com/en/unicode/U+D55F)|MATHEMATICAL DOUBLE-STRUCK SMALL N<BR>n + doubleStruck|
-|<a name="char-mathematical-double-struck-small-n"></a>𝕟|[U+D55F](https://www.compart.com/en/unicode/U+D55F)|MATHEMATICAL DOUBLE-STRUCK SMALL N<BR>n + doubleStruck|
 |<a name="char-mathematical-double-struck-small-o"></a>𝕠|[U+D560](https://www.compart.com/en/unicode/U+D560)|MATHEMATICAL DOUBLE-STRUCK SMALL O<BR>o + doubleStruck|
 |<a name="char-mathematical-double-struck-small-p"></a>𝕡|[U+D561](https://www.compart.com/en/unicode/U+D561)|MATHEMATICAL DOUBLE-STRUCK SMALL P<BR>p + doubleStruck|
-|<a name="char-mathematical-double-struck-small-p"></a>𝕡|[U+D561](https://www.compart.com/en/unicode/U+D561)|MATHEMATICAL DOUBLE-STRUCK SMALL P<BR>p + doubleStruck|
 |<a name="char-mathematical-double-struck-small-q"></a>𝕢|[U+D562](https://www.compart.com/en/unicode/U+D562)|MATHEMATICAL DOUBLE-STRUCK SMALL Q<BR>q + doubleStruck|
-|<a name="char-mathematical-double-struck-small-q"></a>𝕢|[U+D562](https://www.compart.com/en/unicode/U+D562)|MATHEMATICAL DOUBLE-STRUCK SMALL Q<BR>q + doubleStruck|
-|<a name="char-mathematical-double-struck-small-r"></a>𝕣|[U+D563](https://www.compart.com/en/unicode/U+D563)|MATHEMATICAL DOUBLE-STRUCK SMALL R<BR>r + doubleStruck|
 |<a name="char-mathematical-double-struck-small-r"></a>𝕣|[U+D563](https://www.compart.com/en/unicode/U+D563)|MATHEMATICAL DOUBLE-STRUCK SMALL R<BR>r + doubleStruck|
 |<a name="char-mathematical-double-struck-small-s"></a>𝕤|[U+D564](https://www.compart.com/en/unicode/U+D564)|MATHEMATICAL DOUBLE-STRUCK SMALL S<BR>s + doubleStruck|
 |<a name="char-mathematical-double-struck-small-t"></a>𝕥|[U+D565](https://www.compart.com/en/unicode/U+D565)|MATHEMATICAL DOUBLE-STRUCK SMALL T<BR>t + doubleStruck|
@@ -1365,7 +1335,6 @@ This creates a list that feels at least a bit alphabetical in nature, and positi
 |<a name="char-mathematical-double-struck-small-w"></a>𝕨|[U+D568](https://www.compart.com/en/unicode/U+D568)|MATHEMATICAL DOUBLE-STRUCK SMALL W<BR>w + doubleStruck|
 |<a name="char-mathematical-double-struck-small-x"></a>𝕩|[U+D569](https://www.compart.com/en/unicode/U+D569)|MATHEMATICAL DOUBLE-STRUCK SMALL X<BR>x + doubleStruck|
 |<a name="char-mathematical-double-struck-small-y"></a>𝕪|[U+D56A](https://www.compart.com/en/unicode/U+D56A)|MATHEMATICAL DOUBLE-STRUCK SMALL Y<BR>y + doubleStruck|
-|<a name="char-mathematical-double-struck-small-z"></a>𝕫|[U+D56B](https://www.compart.com/en/unicode/U+D56B)|MATHEMATICAL DOUBLE-STRUCK SMALL Z<BR>z + doubleStruck|
 |<a name="char-mathematical-double-struck-small-z"></a>𝕫|[U+D56B](https://www.compart.com/en/unicode/U+D56B)|MATHEMATICAL DOUBLE-STRUCK SMALL Z<BR>z + doubleStruck|
 |<a name="char-mathematical-bold-fraktur-capital-a"></a>𝕬|[U+D56C](https://www.compart.com/en/unicode/U+D56C)|MATHEMATICAL BOLD FRAKTUR CAPITAL A<BR>A + bold + fraktur|
 |<a name="char-mathematical-bold-fraktur-capital-b"></a>𝕭|[U+D56D](https://www.compart.com/en/unicode/U+D56D)|MATHEMATICAL BOLD FRAKTUR CAPITAL B<BR>B + bold + fraktur|
@@ -1653,7 +1622,6 @@ This creates a list that feels at least a bit alphabetical in nature, and positi
 |<a name="char-mathematical-monospace-capital-x"></a>𝚇|[U+D687](https://www.compart.com/en/unicode/U+D687)|MATHEMATICAL MONOSPACE CAPITAL X<BR>X + monospace|
 |<a name="char-mathematical-monospace-capital-y"></a>𝚈|[U+D688](https://www.compart.com/en/unicode/U+D688)|MATHEMATICAL MONOSPACE CAPITAL Y<BR>Y + monospace|
 |<a name="char-mathematical-monospace-capital-z"></a>𝚉|[U+D689](https://www.compart.com/en/unicode/U+D689)|MATHEMATICAL MONOSPACE CAPITAL Z<BR>Z + monospace|
-|<a name="char-mathematical-monospace-capital-z"></a>𝚉|[U+D689](https://www.compart.com/en/unicode/U+D689)|MATHEMATICAL MONOSPACE CAPITAL Z<BR>Z + monospace|
 |<a name="char-mathematical-monospace-small-a"></a>𝚊|[U+D68A](https://www.compart.com/en/unicode/U+D68A)|MATHEMATICAL MONOSPACE SMALL A<BR>a + monospace|
 |<a name="char-mathematical-monospace-small-b"></a>𝚋|[U+D68B](https://www.compart.com/en/unicode/U+D68B)|MATHEMATICAL MONOSPACE SMALL B<BR>b + monospace|
 |<a name="char-mathematical-monospace-small-c"></a>𝚌|[U+D68C](https://www.compart.com/en/unicode/U+D68C)|MATHEMATICAL MONOSPACE SMALL C<BR>c + monospace|
@@ -1722,7 +1690,6 @@ This creates a list that feels at least a bit alphabetical in nature, and positi
 |<a name="char-mathematical-bold-small-pi"></a>𝛑|[U+D6D1](https://www.compart.com/en/unicode/U+D6D1)|MATHEMATICAL BOLD SMALL PI<BR>π + bold|
 |<a name="char-mathematical-bold-small-rho"></a>𝛒|[U+D6D2](https://www.compart.com/en/unicode/U+D6D2)|MATHEMATICAL BOLD SMALL RHO<BR>ρ + bold|
 |<a name="char-mathematical-bold-small-final-sigma"></a>𝛓|[U+D6D3](https://www.compart.com/en/unicode/U+D6D3)|MATHEMATICAL BOLD SMALL FINAL SIGMA<BR>ς + bold|
-|<a name="char-mathematical-bold-small-final-sigma"></a>𝛓|[U+D6D3](https://www.compart.com/en/unicode/U+D6D3)|MATHEMATICAL BOLD SMALL FINAL SIGMA<BR>ς + bold|
 |<a name="char-mathematical-bold-small-sigma"></a>𝛔|[U+D6D4](https://www.compart.com/en/unicode/U+D6D4)|MATHEMATICAL BOLD SMALL SIGMA<BR>σ + bold|
 |<a name="char-mathematical-bold-small-tau"></a>𝛕|[U+D6D5](https://www.compart.com/en/unicode/U+D6D5)|MATHEMATICAL BOLD SMALL TAU<BR>τ + bold|
 |<a name="char-mathematical-bold-small-upsilon"></a>𝛖|[U+D6D6](https://www.compart.com/en/unicode/U+D6D6)|MATHEMATICAL BOLD SMALL UPSILON<BR>υ + bold|
@@ -1771,7 +1738,6 @@ This creates a list that feels at least a bit alphabetical in nature, and positi
 |<a name="char-mathematical-italic-small-omicron"></a>𝜊|[U+D70A](https://www.compart.com/en/unicode/U+D70A)|MATHEMATICAL ITALIC SMALL OMICRON<BR>ο + italic|
 |<a name="char-mathematical-italic-small-pi"></a>𝜋|[U+D70B](https://www.compart.com/en/unicode/U+D70B)|MATHEMATICAL ITALIC SMALL PI<BR>π + italic|
 |<a name="char-mathematical-italic-small-rho"></a>𝜌|[U+D70C](https://www.compart.com/en/unicode/U+D70C)|MATHEMATICAL ITALIC SMALL RHO<BR>ρ + italic|
-|<a name="char-mathematical-italic-small-final-sigma"></a>𝜍|[U+D70D](https://www.compart.com/en/unicode/U+D70D)|MATHEMATICAL ITALIC SMALL FINAL SIGMA<BR>ς + italic|
 |<a name="char-mathematical-italic-small-final-sigma"></a>𝜍|[U+D70D](https://www.compart.com/en/unicode/U+D70D)|MATHEMATICAL ITALIC SMALL FINAL SIGMA<BR>ς + italic|
 |<a name="char-mathematical-italic-small-sigma"></a>𝜎|[U+D70E](https://www.compart.com/en/unicode/U+D70E)|MATHEMATICAL ITALIC SMALL SIGMA<BR>σ + italic|
 |<a name="char-mathematical-italic-small-tau"></a>𝜏|[U+D70F](https://www.compart.com/en/unicode/U+D70F)|MATHEMATICAL ITALIC SMALL TAU<BR>τ + italic|
@@ -1824,7 +1790,6 @@ This creates a list that feels at least a bit alphabetical in nature, and positi
 |<a name="char-mathematical-bold-italic-small-rho"></a>𝝆|[U+D746](https://www.compart.com/en/unicode/U+D746)|MATHEMATICAL BOLD ITALIC SMALL RHO<BR>ρ + bold + italic|
 |<a name="char-mathematical-bold-italic-small-final-sigma"></a>𝝇|[U+D747](https://www.compart.com/en/unicode/U+D747)|MATHEMATICAL BOLD ITALIC SMALL FINAL SIGMA<BR>ς + bold + italic|
 |<a name="char-mathematical-bold-italic-small-final-sigma"></a>𝝇|[U+D747](https://www.compart.com/en/unicode/U+D747)|MATHEMATICAL BOLD ITALIC SMALL FINAL SIGMA<BR>ς + bold + italic|
-|<a name="char-mathematical-bold-italic-small-final-sigma"></a>𝝇|[U+D747](https://www.compart.com/en/unicode/U+D747)|MATHEMATICAL BOLD ITALIC SMALL FINAL SIGMA<BR>ς + bold + italic|
 |<a name="char-mathematical-bold-italic-small-sigma"></a>𝝈|[U+D748](https://www.compart.com/en/unicode/U+D748)|MATHEMATICAL BOLD ITALIC SMALL SIGMA<BR>σ + bold + italic|
 |<a name="char-mathematical-bold-italic-small-tau"></a>𝝉|[U+D749](https://www.compart.com/en/unicode/U+D749)|MATHEMATICAL BOLD ITALIC SMALL TAU<BR>τ + bold + italic|
 |<a name="char-mathematical-bold-italic-small-upsilon"></a>𝝊|[U+D74A](https://www.compart.com/en/unicode/U+D74A)|MATHEMATICAL BOLD ITALIC SMALL UPSILON<BR>υ + bold + italic|
@@ -1874,7 +1839,6 @@ This creates a list that feels at least a bit alphabetical in nature, and positi
 |<a name="char-mathematical-sans-serif-bold-small-pi"></a>𝝿|[U+D77F](https://www.compart.com/en/unicode/U+D77F)|MATHEMATICAL SANS-SERIF BOLD SMALL PI<BR>π + sansSerif + bold|
 |<a name="char-mathematical-sans-serif-bold-small-rho"></a>𝞀|[U+D780](https://www.compart.com/en/unicode/U+D780)|MATHEMATICAL SANS-SERIF BOLD SMALL RHO<BR>ρ + sansSerif + bold|
 |<a name="char-mathematical-sans-serif-bold-small-final-sigma"></a>𝞁|[U+D781](https://www.compart.com/en/unicode/U+D781)|MATHEMATICAL SANS-SERIF BOLD SMALL FINAL SIGMA<BR>ς + sansSerif + bold|
-|<a name="char-mathematical-sans-serif-bold-small-final-sigma"></a>𝞁|[U+D781](https://www.compart.com/en/unicode/U+D781)|MATHEMATICAL SANS-SERIF BOLD SMALL FINAL SIGMA<BR>ς + sansSerif + bold|
 |<a name="char-mathematical-sans-serif-bold-small-sigma"></a>𝞂|[U+D782](https://www.compart.com/en/unicode/U+D782)|MATHEMATICAL SANS-SERIF BOLD SMALL SIGMA<BR>σ + sansSerif + bold|
 |<a name="char-mathematical-sans-serif-bold-small-tau"></a>𝞃|[U+D783](https://www.compart.com/en/unicode/U+D783)|MATHEMATICAL SANS-SERIF BOLD SMALL TAU<BR>τ + sansSerif + bold|
 |<a name="char-mathematical-sans-serif-bold-small-upsilon"></a>𝞄|[U+D784](https://www.compart.com/en/unicode/U+D784)|MATHEMATICAL SANS-SERIF BOLD SMALL UPSILON<BR>υ + sansSerif + bold|
@@ -1907,7 +1871,6 @@ This creates a list that feels at least a bit alphabetical in nature, and positi
 |<a name="char-mathematical-sans-serif-bold-italic-capital-chi"></a>𝞦|[U+D7A6](https://www.compart.com/en/unicode/U+D7A6)|MATHEMATICAL SANS-SERIF BOLD ITALIC CAPITAL CHI<BR>Χ + sansSerif + bold + italic|
 |<a name="char-mathematical-sans-serif-bold-italic-capital-psi"></a>𝞧|[U+D7A7](https://www.compart.com/en/unicode/U+D7A7)|MATHEMATICAL SANS-SERIF BOLD ITALIC CAPITAL PSI<BR>Ψ + sansSerif + bold + italic|
 |<a name="char-mathematical-sans-serif-bold-italic-capital-omega"></a>𝞨|[U+D7A8](https://www.compart.com/en/unicode/U+D7A8)|MATHEMATICAL SANS-SERIF BOLD ITALIC CAPITAL OMEGA<BR>Ω + sansSerif + bold + italic|
-|<a name="char-mathematical-sans-serif-bold-italic-capital-omega"></a>𝞨|[U+D7A8](https://www.compart.com/en/unicode/U+D7A8)|MATHEMATICAL SANS-SERIF BOLD ITALIC CAPITAL OMEGA<BR>Ω + sansSerif + bold + italic|
 |<a name="char-mathematical-sans-serif-bold-italic-small-alpha"></a>𝞪|[U+D7AA](https://www.compart.com/en/unicode/U+D7AA)|MATHEMATICAL SANS-SERIF BOLD ITALIC SMALL ALPHA<BR>α + sansSerif + bold + italic|
 |<a name="char-mathematical-sans-serif-bold-italic-small-beta"></a>𝞫|[U+D7AB](https://www.compart.com/en/unicode/U+D7AB)|MATHEMATICAL SANS-SERIF BOLD ITALIC SMALL BETA<BR>β + sansSerif + bold + italic|
 |<a name="char-mathematical-sans-serif-bold-italic-small-gamma"></a>𝞬|[U+D7AC](https://www.compart.com/en/unicode/U+D7AC)|MATHEMATICAL SANS-SERIF BOLD ITALIC SMALL GAMMA<BR>γ + sansSerif + bold + italic|
@@ -1925,7 +1888,6 @@ This creates a list that feels at least a bit alphabetical in nature, and positi
 |<a name="char-mathematical-sans-serif-bold-italic-small-omicron"></a>𝞸|[U+D7B8](https://www.compart.com/en/unicode/U+D7B8)|MATHEMATICAL SANS-SERIF BOLD ITALIC SMALL OMICRON<BR>ο + sansSerif + bold + italic|
 |<a name="char-mathematical-sans-serif-bold-italic-small-pi"></a>𝞹|[U+D7B9](https://www.compart.com/en/unicode/U+D7B9)|MATHEMATICAL SANS-SERIF BOLD ITALIC SMALL PI<BR>π + sansSerif + bold + italic|
 |<a name="char-mathematical-sans-serif-bold-italic-small-rho"></a>𝞺|[U+D7BA](https://www.compart.com/en/unicode/U+D7BA)|MATHEMATICAL SANS-SERIF BOLD ITALIC SMALL RHO<BR>ρ + sansSerif + bold + italic|
-|<a name="char-mathematical-sans-serif-bold-italic-small-final-sigma"></a>𝞻|[U+D7BB](https://www.compart.com/en/unicode/U+D7BB)|MATHEMATICAL SANS-SERIF BOLD ITALIC SMALL FINAL SIGMA<BR>ς + sansSerif + bold + italic|
 |<a name="char-mathematical-sans-serif-bold-italic-small-final-sigma"></a>𝞻|[U+D7BB](https://www.compart.com/en/unicode/U+D7BB)|MATHEMATICAL SANS-SERIF BOLD ITALIC SMALL FINAL SIGMA<BR>ς + sansSerif + bold + italic|
 |<a name="char-mathematical-sans-serif-bold-italic-small-final-sigma"></a>𝞻|[U+D7BB](https://www.compart.com/en/unicode/U+D7BB)|MATHEMATICAL SANS-SERIF BOLD ITALIC SMALL FINAL SIGMA<BR>ς + sansSerif + bold + italic|
 |<a name="char-mathematical-sans-serif-bold-italic-small-sigma"></a>𝞼|[U+D7BC](https://www.compart.com/en/unicode/U+D7BC)|MATHEMATICAL SANS-SERIF BOLD ITALIC SMALL SIGMA<BR>σ + sansSerif + bold + italic|
