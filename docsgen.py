@@ -45,6 +45,14 @@ The hamburger menu looks like this:
 ![burger menu](images/hamburgerMenu.png)
 """
 
+readmeInstallation = """
+## Installation
+
+Just save the `fixler-spelling.json` file somewhere locally, probably in your Plover config directory (`File → Open config folder` in Plover). Then add it to your dictionaries in Plover, wherever makes sense to you, or at the top, if you're not sure.
+
+Note: This is not a Python dictionary.
+"""
+
 readmeNotesOnDesign = """
 ## Notes on Design
 ### The Core
@@ -240,6 +248,7 @@ def generateReadme ():
     print(readmeTitle)
     print(readmeGoals)
     print(readmeTOC)
+    print(readmeInstallation)
     print(readmeNotesOnDesign)
     print(readmeKeyboardSections)
     print(readmeUsingModifiers)
