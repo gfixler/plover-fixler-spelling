@@ -174,193 +174,196 @@ Here are [currently] all 1726 characters this library exports, base alphabets fi
 Code points currently link to their associated page on [Compart](https://www.compart.com/en/about-compart)'s site. No affiliation; it just showed up in character searches, seems to have all pages, and it's easy to turn Unicode code points into its URLs.
 
 ### English Latin Alphabet
+Standard English steno enders.<BR>
 **Majuscule Ender:** `*P`<BR>
 **Minuscule Ender:** `*`<BR>
 <BR>
 English steno theories come with alphabets, but for sake of completeness...<BR>
-|Character|Name|Stroke(s)|Notes|
-|-|-|-|-|
-|A|LATIN CAPITAL LETTER A|`A*P`||
-|a|LATIN SMALL LETTER A|`A*`||
-|B|LATIN CAPITAL LETTER B|`PW*P`||
-|b|LATIN SMALL LETTER B|`PW*`||
-|C|LATIN CAPITAL LETTER C|`KR*P`||
-|c|LATIN SMALL LETTER C|`KR*`||
-|D|LATIN CAPITAL LETTER D|`TK*P`||
-|d|LATIN SMALL LETTER D|`TK*`||
-|E|LATIN CAPITAL LETTER E|`*EP`||
-|e|LATIN SMALL LETTER E|`*E`||
-|F|LATIN CAPITAL LETTER F|`TP*P`||
-|f|LATIN SMALL LETTER F|`TP*`||
-|G|LATIN CAPITAL LETTER G|`TKPW*P`||
-|g|LATIN SMALL LETTER G|`TKPW*`||
-|H|LATIN CAPITAL LETTER H|`H*P`||
-|h|LATIN SMALL LETTER H|`H*`||
-|I|LATIN CAPITAL LETTER I|`*EUP`||
-|i|LATIN SMALL LETTER I|`*EU`||
-|J|LATIN CAPITAL LETTER J|`SKWR*P`||
-|j|LATIN SMALL LETTER J|`SKWR*`||
-|K|LATIN CAPITAL LETTER K|`K*P`||
-|k|LATIN SMALL LETTER K|`K*`||
-|L|LATIN CAPITAL LETTER L|`HR*P`||
-|l|LATIN SMALL LETTER L|`HR*`||
-|M|LATIN CAPITAL LETTER M|`PH*P`||
-|m|LATIN SMALL LETTER M|`PH*`||
-|N|LATIN CAPITAL LETTER N|`TPH*P`||
-|n|LATIN SMALL LETTER N|`TPH*`||
-|O|LATIN CAPITAL LETTER O|`O*P`||
-|o|LATIN SMALL LETTER O|`O*`||
-|P|LATIN CAPITAL LETTER P|`P*P`||
-|p|LATIN SMALL LETTER P|`P*`||
-|Q|LATIN CAPITAL LETTER Q|`KW*P`||
-|q|LATIN SMALL LETTER Q|`KW*`||
-|R|LATIN CAPITAL LETTER R|`R*P`||
-|r|LATIN SMALL LETTER R|`R*`||
-|S|LATIN CAPITAL LETTER S|`S*P`||
-|s|LATIN SMALL LETTER S|`S*`||
-|T|LATIN CAPITAL LETTER T|`T*P`||
-|t|LATIN SMALL LETTER T|`T*`||
-|U|LATIN CAPITAL LETTER U|`*UP`||
-|u|LATIN SMALL LETTER U|`*U`||
-|V|LATIN CAPITAL LETTER V|`SR*P`||
-|v|LATIN SMALL LETTER V|`SR*`||
-|W|LATIN CAPITAL LETTER W|`W*P`||
-|w|LATIN SMALL LETTER W|`W*`||
-|X|LATIN CAPITAL LETTER X|`KP*P`||
-|x|LATIN SMALL LETTER X|`KP*`||
-|Y|LATIN CAPITAL LETTER Y|`KWR*P`||
-|y|LATIN SMALL LETTER Y|`KWR*`||
-|Z|LATIN CAPITAL LETTER Z|`STKPW*P`<BR>`STK*P`||
-|z|LATIN SMALL LETTER Z|`STKPW*`<BR>`STK*`||
+|Letter|Code Pt|Name|Stroke(s)|Notes|
+|-|-|-|-|-|
+|A|[U+0041](https://www.compart.com/en/unicode/U+0041)|LATIN CAPITAL LETTER A|`A*P`||
+|a|[U+0061](https://www.compart.com/en/unicode/U+0061)|LATIN SMALL LETTER A|`A*`||
+|B|[U+0042](https://www.compart.com/en/unicode/U+0042)|LATIN CAPITAL LETTER B|`PW*P`||
+|b|[U+0062](https://www.compart.com/en/unicode/U+0062)|LATIN SMALL LETTER B|`PW*`||
+|C|[U+0043](https://www.compart.com/en/unicode/U+0043)|LATIN CAPITAL LETTER C|`KR*P`||
+|c|[U+0063](https://www.compart.com/en/unicode/U+0063)|LATIN SMALL LETTER C|`KR*`||
+|D|[U+0044](https://www.compart.com/en/unicode/U+0044)|LATIN CAPITAL LETTER D|`TK*P`||
+|d|[U+0064](https://www.compart.com/en/unicode/U+0064)|LATIN SMALL LETTER D|`TK*`||
+|E|[U+0045](https://www.compart.com/en/unicode/U+0045)|LATIN CAPITAL LETTER E|`*EP`||
+|e|[U+0065](https://www.compart.com/en/unicode/U+0065)|LATIN SMALL LETTER E|`*E`||
+|F|[U+0046](https://www.compart.com/en/unicode/U+0046)|LATIN CAPITAL LETTER F|`TP*P`||
+|f|[U+0066](https://www.compart.com/en/unicode/U+0066)|LATIN SMALL LETTER F|`TP*`||
+|G|[U+0047](https://www.compart.com/en/unicode/U+0047)|LATIN CAPITAL LETTER G|`TKPW*P`||
+|g|[U+0067](https://www.compart.com/en/unicode/U+0067)|LATIN SMALL LETTER G|`TKPW*`||
+|H|[U+0048](https://www.compart.com/en/unicode/U+0048)|LATIN CAPITAL LETTER H|`H*P`||
+|h|[U+0068](https://www.compart.com/en/unicode/U+0068)|LATIN SMALL LETTER H|`H*`||
+|I|[U+0049](https://www.compart.com/en/unicode/U+0049)|LATIN CAPITAL LETTER I|`*EUP`||
+|i|[U+0069](https://www.compart.com/en/unicode/U+0069)|LATIN SMALL LETTER I|`*EU`||
+|J|[U+004A](https://www.compart.com/en/unicode/U+004A)|LATIN CAPITAL LETTER J|`SKWR*P`||
+|j|[U+006A](https://www.compart.com/en/unicode/U+006A)|LATIN SMALL LETTER J|`SKWR*`||
+|K|[U+004B](https://www.compart.com/en/unicode/U+004B)|LATIN CAPITAL LETTER K|`K*P`||
+|k|[U+006B](https://www.compart.com/en/unicode/U+006B)|LATIN SMALL LETTER K|`K*`||
+|L|[U+004C](https://www.compart.com/en/unicode/U+004C)|LATIN CAPITAL LETTER L|`HR*P`||
+|l|[U+006C](https://www.compart.com/en/unicode/U+006C)|LATIN SMALL LETTER L|`HR*`||
+|M|[U+004D](https://www.compart.com/en/unicode/U+004D)|LATIN CAPITAL LETTER M|`PH*P`||
+|m|[U+006D](https://www.compart.com/en/unicode/U+006D)|LATIN SMALL LETTER M|`PH*`||
+|N|[U+004E](https://www.compart.com/en/unicode/U+004E)|LATIN CAPITAL LETTER N|`TPH*P`||
+|n|[U+006E](https://www.compart.com/en/unicode/U+006E)|LATIN SMALL LETTER N|`TPH*`||
+|O|[U+004F](https://www.compart.com/en/unicode/U+004F)|LATIN CAPITAL LETTER O|`O*P`||
+|o|[U+006F](https://www.compart.com/en/unicode/U+006F)|LATIN SMALL LETTER O|`O*`||
+|P|[U+0050](https://www.compart.com/en/unicode/U+0050)|LATIN CAPITAL LETTER P|`P*P`||
+|p|[U+0070](https://www.compart.com/en/unicode/U+0070)|LATIN SMALL LETTER P|`P*`||
+|Q|[U+0051](https://www.compart.com/en/unicode/U+0051)|LATIN CAPITAL LETTER Q|`KW*P`||
+|q|[U+0071](https://www.compart.com/en/unicode/U+0071)|LATIN SMALL LETTER Q|`KW*`||
+|R|[U+0052](https://www.compart.com/en/unicode/U+0052)|LATIN CAPITAL LETTER R|`R*P`||
+|r|[U+0072](https://www.compart.com/en/unicode/U+0072)|LATIN SMALL LETTER R|`R*`||
+|S|[U+0053](https://www.compart.com/en/unicode/U+0053)|LATIN CAPITAL LETTER S|`S*P`||
+|s|[U+0073](https://www.compart.com/en/unicode/U+0073)|LATIN SMALL LETTER S|`S*`||
+|T|[U+0054](https://www.compart.com/en/unicode/U+0054)|LATIN CAPITAL LETTER T|`T*P`||
+|t|[U+0074](https://www.compart.com/en/unicode/U+0074)|LATIN SMALL LETTER T|`T*`||
+|U|[U+0055](https://www.compart.com/en/unicode/U+0055)|LATIN CAPITAL LETTER U|`*UP`||
+|u|[U+0075](https://www.compart.com/en/unicode/U+0075)|LATIN SMALL LETTER U|`*U`||
+|V|[U+0056](https://www.compart.com/en/unicode/U+0056)|LATIN CAPITAL LETTER V|`SR*P`||
+|v|[U+0076](https://www.compart.com/en/unicode/U+0076)|LATIN SMALL LETTER V|`SR*`||
+|W|[U+0057](https://www.compart.com/en/unicode/U+0057)|LATIN CAPITAL LETTER W|`W*P`||
+|w|[U+0077](https://www.compart.com/en/unicode/U+0077)|LATIN SMALL LETTER W|`W*`||
+|X|[U+0058](https://www.compart.com/en/unicode/U+0058)|LATIN CAPITAL LETTER X|`KP*P`||
+|x|[U+0078](https://www.compart.com/en/unicode/U+0078)|LATIN SMALL LETTER X|`KP*`||
+|Y|[U+0059](https://www.compart.com/en/unicode/U+0059)|LATIN CAPITAL LETTER Y|`KWR*P`||
+|y|[U+0079](https://www.compart.com/en/unicode/U+0079)|LATIN SMALL LETTER Y|`KWR*`||
+|Z|[U+005A](https://www.compart.com/en/unicode/U+005A)|LATIN CAPITAL LETTER Z|`STKPW*P`<BR>`STK*P`||
+|z|[U+007A](https://www.compart.com/en/unicode/U+007A)|LATIN SMALL LETTER Z|`STKPW*`<BR>`STK*`||
 ### Greek Alphabet
+"For Love of Greece!"<BR>
 **Majuscule Ender:** `*FLG`<BR>
 **Minuscule Ender:** `-FLG`<BR>
 <BR>
 Many Greek letters match up nicely with English; some do not. Read the notes for each letter to see how we get around the discrepancies.<BR>
-|Character|Name|Stroke(s)|Notes|
-|-|-|-|-|
-|Α|GREEK CAPITAL LETTER ALPHA|`A*FLG`|Sounds like A.|
-|α|GREEK SMALL LETTER ALPHA|`AFLG`|Sounds like A.|
-|Β|GREEK CAPITAL LETTER BETA|`PW*FLG`|Sounds like B.|
-|β|GREEK SMALL LETTER BETA|`PW-FLG`|Sounds like B.|
-|Γ|GREEK CAPITAL LETTER GAMMA|`TKPW*FLG`|Sounds like G.|
-|γ|GREEK SMALL LETTER GAMMA|`TKPW-FLG`|Sounds like G.|
-|Δ|GREEK CAPITAL LETTER DELTA|`TK*FLG`|Sounds like D.|
-|δ|GREEK SMALL LETTER DELTA|`TK-FLG`|Sounds like D.|
-|Ε|GREEK CAPITAL LETTER EPSILON|`*EFLG`|Sounds like E|
-|ε|GREEK SMALL LETTER EPSILON|`EFLG`|Sounds like E|
-|Ζ|GREEK CAPITAL LETTER ZETA|`STKPW*FLG`|Sounds like Z.|
-|ζ|GREEK SMALL LETTER ZETA|`STKPW-FLG`|Sounds like Z.|
-|Η|GREEK CAPITAL LETTER ETA|`A*EUFLG`|Makes the Ā sound.|
-|η|GREEK SMALL LETTER ETA|`AEUFLG`|Makes the Ā sound.|
-|Θ|GREEK CAPITAL LETTER THETA|`TH*FLG`|Makes the TH sound.|
-|θ|GREEK SMALL LETTER THETA|`TH-FLG`|Makes the TH sound.|
-|Ι|GREEK CAPITAL LETTER IOTA|`*EUFLG`|Sounds like I.|
-|ι|GREEK SMALL LETTER IOTA|`EUFLG`|Sounds like I.|
-|Κ|GREEK CAPITAL LETTER KAPPA|`K*FLG`|Sounds like K.|
-|κ|GREEK SMALL LETTER KAPPA|`K-FLG`|Sounds like K.|
-|Λ|GREEK CAPITAL LETTER LAMDA|`HR*FLG`|Sounds like L.|
-|λ|GREEK SMALL LETTER LAMDA|`HR-FLG`|Sounds like L.|
-|Μ|GREEK CAPITAL LETTER MU|`PH*FLG`|Sounds like M.|
-|μ|GREEK SMALL LETTER MU|`PH-FLG`|Sounds like M.|
-|Ν|GREEK CAPITAL LETTER NU|`TPH*FLG`|We use the N chord, for the sound, even though the lowercase looks like a v.|
-|ν|GREEK SMALL LETTER NU|`TPH-FLG`|We use the N chord, for the sound, even though the lowercase looks like a v.|
-|Ξ|GREEK CAPITAL LETTER XI|`KP*FLG`|Sounds like X.|
-|ξ|GREEK SMALL LETTER XI|`KP-FLG`|Sounds like X.|
-|Ο|GREEK CAPITAL LETTER OMICRON|`O*FLG`|Sounds like O.|
-|ο|GREEK SMALL LETTER OMICRON|`OFLG`|Sounds like O.|
-|Π|GREEK CAPITAL LETTER PI|`P*FLG`|Sounds like P.|
-|π|GREEK SMALL LETTER PI|`P-FLG`|Sounds like P.|
-|Ρ|GREEK CAPITAL LETTER RHO|`R*FLG`|It looks like a P, but we respect that it sounds like an R.|
-|ρ|GREEK SMALL LETTER RHO|`R-FLG`|It looks like a P, but we respect that it sounds like an R.|
-|Σ|GREEK CAPITAL LETTER SIGMA|`S*FLG`|Sounds like S.|
-|σ|GREEK SMALL LETTER SIGMA|`S-FLG`|Sounds like S.|
-|ς|GREEK SMALL LETTER FINAL SIGMA|`SEFLG`|This system is built around majuscule/minuscule, but then this weirdo second minuscule sigma comes along. The E in the chord is for "end" (of word), as it's the word-final variant.|
-|Τ|GREEK CAPITAL LETTER TAU|`T*FLG`|Sounds like T.|
-|τ|GREEK SMALL LETTER TAU|`T-FLG`|Sounds like T.|
-|Υ|GREEK CAPITAL LETTER UPSILON|`*UFLG`|The capital looks like a Y, but we respect that it's a U sound.|
-|υ|GREEK SMALL LETTER UPSILON|`UFLG`|The capital looks like a Y, but we respect that it's a U sound.|
-|Φ|GREEK CAPITAL LETTER PHI|`TP*FLG`|Sounds like F.|
-|φ|GREEK SMALL LETTER PHI|`TP-FLG`|Sounds like F.|
-|Χ|GREEK CAPITAL LETTER CHI|`KH*FLG`|It's actual sound is hard to represent in steno, but CH is a reasonable fit. The Latin English steno X shape is in use by Xi, so we he can't provide it as an orthographic alternate for this one.|
-|χ|GREEK SMALL LETTER CHI|`KH-FLG`|It's actual sound is hard to represent in steno, but CH is a reasonable fit. The Latin English steno X shape is in use by Xi, so we he can't provide it as an orthographic alternate for this one.|
-|Ψ|GREEK CAPITAL LETTER PSI|`SP*FLG`|Sounds like PS (as in "lapse"), so we used the swapped form, as we don't have a PS sound on the left-hand side, where the consonants live.|
-|ψ|GREEK SMALL LETTER PSI|`SP-FLG`|Sounds like PS (as in "lapse"), so we used the swapped form, as we don't have a PS sound on the left-hand side, where the consonants live.|
-|Ω|GREEK CAPITAL LETTER OMEGA|`O*EFLG`|O is taken by omicron, which people pronounce with an initial long or short O sound, but this one is only ever the long O, so we use OE for this one.|
-|ω|GREEK SMALL LETTER OMEGA|`OEFLG`|O is taken by omicron, which people pronounce with an initial long or short O sound, but this one is only ever the long O, so we use OE for this one.|
+|Letter|Code Pt|Name|Stroke(s)|Notes|
+|-|-|-|-|-|
+|Α|[U+0391](https://www.compart.com/en/unicode/U+0391)|GREEK CAPITAL LETTER ALPHA|`A*FLG`|Sounds like A.|
+|α|[U+03B1](https://www.compart.com/en/unicode/U+03B1)|GREEK SMALL LETTER ALPHA|`AFLG`|Sounds like A.|
+|Β|[U+0392](https://www.compart.com/en/unicode/U+0392)|GREEK CAPITAL LETTER BETA|`PW*FLG`|Sounds like B.|
+|β|[U+03B2](https://www.compart.com/en/unicode/U+03B2)|GREEK SMALL LETTER BETA|`PW-FLG`|Sounds like B.|
+|Γ|[U+0393](https://www.compart.com/en/unicode/U+0393)|GREEK CAPITAL LETTER GAMMA|`TKPW*FLG`|Sounds like G.|
+|γ|[U+03B3](https://www.compart.com/en/unicode/U+03B3)|GREEK SMALL LETTER GAMMA|`TKPW-FLG`|Sounds like G.|
+|Δ|[U+0394](https://www.compart.com/en/unicode/U+0394)|GREEK CAPITAL LETTER DELTA|`TK*FLG`|Sounds like D.|
+|δ|[U+03B4](https://www.compart.com/en/unicode/U+03B4)|GREEK SMALL LETTER DELTA|`TK-FLG`|Sounds like D.|
+|Ε|[U+0395](https://www.compart.com/en/unicode/U+0395)|GREEK CAPITAL LETTER EPSILON|`*EFLG`|Sounds like E|
+|ε|[U+03B5](https://www.compart.com/en/unicode/U+03B5)|GREEK SMALL LETTER EPSILON|`EFLG`|Sounds like E|
+|Ζ|[U+0396](https://www.compart.com/en/unicode/U+0396)|GREEK CAPITAL LETTER ZETA|`STKPW*FLG`|Sounds like Z.|
+|ζ|[U+03B6](https://www.compart.com/en/unicode/U+03B6)|GREEK SMALL LETTER ZETA|`STKPW-FLG`|Sounds like Z.|
+|Η|[U+0397](https://www.compart.com/en/unicode/U+0397)|GREEK CAPITAL LETTER ETA|`A*EUFLG`|Makes the Ā sound.|
+|η|[U+03B7](https://www.compart.com/en/unicode/U+03B7)|GREEK SMALL LETTER ETA|`AEUFLG`|Makes the Ā sound.|
+|Θ|[U+0398](https://www.compart.com/en/unicode/U+0398)|GREEK CAPITAL LETTER THETA|`TH*FLG`|Makes the TH sound.|
+|θ|[U+03B8](https://www.compart.com/en/unicode/U+03B8)|GREEK SMALL LETTER THETA|`TH-FLG`|Makes the TH sound.|
+|Ι|[U+0399](https://www.compart.com/en/unicode/U+0399)|GREEK CAPITAL LETTER IOTA|`*EUFLG`|Sounds like I.|
+|ι|[U+03B9](https://www.compart.com/en/unicode/U+03B9)|GREEK SMALL LETTER IOTA|`EUFLG`|Sounds like I.|
+|Κ|[U+039A](https://www.compart.com/en/unicode/U+039A)|GREEK CAPITAL LETTER KAPPA|`K*FLG`|Sounds like K.|
+|κ|[U+03BA](https://www.compart.com/en/unicode/U+03BA)|GREEK SMALL LETTER KAPPA|`K-FLG`|Sounds like K.|
+|Λ|[U+039B](https://www.compart.com/en/unicode/U+039B)|GREEK CAPITAL LETTER LAMDA|`HR*FLG`|Sounds like L.|
+|λ|[U+03BB](https://www.compart.com/en/unicode/U+03BB)|GREEK SMALL LETTER LAMDA|`HR-FLG`|Sounds like L.|
+|Μ|[U+039C](https://www.compart.com/en/unicode/U+039C)|GREEK CAPITAL LETTER MU|`PH*FLG`|Sounds like M.|
+|μ|[U+03BC](https://www.compart.com/en/unicode/U+03BC)|GREEK SMALL LETTER MU|`PH-FLG`|Sounds like M.|
+|Ν|[U+039D](https://www.compart.com/en/unicode/U+039D)|GREEK CAPITAL LETTER NU|`TPH*FLG`|We use the N chord, for the sound, even though the lowercase looks like a v.|
+|ν|[U+03BD](https://www.compart.com/en/unicode/U+03BD)|GREEK SMALL LETTER NU|`TPH-FLG`|We use the N chord, for the sound, even though the lowercase looks like a v.|
+|Ξ|[U+039E](https://www.compart.com/en/unicode/U+039E)|GREEK CAPITAL LETTER XI|`KP*FLG`|Sounds like X.|
+|ξ|[U+03BE](https://www.compart.com/en/unicode/U+03BE)|GREEK SMALL LETTER XI|`KP-FLG`|Sounds like X.|
+|Ο|[U+039F](https://www.compart.com/en/unicode/U+039F)|GREEK CAPITAL LETTER OMICRON|`O*FLG`|Sounds like O.|
+|ο|[U+03BF](https://www.compart.com/en/unicode/U+03BF)|GREEK SMALL LETTER OMICRON|`OFLG`|Sounds like O.|
+|Π|[U+03A0](https://www.compart.com/en/unicode/U+03A0)|GREEK CAPITAL LETTER PI|`P*FLG`|Sounds like P.|
+|π|[U+03C0](https://www.compart.com/en/unicode/U+03C0)|GREEK SMALL LETTER PI|`P-FLG`|Sounds like P.|
+|Ρ|[U+03A1](https://www.compart.com/en/unicode/U+03A1)|GREEK CAPITAL LETTER RHO|`R*FLG`|It looks like a P, but we respect that it sounds like an R.|
+|ρ|[U+03C1](https://www.compart.com/en/unicode/U+03C1)|GREEK SMALL LETTER RHO|`R-FLG`|It looks like a P, but we respect that it sounds like an R.|
+|Σ|[U+03A3](https://www.compart.com/en/unicode/U+03A3)|GREEK CAPITAL LETTER SIGMA|`S*FLG`|Sounds like S.|
+|σ|[U+03C3](https://www.compart.com/en/unicode/U+03C3)|GREEK SMALL LETTER SIGMA|`S-FLG`|Sounds like S.|
+|ς|[U+03C2](https://www.compart.com/en/unicode/U+03C2)|GREEK SMALL LETTER FINAL SIGMA|`SEFLG`|This system is built around majuscule/minuscule, but then this weirdo second minuscule sigma comes along. The E in the chord is for "end" (of word), as it's the word-final variant.|
+|Τ|[U+03A4](https://www.compart.com/en/unicode/U+03A4)|GREEK CAPITAL LETTER TAU|`T*FLG`|Sounds like T.|
+|τ|[U+03C4](https://www.compart.com/en/unicode/U+03C4)|GREEK SMALL LETTER TAU|`T-FLG`|Sounds like T.|
+|Υ|[U+03A5](https://www.compart.com/en/unicode/U+03A5)|GREEK CAPITAL LETTER UPSILON|`*UFLG`|The capital looks like a Y, but we respect that it's a U sound.|
+|υ|[U+03C5](https://www.compart.com/en/unicode/U+03C5)|GREEK SMALL LETTER UPSILON|`UFLG`|The capital looks like a Y, but we respect that it's a U sound.|
+|Φ|[U+03A6](https://www.compart.com/en/unicode/U+03A6)|GREEK CAPITAL LETTER PHI|`TP*FLG`|Sounds like F.|
+|φ|[U+03C6](https://www.compart.com/en/unicode/U+03C6)|GREEK SMALL LETTER PHI|`TP-FLG`|Sounds like F.|
+|Χ|[U+03A7](https://www.compart.com/en/unicode/U+03A7)|GREEK CAPITAL LETTER CHI|`KH*FLG`|It's actual sound is hard to represent in steno, but CH is a reasonable fit. The Latin English steno X shape is in use by Xi, so we he can't provide it as an orthographic alternate for this one.|
+|χ|[U+03C7](https://www.compart.com/en/unicode/U+03C7)|GREEK SMALL LETTER CHI|`KH-FLG`|It's actual sound is hard to represent in steno, but CH is a reasonable fit. The Latin English steno X shape is in use by Xi, so we he can't provide it as an orthographic alternate for this one.|
+|Ψ|[U+03A8](https://www.compart.com/en/unicode/U+03A8)|GREEK CAPITAL LETTER PSI|`SP*FLG`|Sounds like PS (as in "lapse"), so we used the swapped form, as we don't have a PS sound on the left-hand side, where the consonants live.|
+|ψ|[U+03C8](https://www.compart.com/en/unicode/U+03C8)|GREEK SMALL LETTER PSI|`SP-FLG`|Sounds like PS (as in "lapse"), so we used the swapped form, as we don't have a PS sound on the left-hand side, where the consonants live.|
+|Ω|[U+03A9](https://www.compart.com/en/unicode/U+03A9)|GREEK CAPITAL LETTER OMEGA|`O*EFLG`|O is taken by omicron, which people pronounce with an initial long or short O sound, but this one is only ever the long O, so we use OE for this one.|
+|ω|[U+03C9](https://www.compart.com/en/unicode/U+03C9)|GREEK SMALL LETTER OMEGA|`OEFLG`|O is taken by omicron, which people pronounce with an initial long or short O sound, but this one is only ever the long O, so we use OE for this one.|
 ### Russian Cyrillic Alphabet
+"Russian is Pretty Good!"<BR>Russians also play a lot of RPGs [citation needed], and shoot a lot of [RPGs](https://en.wikipedia.org/wiki/RPG-7).<BR>
 **Majuscule Ender:** `*RPG`<BR>
 **Minuscule Ender:** `-RPG`<BR>
 <BR>
 The Russian alphabet has a number of discrepancies with English. All attempts were made to come up with mnemonically memorable strokes. See the descriptions following each letter.<BR>
-|Character|Name|Stroke(s)|Notes|
-|-|-|-|-|
-|А|CYRILLIC CAPITAL LETTER A|`A*RPG`|Sounds like A.|
-|а|CYRILLIC SMALL LETTER A|`ARPG`|Sounds like A.|
-|Б|CYRILLIC CAPITAL LETTER BE|`PW*RPG`|Sounds like B.|
-|б|CYRILLIC SMALL LETTER BE|`PW-RPG`|Sounds like B.|
-|В|CYRILLIC CAPITAL LETTER VE|`SR*RPG`|Sounds like V.|
-|в|CYRILLIC SMALL LETTER VE|`SR-RPG`|Sounds like V.|
-|Г|CYRILLIC CAPITAL LETTER GHE|`TKPW*RPG`|Sounds like G.|
-|г|CYRILLIC SMALL LETTER GHE|`TKPW-RPG`|Sounds like G.|
-|Д|CYRILLIC CAPITAL LETTER DE|`TK*RPG`|Sounds like D.|
-|д|CYRILLIC SMALL LETTER DE|`TK-RPG`|Sounds like D.|
-|Е|CYRILLIC CAPITAL LETTER IE|`KWR*ERPG`|Makes the YE sound, sort of.|
-|е|CYRILLIC SMALL LETTER IE|`KWRERPG`|Makes the YE sound, sort of.|
-|Ё|CYRILLIC CAPITAL LETTER IO|`KWRO*ERPG`<BR>`KWRO*RPG`|Makes the YŌ sound. Slightly simpler YO alternate provided.|
-|ё|CYRILLIC SMALL LETTER IO|`KWROERPG`<BR>`KWRORPG`|Makes the YŌ sound. Slightly simpler YO alternate provided.|
-|Ж|CYRILLIC CAPITAL LETTER ZHE|`STKPWH*RPG`<BR>`STKPW*RPG`<BR>`SKWR*RPG`|A literal steno ZH, as when this symbol is transliterated to English, i.e. in "Dr. Zhivago." Alternate, simpler form of Z provided, and an alternate J sound as well.|
-|ж|CYRILLIC SMALL LETTER ZHE|`STKPWH-RPG`<BR>`STKPW-RPG`<BR>`SKWR-RPG`|A literal steno ZH, as when this symbol is transliterated to English, i.e. in "Dr. Zhivago." Alternate, simpler form of Z provided, and an alternate J sound as well.|
-|З|CYRILLIC CAPITAL LETTER ZE|`STKPW*RPG`|Sounds like Z.|
-|з|CYRILLIC SMALL LETTER ZE|`STKPW-RPG`|Sounds like Z.|
-|И|CYRILLIC CAPITAL LETTER I|`AO*ERPG`<BR>`*EURPG`|Makes the Ē sound. A simpler I-sound alternate is provided for anyone who can imagine I as a long E sound; in my Spanish dictionary, I just use I (EU) for all letters I, and don't think of it like the English short I when working in that language.|
-|и|CYRILLIC SMALL LETTER I|`AOERPG`<BR>`EURPG`|Makes the Ē sound. A simpler I-sound alternate is provided for anyone who can imagine I as a long E sound; in my Spanish dictionary, I just use I (EU) for all letters I, and don't think of it like the English short I when working in that language.|
-|Й|CYRILLIC CAPITAL LETTER SHORT I|`KWR*RPG`|Sounds like Y, sort of.|
-|й|CYRILLIC SMALL LETTER SHORT I|`KWR-RPG`|Sounds like Y, sort of.|
-|К|CYRILLIC CAPITAL LETTER KA|`K*RPG`|Sounds like K.|
-|к|CYRILLIC SMALL LETTER KA|`K-RPG`|Sounds like K.|
-|Л|CYRILLIC CAPITAL LETTER EL|`HR*RPG`|Sounds like L.|
-|л|CYRILLIC SMALL LETTER EL|`HR-RPG`|Sounds like L.|
-|М|CYRILLIC CAPITAL LETTER EM|`PH*RPG`|Sounds like M.|
-|м|CYRILLIC SMALL LETTER EM|`PH-RPG`|Sounds like M.|
-|Н|CYRILLIC CAPITAL LETTER EN|`TPH*RPG`|Sounds like N.|
-|н|CYRILLIC SMALL LETTER EN|`TPH-RPG`|Sounds like N.|
-|О|CYRILLIC CAPITAL LETTER O|`O*RPG`|Sounds like O.|
-|о|CYRILLIC SMALL LETTER O|`ORPG`|Sounds like O.|
-|П|CYRILLIC CAPITAL LETTER PE|`P*RPG`|Sounds like P.|
-|п|CYRILLIC SMALL LETTER PE|`P-RPG`|Sounds like P.|
-|Р|CYRILLIC CAPITAL LETTER ER|`R*RPG`|Sounds like R.|
-|р|CYRILLIC SMALL LETTER ER|`R-RPG`|Sounds like R.|
-|С|CYRILLIC CAPITAL LETTER ES|`S*RPG`|Sounds like S.|
-|с|CYRILLIC SMALL LETTER ES|`S-RPG`|Sounds like S.|
-|Т|CYRILLIC CAPITAL LETTER TE|`T*RPG`|Sounds like T.|
-|т|CYRILLIC SMALL LETTER TE|`T-RPG`|Sounds like T.|
-|У|CYRILLIC CAPITAL LETTER U|`AO*URPG`<BR>`AO*RPG`|Makes the Ū sound, sort of. An alternate form is included, for anyone who wants to think of that sound from the viewpoint of the orthographic AO →"oo" spelling trick in Plover theory.|
-|у|CYRILLIC SMALL LETTER U|`AOURPG`<BR>`AORPG`|Makes the Ū sound, sort of. An alternate form is included, for anyone who wants to think of that sound from the viewpoint of the orthographic AO →"oo" spelling trick in Plover theory.|
-|Ф|CYRILLIC CAPITAL LETTER EF|`TP*RPG`|Sounds like F.|
-|ф|CYRILLIC SMALL LETTER EF|`TP-RPG`|Sounds like F.|
-|Х|CYRILLIC CAPITAL LETTER HA|`KP*RPG`|Uses orthography to get around the conflict with Ч/ч, which makes the "ch" sound. As this looks exactly like an X, we go with the steno X chord.|
-|х|CYRILLIC SMALL LETTER HA|`KP-RPG`|Uses orthography to get around the conflict with Ч/ч, which makes the "ch" sound. As this looks exactly like an X, we go with the steno X chord.|
-|Ц|CYRILLIC CAPITAL LETTER TSE|`ST*RPG`|This is supposed to make the TS sound, as in "cats", but we don't have that chord on the left-hand side of the board, so we employ the Plover theory trick of allowing one adjacent sound swap.|
-|ц|CYRILLIC SMALL LETTER TSE|`ST-RPG`|This is supposed to make the TS sound, as in "cats", but we don't have that chord on the left-hand side of the board, so we employ the Plover theory trick of allowing one adjacent sound swap.|
-|Ч|CYRILLIC CAPITAL LETTER CHE|`KH*RPG`|Makes the CH sound.|
-|ч|CYRILLIC SMALL LETTER CHE|`KH-RPG`|Makes the CH sound.|
-|Ш|CYRILLIC CAPITAL LETTER SHA|`SH*RPG`|Makes the SH sound.|
-|ш|CYRILLIC SMALL LETTER SHA|`SH-RPG`|Makes the SH sound.|
-|Щ|CYRILLIC CAPITAL LETTER SHCHA|`SKH*RPG`|Think of this one as a letter brief. The sound should be SHCH, like the sound between the words in "fresh cheese," but we don't have that in English steno, so we just merge SH and KH (CH).|
-|щ|CYRILLIC SMALL LETTER SHCHA|`SKH-RPG`|Think of this one as a letter brief. The sound should be SHCH, like the sound between the words in "fresh cheese," but we don't have that in English steno, so we just merge SH and KH (CH).|
-|Ъ|CYRILLIC CAPITAL LETTER HARD SIGN|`PWH*RPG`|This letter looks like the b in the English alphabet. It doesn't have its own sound, so I'm just leaning on what's visually sensible to an English speaker, and adding the H to denote that this is the hard sign (see: мягкий знак (soft sign)).|
-|ъ|CYRILLIC SMALL LETTER HARD SIGN|`PWH-RPG`|This letter looks like the b in the English alphabet. It doesn't have its own sound, so I'm just leaning on what's visually sensible to an English speaker, and adding the H to denote that this is the hard sign (see: мягкий знак (soft sign)).|
-|Ы|CYRILLIC CAPITAL LETTER YERU|`*URPG`|I'm told this letter makes a sound somewhere between the vowels in "bit" and "put", and my best take on that is the short U sound.|
-|ы|CYRILLIC SMALL LETTER YERU|`URPG`|I'm told this letter makes a sound somewhere between the vowels in "bit" and "put", and my best take on that is the short U sound.|
-|Ь|CYRILLIC CAPITAL LETTER SOFT SIGN|`PWR*RPG`|Like the hard sign, but with the R instead of the H, to denote the soft sound. The choice of R is positional; H is hard, and R is the soft version below it. (see: твёрдый знак (hard sign)).|
-|ь|CYRILLIC SMALL LETTER SOFT SIGN|`PWR-RPG`|Like the hard sign, but with the R instead of the H, to denote the soft sound. The choice of R is positional; H is hard, and R is the soft version below it. (see: твёрдый знак (hard sign)).|
-|Э|CYRILLIC CAPITAL LETTER E|`*ERPG`|Sounds like E.|
-|э|CYRILLIC SMALL LETTER E|`ERPG`|Sounds like E.|
-|Ю|CYRILLIC CAPITAL LETTER YU|`KWRAO*URPG`|Makes the YŪ sound.|
-|ю|CYRILLIC SMALL LETTER YU|`KWRAOURPG`|Makes the YŪ sound.|
-|Я|CYRILLIC CAPITAL LETTER YA|`KWRA*RPG`|Makes the YA sound.|
-|я|CYRILLIC SMALL LETTER YA|`KWRARPG`|Makes the YA sound.|
+|Letter|Code Pt|Name|Stroke(s)|Notes|
+|-|-|-|-|-|
+|А|[U+0410](https://www.compart.com/en/unicode/U+0410)|CYRILLIC CAPITAL LETTER A|`A*RPG`|Sounds like A.|
+|а|[U+0430](https://www.compart.com/en/unicode/U+0430)|CYRILLIC SMALL LETTER A|`ARPG`|Sounds like A.|
+|Б|[U+0411](https://www.compart.com/en/unicode/U+0411)|CYRILLIC CAPITAL LETTER BE|`PW*RPG`|Sounds like B.|
+|б|[U+0431](https://www.compart.com/en/unicode/U+0431)|CYRILLIC SMALL LETTER BE|`PW-RPG`|Sounds like B.|
+|В|[U+0412](https://www.compart.com/en/unicode/U+0412)|CYRILLIC CAPITAL LETTER VE|`SR*RPG`|Sounds like V.|
+|в|[U+0432](https://www.compart.com/en/unicode/U+0432)|CYRILLIC SMALL LETTER VE|`SR-RPG`|Sounds like V.|
+|Г|[U+0413](https://www.compart.com/en/unicode/U+0413)|CYRILLIC CAPITAL LETTER GHE|`TKPW*RPG`|Sounds like G.|
+|г|[U+0433](https://www.compart.com/en/unicode/U+0433)|CYRILLIC SMALL LETTER GHE|`TKPW-RPG`|Sounds like G.|
+|Д|[U+0414](https://www.compart.com/en/unicode/U+0414)|CYRILLIC CAPITAL LETTER DE|`TK*RPG`|Sounds like D.|
+|д|[U+0434](https://www.compart.com/en/unicode/U+0434)|CYRILLIC SMALL LETTER DE|`TK-RPG`|Sounds like D.|
+|Е|[U+0415](https://www.compart.com/en/unicode/U+0415)|CYRILLIC CAPITAL LETTER IE|`KWR*ERPG`|Makes the YE sound, sort of.|
+|е|[U+0435](https://www.compart.com/en/unicode/U+0435)|CYRILLIC SMALL LETTER IE|`KWRERPG`|Makes the YE sound, sort of.|
+|Ё|[U+0401](https://www.compart.com/en/unicode/U+0401)|CYRILLIC CAPITAL LETTER IO|`KWRO*ERPG`<BR>`KWRO*RPG`|Makes the YŌ sound. Slightly simpler YO alternate provided.|
+|ё|[U+0451](https://www.compart.com/en/unicode/U+0451)|CYRILLIC SMALL LETTER IO|`KWROERPG`<BR>`KWRORPG`|Makes the YŌ sound. Slightly simpler YO alternate provided.|
+|Ж|[U+0416](https://www.compart.com/en/unicode/U+0416)|CYRILLIC CAPITAL LETTER ZHE|`STKPWH*RPG`<BR>`STKPW*RPG`<BR>`SKWR*RPG`|A literal steno ZH, as when this symbol is transliterated to English, i.e. in "Dr. Zhivago." Alternate, simpler form of Z provided, and an alternate J sound as well.|
+|ж|[U+0436](https://www.compart.com/en/unicode/U+0436)|CYRILLIC SMALL LETTER ZHE|`STKPWH-RPG`<BR>`STKPW-RPG`<BR>`SKWR-RPG`|A literal steno ZH, as when this symbol is transliterated to English, i.e. in "Dr. Zhivago." Alternate, simpler form of Z provided, and an alternate J sound as well.|
+|З|[U+0417](https://www.compart.com/en/unicode/U+0417)|CYRILLIC CAPITAL LETTER ZE|`STKPW*RPG`|Sounds like Z.|
+|з|[U+0437](https://www.compart.com/en/unicode/U+0437)|CYRILLIC SMALL LETTER ZE|`STKPW-RPG`|Sounds like Z.|
+|И|[U+0418](https://www.compart.com/en/unicode/U+0418)|CYRILLIC CAPITAL LETTER I|`AO*ERPG`<BR>`*EURPG`|Makes the Ē sound. A simpler I-sound alternate is provided for anyone who can imagine I as a long E sound; in my Spanish dictionary, I just use I (EU) for all letters I, and don't think of it like the English short I when working in that language.|
+|и|[U+0438](https://www.compart.com/en/unicode/U+0438)|CYRILLIC SMALL LETTER I|`AOERPG`<BR>`EURPG`|Makes the Ē sound. A simpler I-sound alternate is provided for anyone who can imagine I as a long E sound; in my Spanish dictionary, I just use I (EU) for all letters I, and don't think of it like the English short I when working in that language.|
+|Й|[U+0419](https://www.compart.com/en/unicode/U+0419)|CYRILLIC CAPITAL LETTER SHORT I|`KWR*RPG`|Sounds like Y, sort of.|
+|й|[U+0439](https://www.compart.com/en/unicode/U+0439)|CYRILLIC SMALL LETTER SHORT I|`KWR-RPG`|Sounds like Y, sort of.|
+|К|[U+041A](https://www.compart.com/en/unicode/U+041A)|CYRILLIC CAPITAL LETTER KA|`K*RPG`|Sounds like K.|
+|к|[U+043A](https://www.compart.com/en/unicode/U+043A)|CYRILLIC SMALL LETTER KA|`K-RPG`|Sounds like K.|
+|Л|[U+041B](https://www.compart.com/en/unicode/U+041B)|CYRILLIC CAPITAL LETTER EL|`HR*RPG`|Sounds like L.|
+|л|[U+043B](https://www.compart.com/en/unicode/U+043B)|CYRILLIC SMALL LETTER EL|`HR-RPG`|Sounds like L.|
+|М|[U+041C](https://www.compart.com/en/unicode/U+041C)|CYRILLIC CAPITAL LETTER EM|`PH*RPG`|Sounds like M.|
+|м|[U+043C](https://www.compart.com/en/unicode/U+043C)|CYRILLIC SMALL LETTER EM|`PH-RPG`|Sounds like M.|
+|Н|[U+041D](https://www.compart.com/en/unicode/U+041D)|CYRILLIC CAPITAL LETTER EN|`TPH*RPG`|Sounds like N.|
+|н|[U+043D](https://www.compart.com/en/unicode/U+043D)|CYRILLIC SMALL LETTER EN|`TPH-RPG`|Sounds like N.|
+|О|[U+041E](https://www.compart.com/en/unicode/U+041E)|CYRILLIC CAPITAL LETTER O|`O*RPG`|Sounds like O.|
+|о|[U+043E](https://www.compart.com/en/unicode/U+043E)|CYRILLIC SMALL LETTER O|`ORPG`|Sounds like O.|
+|П|[U+041F](https://www.compart.com/en/unicode/U+041F)|CYRILLIC CAPITAL LETTER PE|`P*RPG`|Sounds like P.|
+|п|[U+043F](https://www.compart.com/en/unicode/U+043F)|CYRILLIC SMALL LETTER PE|`P-RPG`|Sounds like P.|
+|Р|[U+0420](https://www.compart.com/en/unicode/U+0420)|CYRILLIC CAPITAL LETTER ER|`R*RPG`|Sounds like R.|
+|р|[U+0440](https://www.compart.com/en/unicode/U+0440)|CYRILLIC SMALL LETTER ER|`R-RPG`|Sounds like R.|
+|С|[U+0421](https://www.compart.com/en/unicode/U+0421)|CYRILLIC CAPITAL LETTER ES|`S*RPG`|Sounds like S.|
+|с|[U+0441](https://www.compart.com/en/unicode/U+0441)|CYRILLIC SMALL LETTER ES|`S-RPG`|Sounds like S.|
+|Т|[U+0422](https://www.compart.com/en/unicode/U+0422)|CYRILLIC CAPITAL LETTER TE|`T*RPG`|Sounds like T.|
+|т|[U+0442](https://www.compart.com/en/unicode/U+0442)|CYRILLIC SMALL LETTER TE|`T-RPG`|Sounds like T.|
+|У|[U+0423](https://www.compart.com/en/unicode/U+0423)|CYRILLIC CAPITAL LETTER U|`AO*URPG`<BR>`AO*RPG`|Makes the Ū sound, sort of. An alternate form is included, for anyone who wants to think of that sound from the viewpoint of the orthographic AO →"oo" spelling trick in Plover theory.|
+|у|[U+0443](https://www.compart.com/en/unicode/U+0443)|CYRILLIC SMALL LETTER U|`AOURPG`<BR>`AORPG`|Makes the Ū sound, sort of. An alternate form is included, for anyone who wants to think of that sound from the viewpoint of the orthographic AO →"oo" spelling trick in Plover theory.|
+|Ф|[U+0424](https://www.compart.com/en/unicode/U+0424)|CYRILLIC CAPITAL LETTER EF|`TP*RPG`|Sounds like F.|
+|ф|[U+0444](https://www.compart.com/en/unicode/U+0444)|CYRILLIC SMALL LETTER EF|`TP-RPG`|Sounds like F.|
+|Х|[U+0425](https://www.compart.com/en/unicode/U+0425)|CYRILLIC CAPITAL LETTER HA|`KP*RPG`|Uses orthography to get around the conflict with Ч/ч, which makes the "ch" sound. As this looks exactly like an X, we go with the steno X chord.|
+|х|[U+0445](https://www.compart.com/en/unicode/U+0445)|CYRILLIC SMALL LETTER HA|`KP-RPG`|Uses orthography to get around the conflict with Ч/ч, which makes the "ch" sound. As this looks exactly like an X, we go with the steno X chord.|
+|Ц|[U+0426](https://www.compart.com/en/unicode/U+0426)|CYRILLIC CAPITAL LETTER TSE|`ST*RPG`|This is supposed to make the TS sound, as in "cats", but we don't have that chord on the left-hand side of the board, so we employ the Plover theory trick of allowing one adjacent sound swap.|
+|ц|[U+0446](https://www.compart.com/en/unicode/U+0446)|CYRILLIC SMALL LETTER TSE|`ST-RPG`|This is supposed to make the TS sound, as in "cats", but we don't have that chord on the left-hand side of the board, so we employ the Plover theory trick of allowing one adjacent sound swap.|
+|Ч|[U+0427](https://www.compart.com/en/unicode/U+0427)|CYRILLIC CAPITAL LETTER CHE|`KH*RPG`|Makes the CH sound.|
+|ч|[U+0447](https://www.compart.com/en/unicode/U+0447)|CYRILLIC SMALL LETTER CHE|`KH-RPG`|Makes the CH sound.|
+|Ш|[U+0428](https://www.compart.com/en/unicode/U+0428)|CYRILLIC CAPITAL LETTER SHA|`SH*RPG`|Makes the SH sound.|
+|ш|[U+0448](https://www.compart.com/en/unicode/U+0448)|CYRILLIC SMALL LETTER SHA|`SH-RPG`|Makes the SH sound.|
+|Щ|[U+0429](https://www.compart.com/en/unicode/U+0429)|CYRILLIC CAPITAL LETTER SHCHA|`SKH*RPG`|Think of this one as a letter brief. The sound should be SHCH, like the sound between the words in "fresh cheese," but we don't have that in English steno, so we just merge SH and KH (CH).|
+|щ|[U+0449](https://www.compart.com/en/unicode/U+0449)|CYRILLIC SMALL LETTER SHCHA|`SKH-RPG`|Think of this one as a letter brief. The sound should be SHCH, like the sound between the words in "fresh cheese," but we don't have that in English steno, so we just merge SH and KH (CH).|
+|Ъ|[U+042A](https://www.compart.com/en/unicode/U+042A)|CYRILLIC CAPITAL LETTER HARD SIGN|`PWH*RPG`|This letter looks like the b in the English alphabet. It doesn't have its own sound, so I'm just leaning on what's visually sensible to an English speaker, and adding the H to denote that this is the hard sign (see: мягкий знак (soft sign)).|
+|ъ|[U+044A](https://www.compart.com/en/unicode/U+044A)|CYRILLIC SMALL LETTER HARD SIGN|`PWH-RPG`|This letter looks like the b in the English alphabet. It doesn't have its own sound, so I'm just leaning on what's visually sensible to an English speaker, and adding the H to denote that this is the hard sign (see: мягкий знак (soft sign)).|
+|Ы|[U+042B](https://www.compart.com/en/unicode/U+042B)|CYRILLIC CAPITAL LETTER YERU|`*URPG`|I'm told this letter makes a sound somewhere between the vowels in "bit" and "put", and my best take on that is the short U sound.|
+|ы|[U+044B](https://www.compart.com/en/unicode/U+044B)|CYRILLIC SMALL LETTER YERU|`URPG`|I'm told this letter makes a sound somewhere between the vowels in "bit" and "put", and my best take on that is the short U sound.|
+|Ь|[U+042C](https://www.compart.com/en/unicode/U+042C)|CYRILLIC CAPITAL LETTER SOFT SIGN|`PWR*RPG`|Like the hard sign, but with the R instead of the H, to denote the soft sound. The choice of R is positional; H is hard, and R is the soft version below it. (see: твёрдый знак (hard sign)).|
+|ь|[U+044C](https://www.compart.com/en/unicode/U+044C)|CYRILLIC SMALL LETTER SOFT SIGN|`PWR-RPG`|Like the hard sign, but with the R instead of the H, to denote the soft sound. The choice of R is positional; H is hard, and R is the soft version below it. (see: твёрдый знак (hard sign)).|
+|Э|[U+042D](https://www.compart.com/en/unicode/U+042D)|CYRILLIC CAPITAL LETTER E|`*ERPG`|Sounds like E.|
+|э|[U+044D](https://www.compart.com/en/unicode/U+044D)|CYRILLIC SMALL LETTER E|`ERPG`|Sounds like E.|
+|Ю|[U+042E](https://www.compart.com/en/unicode/U+042E)|CYRILLIC CAPITAL LETTER YU|`KWRAO*URPG`|Makes the YŪ sound.|
+|ю|[U+044E](https://www.compart.com/en/unicode/U+044E)|CYRILLIC SMALL LETTER YU|`KWRAOURPG`|Makes the YŪ sound.|
+|Я|[U+042F](https://www.compart.com/en/unicode/U+042F)|CYRILLIC CAPITAL LETTER YA|`KWRA*RPG`|Makes the YA sound.|
+|я|[U+044F](https://www.compart.com/en/unicode/U+044F)|CYRILLIC SMALL LETTER YA|`KWRARPG`|Makes the YA sound.|
 ### All Composed Characters
 
 There are many ways to sort such a list. I opted not to go with Unicode code point, because it ends up somewhat nonsensical. Instead, this uses a custom sort based on a 3-tuple of:
