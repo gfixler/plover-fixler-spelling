@@ -21,16 +21,7 @@ readmeTitle = """
 # Fixler Spelling for Plover
 A fingerspelling system for the [Plover](https://www.openstenoproject.org/plover/) steno software.
 
-This library currently provides quick access to """ + str(charCount) + """ characters."
-"""
-
-readmeTOC = """
-## Table of Contents
-This is a long readme. GitHub provides a table of contents under the hamburger menu, at the top right of this readme.
-
-The burger menu looks like this:
-
-![burger menu](images/hamburgerMenu.png)
+This library currently provides quick access to """ + str(charCount) + """ characters.
 """
 
 readmeGoals = """
@@ -42,6 +33,15 @@ readmeGoals = """
 * include some other alphabets where possible (Greek, Russian, NATO...)
 """
 
+readmeTOC = """
+## Table of Contents
+This is a long readme. GitHub provides a table of contents under the hamburger menu, at the top right of this readme.
+
+The burger menu looks like this:
+
+![burger menu](images/hamburgerMenu.png)
+"""
+
 readmeNotesOnDesign = """
 ## Notes on Design
 ### The Core
@@ -51,7 +51,7 @@ The core of this system is fingerspelling, and revolves around the Latin letters
 Modifiers are not currently programmatic, and do not look at stroke history. This is not a Plover Python dictionary. The modifier system simply exports a JSON file mapping letters to outlines.
 
 ### System Letters
-Because letter chords are part of the outlines with their modifiers, you must use the letter chords as defined in this library. This means if you use STK for "z", for example, and this system only exports STKPW, you must use this system's version when composition, e.g., the ẓ ("Z with dot below") character. Currently, the way around this is to modify the Python file, and reexport the dictionary.
+Because letter chords are part of the outlines with their modifiers, you must use the letter chords as defined in this library. This means if you use STK for "z", for example, and this system only exports STKPW, you must use this system's version when composing, e.g., the ẓ ("Z with dot below") character. Currently, the way around this is to modify the Python file, and reexport the dictionary. Note: This system does export both of those chords for Z/z, and their compositions..
 
 ### Precomposed Characters
 All characters defined in this system, as seen in the "Used by" lists following each modifier in the [Available Diacritics and Other Modifiers](#available-diacritics-and-other-modifiers) section, and in the [All Characters List](#all-characters-list), are "precomposed" characters in Unicode, meaning they have a single code point in The Unicode Standard. Many characters encountered in the wild, are actually composed of a base letter, with one or more [combining characters](https://en.wikipedia.org/wiki/Combining_character) following them, and your font rendering system does the work of displaying them in composed form, although they can look different, and may fail to render well, or not at all.
@@ -83,7 +83,7 @@ See the following section, [Using Modifiers](#using-modifiers), for usage instru
 
 readmeUsingModifiers = """
 ## Using Modifiers
-Modify base letters by stroking a diacritic or modifier outline, or sequences thereof, immediately after a base letter. See [Available Diacritics and Other Modifiers](#available-diacritics-and-other-modifiers) section.
+Modify base letters by stroking a diacritic or modifier outline, or sequences thereof, immediately after a base letter. See the [Available Diacritics and Other Modifiers](#available-diacritics-and-other-modifiers) section.
 
 #### Examples
 * á (A with acute): Stroke letter a, then the acute diacritic
@@ -167,9 +167,9 @@ Code points currently link to their associated page on [Compart](https://www.com
 
 There are many ways to sort such a list. I opted not to go with Unicode code point, because it ends up somewhat nonsensical. Instead, this uses a custom sort based on a 3-tuple of:
 
-    1. lowercase base letter (e.g. "a" for "Â")
-    2. decomposed, Unicode-ordered, diacritics list
-    3. True, if base letter is lower, otherwise False
+1. lowercase base letter (e.g. "a" for "Â")
+2. decomposed, Unicode-ordered, diacritics list
+3. True, if base letter is lower, otherwise False
 
 This creates a list that feels at least a bit alphabetical in nature, and positions upper and lowercase letters with the same diacritics together.
 
