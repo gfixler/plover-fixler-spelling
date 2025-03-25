@@ -328,7 +328,7 @@ GREEK_ALPHABET_DATA = {
             "minuscule": "ς",
             "strokes": ["SE"],
             "link": "https://en.wikipedia.org/wiki/Sigma",
-            "docs": "This system is built around majuscule/minuscule, but then this weirdo second minuscule sigma comes along. The E in the chord is for \"end\" (of word), as it's the word-final variant.",
+            "docs": "Sigma is unique in Greek, and in languages in general, in that it's lowercase form has two variants. This one is for use in word-final position. This uses the same chord as the lowercase sigma, but adds in E, for \"end\" (of word).",
         },
         {
             "name": "tau",
