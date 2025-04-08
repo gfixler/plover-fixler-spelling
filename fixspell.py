@@ -1868,9 +1868,18 @@ MODIFIED_LATIN_CHARS = [
     {
         "name": "I with dot above",
         "majuscule": ("I", "İ"),
-        "minuscule": ("i", "i"), # literally just lowercase i, U+0069
+        "minuscule": None, # Unicode just uses lowercase i, U+0069
         "modifiers": ["dotAbove"],
         "link": "https://en.wikipedia.org/wiki/%C4%B0",
+        "docs": "Lowercase I already has a dot (formally, a \"tittle\"), and there isn't a version with an extra dot, nor an alternate version of its dotted self in Unicode. As such, the dot above modifier adds the dot to the uppercase version, but removes it to create the dotless version of the lowercase letter.",
+    },
+    {
+        "name": "Dotless I",
+        "majuscule": None, # Unicode just uses capital I for this, U+0073
+        "minuscule": ("i", "ı"),
+        "modifiers": ["dotAbove"],
+        "link": "https://en.wikipedia.org/wiki/Dotless_I",
+        "docs": "Normally i (and j) have a dot above (formally, a \"tittle\"), so we use the dot above modifier here to remove the dot from the minuscule cases. For the uppercase letters, which do have a dot above variant, but don't have dotless variants, we use the modifier to add the dot above.",
     },
     {
         "name": "I with circumflex",
@@ -1920,6 +1929,14 @@ MODIFIED_LATIN_CHARS = [
         "minuscule": ("i", "ị"),
         "modifiers": ["dotBelow"],
         "link": "https://en.wikipedia.org/wiki/Dot_(diacritic)",
+    },
+    {
+        "name": "Dotless J",
+        "majuscule": None,
+        "minuscule": ("j", "ȷ"),
+        "modifiers": ["dotAbove"],
+        "link": "https://en.wikipedia.org/wiki/Dotless_J",
+        "docs": "Normally j (and i) have a dot above (formally, a \"tittle\"), so we use the dot above modifier here to remove the dot from the minuscule cases. For the uppercase letters, which do have a dot above variant, but don't have dotless variants, we use the modifier to add the dot above.",
     },
     {
         "name": "J with circumflex",
