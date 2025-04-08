@@ -8,9 +8,9 @@ enderBraille = "-RPGT"
 LATIN_ALPHABET_DATA = {
     "minStroke": "*",
     "majStroke": "*P",
-    "name": "English Latin Alphabet",
+    "name": "English Alphabet",
     "enderThoughts": "Standard English steno enders.",
-    "docs": "English steno theories come with alphabets, but for sake of completeness...",
+    "docs": "English steno theories come with alphabets, but for sake of completeness, we include the [English Alphabet](https://en.wikipedia.org/wiki/English_alphabet) again.",
     "letters": [
         {
             "majuscule": "A",
@@ -176,7 +176,7 @@ GREEK_ALPHABET_DATA = {
     "majStroke": "*FLG",
     "name": "Greek Alphabet",
     "enderThoughts": "\"For Love of Greece!\"",
-    "docs": "Many Greek letters match up nicely with English; some do not. Read the notes for each letter to see how we get around the discrepancies.",
+    "docs": "Many letters in the [Greek alphabet](https://en.wikipedia.org/wiki/Greek_alphabet) match up nicely with English; some do not. Read the notes for each letter to see how we get around the discrepancies.",
     "letters": [
         {
             "name": "alpha",
