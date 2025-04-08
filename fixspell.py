@@ -1381,6 +1381,159 @@ MODIFIED_LATIN_CHARS = [
         "link": "https://en.wikipedia.org/wiki/%C3%9F",
     },
 
+    #  ____
+    # |  _ \ ___  _ __ ___   __ _ _ __
+    # | |_) / _ \| '_ ` _ \ / _` | '_ \
+    # |  _ < (_) | | | | | | (_| | | | |
+    # |_| \_\___/|_| |_| |_|\__,_|_| |_|
+    {
+        "name": "Roman numeral I",
+        "majuscule": ("I", "Ⅰ"),
+        "minuscule": ("i", "ⅰ"),
+        "modifiers": ["ligature"],
+        "link": "",
+    },
+    {
+        "name": "Roman numeral II",
+        "majuscule": ("II", "Ⅱ"),
+        "minuscule": ("ii", "ⅱ"),
+        "modifiers": ["ligature"],
+        "link": "",
+    },
+    {
+        "name": "Roman numeral III",
+        "majuscule": ("III", "Ⅲ"),
+        "minuscule": ("iii", "ⅲ"),
+        "modifiers": ["ligature"],
+        "link": "",
+    },
+    {
+        "name": "Roman numeral IV",
+        "majuscule": ("IV", "Ⅳ"),
+        "minuscule": ("iv", "ⅳ"),
+        "modifiers": ["ligature"],
+        "link": "",
+    },
+    {
+        "name": "Roman numeral V",
+        "majuscule": ("V", "Ⅴ"),
+        "minuscule": ("v", "ⅴ"),
+        "modifiers": ["ligature"],
+        "link": "",
+    },
+    {
+        "name": "Roman numeral VI",
+        "majuscule": ("VI", "Ⅵ"),
+        "minuscule": ("vi", "ⅵ"),
+        "modifiers": ["ligature"],
+        "link": "",
+    },
+    {
+        "name": "Roman numeral VII",
+        "majuscule": ("VII", "Ⅶ"),
+        "minuscule": ("vii", "ⅶ"),
+        "modifiers": ["ligature"],
+        "link": "",
+    },
+    {
+        "name": "Roman numeral VIII",
+        "majuscule": ("VIII", "Ⅷ"),
+        "minuscule": ("viii", "ⅷ"),
+        "modifiers": ["ligature"],
+        "link": "",
+    },
+    {
+        "name": "Roman numeral IX",
+        "majuscule": ("IX", "Ⅸ"),
+        "minuscule": ("ix", "ⅸ"),
+        "modifiers": ["ligature"],
+        "link": "",
+    },
+    {
+        "name": "Roman numeral X",
+        "majuscule": ("X", "Ⅹ"),
+        "minuscule": ("x", "ⅹ"),
+        "modifiers": ["ligature"],
+        "link": "",
+    },
+    {
+        "name": "Roman numeral XI",
+        "majuscule": ("XI", "Ⅺ"),
+        "minuscule": ("xi", "ⅺ"),
+        "modifiers": ["ligature"],
+        "link": "",
+    },
+    {
+        "name": "Roman numeral XII",
+        "majuscule": ("XII", "Ⅻ"),
+        "minuscule": ("xii", "ⅻ"),
+        "modifiers": ["ligature"],
+        "link": "",
+    },
+    {
+        "name": "Roman numeral L",
+        "majuscule": ("L", "Ⅼ"),
+        "minuscule": ("l", "ⅼ"),
+        "modifiers": ["ligature"],
+        "link": "",
+    },
+    {
+        "name": "Roman numeral C",
+        "majuscule": ("C", "Ⅽ"),
+        "minuscule": ("c", "ⅽ"),
+        "modifiers": ["ligature"],
+        "link": "",
+    },
+    {
+        "name": "Roman numeral D",
+        "majuscule": ("D", "Ⅾ"),
+        "minuscule": ("d", "ⅾ"),
+        "modifiers": ["ligature"],
+        "link": "",
+    },
+    {
+        "name": "Roman numeral M",
+        "majuscule": ("M", "Ⅿ"),
+        "minuscule": ("m", "ⅿ"),
+        "modifiers": ["ligature"],
+        "link": "",
+    },
+    {
+        "name": "Roman numeral one thousand",
+        "majuscule": ("CD", "ↀ"),
+        "minuscule": None,
+        "modifiers": ["ligature"],
+        "link": "",
+    },
+    {
+        "name": "Roman numeral five thousand",
+        "majuscule": ("DD", "ↁ"),
+        "minuscule": None,
+        "modifiers": ["ligature"],
+        "link": "",
+    },
+    {
+        "name": "Roman numeral ten thousand",
+        "majuscule": ("CCDD", "ↂ"),
+        "minuscule": None,
+        "modifiers": ["ligature"],
+        "link": "",
+    },
+    {
+        "name": "Roman numeral fifty thousand",
+        "majuscule": ("DDD", "ↇ"),
+        "minuscule": None,
+        "modifiers": ["ligature"],
+        "link": "",
+    },
+    {
+        "name": "Roman numeral one hundred thousand",
+        "majuscule": ("CCCDDD", "ↈ"),
+        "minuscule": None,
+        "modifiers": ["ligature"],
+        "link": "",
+    },
+
     #  _                        __
     # | |_ _ __ __ _ _ __  ___ / _| ___  _ __ _ __ ___  ___
     # | __| '__/ _` | '_ \/ __| |_ / _ \| '__| '_ ` _ \/ __|
