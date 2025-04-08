@@ -2154,7 +2154,7 @@ MODIFIED_LATIN_CHARS = [
         "link": "https://en.wikipedia.org/wiki/%C5%9A",
     },
     {
-        "name": "S with caron",
+        "name": "S with circumflex",
         "majuscule": ("S", "Ŝ"),
         "minuscule": ("s", "ŝ"),
         "modifiers": ["caron"],
@@ -2696,7 +2696,7 @@ MODIFIED_LATIN_CHARS = [
         "name": "U with diaeresis and caron",
         "majuscule": ("U", "Ǚ"),
         "minuscule": ("u", "ǚ"),
-        "modifiers": ["diaeresis", "macron"],
+        "modifiers": ["diaeresis", "caron"],
         "link": "",
     },
     {
