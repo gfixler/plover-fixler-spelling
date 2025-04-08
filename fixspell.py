@@ -834,6 +834,7 @@ cyrillicNonSlavicAlphabet = [
 # These string pairs are used to wrap output characters to enforce case.
 minWraps = ("{>}{&", "}")
 majWraps = ("{-|}{&", "}")
+glueWraps = ("{&", "}")
 
 DIACRITICS = {
     "name": "Diacritics",
@@ -7127,17 +7128,19 @@ def createOutlines (alphabet, entry):
         {
             "minuscule": ("a", "á"),
             "majuscule": ("A", "Á"),
+            "caseless": "optional; used when case-enforcement interferes",
             "modifiers": ["acute"],
         }
 
-    It returns a pair of lists of all outlines:
+    It returns a 3-tuple of lists of all outlines:
 
-        (minOutlines, majOutlines)
+        (minOutlines, majOutlines, noCaseOutlines)
     """
     modStrokes = list(map(lambda x: (DIACRITICS["modifiers"] | MODIFIERS["modifiers"])[x]["outline"], entry["modifiers"]))
     minuscule = buildModCharOutlines(alphabet, entry["minuscule"], modStrokes)
     majuscule = buildModCharOutlines(alphabet, entry["majuscule"], modStrokes)
-    return (minuscule, majuscule)
+    caseless = buildModCharOutlines(alphabet, entry["caseless"], modStrokes) if "caseless" in entry else []
+    return (minuscule, majuscule, caseless)
 
 def buildFingerspellingDict ():
     """
@@ -7150,6 +7153,7 @@ def buildFingerspellingDict ():
     # strings to force upper/lowercase through Plover
     majL, majR = majWraps
     minL, minR = minWraps
+    glueL, glueR = glueWraps
 
     # add all the letters from every alphabet
     for alphabet in ALPHABETS:
@@ -7168,18 +7172,20 @@ def buildFingerspellingDict ():
     # create definitions for all character modifications
     for charMods, alphabet in CHAR_MOD_LISTS_WITH_ALPHABETS:
         for entry in charMods:
-            minuscule, majuscule = createOutlines(alphabet, entry)
+            minuscule, majuscule, caseless = createOutlines(alphabet, entry)
             for scule, wrapL, wrapR, outlines in [
-                    ("min", minL, minR, minuscule),
-                    ("maj", majL, majR, majuscule)
+                    ("minuscule", minL, minR, minuscule),
+                    ("majuscule", majL, majR, majuscule),
+                    ("caseless", glueL, glueR, caseless),
                 ]:
                 # None means character + case isn't defined in Unicode
                 if outlines != None:
-                    _, translation = entry[scule + "uscule"]
-                    for outline in outlines:
-                        outlineStr = "/".join(outline)
-                        # add entire definition to the final spelling dict
-                        spellingDict[outlineStr] = wrapL + translation + wrapR
+                    if scule in entry:
+                        _, translation = entry[scule]
+                        for outline in outlines:
+                            outlineStr = "/".join(outline)
+                            # add entire definition to the final spelling dict
+                            spellingDict[outlineStr] = wrapL + translation + wrapR
 
     # return the complete fingerspelling dictionary
     return spellingDict
