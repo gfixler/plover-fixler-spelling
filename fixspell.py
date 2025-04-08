@@ -3588,13 +3588,6 @@ MODIFIED_LATIN_CHARS = [
         "link": "",
     },
     {
-        "name": "G with stroke",
-        "majuscule": ("G", "Ǥ"),
-        "minuscule": ("g", "ǥ"),
-        "modifiers": ["stroke"],
-        "link": "",
-    },
-    {
         "name": "G with slash",
         "majuscule": ("G", "Ꞡ"),
         "minuscule": ("g", "ꞡ"),
