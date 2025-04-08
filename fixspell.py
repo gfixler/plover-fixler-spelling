@@ -974,10 +974,20 @@ NOTE: Diacritics and their tweaks are part of the same stroke.
             "name": "Stroke",
             "docs": "The [stroke](https://en.wikipedia.org/wiki/Bar_(diacritic)), or bar, modifier is like the macron, but lower, because it cuts through the character, rather than flying above it.",
         },
+        "strokeExtra": {
+            "outline": "ERB",
+            "name": "Stroke Extra",
+            "docs": "The \"extra\" stroke is for a double stroke, or double bar, for characters with two horizontal strokes, or for characters that already have a stroke entry, but have an alternate form that needs a modifier of its own. It uses the stroke modifier shape, with the '[extra](#modifier-tweaks)' tweak.",
+        },
         "slash": {
             "outline": "-BL",
             "name": "Slash",
             "docs": "The [slash](https://en.wikipedia.org/wiki/Bar_(diacritic)) is really just a version of the bar, or stroke, but, because certain letters exist in both forms, I gave it its own modifier, to help differentiate between horizontal and vertical strokes/bars. The symbol is like the acute, but shifted, to indicate that it's lower, and cuts through the character. A bit of a stretch, as it's shifted to the right, not down, but other options were used up. Maybe think of it like moving to the right while reading this text, which eventually wraps, and takes you down a line.",
+        },
+        "slashExtra": {
+                "outline": "EBL",
+                "name": "Slash Extra",
+                "docs": "The \"extra\" slash is for use with letters that have more than one way in which to be stroked or slashed. It uses the slash modifier shape, with the '[extra](#modifier-tweaks)' tweak. As this stroke is the differentator for slash, it's meant to be used for the less common option, though this may be a bit subjective.",
         },
         "tilde": {
             "outline": "-FPBG",
@@ -1050,6 +1060,16 @@ NOTE: Diacritics and their tweaks are part of the same stroke.
             "outline": "-PBL",
             "name": "Monospace",
             "docs": "Tough one to think of a chord for. This is just the right-hand side's M and N chords, for \"MoNo\", superimposed."
+        },
+        "subscript": {
+            "outline": "ER",
+            "name": "Subscript",
+            "docs": "Subscript uses the dot below stroke with the '[extra](#modifier-tweaks)' tweak, because it creates a little thing down low.",
+        },
+        "superscript": {
+            "outline": "EF",
+            "name": "Superscript",
+            "docs": "Superscript uses the dot above stroke with the '[extra](#modifier-tweaks)' tweak, because it creates a little thing up high.",
         },
         "currency": {
             "outline": "-PB",
