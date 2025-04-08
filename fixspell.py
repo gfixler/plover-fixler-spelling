@@ -448,9 +448,9 @@ RUSSIAN_ALPHABET_DATA = {
             "name": "Жэ",
             "majuscule": "Ж",
             "minuscule": "ж",
-            "strokes": ["STKPWH", "STKPW", "SKWR"],
+            "strokes": ["STKPWH", "STKH", "SKWR"],
             "link": "https://en.wikipedia.org/wiki/Zhe_(Cyrillic)",
-            "docs": "A literal steno ZH, as when this symbol is transliterated to English, i.e. in \"Dr. Zhivago.\" Alternate, simpler form of Z provided, and an alternate J sound as well.",
+            "docs": "A literal steno ZH, as when this symbol is transliterated to English, i.e. in \"Dr. Zhivago.\" Alternate, simpler form of Z provided (but note that it conflicts with \"this needs\" in Jeff phrasing), and an alternate J sound as well.",
         },
         {
             "name": "Зэ",
