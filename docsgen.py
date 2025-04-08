@@ -165,9 +165,9 @@ def generateModifiersSection ():
                             character = sculeData[1]
                             anchor = getAnchorTextForChar(character)
                             chars.append("[" + character + "](#char-" + anchor + ")")
-                charsStr = " ".join(sorted(chars, key=ccc_sort_key))
+                charsStr = "Used in: " + " ".join(sorted(chars, key=ccc_sort_key)) if chars else "Not currently used by any characters"
             img = "![" + name + "](images/" + name + ".png)"
-            print("|" + img + "|![tweak](images/" + tweak + ".png)|" + info + "<BR><BR>Used in: " + charsStr + "|")
+            print("|" + img + "|![tweak](images/" + tweak + ".png)|" + info + "<BR><BR>" + charsStr + "|")
 
 def generateAllCharactersSection ():
     print("""## All Characters List
