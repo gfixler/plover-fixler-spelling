@@ -3,6 +3,9 @@ from itertools import product
 
 # TODO allow adding character overrides in a user-defined file
 
+
+starterCombining = "TKH"
+
 enderBraille = "-RPGT"
 
 LATIN_ALPHABET_DATA = {
@@ -848,86 +851,103 @@ NOTE: Diacritics and their tweaks are part of the same stroke.
         "acute": {
             "outline": "-RP",
             "name": "Acute",
+            "combining": "{&\u0301}",
             "docs": "Shaped like the [acute accent](https://en.wikipedia.org/wiki/Acute_accent).",
         },
         "acuteDoubled": {
             "outline": "ERP",
             "name": "Double Acute",
+            "combining": "{&\u030B}",
             "docs": "The [double acute accent](https://en.wikipedia.org/wiki/Double_acute_accent) uses the acute modifier shape, with the '[extra](#modifier-tweaks)' tweak.",
         },
         "breve": {
             "outline": "-FRBLG",
             "name": "Breve",
+            "combining": "{&\u0306}",
             "docs": "Shaped like the [breve](https://en.wikipedia.org/wiki/Breve).",
         },
         "breveBelow": {
             "outline": "UFRBLG",
             "name": "Breve Below",
+            "combining": "{&\u032E}",
             "docs": "The [breve below](https://en.wikipedia.org/wiki/Breve#Breve_below) uses the breve modifier shape, with the '[under](#modifier-tweaks)' tweak.",
         },
         "breveInverted": {
             "outline": "-FRPLG",
             "name": "Breve Inverted",
+            "combining": "{&\u0311}",
             "docs": "Shaped like the [inverted breve](https://en.wikipedia.org/wiki/Inverted_breve) symbol.",
         },
         "caron": {
             "outline": "-FBL",
             "name": "Caron",
+            "combining": "{&\u030C}",
             "docs": "Shaped like the [caron](https://en.wikipedia.org/wiki/Caron).",
         },
         "cedilla": {
             "outline": "EB",
             "name": "Cedilla",
+            "combining": "{&\u0327}",
             "docs": "The [cedilla](https://en.wikipedia.org/wiki/Cedilla) is based on the \"comma below\" modifier stroke, with the '[extra](#modifier-tweaks)' tweak, because it's like a comma, but a little bit more than a comma.",
         },
         "circumflex": {
             "outline": "-RPG",
             "name": "Circumflex",
+            "combining": "{&\u0302}",
             "docs": "Shaped like the [circumflex](https://en.wikipedia.org/wiki/Circumflex).",
         },
         "circumflexBelow": {
             "outline": "URPG",
             "name": "Circumflex Below",
+            "combining": "{&\u032D}",
             "docs": "The [circumflex below](https://en.wikipedia.org/wiki/Circumflex#Circumflex_below) uses the circumflex modifier shape, with the '[under](#modifier-tweaks)' tweak.",
         },
         "commaBelow": {
             "outline": "-B",
             "name": "Comma Below",
+            "combining": "{&\u0326}",
             "docs": "The [comma below](https://en.wikipedia.org/wiki/Comma#Diacritical_usage) mirrors the shape used for the comma in the [Emily's Symbols](https://github.com/EPLHREU/emily-symbols) plugin.",
         },
         "diaeresis": {
             "outline": "-FL",
             "name": "Diaeresis/Umlaut",
+            "combining": "{&\u0308}",
             "docs": "Shaped like the [diaeresis/umlaut](https://en.wikipedia.org/wiki/Two_dots_(diacritic)) symbols.<BR><BR>NOTE: [diaeresis](https://en.wikipedia.org/wiki/Diaeresis_(diacritic)) and [umlaut](https://en.wikipedia.org/wiki/Umlaut_(diacritic)) are distinct concepts, with separate uses, but are represented by the same Unicode code points. They are created via the same outline in this spelling system.",
         },
         "diaeresisBelow": {
             "outline": "-RG",
             "name": "Diaeresis Below",
+            "combining": "{&\u0324}",
             "docs": "The diaeresis/umlaut shape, but lower.",
         },
         "dotAbove": {
             "outline": "-F",
             "name": "Dot Above",
+            "combining": "{&\u0307}",
             "docs": "A single key, up high, like a [dot above](https://en.wikipedia.org/wiki/Dot_(diacritic)). See dot below.",
         },
         "dotBelow": {
             "outline": "-R",
             "name": "Dot Below",
+            "combining": "{&\u0323}",
             "docs": "The [dot below](https://en.wikipedia.org/wiki/Dot_(diacritic)) stroke is chosen to mirror the shape used for the period in the [Emily's Symbols](https://github.com/EPLHREU/emily-symbols) plugin. A single key, down low, like a dot below. See dot above.",
         },
         "grave": {
             "outline": "-FB",
             "name": "Grave",
+            "combining": "{&\u0300}",
             "docs": "Shaped like the [grave accent](https://en.wikipedia.org/wiki/Grave_accent).",
         },
         "graveDoubled": {
             "outline": "EFB",
             "name": "Double Grave",
+            "combining": "{&\u030F}",
             "docs": "The [double grave](https://en.wikipedia.org/wiki/Double_grave_accent) uses the grave modifier shape, with the '[extra](#modifier-tweaks)' tweak.",
         },
         "hookAbove": {
             "outline": "-FPB",
             "name": "Hook Above",
+            "combining": "{&\u0309}",
             "docs": "Shaped like the [hook above](https://en.wikipedia.org/wiki/Hook_above) symbol, sticking up, and curling to the left.",
         },
         "hook": {
@@ -938,6 +958,7 @@ NOTE: Diacritics and their tweaks are part of the same stroke.
         "horn": {
             "outline": "-BLG",
             "name": "Horn",
+            "combining": "{&\u031B}",
             "docs": "Shaped like the [horn](https://en.wikipedia.org/wiki/Horn_(diacritic)), sticking out to the right and curving upward. The shape is also on the right-hand side of the modifier keys cluster, as the horn attaches to the upper right side of its characters.",
         },
         "interpunct": {
@@ -948,26 +969,31 @@ NOTE: Diacritics and their tweaks are part of the same stroke.
         "lineBelow": {
             "outline": "UFP",
             "name": "Line Below",
+            "combining": "{&\u0331}",
             "docs": "When [line below](https://en.wikipedia.org/wiki/Macron_below) is decomposed into base character + diacritic, the combining character for this set of Unicode composed characters is the macron below. Rather than use the the lower version of the chord, on the bottom row, this uses the '[under](#modifier-tweaks)' tweak with the macron shape, to respect this relation.",
         },
         "macron": {
             "outline": "-FP",
             "name": "Macron",
+            "combining": "{&\u0304}",
             "docs": "Shaped like the [macron](https://en.wikipedia.org/wiki/Macron_(diacritic)).",
         },
         "ogonek": {
             "outline": "-PBG", # "little tail"
             "name": "Ogonek",
+            "combining": "{&\u0328}",
             "docs": "The [ogonek](https://en.wikipedia.org/wiki/Ogonek), meaning 'little tail' in Polish, hangs off the bottom of its character, curling down and to the right.",
         },
         "ringAbove": {
             "outline": "-FRPB",
             "name": "Ring Above",
+            "combining": "{&\u030A}",
             "docs": "For the [ring above](https://en.wikipedia.org/wiki/Ring_(diacritic)) think of this square of keys like a little circle, or ring.",
         },
         "ringBelow": {
             "outline": "UFRPB",
             "name": "Ring Below",
+            "combining": "{&\u0325}",
             "docs": "The [ring below](https://en.wikipedia.org/wiki/Ring_(diacritic)) uses the ring above modifier shape, with the '[under](#modifier-tweaks)' tweak.",
         },
         "stroke": {
@@ -993,11 +1019,13 @@ NOTE: Diacritics and their tweaks are part of the same stroke.
         "tilde": {
             "outline": "-FPBG",
             "name": "Tilde",
+            "combining": "{&\u0303}",
             "docs": "Shaped like the [tilde](https://en.wikipedia.org/wiki/Tilde).",
         },
         "tildeBelow": {
             "outline": "UFPBG",
             "name": "Tilde Below",
+            "combining": "{&\u0330}",
             "docs": "The tilde modifier shape, with the '[under](#modifier-tweaks)' tweak.",
         },
     }
@@ -7428,6 +7456,8 @@ MODIFIED_RUSSIAN_CHARS = [
 # Note the dash before the star, explained further in the functions below.
 strokeKeys = "STKPWHRAO-*EUFRPBLGTSDZ"
 
+
+
 def parseStroke (stroke):
     """
     Turns a Plover-style stroke string into a list of bools, representing the
@@ -7642,6 +7672,11 @@ def buildFingerspellingDict ():
                             outlineStr = "/".join(outline)
                             # add entire definition to the final spelling dict
                             spellingDict[outlineStr] = wrapL + translation + wrapR
+    # create definitions for combining diacritics
+    for modName, modData in DIACRITICS["modifiers"].items():
+        if "combining" in modData:
+            stroke = renderStroke(mergeStrokes(starterCombining, modData["outline"]))
+            spellingDict[stroke] = modData["combining"]
 
     # return the complete fingerspelling dictionary
     return spellingDict
