@@ -4,11 +4,23 @@ from dataclasses import dataclass
 from fixspell import MODIFIERS
 
 
+# functional helpers
+fst = lambda pair: pair[0]
+snd = lambda pair: pair[1]
+
+
+# helpful coordinates
+ORIGIN = (0, 0)
+UNIT = (1, 1)
+
+# direction key top "leans"
 NORTH = (0, -1)
 SOUTH = (0, 1)
 EAST = (1, 0)
 WEST = (-1, 0)
 
+
+# key options
 @dataclass
 class KeyOpts:
     """
@@ -27,6 +39,8 @@ class KeyOpts:
     typeface: str = "Arial"
     fontSize: int = 14
 
+
+# key colors
 @dataclass
 class KeyCols:
     """
@@ -54,7 +68,24 @@ tweakKeyCols = KeyCols(
     ridge = "#9146BC",
 )
 
+
+# default key
+@dataclass
+class Key:
+    label: str = ""
+    pos: tuple = ORIGIN
+    shift: tuple = NORTH
+    size: tuple = UNIT
+    cols: dict = KeyCols()
+
+
 def genKey (label, opts=None, cols=None, smoothing=8):
+    """
+    Takes a key label, and optional options, colors, and smoothing value.
+    Returns an image of keyboard key.
+
+    opts, cols, and smoothing will use sensible defaults if not passed.
+    """
     # if nothing passed, use defaults
     opts = opts or KeyOpts()
     cols = cols or KeyCols()
@@ -105,6 +136,7 @@ def genKey (label, opts=None, cols=None, smoothing=8):
     dims = ((opts.unit * unitsWide - tw) / 2 + xShift, (opts.unit * unitsHigh - th) / 2 + yShift)
     draw.text(dims, label, font=font, fill="black")
 
+    # if smoothing, we scaled up, so scale back down, and get antialiased
     if smoothing > 1:
         newWidth = image.width // smoothing
         newHeight = image.height // smoothing
@@ -204,16 +236,6 @@ def genKey (label, opts=None, cols=None, smoothing=8):
 # if __name__ == "__main__":
 #     genDiacriticImages()
 #     genTweakImages()
-
-UNIT = (1, 1)
-
-@dataclass
-class Key:
-    label: str = ""
-    pos: tuple = (0, 0)
-    shift: tuple = NORTH
-    size: tuple = UNIT
-    cols: dict = KeyCols()
 
 def buildKeyboard (kbdKeys):
     return [Key(*k) for k in kbdKeys]
