@@ -2,6 +2,7 @@ import unicodedata
 
 
 from fixspell import \
+    starterCombining, \
     DIACRITICS, \
     MODIFIERS, \
     ALPHABET_DATA, \
@@ -166,8 +167,19 @@ def generateModifiersSection ():
                             anchor = getAnchorTextForChar(character)
                             chars.append("[" + character + "](#char-" + anchor + ")")
                 charsStr = "Used in: " + " ".join(sorted(chars, key=ccc_sort_key)) if chars else "Not currently used by any characters"
+                if "combining" in data:
+                    charsStr += "<BR><BR><B>combinable</B>"
             img = "![" + name + "](images/" + name + ".png)"
             print("|" + img + "|![tweak](images/" + tweak + ".png)|" + info + "<BR><BR>" + charsStr + "|")
+
+readmeCombiningDiacritics = """
+## Combining Diacritics
+Each diacritic in the [Diacritics](#diacritics) section will have <B>combinable</B> in its notes column, if it can be used as a combining diacritic.
+
+To use a diacritic modifier to add a combining diacritic, combine its stroke with the unique combining diacritic starter chord, `""" + starterCombining + """`. For example, the diaeresis stroke is `""" + DIACRITICS["modifiers"]["diaeresis"]["outline"] + """`, so the combining version is the stroke, `""" + renderStroke(mergeStrokes(starterCombining, DIACRITICS["modifiers"]["diaeresis"]["outline"])) + """`.
+
+Now you can write cool [Zalgo Text](https://zalgo.org/) posts, like [this classic](https://stackoverflow.com/a/1732454/955926).
+"""
 
 def generateAllCharactersSection ():
     print("""## All Characters List
@@ -254,6 +266,7 @@ def generateReadme ():
     print(readmeTweaks)
     print(readmeAvailableDiacritics)
     generateModifiersSection()
+    print(readmeCombiningDiacritics)
     generateAllCharactersSection()
     print(readmeKnownIssues)
 
