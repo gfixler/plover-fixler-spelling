@@ -202,10 +202,10 @@ def renderKeyboard (keys):
 
         renders.append((keyImg, keyX, keyY))
 
-    image = Image.new("RGBA", (maxX, maxY), (255, 255, 255, 0))
+    image = Image.new("RGBA", (maxX - minX, maxY - minY), (255, 255, 255, 0))
 
     for keyImg, x, y in renders:
-        image.paste(keyImg, (x, y))
+        image.paste(keyImg, (x - minX, y - minY))
 
     return image
 
