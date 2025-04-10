@@ -1364,6 +1364,13 @@ MODIFIED_LATIN_CHARS = [
         "link": "https://en.wikipedia.org/wiki/Ligature_(writing)#Ligatures_in_Unicode_(Latin_alphabets)",
     },
     {
+        "name": "OU ligature",
+        "majuscule": ("OU", "Ȣ"),
+        "minuscule": ("ou", "ȣ"),
+        "modifiers": ["ligature"],
+        "link": "",
+    },
+    {
         "name": "ST ligature",
         "majuscule": None,
         "minuscule": ("st", "ﬆ"),
@@ -1592,6 +1599,20 @@ MODIFIED_LATIN_CHARS = [
         "minuscule": ("f", "ⅎ"),
         "modifiers": ["turned"],
         "link": "https://en.wikipedia.org/wiki/Claudian_letters", # TODO research these
+    },
+    {
+        "name": "Turned M",
+        "majuscule": ("M", "Ɯ"),
+        "minuscule": None,
+        "modifiers": ["turned"],
+        "link": "",
+    },
+    {
+        "name": "Turned V",
+        "majuscule": ("V", "Ʌ"),
+        "minuscule": None,
+        "modifiers": ["turned"],
+        "link": "",
     },
 
     #  _ _             _                        _ _                 _ _   _
@@ -2467,10 +2488,10 @@ MODIFIED_LATIN_CHARS = [
     {
         "name": "S with dot above",
         "majuscule": ("S", "Ṡ"),
-        "minuscule": ("s", "ṡ"), # TODO add "ẛ"
+        "minuscule": ("s", "ṡ"),
         "modifiers": ["dotAbove"],
         "link": "https://en.wikipedia.org/wiki/%E1%B9%A0",
-    },
+    }, # TODO add "ẛ"
     {
         "name": "S with caron",
         "majuscule": ("S", "Š"),
@@ -3752,6 +3773,20 @@ MODIFIED_LATIN_CHARS = [
         "modifiers": ["slash"],
         "link": "https://en.wikipedia.org/wiki/%EA%9E%A8",
     }, # TODO add in ẜ
+    {
+        "name": "Y with stroke",
+        "majuscule": ("Y", "Ɏ"),
+        "minuscule": ("y", "ɏ"),
+        "modifiers": ["stroke"],
+        "link": "",
+    },
+    {
+        "name": "Z with stroke",
+        "majuscule": ("Z", "Ƶ"),
+        "minuscule": ("z", "ƶ"),
+        "modifiers": ["stroke"],
+        "link": "",
+    },
 
     #  _        _  _____ ___ _   _   __  __    _  _____ _   _
     # | |      / \|_   _|_ _| \ | | |  \/  |  / \|_   _| | | |
@@ -6084,6 +6119,13 @@ MODIFIED_GREEK_CHARS = [
         "minuscule": ("θ", "ꟈ"),
         "modifiers": ["stroke"],
         "link": "https://en.wikipedia.org/wiki/Tau_gallicum",
+    },
+    {
+        "name": "Lambda with stroke",
+        "majuscule": None,
+        "minuscule": ("λ", "ƛ"),
+        "modifiers": ["slash"],
+        "link": "",
     },
 
     #   ____ ____  _____ _____ _  __  __  __    _  _____ _   _
