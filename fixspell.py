@@ -7,6 +7,9 @@ from itertools import product
 starterCombining = "TKH"
 
 enderBraille = "-RPGT"
+enderNato = "-RPGS"
+enderHyphen = "-FPLT"
+enderPeriod = "-RBGS"
 
 # These string pairs are used to wrap output characters to enforce case.
 minWraps = ("{>}{&", "}")
