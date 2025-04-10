@@ -168,7 +168,7 @@ def generateModifiersSection ():
                             chars.append("[" + character + "](#char-" + anchor + ")")
                 charsStr = "Used in: " + " ".join(sorted(chars, key=ccc_sort_key)) if chars else "Not currently used by any characters"
                 if "combining" in data:
-                    charsStr += "<BR><BR><B>combinable</B>"
+                    charsStr += "<BR><BR><B>[combinable](#combining-diacritics)</B>"
             img = "![" + name + "](images/" + name + ".png)"
             print("|" + img + "|![tweak](images/" + tweak + ".png)|" + info + "<BR><BR>" + charsStr + "|")
 
