@@ -146,6 +146,69 @@ def genKey (label, opts=None, cols=None, smoothing=8):
 
     return final
 
+
+stenoKeys = [
+    ("S", (0,0),  EAST, (1,2)),
+    ("T", (1,0), SOUTH,  UNIT),
+    ("K", (1,1), NORTH,  UNIT),
+    ("P", (2,0), SOUTH,  UNIT),
+    ("W", (2,1), NORTH,  UNIT),
+    ("H", (3,0), SOUTH,  UNIT),
+    ("R", (3,1), NORTH,  UNIT),
+    ("A", (2,2),  EAST,  UNIT),
+    ("O", (3,2),  WEST,  UNIT),
+    ("*", (4,0), (0,0), (1,2)),
+    ("E", (5,2),  EAST,  UNIT),
+    ("U", (6,2),  WEST,  UNIT),
+    ("F", (5,0), SOUTH,  UNIT),
+    ("R", (5,1), NORTH,  UNIT),
+    ("P", (6,0), SOUTH,  UNIT),
+    ("B", (6,1), NORTH,  UNIT),
+    ("L", (7,0), SOUTH,  UNIT),
+    ("G", (7,1), NORTH,  UNIT),
+    ("T", (8,0), SOUTH,  UNIT),
+    ("S", (8,1), NORTH,  UNIT),
+    ("D", (9,0), SOUTH,  UNIT),
+    ("Z", (9,1), NORTH,  UNIT),
+]
+
+
+def buildKeyboard (kbdKeys):
+    return [Key(*k) for k in kbdKeys]
+
+def renderKeyboard (keys):
+    minX = minY = float('inf')
+    maxX = maxY = float('-inf')
+
+    renders = []
+    for key in keys:
+        x, y = key.pos
+
+        options = {
+            "shiftDir": key.shift,
+            "size": key.size,
+        }
+        opts = KeyOpts(**options)
+        keyImg = genKey(key.label, opts, key.cols)
+        imgW, imgH = keyImg.size
+
+        keyX = x * imgW
+        keyY = y * imgH
+
+        minX = min(minX, keyX)
+        minY = min(minY, keyY)
+        maxX = max(maxX, keyX + imgW)
+        maxY = max(maxY, keyY + imgH)
+
+        renders.append((keyImg, keyX, keyY))
+
+    image = Image.new("RGBA", (maxX, maxY), (255, 255, 255, 0))
+
+    for keyImg, x, y in renders:
+        image.paste(keyImg, (x, y))
+
+    return image
+
 # def genDiacriticStrokeImage (stroke="", keyOpts=defaultKeyOpts, keyCols=defaultKeyCols):
 #     pressed = lambda k: modifierKeyCols if k in stroke else defaultKeyCols
 
@@ -236,65 +299,4 @@ def genKey (label, opts=None, cols=None, smoothing=8):
 # if __name__ == "__main__":
 #     genDiacriticImages()
 #     genTweakImages()
-
-def buildKeyboard (kbdKeys):
-    return [Key(*k) for k in kbdKeys]
-
-def renderKeyboard (keys):
-    minX = minY = float('inf')
-    maxX = maxY = float('-inf')
-
-    renders = []
-    for key in keys:
-        x, y = key.pos
-
-        options = {
-            "shiftDir": key.shift,
-            "size": key.size,
-        }
-        opts = KeyOpts(**options)
-        keyImg = genKey(key.label, opts, key.cols)
-        imgW, imgH = keyImg.size
-
-        keyX = x * imgW
-        keyY = y * imgH
-
-        minX = min(minX, keyX)
-        minY = min(minY, keyY)
-        maxX = max(maxX, keyX + imgW)
-        maxY = max(maxY, keyY + imgH)
-
-        renders.append((keyImg, keyX, keyY))
-
-    image = Image.new("RGBA", (maxX, maxY), (255, 255, 255, 0))
-
-    for keyImg, x, y in renders:
-        image.paste(keyImg, (x, y))
-
-    return image
-
-stenoKeyboard = [
-    ("S", (0,0),  EAST, (1,2), defaultKeyCols),
-    ("T", (1,0), SOUTH,  UNIT, defaultKeyCols),
-    ("K", (1,1), NORTH,  UNIT, defaultKeyCols),
-    ("P", (2,0), SOUTH,  UNIT, defaultKeyCols),
-    ("W", (2,1), NORTH,  UNIT, defaultKeyCols),
-    ("H", (3,0), SOUTH,  UNIT, defaultKeyCols),
-    ("R", (3,1), NORTH,  UNIT, defaultKeyCols),
-    ("A", (2,2),  EAST,  UNIT, defaultKeyCols),
-    ("O", (3,2),  WEST,  UNIT, defaultKeyCols),
-    ("*", (4,0), (0,0), (1,2), defaultKeyCols),
-    ("E", (5,2),  EAST,  UNIT, tweakKeyCols),
-    ("U", (6,2),  WEST,  UNIT, tweakKeyCols),
-    ("F", (5,0), SOUTH,  UNIT, modifierKeyCols),
-    ("R", (5,1), NORTH,  UNIT, modifierKeyCols),
-    ("P", (6,0), SOUTH,  UNIT, modifierKeyCols),
-    ("B", (6,1), NORTH,  UNIT, modifierKeyCols),
-    ("L", (7,0), SOUTH,  UNIT, modifierKeyCols),
-    ("G", (7,1), NORTH,  UNIT, modifierKeyCols),
-    ("T", (8,0), SOUTH,  UNIT, defaultKeyCols),
-    ("S", (8,1), NORTH,  UNIT, defaultKeyCols),
-    ("D", (9,0), SOUTH,  UNIT, defaultKeyCols),
-    ("Z", (9,1), NORTH,  UNIT, defaultKeyCols),
-]
 
