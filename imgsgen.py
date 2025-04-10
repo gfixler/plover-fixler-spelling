@@ -1,7 +1,7 @@
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 from dataclasses import dataclass
 
-from fixspell import MODIFIERS
+from fixspell import MODIFIERS, parseStroke
 
 
 # functional helpers
@@ -208,6 +208,24 @@ def renderKeyboard (keys):
         image.paste(keyImg, (x - minX, y - minY))
 
     return image
+
+
+stenoKeyboard = buildKeyboard(stenoKeys)
+
+
+def strokeToKeys(stroke, keys=stenoKeyboard):
+    """
+    Turns a legitimate Plover style stroke ("KAT", "TP-PL", "-RP") into a list
+    of keyboard keys, effectively creating a sub-board.
+    """
+    pressed = parseStroke(stroke)
+    undashed = pressed[:9] + pressed[10:]
+    return map(snd, filter(fst, zip(undashed, keys)))
+
+
+modKeys = strokeToKeys("-FRPBLG")
+tweakKeys = strokeToKeys("EU")
+
 
 # def genDiacriticStrokeImage (stroke="", keyOpts=defaultKeyOpts, keyCols=defaultKeyCols):
 #     pressed = lambda k: modifierKeyCols if k in stroke else defaultKeyCols
