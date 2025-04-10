@@ -8,6 +8,12 @@ starterCombining = "TKH"
 
 enderBraille = "-RPGT"
 
+# These string pairs are used to wrap output characters to enforce case.
+minWraps = ("{>}{&", "}")
+majWraps = ("{-|}{&", "}")
+glueWraps = ("{&", "}")
+
+
 LATIN_ALPHABET_DATA = {
     "minStroke": "*",
     "majStroke": "*P",
@@ -833,11 +839,6 @@ cyrillicNonSlavicAlphabet = [
 # diacritical marks. See: https://en.wikipedia.org/wiki/Cyrillic_script
 # А̂а̂ А̄а̄ Е̂е̂ Е̄е̄ Є́є́ З́з́ І́і́ И̂и̂ О̂о̂ О̄о̄ С́с́ У̂у̂
 
-
-# These string pairs are used to wrap output characters to enforce case.
-minWraps = ("{>}{&", "}")
-majWraps = ("{-|}{&", "}")
-glueWraps = ("{&", "}")
 
 DIACRITICS = {
     "name": "Diacritics",
