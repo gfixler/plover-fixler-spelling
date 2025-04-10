@@ -157,10 +157,10 @@ def genKey (label, opts=None, cols=None, smoothing=8):
 
 #     return image
 
-def genDiacriticImages ():
-    for modName, modData in MODIFIERS.items():
-        image = genDiacriticStrokeImage(modData["outline"])
-        image.save("images/" + modName + ".png", "PNG")
+# def genDiacriticImages ():
+#     for modName, modData in MODIFIERS.items():
+#         image = genDiacriticStrokeImage(modData["outline"])
+#         image.save("images/" + modName + ".png", "PNG")
 
 # def genTweakStrokeImage (stroke="", keyOpts=defaultKeyOpts, keyCols=defaultKeyCols):
 #     pressed = lambda k: tweakKeyCols if k in stroke else defaultKeyCols
@@ -195,15 +195,15 @@ def genDiacriticImages ():
 
 #     return image
 
-def genTweakImages ():
-    genTweakStrokeImage("").save("images/EU_up.png", "PNG")
-    genTweakStrokeImage("E").save("images/E_down.png", "PNG")
-    genTweakStrokeImage("U").save("images/U_down.png", "PNG")
-    genTweakStrokeImage("EU").save("images/EU_down.png", "PNG")
+# def genTweakImages ():
+#     genTweakStrokeImage("").save("images/EU_up.png", "PNG")
+#     genTweakStrokeImage("E").save("images/E_down.png", "PNG")
+#     genTweakStrokeImage("U").save("images/U_down.png", "PNG")
+#     genTweakStrokeImage("EU").save("images/EU_down.png", "PNG")
 
-if __name__ == "__main__":
-    genDiacriticImages()
-    genTweakImages()
+# if __name__ == "__main__":
+#     genDiacriticImages()
+#     genTweakImages()
 
 UNIT = (1, 1)
 
