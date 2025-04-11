@@ -76,7 +76,6 @@ class Key:
     pos: tuple = ORIGIN
     shift: tuple = NORTH
     size: tuple = UNIT
-    cols: dict = KeyCols()
 
 
 def genKey (label, opts=None, cols=None, smoothing=8):
@@ -176,25 +175,33 @@ stenoKeys = [
 def buildKeyboard (kbdKeys):
     return [Key(*k) for k in kbdKeys]
 
-def renderKeyboard (keys):
+def renderKeyboard (keysStroke, pressStroke=None, colors=None):
+    # start with an infinity bounding box
     minX = minY = float('inf')
     maxX = maxY = float('-inf')
 
+    # container for key images
     renders = []
+
     for key in keys:
         x, y = key.pos
 
+        # create key options with to face shift and size in units
         options = {
             "shiftDir": key.shift,
             "size": key.size,
         }
         opts = KeyOpts(**options)
-        keyImg = genKey(key.label, opts, key.cols)
-        imgW, imgH = keyImg.size
 
+        # generate key image
+        keyImg = genKey(key.label, opts, key.cols)
+
+        # shift key into place by unit position and size
+        imgW, imgH = keyImg.size
         keyX = x * imgW
         keyY = y * imgH
 
+        # update the bounding box
         minX = min(minX, keyX)
         minY = min(minY, keyY)
         maxX = max(maxX, keyX + imgW)
@@ -204,6 +211,7 @@ def renderKeyboard (keys):
 
     image = Image.new("RGBA", (maxX - minX, maxY - minY), (255, 255, 255, 0))
 
+    # build the keyboard image from all the key images
     for keyImg, x, y in renders:
         image.paste(keyImg, (x - minX, y - minY))
 
@@ -317,4 +325,7 @@ tweakKeys = strokeToKeys("EU")
 # if __name__ == "__main__":
 #     genDiacriticImages()
 #     genTweakImages()
+
+im = renderKeyboard(strokeToKeys("-FRPBLG"))
+im.save("test.png")
 
