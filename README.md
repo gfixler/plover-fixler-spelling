@@ -1,6 +1,6 @@
 
 # Fixler Spelling for Plover
-A fingerspelling system for the [Plover](https://www.openstenoproject.org/plover/) steno software.
+A fingerspelling system for the [Plover](https://opensteno.org/plover/) steno software.
 
 This library currently provides quick access to 1875 characters.
 
